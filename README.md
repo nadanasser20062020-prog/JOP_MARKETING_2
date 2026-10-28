@@ -27,6 +27,7 @@ A job-market intelligence platform designed to help engineers in Egypt and the w
 
 - [All project documentation](docs/README.md)
 - [Software engineering documentation](docs/software-engineering/README.md)
+- [Project diagram pack](docs/diagrams/README.md)
 - [Project plan and task breakdown](docs/PROJECT_PLAN.md)
 - [Feature specification](docs/FEATURE_SPEC.md)
 - [Data and database plan](docs/DATA_AND_DATABASE.md)

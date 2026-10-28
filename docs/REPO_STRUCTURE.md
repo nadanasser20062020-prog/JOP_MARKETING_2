@@ -2,7 +2,7 @@
 
 This structure separates analysis, database work, models, and the website. The repository currently contains documentation and planning scaffolding only; implementation files should be added after the dataset audit and technology choices.
 
-- **`docs/`** — Project scope, task plan, data and database design, analytics, ML, web application, and workflow documentation; `docs/software-engineering/` contains requirements, architecture, API, UX, security, testing, operations, and governance specifications.
+- **`docs/`** — Project scope, task plan, data and database design, analytics, ML, web application, software-engineering specifications, and version-controlled Mermaid diagrams in `docs/diagrams/`.
 - **`data/`** — Readme, data dictionaries, and only small samples that are approved for sharing. Large raw or processed files remain outside Git.
 - **`database/`** — ERD, schema definitions, Neon setup instructions, and data-loading decisions.
 - **`analysis/`** — SQL analyses, exploratory analysis notebooks, charts, and analytical reports.

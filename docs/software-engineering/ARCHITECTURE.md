@@ -16,21 +16,7 @@ The system serves visitors exploring the team's collected job advertisements. Th
 
 ## Proposed Container View
 
-```mermaid
-flowchart LR
-    Visitor[Visitor] --> Web[Web frontend]
-    Web --> API[Backend API]
-    API --> Services[Application services]
-    Services --> DB[(PostgreSQL / Neon)]
-    Services --> Models[Matching and model services]
-    DataPrep[Data preparation] --> DB
-    Analysis[SQL and Python analysis] --> DB
-    Drive[Collected source files] --> DataPrep
-    Web --> JobSources[External job sources]
-    Web --> Learning[External learning resources]
-```
-
-The diagram is conceptual. Deployment boundaries and selected technologies remain to be confirmed.
+See the [system context](../diagrams/01_SYSTEM_CONTEXT.md), [container architecture](../diagrams/02_CONTAINER_ARCHITECTURE.md), [backend component](../diagrams/03_BACKEND_COMPONENTS.md), [DFD Level 0](../diagrams/16_DFD_LEVEL_0.md), [DFD Level 1](../diagrams/17_DFD_LEVEL_1.md), and [deployment](../diagrams/12_DEPLOYMENT_VIEW.md) diagrams. These are conceptual; deployment boundaries and selected technologies remain to be confirmed.
 
 ## Component Responsibilities
 

@@ -16,6 +16,7 @@
 ## Software Engineering
 
 - [Software engineering documentation index](software-engineering/README.md)
+- [Project diagram pack](diagrams/README.md)
 - [Web application plan](WEB_APP_PLAN.md)
 
 The software engineering index covers requirements, user stories, use cases, architecture, API and database specifications, UX, accessibility, localization, security, testing, deployment, development workflow, traceability, risks, and decision records.

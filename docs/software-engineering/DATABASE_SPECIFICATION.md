@@ -33,17 +33,7 @@ Company and location relationships may be optional when an advertisement does no
 
 ## ERD Concept
 
-```mermaid
-erDiagram
-    COMPANY o|--o{ JOB_POST : publishes
-    LOCATION o|--o{ JOB_POST : locates
-    SOURCE o|--o{ JOB_POST : provides
-    JOB_POST ||--o{ JOB_SKILL : has
-    SKILL ||--o{ JOB_SKILL : describes
-    SKILL ||--o{ LEARNING_RESOURCE : supports
-```
-
-Cardinality notation should be confirmed when the ERD is finalized against actual source data.
+See the [logical ERD](../diagrams/04_LOGICAL_ERD.md) and [conceptual domain class diagram](../diagrams/18_DOMAIN_CLASS_DIAGRAM.md). Both are provisional; candidate entities, attributes, and cardinalities must be checked against the actual source data before schema implementation.
 
 ## Integrity and Normalization Rules
 
