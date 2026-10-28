@@ -1,7 +1,7 @@
-# الخلفية وطبقة البيانات
+# Backend and Data Services
 
-هذا المجلد مخصص للطبقة التي تصل الموقع بقاعدة البيانات وتوفر البحث والتصفية والمؤشرات والمطابقة.
+This directory is for the service layer that connects the website to the database and provides search, filtering, metrics, and matching results.
 
-- لا تتصل واجهة المتصفح بقاعدة Neon مباشرة.
-- تُحفظ أسرار الاتصال في متغيرات بيئة خارج Git.
-- راجعوا تدفق البيانات ومعايير القبول في `docs/WEB_APP_PLAN.md`.
+- The browser must not connect directly to Neon.
+- Store connection credentials in environment variables outside Git.
+- Review the system flow and acceptance criteria in `docs/WEB_APP_PLAN.md`.

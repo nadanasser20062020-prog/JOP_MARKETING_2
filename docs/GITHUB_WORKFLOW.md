@@ -1,38 +1,38 @@
-# طريقة تنظيم العمل على GitHub
+# GitHub Workflow
 
-## استخدام معرّفات المهام
+## Task Identifiers
 
-كل مهمة في [خطة المشروع](PROJECT_PLAN.md) لها معرّف مثل T01 أو T14. عند تحويلها إلى GitHub Issue، يبدأ العنوان بالمعرّف، ويُستخدم قالب المهمة الموجود في `.github/ISSUE_TEMPLATE/task.md`.
+Every task in the [Project Plan](PROJECT_PLAN.md) has an identifier such as T01 or T14. When creating a GitHub Issue, begin its title with the identifier and use `.github/ISSUE_TEMPLATE/task.md`.
 
-## حالات لوحة العمل المقترحة
+## Suggested Board Statuses
 
-- **Backlog:** المهمة ضمن الخطة ولم تصبح جاهزة.
-- **Ready:** المتطلبات والاعتماديات واضحة ويمكن البدء بها.
-- **In Progress:** يعمل عليها شخص أو فريق محدد.
-- **Review:** التنفيذ جاهز لمراجعة شخص آخر.
-- **Blocked:** يوجد عائق مكتوب وقرار مطلوب.
-- **Done:** تحققت معايير الإنجاز، ووُثقت المخرجات، وراجعت التغييرات.
+- **Backlog:** Planned but not ready to start.
+- **Ready:** Requirements and dependencies are clear.
+- **In Progress:** An owner or team is actively working on it.
+- **Review:** Work is ready for peer review.
+- **Blocked:** A documented dependency or decision prevents progress.
+- **Done:** Acceptance criteria have been met, outputs are documented, and changes have been reviewed.
 
-## تعريف المهمة الجاهزة
+## Definition of Ready
 
-قبل البدء، يجب أن يكون للمهمة هدف واضح، ومدخلات معروفة، واعتماديات محسومة، ومخرج قابل للمراجعة، ومعيار قبول يمكن التحقق منه. لا تُفتح مهمة ML قبل معرفة الحقول التي تحتاجها.
+Before work begins, a task should have a clear objective, known inputs, resolved dependencies, a reviewable deliverable, and verifiable acceptance criteria. Do not start an ML task before confirming that the required fields are available.
 
-## تعريف الإنجاز
+## Definition of Done
 
-لا تُغلق المهمة لمجرد أن الملف أو الرسم موجود؛ تُغلق عندما:
+Close a task only when:
 
-- تكون معايير القبول في Issue متحققة.
-- تكون النتائج قابلة لإعادة التشغيل أو المراجعة.
-- تُحدّث الوثائق المتأثرة.
-- لا تحتوي التغييرات على أسرار أو داتا خام كبيرة.
-- يراجع عضو آخر الأرقام/التصميم/النتيجة بحسب طبيعة المهمة.
+- Its acceptance criteria are met.
+- Results are reproducible or otherwise reviewable.
+- Related documentation has been updated.
+- Changes contain no credentials or large raw data files.
+- Another team member has reviewed the result, figures, or design as appropriate.
 
-## Labels مقترحة
+## Suggested Labels
 
 `data`, `database`, `sql`, `analysis`, `ml`, `frontend`, `backend`, `documentation`, `testing`, `blocked`, `conditional`.
 
-## تقسيم المسؤوليات
+## Team Responsibilities
 
-بعد T01، يحدد الفريق المسؤولين عن البيانات وقاعدة البيانات، التحليل، النماذج، الواجهة، والدمج. قد يعمل شخص على أكثر من مسار؛ المهم أن يكون لكل Issue مسؤول ومخرج واضح، وأن تُراجع النتائج قبل دمجها.
+After T01, assign owners for data and database work, analytics, models, frontend, backend, and integration. One person may own multiple areas, but each Issue should have a clear owner and deliverable. Review results before merging them.
 
-> هذه الوثيقة وقوالب المستودع جاهزة للاستخدام. لم يتم إنشاء Issues أو لوحة GitHub خارج المستودع ضمن هذا التحديث.
+The repository includes task and pull-request templates. No standalone GitHub Issues or Project board were created as part of this planning update.

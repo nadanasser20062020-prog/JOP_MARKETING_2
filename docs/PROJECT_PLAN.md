@@ -1,149 +1,149 @@
-# خطة المشروع والمهام
+# Project Plan and Task Breakdown
 
-هذه الوثيقة هي قائمة العمل المركزية. لكل مهمة معرّف ثابت يمكن استخدامه في GitHub Issues. لا توجد مواعيد أو أسماء مسؤولين مفترضة؛ يحددها الفريق بعد معرفة حجم الداتا وتقسيم العمل. الترتيب أدناه يراعي الاعتماد بين المهام، وليس تقديرًا للمدة.
+This document is the central execution plan. Each task has a stable identifier that can be used in GitHub Issues. No owners or dates are assumed; the team should assign them after reviewing the dataset and agreeing on workload. The sequence reflects dependencies, not time estimates.
 
-## طريقة قراءة المهمة
+## Task Format
 
-- **الهدف:** لماذا نعملها؟
-- **الطريقة:** ما الخطوات المقترحة؟
-- **المخرج ومعيار الإنجاز:** ما الذي يجب أن يصبح موجودًا أو قابلًا للتحقق قبل إغلاق المهمة؟
+- **Objective:** Why the task is needed.
+- **Approach:** How the team should complete it.
+- **Deliverable and completion criteria:** What must be reviewable before the task is closed.
 
-## المرحلة 0 — فهم الداتا وتثبيت النطاق
+## Phase 0 — Dataset Discovery and Scope Definition
 
-### T01 — جرد الداتا وتدقيقها
-- **الهدف:** معرفة ما تحتويه الملفات فعلًا قبل تثبيت التصميم أو اختيار نماذج ML.
-- **الطريقة:** جرد الملفات والصيغ والترميز؛ معاينة الأعمدة وعينة من الصفوف؛ توثيق عدد السجلات، اللغات، التواريخ، البلدان، الحقول الناقصة، التكرارات، ومصادر الإعلانات. القراءة فقط من المصدر الأصلي؛ لا نعدّل ملفات Drive.
-- **المخرج ومعيار الإنجاز:** تقرير Data Audit يصف الملفات والحقول وجودة البيانات، مع قائمة واضحة بما يمكن وما لا يمكن تحليله. لا تُرفع ملفات الداتا الخام الكبيرة إلى GitHub.
-- **الأولوية/الاعتماد:** أول مهمة؛ لا تعتمد على مهام سابقة.
+### T01 — Inventory and audit the dataset
+- **Objective:** Understand the actual files and fields before finalizing the data model or selecting machine-learning tasks.
+- **Approach:** Inventory file formats, encodings, and sizes; inspect headers and representative records; document record counts, languages, dates, countries, missing values, duplicates, and job-ad sources. Treat the source files as read-only and do not modify the originals in Drive.
+- **Deliverable and completion criteria:** A Data Audit report describing the files, fields, data quality, and feasible analyses. Large raw data files are not committed to GitHub.
+- **Priority/dependency:** First task; no prior task required.
 
-### T02 — قاموس البيانات وتأكيد نطاق الميزات
-- **الهدف:** ربط كل ميزة بحقول موجودة فعلًا وتحديد النواقص.
-- **الطريقة:** تعريف معنى كل عمود ووحدته ومصدره؛ وضع قاموس موحّد للقيم والمسميات؛ تمييز الميزات المؤكدة من الميزات المشروطة بوجود بيانات مثل الراتب والتاريخ ونوع العمل.
-- **المخرج ومعيار الإنجاز:** Data Dictionary وجدول يوضح لكل ميزة الحقول اللازمة وحالتها: متاحة، تحتاج تنظيفًا، أو غير متاحة. تثبيت النطاق بناءً على نتيجة T01.
-- **الاعتماد:** T01.
+### T02 — Create the data dictionary and confirm feature feasibility
+- **Objective:** Map each proposed feature to fields that actually exist in the dataset.
+- **Approach:** Define each field, unit, and source; establish canonical values and naming conventions; identify features that require salary, date, work-mode, or other fields.
+- **Deliverable and completion criteria:** A Data Dictionary and a feature-feasibility matrix marking each requirement as available, requiring cleaning, or unavailable. Confirm the project scope using the T01 findings.
+- **Dependency:** T01.
 
-## المرحلة 1 — تجهيز البيانات وقاعدة البيانات
+## Phase 1 — Data Preparation and Database Design
 
-### T03 — تنظيف وتوحيد البيانات
-- **الهدف:** إنتاج نسخة قابلة للتحليل دون تغيير المصدر الأصلي.
-- **الطريقة:** توحيد أسماء الأعمدة والقيم؛ كشف الإعلانات المكررة؛ توحيد أسماء الدول وأنماط العمل والمسمّيات والمهارات؛ الاحتفاظ بالقيمة الأصلية بجانب القيمة الموحّدة عند الحاجة. عدم اختراع بيانات مفقودة.
-- **المخرج ومعيار الإنجاز:** قواعد تنظيف موثقة ونسخة منظمة قابلة لإعادة الإنتاج، مع مقارنة قبل/بعد تبين ما حُذف أو وُحّد ولماذا.
-- **الاعتماد:** T01 وT02.
+### T03 — Clean and standardize the data
+- **Objective:** Create analysis-ready data without changing the original source files.
+- **Approach:** Standardize column names and values; detect duplicate job advertisements; normalize role titles, skills, countries, and work arrangements; retain original values where needed. Do not fabricate missing information.
+- **Deliverable and completion criteria:** Documented, reproducible cleaning rules and a structured dataset, with a before-and-after comparison explaining changes.
+- **Dependencies:** T01 and T02.
 
-### T04 — تصميم الجداول وERD
-- **الهدف:** تحويل الداتا المسطحة إلى نموذج علائقي مناسب للتحليل.
-- **الطريقة:** تحديد الكيانات والعلاقات والمفاتيح والحقول الاختيارية بعد فحص الأعمدة. تمثيل العلاقة المتعددة بين الوظائف والمهارات بجدول ربط. رسم ERD ومراجعته مع الفريق.
-- **المخرج ومعيار الإنجاز:** ERD وقاموس حقول نهائيان، مع توضيح العلاقات والمفاتيح وما إذا كانت الحقول قابلة لأن تكون فارغة.
-- **الاعتماد:** T01 وT02.
+### T04 — Design the relational model and ERD
+- **Objective:** Organize the collected data into a relational structure suitable for analysis and application use.
+- **Approach:** Define entities, relationships, keys, and optional fields after reviewing the actual columns. Represent the many-to-many relationship between jobs and skills with a junction table. Draw and review the ERD with the team.
+- **Deliverable and completion criteria:** An approved ERD and data dictionary showing relationships, keys, and nullable fields.
+- **Dependencies:** T01 and T02.
 
-### T05 — بناء قاعدة البيانات وتحميل البيانات والتحقق
-- **الهدف:** جعل البيانات النظيفة متاحة للاستعلامات والتطبيق.
-- **الطريقة:** إنشاء الجداول في PostgreSQL/Neon بعد اعتماد ERD؛ تحميل البيانات على مراحل؛ تخزين بيانات الاتصال في متغيرات بيئة محلية وعدم إضافتها إلى GitHub؛ التحقق من أعداد الصفوف والعلاقات والسجلات اليتيمة.
-- **المخرج ومعيار الإنجاز:** قاعدة جاهزة للاستعلام، خطوات تحميل قابلة للتكرار، وفحوص تؤكد تطابق أعداد السجلات وعدم وجود أخطاء علاقات غير مفسرة.
-- **الاعتماد:** T03 وT04.
+### T05 — Build the database, load data, and validate it
+- **Objective:** Make cleaned data available for queries and the application.
+- **Approach:** Create the approved schema in PostgreSQL/Neon; load data in controlled stages; keep connection credentials in environment variables outside GitHub; validate record counts, relationships, and orphan records.
+- **Deliverable and completion criteria:** A queryable database, repeatable loading instructions, and validation checks explaining any discrepancies.
+- **Dependencies:** T03 and T04.
 
-## المرحلة 2 — التحليل والإحصاءات
+## Phase 2 — Analytics and Reporting
 
-### T06 — تحليل SQL
-- **الهدف:** استخراج إجابات قابلة للتكرار عن سوق الوظائف من قاعدة البيانات.
-- **الطريقة:** إعداد استعلامات مجمعة للوظائف حسب البلد والمسمى والشركة، والمهارات الأكثر طلبًا، ونوع العمل، والرواتب، والاتجاهات الزمنية إذا توفرت تواريخ. استخدام الوسيط وأعداد العينة عند تحليل الرواتب.
-- **المخرج ومعيار الإنجاز:** مجموعة استعلامات موثقة، وكل استنتاج مرتبط بتعريف واضح للمقياس والمرشحات وعدد السجلات.
-- **الاعتماد:** T05.
+### T06 — Build SQL analyses
+- **Objective:** Produce reproducible answers to job-market questions from the relational database.
+- **Approach:** Create aggregations by country, role, company, skill, work arrangement, salary, and time where supported. Use medians and sample counts for salary reporting.
+- **Deliverable and completion criteria:** Documented SQL analyses with a clear metric definition, filters, and sample size for each result.
+- **Dependency:** T05.
 
-### T07 — التحليل الاستكشافي بـPython
-- **الهدف:** فهم جودة البيانات وتوزيعاتها واكتشاف الأنماط قبل النمذجة.
-- **الطريقة:** استخدام NumPy وPandas للفحص والتنظيف والتحليل، وMatplotlib وSeaborn للرسوم. الاتصال بقاعدة البيانات من بيئة آمنة؛ استرجاع النتائج المجمعة أو العينات المناسبة بدل تحميل كل ملف كبير بلا حاجة.
-- **المخرج ومعيار الإنجاز:** دفاتر تحليل مرتبة وقابلة لإعادة التشغيل توضح الأسئلة، والتحويلات، والنتائج، والقيود.
-- **الاعتماد:** T05.
+### T07 — Conduct exploratory analysis in Python
+- **Objective:** Understand data quality, distributions, and patterns before modeling.
+- **Approach:** Use NumPy and Pandas for inspection, transformations, and analysis; use Matplotlib and Seaborn for charts. Connect to the database securely and retrieve suitable aggregates or samples instead of loading a large raw file into memory unnecessarily.
+- **Deliverable and completion criteria:** Organized, reproducible notebooks that explain the questions, transformations, results, and limitations.
+- **Dependency:** T05.
 
-### T08 — الرسوم والتقرير التحليلي
-- **الهدف:** تحويل النتائج إلى قصة مفهومة للمستخدم ولجنة المشروع.
-- **الطريقة:** اختيار رسم مناسب لكل سؤال، وإظهار الوحدة والفترة وعدد السجلات والمصدر، ومقارنة النتائج بين SQL وPython عند الحاجة.
-- **المخرج ومعيار الإنجاز:** مجموعة رسوم ولوحة مؤشرات أولية وتقرير يلخص النتائج وما لا تسمح الداتا باستنتاجه.
-- **الاعتماد:** T06 وT07.
+### T08 — Produce charts and an analytical report
+- **Objective:** Turn analytical findings into a clear narrative for users and reviewers.
+- **Approach:** Select an appropriate chart for each question; show units, time period, source, and sample size; compare SQL and Python results where useful.
+- **Deliverable and completion criteria:** A set of reviewed charts, an initial dashboard, and a report describing findings and what the data cannot establish.
+- **Dependencies:** T06 and T07.
 
-## المرحلة 3 — المهارات وتعلم الآلة
+## Phase 3 — Skills and Machine Learning
 
-### T09 — قاموس المهارات ومصادر التعلم
-- **الهدف:** توحيد المهارات وتمكين المطابقة وربط الفجوات بمصادر مفيدة.
-- **الطريقة:** جمع الصيغ البديلة والمرادفات إلى أسماء معيارية، مع الاحتفاظ بالنص الأصلي؛ مراجعة مصادر التعلم يدويًا وتسجيل المهارة واللغة والرابط وحالة كون المصدر مجانيًا وتاريخ التحقق.
-- **المخرج ومعيار الإنجاز:** قاموس مهارات قابل للمراجعة وفهرس مصادر واضح، بلا روابط مدفوعة على أنها مجانية.
-- **الاعتماد:** T01 وT03.
+### T09 — Build a skill taxonomy and learning-resource catalogue
+- **Objective:** Normalize skills for matching and connect skill gaps to useful learning resources.
+- **Approach:** Map aliases and spelling variants to canonical skill names while retaining original text. Review learning resources and record the skill, language, URL, free-access status, and verification date.
+- **Deliverable and completion criteria:** A reviewable skill taxonomy and resource catalogue. Resources must not be labelled free unless that status has been checked.
+- **Dependencies:** T01 and T03.
 
-### T10 — مطابقة المهارات بالوظائف كخط أساس
-- **الهدف:** تقديم توصيات مفهومة قبل استخدام نموذج معقد.
-- **الطريقة:** توحيد مهارات المستخدم، مقارنتها بمهارات الإعلانات، ترتيب الوظائف/المسارات بحسب تغطية المهارات، وإظهار المطابق والناقص وأسباب الترتيب. اختبار النتائج على أمثلة يراجعها الفريق.
-- **المخرج ومعيار الإنجاز:** مطابقة قابلة للتفسير؛ الدرجة توصف كتغطية مهارات وليست احتمال توظيف.
-- **الاعتماد:** T03 وT09.
+### T10 — Implement an explainable skill-matching baseline
+- **Objective:** Recommend relevant jobs or role profiles before introducing more complex models.
+- **Approach:** Normalize user-entered skills, compare them with skills in job advertisements, rank the closest matches, and show matched and missing skills with reasons. Review results against team-created test cases.
+- **Deliverable and completion criteria:** An explainable matching method. Its score is described as skill coverage, not as a probability of being hired.
+- **Dependencies:** T03 and T09.
 
-### T11 — Clustering لإعلانات الوظائف
-- **الهدف:** اكتشاف مجموعات وظائف متقاربة من حيث تركيبة المهارات.
-- **الطريقة:** بناء تمثيل مناسب للمهارات أو النصوص، تجربة عدد محدود من طرق التجميع، تقييم الاتساق بمقاييس مناسبة ومراجعة أمثلة ومهارات كل مجموعة يدويًا.
-- **المخرج ومعيار الإنجاز:** تقرير عن المجموعات وحدودها وأمثلتها؛ لا تُسمى المجموعات مسميات مهنية مؤكدة قبل مراجعتها.
-- **الاعتماد:** T03 وT05 وT09؛ حجم الداتا وجودتها بوابة قرار.
+### T11 — Cluster job advertisements
+- **Objective:** Discover groups of advertisements with similar skill profiles.
+- **Approach:** Build an appropriate representation of skills or job text, test a limited set of clustering approaches, assess quality, and manually review representative examples and top skills in each cluster.
+- **Deliverable and completion criteria:** A report describing clusters, representative examples, and limitations. Cluster names are not treated as authoritative job categories until reviewed.
+- **Dependencies:** T03, T05, and T09. Dataset size and quality are a go/no-go condition.
 
-### T12 — Classification لعائلات الوظائف
-- **الهدف:** اختبار تصنيف الإعلان إلى فئة وظيفية مثل Data أو Backend أو Frontend.
-- **الطريقة:** تحديد الفئات وتعريفها، وتجهيز عينة موسومة ومراجعتها؛ بناء خط أساس نصي بسيط من العنوان والوصف عند توفرهما؛ تقييم النتائج لكل فئة وليس بالدقة الكلية وحدها.
-- **المخرج ومعيار الإنجاز:** تقرير مقاييس وأخطاء ومراجعة أمثلة، أو تقرير يوضح لماذا لا تسمح البيانات بنموذج موثوق.
-- **الاعتماد:** T01 وT03؛ يحتاج تسميات موثوقة أو عينة تصنيف يراجعها الفريق.
+### T12 — Classify job families
+- **Objective:** Test whether job advertisements can be assigned to useful categories such as Data, Backend, or Frontend.
+- **Approach:** Define categories, prepare and review a labelled sample, train a simple text-classification baseline using titles and descriptions when available, and inspect errors.
+- **Deliverable and completion criteria:** A report with per-class metrics, error examples, and a conclusion about whether the model is reliable enough to use—or why the data does not support a trustworthy model.
+- **Dependencies:** T01 and T03. Requires reliable labels or a reviewed labelled sample.
 
-### T13 — Regression للرواتب
-- **الهدف:** اختبار إمكانية تقدير الراتب من خصائص الإعلان.
-- **الطريقة:** استخدام الإعلانات ذات الرواتب المعلنة فقط؛ توحيد العملة وفترة الراتب ونطاقه وفق سياسة موثقة؛ مقارنة النموذج بخط أساس بسيط؛ تقييم الخطأ والتحقق من عدم تسرب البيانات.
-- **المخرج ومعيار الإنجاز:** تقرير جودة وأخطاء وحدود استخدام؛ لا يعرض التطبيق تقديرًا إذا كانت البيانات قليلة أو غير قابلة للمقارنة.
-- **الاعتماد:** T01 وT03 وT05؛ بوابة قرار حسب عدد الرواتب وجودتها.
+### T13 — Model salary estimates with regression
+- **Objective:** Test whether salary can be estimated from job-advertisement attributes.
+- **Approach:** Use only advertisements with disclosed salaries; standardize currency, pay period, and ranges under a documented policy; compare with a simple baseline; evaluate errors and check for data leakage.
+- **Deliverable and completion criteria:** A model-quality report and usage limitations. The application must not display estimates when salary coverage or comparability is inadequate.
+- **Dependencies:** T01, T03, and T05. Data sufficiency is a go/no-go condition.
 
-## المرحلة 4 — الموقع وتجربة المستخدم
+## Phase 4 — Website and User Experience
 
-### T14 — طبقة الوصول للبيانات وواجهات الخدمة
-- **الهدف:** إتاحة بيانات وتحليلات آمنة للواجهة.
-- **الطريقة:** إنشاء طبقة خلفية تتصل بـNeon وتنفذ البحث والتصفية والتجميع والمطابقة؛ عدم وضع بيانات اعتماد قاعدة البيانات في المتصفح.
-- **المخرج ومعيار الإنجاز:** الواجهة تحصل على النتائج من طبقة خلفية موثقة، والاستعلامات لا تكشف أسرار الاتصال.
-- **الاعتماد:** T05؛ تصميم تفاصيل الربط بعد اختيار التقنيات.
+### T14 — Implement the data-access and service layer
+- **Objective:** Provide the user interface with secure access to data and analytics.
+- **Approach:** Build a backend layer that connects to Neon and handles search, filtering, aggregation, and matching. Never expose database credentials in browser code.
+- **Deliverable and completion criteria:** A documented service interface used by the frontend, with credentials kept outside the client.
+- **Dependency:** T05. Technology details are decided by the team before implementation.
 
-### T15 — استكشاف الوظائف وتفاصيل الإعلان
-- **الهدف:** تمكين المستخدم من العثور على إعلان وفهمه.
-- **الطريقة:** بناء قائمة بحث، مرشحات تعتمد على الحقول الموجودة، وصفحة تفاصيل تتضمن المصدر والحقول الناقصة بوضوح.
-- **المخرج ومعيار الإنجاز:** يمكن البحث والتصفية وفتح إعلان ورؤية رابطه الأصلي، مع عرض "غير متاح" بدل اختراع قيم.
-- **الاعتماد:** T05 وT14.
+### T15 — Build job search and detail pages
+- **Objective:** Help users find and understand individual job advertisements.
+- **Approach:** Build searchable results and filters based on verified dataset fields; show the available posting details and source; clearly label missing information.
+- **Deliverable and completion criteria:** Users can search, filter, open a posting, and follow its source link when available. Missing values are not invented.
+- **Dependencies:** T05 and T14.
 
-### T16 — لوحة السوق والمقارنة والاتجاهات وخريطة المهارات
-- **الهدف:** عرض نتائج التحليل بصريًا ومقارنة الدول والوظائف.
-- **الطريقة:** ربط الرسوم باستعلامات موثقة، وإظهار حجم العينة والفترة؛ تعطيل الرسوم التي لا تدعمها حقول الداتا.
-- **المخرج ومعيار الإنجاز:** لوحة مؤشرات ومقارنة أسواق واتجاهات زمنية وعرض لعلاقات المهارات بحسب توافر البيانات، دون تعميم خارج العينة.
-- **الاعتماد:** T08 وT14.
+### T16 — Build the market dashboard, comparisons, trends, and skill map
+- **Objective:** Present analytical findings visually and enable market comparison.
+- **Approach:** Connect charts to documented queries; show sample sizes and time periods; suppress or qualify visuals that are not supported by the dataset.
+- **Deliverable and completion criteria:** A market dashboard, market-comparison views, supported time trends, and a skill-relationship view where data coverage permits.
+- **Dependencies:** T08 and T14.
 
-### T17 — مطابقة المستخدم ومصادر التعلم والواجهة الثنائية
-- **الهدف:** تحويل المهارات إلى توصيات وفجوات وخطوات تعلم.
-- **الطريقة:** إدخال المهارات وتفضيلات السوق عند توفرها؛ عرض أفضل المطابقات مع تفسير؛ إظهار الفجوات وروابط التعلم؛ توفير العربية والإنجليزية والاتجاه الصحيح للعربية.
-- **المخرج ومعيار الإنجاز:** يستطيع المستخدم تجربة مهارات، فهم سبب التوصية، فتح وظيفة/مصدر تعلم، والتبديل بين اللغتين.
-- **الاعتماد:** T09 وT10 وT14.
+### T17 — Build skill matching, learning resources, and bilingual interface
+- **Objective:** Turn a user's skills into understandable recommendations and next steps.
+- **Approach:** Accept user-entered skills and optional market preferences; show ranked matches with explanations; display gaps and learning links; support English and Arabic, including correct RTL layout.
+- **Deliverable and completion criteria:** Users can enter skills, understand why results were recommended, open a relevant job or learning resource, and switch languages.
+- **Dependencies:** T09, T10, and T14.
 
-## المرحلة 5 — الجودة والتسليم
+## Phase 5 — Quality and Delivery
 
-### T18 — اختبار التكامل والجودة والأمان
-- **الهدف:** التأكد من صحة الأرقام وسلامة استخدام الموقع.
-- **الطريقة:** اختبار قواعد البيانات والاستعلامات والنماذج والواجهات؛ فحص المدخلات الفارغة والقيم غير المعروفة؛ التحقق من اتجاه RTL وإمكانية الاستخدام بلوحة المفاتيح؛ مراجعة الأسرار والروابط.
-- **المخرج ومعيار الإنجاز:** قائمة اختبارات ناجحة، وإصلاح العيوب الحرجة، وتطابق عينات الأرقام المعروضة مع الاستعلامات المصدرية.
-- **الاعتماد:** T14–T17.
+### T18 — Test integration, data quality, and security
+- **Objective:** Verify the accuracy of displayed results and the safety and usability of the application.
+- **Approach:** Test data rules, relationships, queries, models, and interfaces; check empty and unknown values; review RTL and keyboard accessibility; inspect credentials and links.
+- **Deliverable and completion criteria:** A test checklist with critical issues resolved and sampled UI figures reconciled against source queries.
+- **Dependencies:** T14–T17.
 
-### T19 — النشر والعرض النهائي
-- **الهدف:** تقديم نسخة قابلة للتجربة وشرح المنهجية والنتائج.
-- **الطريقة:** إعداد تعليمات تشغيل ونشر، تجهيز بيانات تجريبية آمنة عند الحاجة، توثيق التقنيات والقرارات ومقاييس النماذج والقيود، وتجهيز سيناريو عرض.
-- **المخرج ومعيار الإنجاز:** رابط/بيئة عرض تعمل، مستندات تشغيل، عرض يوضح السؤال والبيانات والتحليل والنماذج والمنتج والقيود.
-- **الاعتماد:** T18.
+### T19 — Deploy and prepare the final presentation
+- **Objective:** Deliver a usable demonstration and explain the methodology and findings.
+- **Approach:** Prepare operating and deployment instructions, use safe demonstration data if needed, document technology choices, model metrics, and limitations, and rehearse a user-focused walkthrough.
+- **Deliverable and completion criteria:** A working demonstration environment, operating documentation, and a presentation covering the problem, dataset, analysis, models, product, and limitations.
+- **Dependency:** T18.
 
-## الاعتمادات المختصرة
+## Dependency Summary
 
 - T01 → T02 → T03 → T04/T05 → T06/T07 → T08.
-- T03 وT09 → T10، ثم يمكن ربط T10 بواجهة T17.
-- T03 وT05 → T11/T12/T13، مع قرار جودة قبل عرض أي نموذج للمستخدم.
+- T03 and T09 → T10; T10 can then be integrated into T17.
+- T03 and T05 → T11/T12/T13, subject to data-quality gates.
 - T05 → T14 → T15/T16/T17 → T18 → T19.
 
-## بوابات قرار مهمة
+## Decision Gates
 
-1. لا تثبتوا مخطط الجداول النهائي قبل فحص الأعمدة والتكرارات.
-2. لا تعرضوا توقع راتب إن لم يوجد عدد كافٍ من الرواتب القابلة للتوحيد.
-3. لا تدّعوا جودة تصنيف من دون تسميات مراجعة وتقييم منفصل.
-4. إذا لم تتوفر تواريخ أو بلد أو نوع عمل، يعرض الموقع ما هو متاح فقط، وتوثق الفجوة بدل ملئها تخمينًا.
+1. Do not finalize the database schema before inspecting the actual columns and duplicates.
+2. Do not display salary estimates unless there are enough comparable disclosed salaries.
+3. Do not claim classification quality without reviewed labels and separate evaluation.
+4. If dates, country, or work-mode fields are unavailable or unreliable, show only supported results and document the gap instead of guessing.

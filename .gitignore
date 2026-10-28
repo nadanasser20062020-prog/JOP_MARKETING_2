@@ -1,20 +1,13 @@
-# أسرار وإعدادات محلية
 .env
 .env.*
 !.env.example
-
-# بيانات العمل الخام أو المعالجة الكبيرة (تبقى خارج Git)
 /data/raw/
 /data/interim/
 /data/processed/
-
-# Python وJupyter
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 .ipynb_checkpoints/
-
-# ملفات محلية
 .DS_Store
 Thumbs.db

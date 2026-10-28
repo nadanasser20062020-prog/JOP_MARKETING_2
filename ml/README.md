@@ -1,7 +1,7 @@
-# تعلم الآلة
+# Machine Learning
 
-هذا المجلد مخصص لتجارب المطابقة والتجميع والتصنيف والانحدار وتقييمها.
+This directory is for experiments in skill matching, clustering, classification, and regression, together with their evaluations.
 
-- راجعوا بوابات الجودة ومقاييس التقييم في `docs/ML_PLAN.md` قبل تدريب النماذج.
-- قارنوا كل نموذج بخط أساس بسيط، ووثقوا الأخطاء والقيود.
-- لا تعرضوا نتيجة نموذج للمستخدم إن لم تكن بياناته ومقاييسه كافية لدعمها.
+- Review the data-quality gates and evaluation guidance in `docs/ML_PLAN.md` before training models.
+- Compare every model with a simple baseline and document errors and limitations.
+- Do not expose model outputs to users unless the data and evaluation support them.

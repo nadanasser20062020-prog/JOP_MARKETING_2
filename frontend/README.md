@@ -1,5 +1,5 @@
-# الواجهة
+# Frontend
 
-هذا المجلد مخصص لصفحات الموقع وتجربة المستخدم بالعربية والإنجليزية.
+This directory is for website pages and the English/Arabic user experience.
 
-الصفحات المخططة: الصفحة الرئيسية، مستكشف الوظائف، تفاصيل الوظيفة، تحليل ومقارنة الأسواق، مستكشف المهارات، مطابقة المهارات ومصادر التعلم، والمنهجية. التفاصيل في `docs/FEATURE_SPEC.md` و`docs/WEB_APP_PLAN.md`.
+Planned pages include the home dashboard, job explorer, job details, market analysis and comparison, skill explorer, skill matching and learning resources, and methodology. See `docs/FEATURE_SPEC.md` and `docs/WEB_APP_PLAN.md` for details.

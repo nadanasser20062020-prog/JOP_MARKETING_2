@@ -1,67 +1,67 @@
-# خطة التحليل باستخدام SQL وPython
+# SQL and Python Analytics Plan
 
-هدف التحليل هو الإجابة عن أسئلة محددة عن **إعلانات الداتا المجمعة**، لا وصف كل سوق العمل. يبدأ التحليل بعد T01–T05: فحص الداتا وتنظيفها وتحميلها إلى قاعدة علائقية.
+The analysis should answer specific questions about the **collected job advertisements**, not make unsupported claims about entire labor markets. Begin after T01–T05: audit the dataset, clean it, design the relational model, and load it into the database.
 
-## أسئلة التحليل
+## Analysis Questions
 
-### تغطية البيانات وجودتها
+### Data Coverage and Quality
 
-- كم إعلانًا لدينا لكل مصدر ودولة وفترة؟
-- ما نسبة الحقول الناقصة في المسمى، الشركة، الموقع، التاريخ، المهارات، نمط العمل والراتب؟
-- كم إعلانًا مكررًا؟ وما قاعدة كشف التكرار التي استخدمت؟
-- ما اللغات والفترات التي تغطيها العينة، وما المناطق غير الممثلة؟
+- How many advertisements are available by source, country, and period?
+- What proportion of records is missing title, employer, location, date, skills, work arrangement, or salary?
+- How many duplicate records exist, and what rule was used to detect them?
+- Which languages and time periods are represented, and which markets are underrepresented?
 
-### سوق الوظائف والمهارات
+### Roles and Skills
 
-- ما أكثر المسميات/العائلات الوظيفية ظهورًا في العينة؟
-- ما المهارات الأكثر تكرارًا إجمالًا وبحسب الوظيفة أو الدولة؟
-- ما المهارات التي تظهر معًا كثيرًا؟
-- ما الشركات الأكثر ظهورًا، مع التمييز بين عدد الإعلانات وعدد الشركات الفريدة؟
-- ما توزيع الوظائف عن بُعد/هجين/حضوري، إذا أمكن توحيد هذا الحقل؟
+- Which roles or job families appear most frequently in the sample?
+- Which skills are most frequent overall and by role or country?
+- Which skills commonly appear together?
+- Which employers appear most often, distinguishing advertisement counts from unique employers?
+- What is the distribution of remote, hybrid, and onsite roles if the field can be normalized reliably?
 
-### الرواتب والوقت
+### Salaries and Time
 
-- ما توزيع الرواتب المعلنة حسب الوظيفة والدولة والخبرة؟
-- ما الوسيط والمدى وعدد الإعلانات التي بُني عليها كل رقم؟
-- كيف يتغير عدد الإعلانات أو الطلب على المهارات مع الوقت، إذا كان تاريخ الإعلان موثوقًا؟
-- هل توجد اختلافات بسبب العملات أو الرواتب الشهرية مقابل السنوية؟
+- How are disclosed salaries distributed by role, country, and experience level?
+- What are the median and range, and how many advertisements support each figure?
+- How do advertisement counts or skill demand change over time if posting dates are reliable?
+- Are there differences in currency or monthly, annual, and hourly pay periods?
 
-## طريقة العمل بـSQL
+## SQL Approach
 
-- تنفيذ التحليلات التجميعية على قاعدة البيانات: العدّ، التجميع حسب الدولة/المسمى/المهارة، حساب الإحصاءات، وفلترة الفترات.
-- حفظ الاستعلامات التحليلية بشكل منفصل عن تعريف الجداول، مع تعليق يشرح السؤال وتعريف المقياس.
-- اختبار كل استعلام على عينات يدوية ومقارنة أعداد النتائج مع قاعدة البيانات.
-- عند استخدام SQL داخل Python، يبقى الاستعلام واضحًا وقابلًا للمراجعة، ولا توضع بيانات الاتصال السرية داخل Notebook.
+- Perform database aggregations for counts, groupings by country/role/skill, summary statistics, and date filters.
+- Keep analytical queries separate from schema definitions. Document the question and metric definition for each query.
+- Validate queries against manually checked samples and compare totals with the database.
+- When SQL is executed from Python, keep each query readable and reviewable; never put database credentials in a notebook.
 
-## طريقة العمل بـPython
+## Python Approach
 
-- **Pandas:** قراءة النتائج أو العينات، الفحص، التنظيف التحليلي، والدمج عند الحاجة.
-- **NumPy:** الحسابات العددية والتحويلات المناسبة.
-- **Matplotlib وSeaborn:** الرسوم الوصفية والمقارنات والتوزيعات.
-- الاتصال بـNeon من بيئة آمنة. يفضّل جلب النتائج المجمعة أو استخدام دفعات مناسبة بدل سحب ملف ضخم كاملًا إلى الذاكرة دون داعٍ.
-- لكل Notebook سؤال واضح، وخطوات مرتبة، ونتيجة قابلة لإعادة التشغيل؛ لا تستخدموا Notebook كمكان وحيد لتخزين قواعد التنظيف.
+- **Pandas:** Inspect and transform query results or samples; clean and combine analysis-ready data when needed.
+- **NumPy:** Perform numerical calculations and suitable transformations.
+- **Matplotlib and Seaborn:** Create descriptive, comparative, and distribution charts.
+- Connect to Neon securely. Prefer aggregated results or suitable batches over loading a large raw file into memory without need.
+- Give each notebook a clear question, ordered steps, reproducible results, and stated limitations. Do not use notebooks as the only record of data-cleaning rules.
 
-## الرسوم المقترحة
+## Suggested Visualizations
 
-- أعمدة لأكثر المهارات والوظائف ظهورًا، إجمالًا أو حسب سوق مختار.
-- رسوم مقارنة للوظائف/المهارات بين الدول مع إظهار حجم كل عينة.
-- Box plot أو توزيع للرواتب بعد توحيد العملة والفترة فقط، مع عدد الإعلانات ذات الرواتب المعلنة.
-- أعمدة أو نسب لنمط العمل حسب الدولة أو الوظيفة إذا كانت البيانات مكتملة بما يكفي.
-- خط زمني لعدد الإعلانات والمهارات المطلوبة إذا كانت التواريخ موثوقة وتغطي فترة كافية.
-- Heatmap أو شبكة لاقتران المهارات عندما لا يؤدي تكرار الإعلانات إلى تضخيم النتيجة.
+- Bar charts for the most frequent skills and roles, overall or by selected market.
+- Comparative charts for roles and skills across countries, with sample sizes.
+- Box plots or salary distributions only after standardizing currency and pay period; show the number of salary-bearing advertisements.
+- Work-arrangement comparisons by country or role when coverage is sufficient.
+- Time-series charts for advertisement counts and skill demand only when dates are reliable and cover a meaningful period.
+- Heatmaps or networks for skill co-occurrence when repeated advertisements do not distort the result.
 
-## ضوابط تفسير النتائج
+## Interpretation Rules
 
-- استخدام الوسيط غالبًا للرواتب لأنها قد تكون منحرفة وبها قيم متطرفة؛ لا تعرضوا متوسطًا بلا توزيع وعدد عينة.
-- عدم مقارنة عملات أو فترات راتب مختلفة مباشرة. توثيق سياسة التحويل إن استُخدم سعر صرف.
-- التمييز بين الراتب المعلن والراتب المتوقع من نموذج.
-- عرض القيم المفقودة كتغطية ناقصة لا كقيمة صفرية.
-- مراجعة الإعلانات المتكررة أو المنتهية؛ ولا تُفسر كثرة إعلانات شركة بأنها بالضرورة فرص أكثر للمستخدم.
-- كل رسم يذكر مصدره، وحدود العينة، والمرشحات، ووحدة القياس والفترة عند انطباقها.
+- Prefer the median for salaries, which may be skewed and contain outliers. Do not present an average without context, distribution, and sample count.
+- Do not directly compare different currencies or pay periods. Document any exchange-rate policy used.
+- Distinguish advertised salaries from model estimates.
+- Treat missing values as missing coverage, not zero.
+- Review repeated or expired postings; a high number of advertisements from an employer does not necessarily mean more accessible opportunities.
+- Every chart should identify its source, sample limitations, filters, units, and time period where relevant.
 
-## المخرجات المطلوبة
+## Required Deliverables
 
-- استعلامات SQL موثقة.
-- دفاتر Python للتحليل الاستكشافي والتحقق.
-- رسوم مناسبة لصفحات الموقع والعرض النهائي.
-- تقرير نتائج يذكر السؤال، والطريقة، والحجم، والنتيجة، والقيود، وأي قرار اتخذ بناءً عليها.
+- Documented analytical SQL queries.
+- Reproducible Python notebooks for exploratory analysis and validation.
+- Charts suitable for the website and final presentation.
+- A findings report covering the question, method, sample size, result, limitations, and decisions informed by the result.

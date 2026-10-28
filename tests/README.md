@@ -1,8 +1,8 @@
-# الاختبارات
+# Tests
 
-هذا المجلد مخصص لاختبارات جودة البيانات والعلاقات والاستعلامات والنماذج وتكامل الموقع.
+This directory is for tests covering data quality, relationships, queries, models, and website integration.
 
-- اختبروا القيم المفقودة والتكرار والعلاقات بين الجداول.
-- قارنوا أرقام الواجهة بنتائج SQL الموثقة.
-- اختبروا العربية وRTL والمرشحات وحالات عدم وجود النتائج.
-- لا تعتبروا نموذج ML منجزًا دون تقييم على بيانات منفصلة ومراجعة أمثلته.
+- Test missing values, duplicate records, and relationships between tables.
+- Reconcile interface metrics against documented SQL results.
+- Test Arabic and RTL behavior, filters, and empty-result states.
+- Do not consider an ML model complete without evaluation on separate data and review of representative errors.

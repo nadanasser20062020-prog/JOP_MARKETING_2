@@ -1,75 +1,75 @@
-# مواصفات الميزات
+# Feature Specification
 
-تحدد هذه الوثيقة ما يراه المستخدم في المنتج. أي ميزة تعتمد على حقل غير موجود أو غير موثوق تُعرض فقط بعد تأكيدها من تدقيق البيانات.
+This document defines the user-facing product scope. A feature that depends on a missing or unreliable field must be implemented only after the data audit confirms that the requirement is supported.
 
-## المستخدمون المستهدفون
+## Target Users
 
-- مهندس/ة يبحث عن فهم فرص العمل في سوق معين.
-- شخص يعرف بعض مهاراته ويريد استكشاف الوظائف والمسارات الأقرب لها.
-- فريق المشروع الذي يحتاج إلى عرض تحليلات موثقة للجنة التخرج.
+- Engineers exploring opportunities in a specific job market.
+- People who know some of their skills and want to discover relevant roles and development areas.
+- The project team presenting documented analysis to reviewers.
 
-## 1. الصفحة الرئيسية ولوحة السوق
+## 1. Home Page and Market Dashboard
 
-- تعرض ملخصًا للإعلانات الموجودة في العينة: عددها، الأسواق التي تغطيها، أكثر المسميات والمهارات ظهورًا، وتوزيع أنماط العمل عندما تتوفر الحقول.
-- تعرض وقت آخر تحديث أو جمع للبيانات إذا كان موثقًا.
-- تعرض عدد السجلات المستخدمة مع كل مقياس، ولا تخلط بين عدد الإعلانات وعدد الشركات أو الوظائف الفريدة.
-- كل رسم يوضح الوحدة والفترة ومصدر الحساب. لا تعرض الدولة أو المهارة أو الراتب كحقيقة عن سوق كامل خارج العينة.
+- Summarize the available advertisement sample: record count, covered markets, most common roles and skills, and work-arrangement distribution where available.
+- Show the latest collection or update date when documented.
+- Display the number of records behind each metric; distinguish advertisement counts from unique employers or roles.
+- Every chart must state its unit, time period, and source of calculation. Results must not be presented as complete facts about a market beyond the collected sample.
 
-## 2. مستكشف الوظائف
+## 2. Job Explorer
 
-- قائمة إعلانات قابلة للبحث والتصفية حسب الحقول المتوفرة، مثل المسمى، المهارات، الدولة/المدينة، الشركة، نمط العمل، الخبرة والراتب.
-- ترتيب النتائج بمعايير مفهومة مثل الأحدث أو الأقرب لمهارات المستخدم.
-- توضيح عدم توفر قيمة بدل إظهار صفر أو قيمة مفترضة.
-- عدم تضمين حفظ الوظائف أو حفظ عمليات البحث أو التنبيهات عن وظائف جديدة في النطاق الحالي.
+- Search and filter advertisements using verified fields, such as title, skills, country/city, company, work arrangement, experience, and salary.
+- Sort results using understandable criteria such as recency or skill relevance.
+- Show unavailable values as unavailable; do not display zero or an invented value.
+- Saving jobs, saving searches, and alerts for new jobs are excluded from the current scope.
 
-## 3. صفحة تفاصيل الإعلان
+## 3. Job Detail Page
 
-- عرض المعلومات التي يحتويها الإعلان فقط: المسمى والوصف والشركة والموقع ونمط العمل والمهارات والمؤهلات والراتب والتاريخ إن توفرت.
-- رابط إلى المصدر الأصلي وتاريخ جمع البيانات عند توفرهما.
-- تمييز الراتب المعلن عن أي تقدير نموذجي. لا يُعرض تقدير نموذج Regression إلا بعد اجتياز بوابة الجودة في خطة ML، ويُشار بوضوح إلى أنه تقدير لا وعد.
+- Show only information available in the advertisement: title, description, employer, location, work arrangement, skills, qualifications, salary, and dates where present.
+- Provide the original source link and collection date where available.
+- Distinguish an advertised salary from a model estimate. A regression estimate may appear only after passing the ML quality gate and must be clearly identified as an estimate, not a guarantee.
 
-## 4. تحليل المهارات والوظائف
+## 4. Job and Skill Insights
 
-- استكشاف أكثر المهارات ظهورًا إجمالًا وبحسب الوظيفة أو الدولة.
-- عرض المهارات التي تظهر معًا أو ترتبط بأنماط وظيفية متقاربة، بعد توحيد المرادفات وتقليل أثر التكرارات.
-- عرض توزيع الرواتب ونمط العمل حسب الوظيفة/السوق إذا كانت العينة كافية.
-- عند مقارنة الدول، استخدام تعريفات ووحدات وفترات قابلة للمقارنة، وإظهار عدد الإعلانات لكل طرف.
+- Explore frequently occurring skills overall and by role or country.
+- Show skills that commonly appear together or are associated with similar role profiles after normalizing aliases and controlling for duplicate advertisements.
+- Show salary distributions and work arrangements by role or market only when sample coverage is adequate.
+- Use comparable definitions, units, and periods for market comparisons, and show the number of advertisements for each comparison.
 
-## 5. مقارنة الأسواق والاتجاهات الزمنية
+## 5. Market Comparison and Time Trends
 
-- مقارنة دولتين أو أكثر في الوظائف والمهارات والرواتب وأنماط العمل المتاحة.
-- عرض تغير الطلب عبر الزمن فقط إذا كان حقل التاريخ موثوقًا ويغطي فترة مناسبة.
-- عرض حدود التغطية: غياب البلد أو التاريخ من الإعلان يظل غيابًا، ولا يُملأ بتخمين.
+- Compare two or more countries across available roles, skills, salaries, and work arrangements.
+- Show changes over time only when advertisement dates are reliable and cover a meaningful period.
+- Treat missing country or date values as missing; do not infer them.
 
-## 6. مطابقة المهارات ومسارات الوظائف
+## 6. Skill Matching and Career Exploration
 
-- يكتب المستخدم مهاراته أو يختارها من قائمة معيارية؛ ويمكنه اختيار دولة أو نمط عمل مفضل عند توفر البيانات.
-- يحصل على ترتيب لأقرب الوظائف/الإعلانات مع شرح المهارات المتطابقة والناقصة.
-- يوضح النظام كيف حُسبت المطابقة؛ درجة التغطية ليست احتمالًا لقبول المستخدم في الوظيفة.
-- تُرتب المهارات الناقصة بحسب أهميتها في الوظائف المطابقة، ولا يُقال إن مهارة "مطلوبة" إلا إذا دعم ذلك عدد الإعلانات المستخدم.
-- يستطيع المستخدم الانتقال من التوصية إلى صفحة الوظيفة ورابط الإعلان الأصلي.
+- Let users enter skills or select them from a normalized list. Allow optional country or work-arrangement preferences when the data supports them.
+- Rank relevant jobs or role profiles and explain matched and missing skills.
+- Explain how the match score is calculated; it represents skill coverage, not the probability of being hired.
+- Rank missing skills using evidence from the relevant advertisements. Do not call a skill required unless the sample supports that claim.
+- Allow users to open the recommended job detail page and original advertisement.
 
-## 7. مصادر التعلم المجانية
+## 7. Free Learning Resources
 
-- كل مورد مرتبط بمهارة محددة، ويعرض العنوان والجهة واللغة والمستوى والرابط.
-- يسجل الفريق تاريخ التحقق من مجانية المورد؛ إذا كان جزء من المحتوى فقط مجانيًا، يُوضح ذلك.
-- يفضل البدء بالتوثيق الرسمي والمصادر التعليمية التي يمكن التحقق من محتواها، مع مراجعة الروابط دوريًا.
+- Link each resource to a specific skill and display its title, provider, language, level, and URL.
+- Record when the free-access status was last checked. If only part of a resource is free, state that clearly.
+- Prefer official documentation and verifiable learning resources, and review links periodically.
 
-## 8. اللغة وإمكانية الاستخدام
+## 8. Language and Usability
 
-- دعم واجهة عربية وإنجليزية، مع RTL صحيح للعربية وعدم قلب الأرقام أو الروابط.
-- توحيد مسميات المهارات والوظائف والمرادفات داخليًا، مع إمكانية إظهار المسمى الأصلي للإعلان.
-- تصميم مناسب للموبايل والحاسوب، وعناصر واضحة للبحث والمرشحات والرسوم.
+- Support English and Arabic, including correct right-to-left layout for Arabic and correct handling of numbers and links.
+- Normalize role and skill names internally while retaining the original wording from advertisements where useful.
+- Support mobile and desktop layouts with clear search, filters, and charts.
 
-## 9. الشفافية وجودة الداتا
+## 9. Transparency and Data Quality
 
-- صفحة منهجية تشرح مصادر البيانات وطريقة التنظيف والتعريفات والتحليلات والنماذج.
-- توضيح العدد والتاريخ والتغطية لكل نتيجة مهمة.
-- بيان أن البيانات مأخوذة من إعلانات مجمعة، وقد تتكرر أو تنتهي أو لا تحتوي على راتب؛ لذلك النتائج تمثل العينة التي جُمعت فقط.
+- Provide a methodology page describing data sources, cleaning, metric definitions, analyses, models, and limitations.
+- Show sample size, date coverage, and data coverage for important results.
+- Explain that the dataset consists of collected job advertisements that may be duplicated, expired, or missing salary information; results therefore describe the collected sample only.
 
-## خارج النطاق الحالي
+## Explicitly Out of Scope
 
-- حفظ الوظائف.
-- حفظ عمليات البحث.
-- تنبيهات/إشعارات عند ظهور وظائف جديدة.
-- أي ادعاء بأن مطابقة المهارات تضمن التوظيف.
+- Saving jobs.
+- Saving searches.
+- Notifications or alerts for newly available jobs.
+- Any claim that a skill match guarantees employment.

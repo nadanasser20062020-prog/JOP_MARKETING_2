@@ -1,67 +1,67 @@
-# خطة البيانات وقاعدة البيانات
+# Data and Database Plan
 
-## الوضع الحالي والقاعدة العامة
+## Current Status and Guiding Principle
 
-حسب الفريق، مرحلة المشروع الحالية هي جمع الداتا فقط. ملفات Drive كبيرة، ولم يتم توثيق محتواها أو أعمدتها داخل المستودع؛ لذلك كل تصميم هنا **مبدئي** حتى تنتهي مهمة T01. لا نغيّر المصدر الأصلي في Drive، ولا نرفع ملفات CSV/ZIP الخام الكبيرة أو بيانات الاتصال إلى GitHub.
+The team reports that data collection is the only completed project activity. The contents and fields of the large files in Drive have not yet been documented in this repository. All database designs below are provisional until T01 is complete. Do not modify the original Drive files, and do not commit large raw CSV/ZIP files or database credentials to GitHub.
 
-## T01 — قائمة تدقيق البيانات
+## T01 — Dataset Audit Checklist
 
-قبل بناء الجداول أو النماذج، سجّلوا:
+Record the following before building the schema or models:
 
-- أسماء الملفات وصيغها وأحجامها وترميز النصوص واللغة.
-- عدد الصفوف والأعمدة، مع تعريف كل عمود وعينة صغيرة من القيم.
-- نسبة القيم المفقودة والتكرارات، وهل التكرار للوظيفة نفسها أم لإعلان أعيد نشره.
-- تغطية الدول والشركات والمسمّيات والفترة الزمنية ومصادر الإعلانات.
-- وجود وصف الوظيفة والمهارات ونمط العمل والخبرة والمؤهل.
-- وجود راتب: عدد الإعلانات التي تذكره، العملات، هل هو شهري/سنوي، وهل هو قيمة أو نطاق.
-- صلاحية الروابط، وتاريخ الإعلان مقابل تاريخ جمعه، والقيود التي يجب مراعاتها عند عرض البيانات.
+- File names, formats, sizes, text encodings, and languages.
+- Record and column counts, field definitions, and representative values.
+- Missing-value rates and duplicates; determine whether repeated records are duplicate postings or reposted advertisements.
+- Coverage by country, employer, role, date range, and advertisement source.
+- Availability of job descriptions, skills, work arrangement, experience, and education.
+- Salary coverage, currencies, pay periods, and whether values are single amounts or ranges.
+- Source-link validity, the distinction between posting date and collection date, and any restrictions on data use or redistribution.
 
-**الناتج:** تقرير Data Audit وData Dictionary. لا تُنشر عينة تكشف معلومات شخصية أو بيانات لا يحق للفريق إعادة توزيعها.
+**Deliverable:** A Data Audit and Data Dictionary. Do not publish samples that expose personal information or data that the team is not permitted to redistribute.
 
-## مراحل البيانات
+## Data Stages
 
-1. **المصدر الخام:** يبقى كما هو في مكانه الأصلي، ولا تُجرى عليه تعديلات مباشرة.
-2. **الفحص/المنطقة الوسيطة:** تسجيل شكل الملف والأخطاء وقرارات التنظيف. يمكن الاحتفاظ بنسخة عمل محلية آمنة خارج Git عند الحاجة.
-3. **التوحيد:** تنظيف المسميات والقيم والمرادفات والتكرارات مع الحفاظ على القيمة الأصلية حيث يلزم.
-4. **قاعدة التحليل:** تحميل البيانات المنظمة إلى PostgreSQL/Neon للتحليل والاستعلام.
-5. **المخرجات:** استعلامات ورسوم ونماذج وتقارير قابلة للتكرار، مع توثيق كل تحويل.
+1. **Raw source:** Preserve the original files in their current location; do not edit them directly.
+2. **Inspection and staging:** Record file structure, data-quality issues, and cleaning decisions. If a working copy is required, store it securely outside Git.
+3. **Standardization:** Normalize titles, values, aliases, and duplicates while retaining original values where useful.
+4. **Analytical database:** Load structured data into PostgreSQL/Neon for analysis and application access.
+5. **Outputs:** Produce reproducible queries, charts, models, and reports with documented transformations.
 
-## نموذج علائقي مبدئي
+## Provisional Relational Model
 
-يُعتمد بعد تدقيق الأعمدة، وقد تُحذف كيانات أو تُضاف حقول حسب ما يوجد فعلًا:
+Confirm or revise this model after auditing the actual fields:
 
-- **الإعلانات/الوظائف (Job Posts):** المسمى الأصلي والموحد، الوصف، تاريخ الإعلان/الجمع، نمط العمل، الخبرة، الراتب الأصلي ومكوناته المعيارية عند توفرها، ورابط المصدر.
-- **الشركات (Companies):** اسم موحد واسم أصلي؛ يمكن ترك الشركة غير معروفة عند غيابها.
-- **المواقع (Locations):** الدولة والمدينة/المنطقة بالقدر المتوفر، مع قيمة غير معروفة بدل اختلاق موقع.
-- **المهارات (Skills):** اسم معياري، فئة إن أمكن، ومرادفات معروفة.
-- **ربط الوظائف بالمهارات (Job Skills):** يربط كل إعلان بمهاراته، لأن الوظيفة لها مهارات متعددة والمهارة تظهر في إعلانات متعددة. يضاف تمييز مطلوب/مفضل فقط إذا أمكن استنتاجه بثقة من المصدر.
-- **مصادر الإعلانات (Sources):** المنصة أو الموقع ورابط الإعلان/المصدر وتاريخ الجمع.
-- **مصادر التعلم (Learning Resources):** مهارة، عنوان المورد، الجهة، اللغة، المستوى، الرابط، وحالة التحقق من مجانية المورد وتاريخه.
+- **Job Posts:** Original and normalized title, description, posting and collection dates, work arrangement, experience, original salary text and normalized salary fields where available, and source URL.
+- **Companies:** Normalized and original employer names; employer may be unknown.
+- **Locations:** Country and city/region where available; unknown locations remain unknown.
+- **Skills:** Canonical skill name, optional category, and known aliases.
+- **Job Skills:** Junction table linking job posts to skills. Add required/preferred status only when it can be inferred reliably from the source.
+- **Sources:** Source platform or site, advertisement/source URL, and collection date.
+- **Learning Resources:** Skill, resource title, provider, language, level, URL, free-access status, and verification date.
 
-## العلاقات المقترحة
+## Proposed Relationships
 
-- الشركة الواحدة قد ترتبط بعدة إعلانات؛ الإعلان يرتبط بشركة واحدة أو لا تكون الشركة معروفة.
-- الموقع الواحد قد يرتبط بعدة إعلانات؛ موقع الإعلان قد يكون غير محدد.
-- الإعلان والمهارة بينهما علاقة متعدد إلى متعدد عبر جدول ربط Job Skills.
-- المصدر قد يوفر عدة إعلانات.
-- المهارة قد ترتبط بعدة مصادر تعلم.
+- One company may be associated with many job posts; an advertisement may have no known company.
+- One location may be associated with many job posts; a post may have no known location.
+- Job posts and skills form a many-to-many relationship through Job Skills.
+- One source may provide many job posts.
+- One skill may be linked to multiple learning resources.
 
-## قواعد مهمة لتصميم الحقول
+## Field Design Rules
 
-- الاحتفاظ بالنص الأصلي للمسمى والراتب والوصف؛ لا تستبدلوه بصيغة منظفة فقط.
-- الراتب يحتاج قيمة دنيا/عليا إن وجدت، العملة، الفترة (شهري/سنوي/ساعة) والنص الأصلي. لا تُجمع عملات أو فترات مختلفة مباشرة.
-- قيم نمط العمل المعيارية تكون مثل remote / hybrid / onsite / unknown، بعد مراجعة النص الأصلي.
-- لا تُحوّل القيمة المفقودة إلى صفر، ولا تُنشئ شركة أو بلدًا أو راتبًا غير مذكور.
-- فصل تاريخ الإعلان عن تاريخ جمعه، وعدم استخدامهما بالتبادل.
-- منع تكرار المهارة في الإعلان نفسه بعد توحيد المرادفات، مع حفظ معلومات المصدر/الثقة إن أمكن.
+- Preserve original title, salary, and description text; do not replace originals with normalized values only.
+- Salary fields require amount or range, currency, pay period (monthly, yearly, hourly, etc.), and original text. Do not aggregate incomparable currencies or pay periods.
+- Normalize work arrangements to values such as remote, hybrid, onsite, or unknown only after reviewing the source text.
+- Never convert missing values to zero or create an unreported salary, employer, or location.
+- Keep posting date separate from collection date.
+- Avoid duplicate skill assignments within the same advertisement after alias normalization; retain source or confidence information where feasible.
 
-## ERD والمفاتيح
+## ERD and Keys
 
-بعد T01 وT02، يرسم الفريق ERD يوضح الجداول والمفاتيح الأساسية والخارجية والعلاقات الاختيارية، ثم يراجعه شخص آخر من الفريق. يجب أن يشرح الرسم بوضوح علاقة Job Posts بـSkills عبر Job Skills، ومصدر الإعلان، ومعلومات الموقع والشركة.
+After T01 and T02, create an ERD showing tables, primary and foreign keys, optional relationships, and nullable fields. Review it with another team member. Clearly represent the Job Posts-to-Skills relationship through Job Skills, as well as source, company, and location relationships.
 
-## Neon والاتصال الآمن
+## Neon and Secure Connections
 
-- بيانات الاتصال توضع في متغيرات بيئة محلية أو إعدادات الاستضافة؛ لا تُكتب في Notebook أو مستودع Git.
-- يحتفظ الفريق بملف إعدادات نموذجي بلا أسرار إذا احتاج توثيق أسماء المتغيرات.
-- تحليلات Python تتصل بقاعدة البيانات وتقرأ نتائج محددة؛ لا يُحمّل التطبيق كامل ملف خام كبيرًا عند كل طلب.
-- تُختبر أعداد الصفوف والعلاقات وقيود القيم بعد التحميل، ويُحفظ سجل التحويلات كي يمكن إعادة العملية.
+- Store connection details in local environment variables or hosting configuration; never commit them or embed them in notebooks.
+- If environment-variable names need to be documented, use an example configuration with no real credentials.
+- Python analysis should query selected results from the database rather than repeatedly loading a large raw file.
+- Validate record counts, relationships, and constraints after each load. Keep transformation steps reproducible.

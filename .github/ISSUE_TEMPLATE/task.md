@@ -5,29 +5,29 @@ labels: ''
 assignees: ''
 ---
 
-## معرّف المهمة
-مثال: T01 — يطابق المهمة في `docs/PROJECT_PLAN.md`.
+## Task ID
+Example: T01 — use the identifier from `docs/PROJECT_PLAN.md`.
 
-## الهدف
-لماذا نحتاج هذه المهمة؟ وما المشكلة التي تحلها؟
+## Objective
+Why is this task needed, and what problem does it address?
 
-## ما الذي سنفعله؟
-اكتبوا النطاق بوضوح، وما هو خارج النطاق.
+## Scope
+Describe what is included and what is excluded.
 
-## طريقة التنفيذ
-خطوات عامة قابلة للمراجعة، من غير افتراض حقول أو تقنيات لم تُحسم بعد.
+## Approach
+List reviewable steps without assuming unverified data fields or undecided technologies.
 
-## المدخلات والاعتماديات
-ما البيانات أو القرارات أو المهام السابقة المطلوبة؟
+## Inputs and Dependencies
+What data, decisions, or earlier tasks are required?
 
-## المخرجات المتوقعة
-ما الوثيقة أو التحليل أو المكوّن الذي سيكون جاهزًا؟
+## Expected Deliverables
+What document, analysis, or component will be ready?
 
-## معايير القبول
-- [ ] يمكن التحقق من النتيجة بوضوح.
-- [ ] النتائج/الأرقام موثقة ومصدرها معروف.
-- [ ] تم تحديث الوثائق المتأثرة.
-- [ ] لا توجد أسرار أو ملفات بيانات خام كبيرة في التغيير.
+## Acceptance Criteria
+- [ ] The result can be verified clearly.
+- [ ] Results and figures are documented and traceable to their source.
+- [ ] Related documentation has been updated.
+- [ ] No credentials or large raw data files are included in the change.
 
-## المخاطر أو الأسئلة المفتوحة
-اذكروا ما يحتاج قرارًا أو ما قد يمنع إكمال المهمة.
+## Risks and Open Questions
+Document any decision or dependency that could block completion.

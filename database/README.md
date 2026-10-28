@@ -1,7 +1,7 @@
-# قاعدة البيانات
+# Database
 
-هذا المجلد مخصص لمخطط ERD، وتعريف الجداول، وخطوات تحميل البيانات إلى PostgreSQL/Neon.
+This directory is for the ERD, table definitions, Neon setup instructions, and data-loading decisions.
 
-- مخطط الجداول هنا مبدئي إلى أن تكتمل مراجعة أعمدة الداتا.
-- راجعوا `docs/DATA_AND_DATABASE.md` قبل اعتماد العلاقات.
-- لا تضعوا رابط اتصال Neon أو كلمات مرور أو مفاتيح في ملفات Git.
+- Treat the proposed schema as provisional until the dataset columns have been reviewed.
+- Review `docs/DATA_AND_DATABASE.md` before approving relationships.
+- Do not store Neon connection strings, passwords, or keys in Git.

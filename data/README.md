@@ -1,8 +1,8 @@
-# البيانات
+# Data
 
-مكان توثيق مصادر الداتا وقاموسها وعينات صغيرة مسموح بمشاركتها فقط.
+This directory is for documenting data sources, data dictionaries, and only small samples approved for sharing.
 
-- ملفات CSV وZIP الخام الكبيرة تبقى في Google Drive/المكان المتفق عليه، ولا تُرفع إلى GitHub.
-- لا ترفعوا بيانات شخصية أو ملفات لا يسمح مصدرها بإعادة توزيعها.
-- قبل استخدام البيانات، أنجزوا Data Audit وقاموس البيانات كما هو موضح في `docs/DATA_AND_DATABASE.md`.
-- عند إضافة عينة توضيحية، تأكدوا أنها صغيرة ومجهولة الهوية ولا تحتوي بيانات اعتماد أو معلومات حساسة.
+- Keep large raw CSV and ZIP files in Google Drive or another agreed storage location; do not commit them to GitHub.
+- Do not upload personal data or files that the team is not permitted to redistribute.
+- Complete the Data Audit and Data Dictionary described in `docs/DATA_AND_DATABASE.md` before using the dataset.
+- Any illustrative sample must be small, anonymized, and free of credentials or sensitive information.

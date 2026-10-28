@@ -1,24 +1,24 @@
-## ملخص التغيير
-ما الذي تغيّر؟ وما الهدف منه؟
+## Change Summary
+What changed, and why?
 
-## المهام المرتبطة
-اذكروا معرّف المهمة مثل T03 أو رابط GitHub Issue.
+## Related Tasks
+List the task identifier, such as T03, or link the GitHub Issue.
 
-## نوع التغيير
-- [ ] توثيق/خطة
-- [ ] بيانات/قاعدة بيانات
-- [ ] تحليل
-- [ ] تعلم آلة
-- [ ] خلفية/API
-- [ ] واجهة
-- [ ] اختبارات
+## Change Type
+- [ ] Documentation or planning
+- [ ] Data or database
+- [ ] Analytics
+- [ ] Machine learning
+- [ ] Backend or API
+- [ ] Frontend
+- [ ] Tests
 
-## التحقق
-- [ ] راجعت معايير القبول للمهمة.
-- [ ] تحققت من الأرقام أو النتائج على عينة/مرجع مناسب.
-- [ ] حدّثت التوثيق ذي الصلة.
-- [ ] لم أضف أسرار اتصال أو بيانات خام كبيرة.
-- [ ] راجعت حدود الداتا وأوضحت أي افتراضات.
+## Verification
+- [ ] I checked the task acceptance criteria.
+- [ ] I verified figures or results against an appropriate sample or reference.
+- [ ] I updated relevant documentation.
+- [ ] I did not include credentials or large raw data files.
+- [ ] I documented relevant data limitations and assumptions.
 
-## ملاحظات للمراجعين
-ما الذي يجب أن يركز عليه المراجع؟
+## Reviewer Notes
+What should reviewers focus on?
