@@ -1,0 +1,174 @@
+{
+  "reporting_currency": "USD",
+  "fx_rate_date": "2026-10-28",
+  "fx_rate_source": "Frozen 2026-10-28 audit-date reference rates: ECB daily reference rates and same-day EUR cross-rates; official central-bank market/reference rates; and documented fixed pegs. See the per-currency provenance entries.",
+  "target_currency_rates_from_usd": {
+    "EGP": 56.129,
+    "SAR": 3.75
+  },
+  "annualization_factors": {
+    "MONTH": 12,
+    "WEEK": 52,
+    "DAY": 260,
+    "HOUR": 2080
+  },
+  "hourly_work_year_assumption": "40 hours per week × 52 weeks = 2,080 hours; daily uses five 8-hour workdays per week × 52 weeks = 260 workdays.",
+  "currency_rate_details": {
+    "USD": {
+      "usd_per_unit": 1.0,
+      "reference": "Identity rate: 1 USD = 1 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html?date=2026-10-28&rate=1.1133",
+      "source_note": "USD is the reporting base currency; no market conversion is applied to USD."
+    },
+    "EUR": {
+      "usd_per_unit": 1.1133,
+      "reference": "ECB daily reference rate on 2026-10-28: 1 EUR = 1.1133 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html?date=2026-10-28&rate=1.1133",
+      "source_note": "ECB euro foreign-exchange reference rate for USD, 2026-10-28."
+    },
+    "GBP": {
+      "usd_per_unit": 1.3287581309303573,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 0.83785 GBP; 1 GBP = 1.1133/0.83785 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-gbp.en.html?date=2026-10-28&rate=0.83785",
+      "source_note": "ECB daily EUR/GBP reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "PLN": {
+      "usd_per_unit": 0.25276421841298674,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 4.4045 PLN; 1 PLN = 1.1133/4.4045 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-pln.en.html?date=2026-10-28&rate=4.4045",
+      "source_note": "ECB daily EUR/PLN reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "AUD": {
+      "usd_per_unit": 0.7032849020846494,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 1.583 AUD; 1 AUD = 1.1133/1.583 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-aud.en.html?date=2026-10-28&rate=1.5830",
+      "source_note": "ECB daily EUR/AUD reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "BRL": {
+      "usd_per_unit": 0.18771814456978098,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 5.9307 BRL; 1 BRL = 1.1133/5.9307 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-brl.en.html?date=2026-10-28&rate=5.9307",
+      "source_note": "ECB daily EUR/BRL reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "CAD": {
+      "usd_per_unit": 0.7119196828238905,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 1.5638 CAD; 1 CAD = 1.1133/1.5638 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-cad.en.html?date=2026-10-28&rate=1.5638",
+      "source_note": "ECB daily EUR/CAD reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "INR": {
+      "usd_per_unit": 0.01050188898164787,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 106.01 INR; 1 INR = 1.1133/106.01 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-inr.en.html?date=2026-10-28&rate=106.0095",
+      "source_note": "ECB daily EUR/INR reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "MXN": {
+      "usd_per_unit": 0.05367474061788869,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 20.7416 MXN; 1 MXN = 1.1133/20.7416 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-mxn.en.html?date=2026-10-28&rate=20.7416",
+      "source_note": "ECB daily EUR/MXN reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "NZD": {
+      "usd_per_unit": 0.5613371653305097,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 1.9833 NZD; 1 NZD = 1.1133/1.9833 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-nzd.en.html?date=2026-10-28&rate=1.9833",
+      "source_note": "ECB daily EUR/NZD reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "PHP": {
+      "usd_per_unit": 0.01562745648512072,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 71.24 PHP; 1 PHP = 1.1133/71.24 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-php.en.html?date=2026-10-28&rate=71.240",
+      "source_note": "ECB daily EUR/PHP reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "CHF": {
+      "usd_per_unit": 1.2039580404455499,
+      "reference": "ECB cross-rate on 2026-10-28: 1 EUR = 1.1133 USD; 1 EUR = 0.9247 CHF; 1 CHF = 1.1133/0.9247 USD.",
+      "source_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-chf.en.html?date=2026-10-28&rate=0.9247",
+      "source_note": "ECB daily EUR/CHF reference rate for 2026-10-28; converted to USD using the same-date ECB EUR/USD reference rate."
+    },
+    "EGP": {
+      "usd_per_unit": 0.01781610219316218,
+      "reference": "1 USD = 56.1290 EGP (CBE weighted-average market exchange rate on 2026-10-28); 1 EGP = 1/56.1290 USD.",
+      "source_url": "https://www.cbe.org.eg/en/markets/foreign-exchange/foreign-exchange-historical-data",
+      "source_note": "Central Bank of Egypt historical market exchange-rate series: weighted average 56.1290 EGP per USD on 28/10/2026."
+    },
+    "AED": {
+      "usd_per_unit": 0.27229407760381213,
+      "reference": "Official USD/AED reference peg: 1 USD = 3.6725 AED; 1 AED = 1/3.6725 USD.",
+      "source_url": "https://www.centralbank.ae/media/rpapxzng/fx_jun26_en.pdf",
+      "source_note": "Central Bank of the UAE publishes 3.6725 AED per USD; the USD peg remained at this fixed parity on the audit date."
+    },
+    "SAR": {
+      "usd_per_unit": 0.26666666666666666,
+      "reference": "Official USD/SAR peg: 1 USD = 3.750000 SAR; 1 SAR = 1/3.75 USD.",
+      "source_url": "https://www.sama.gov.sa/en-US/MediaCenter/News/Pages/news-557.aspx",
+      "source_note": "Saudi Central Bank official USD/SAR peg of 3.75, applicable on the audit date."
+    },
+    "QAR": {
+      "usd_per_unit": 0.2747252747252747,
+      "reference": "Official USD/QAR parity: 1 USD = 3.64 QAR; 1 QAR = 1/3.64 USD.",
+      "source_url": "https://www.qcb.gov.qa/en/Pages/MonetaryPolicyTools.aspx",
+      "source_note": "Qatar Central Bank fixed USD/QAR parity of 3.64, applicable on the audit date."
+    },
+    "JOD": {
+      "usd_per_unit": 1.4104372355430184,
+      "reference": "Central Bank of Jordan peg: 1 USD = 0.709 JOD (709 fils); 1 JOD = 1/0.709 USD.",
+      "source_url": "https://www.cbj.gov.jo/EN/Pages/Overview_of_the_Central_Bank_of_Jordan",
+      "source_note": "Central Bank of Jordan USD/JOD central peg of 709 fils per USD, applicable on the audit date."
+    },
+    "KWD": {
+      "usd_per_unit": 3.2430679422733903,
+      "reference": "Central Bank of Kuwait chart labels the series in Fils; on 28/10/2026 it reports 308.350 fils per USD, so 1 USD = 0.308350 KWD and 1 KWD = 1000/308.350 USD.",
+      "source_url": "https://www.cbk.gov.kw/en/monetary-policy/market-operations/exchange-rates/usd",
+      "source_note": "The official CBK page labels the chart unit 'Fils' and the series 'KWD to US Dollar Exchange Rate'; this confirms the 308.350 quote is fils per USD, not KWD per USD."
+    },
+    "OMR": {
+      "usd_per_unit": 2.6008,
+      "reference": "Official fixed peg: 1 OMR = 2.6008 USD.",
+      "source_url": "https://cbo.gov.om/Pages/FixedPeg.aspx",
+      "source_note": "Central Bank of Oman fixed OMR/USD parity of 2.6008, applicable on the audit date."
+    },
+    "MAD": {
+      "usd_per_unit": 0.1014569213911773,
+      "reference": "Bank Al-Maghrib reference rate on 28/10/2026: 1 USD = 9.8564 MAD; 1 MAD = 1/9.8564 USD.",
+      "source_url": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-des-changes/Cours-de-change/Cours-de-reference?block=cc51b5ce6878a3dc655dae26c47fddf8&sort=col2",
+      "source_note": "Bank Al-Maghrib official reference-rate table reports 9.8564 MAD per USD as the 28 October 2026 average reference rate."
+    }
+  },
+  "fx_rates_to_reporting_currency": {
+    "USD": 1.0,
+    "EUR": 1.1133,
+    "GBP": 1.3287581309303573,
+    "PLN": 0.25276421841298674,
+    "AUD": 0.7032849020846494,
+    "BRL": 0.18771814456978098,
+    "CAD": 0.7119196828238905,
+    "INR": 0.01050188898164787,
+    "MXN": 0.05367474061788869,
+    "NZD": 0.5613371653305097,
+    "PHP": 0.01562745648512072,
+    "CHF": 1.2039580404455499,
+    "EGP": 0.01781610219316218,
+    "AED": 0.27229407760381213,
+    "SAR": 0.26666666666666666,
+    "QAR": 0.2747252747252747,
+    "JOD": 1.4104372355430184,
+    "KWD": 3.2430679422733903,
+    "OMR": 2.6008,
+    "MAD": 0.1014569213911773
+  },
+  "target_currency_rate_details": {
+    "EGP": {
+      "local_units_per_usd": 56.129,
+      "reference": "CBE market exchange rate, weighted average: 1 USD = 56.1290 EGP on 28/10/2026.",
+      "source_url": "https://www.cbe.org.eg/en/markets/foreign-exchange/foreign-exchange-historical-data",
+      "source_note": "Central Bank of Egypt historical market exchange-rate series."
+    },
+    "SAR": {
+      "local_units_per_usd": 3.75,
+      "reference": "Saudi Central Bank fixed peg: 1 USD = 3.75 SAR.",
+      "source_url": "https://www.sama.gov.sa/en-US/MediaCenter/News/Pages/news-557.aspx",
+      "source_note": "Official USD/SAR peg; applicable on the audit date."
+    }
+  }
+}

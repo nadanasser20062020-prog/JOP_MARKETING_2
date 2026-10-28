@@ -43,6 +43,34 @@ The builder adds new files only; it does not modify or replace the existing proc
 - Preserve `updated` separately; do not interpret it as posting or collection date without source documentation.
 - Keep the International 2023 sample separate from the latest-export snapshots and other undated/semantically uncertain snapshots.
 - Exact duplicates are flagged and retained; there is no cross-source deduplication.
-- Retain raw salaries and their source/provenance. Do not convert currencies or describe research-derived salary ranges as employer-posted pay.
+- Retain raw salaries and their source/provenance. The staging builders do not convert currencies; the separate full-audit finalizer converts only under an explicit dated FX/pay-period policy. Never describe research-derived or synthetic salary ranges as employer-posted pay.
 - Treat enriched skills as source/enrichment data, not independently verified requirements. `CAN`, `Flow`, and `Word` are explicitly excluded from matching until reviewed.
-- Processed files remain Git-ignored by default. Only the new reduced Neon Free files are force-added to this PR under explicit request; existing full files remain unchanged. This scoped addition does not establish general redistribution rights, which remain unverified.
+- Processed files remain Git-ignored by default. Only the new reduced Neon Free files are force-added to this PR under the earlier explicit request; existing full files remain unchanged. This scoped addition does not establish general redistribution rights, which remain unverified. The separate cleaned audit dataset also stays outside Git; only its scripts, final Markdown report, dictionary, and compact aggregate notebook inputs are tracked.
+
+## Loss-preserving cleaning audit
+
+The full audit has two stages. `build_cleaning_audit.py` writes `data/processed/jobs_cleaned_audited.csv.gz`, before/after quality inputs, salary review candidates, source checksums, and the audit notebook. It keeps every selected source row, embeds the original row in `source_row_json`, preserves raw salary/title/country/skill fields, and flags duplicate candidates, date anomalies, and salary outliers without deleting rows. `finalize_full_cleaning_audit.py` adds derived annual salary values and, when eligible references exist, explicitly labeled `Estimated/Synthetic` values for originally missing salaries. An estimate is not an employer-reported salary.
+
+For the full run, the declared audit date was 2026-10-28 and all seven job sources were present (775,155 rows); three paired base exports were used only for skill comparison and not added as job rows. The International CSV was extracted from the user-requested Google Drive ZIP. Its recorded Drive modification date (2026-10-31) is later than the audit date and is documented as a provenance limitation, not treated as a posting or collection date. The raw snapshot used for this run was kept outside `data/raw/` so the partial checked-in raw folder was not replaced.
+
+Salary amounts are annualized only when currency and pay period are explicit. The finalizer requires `data/reference/fx_rates_2026-10-28.json` to match the audit date and produces separate USD, EGP, and SAR values. Missing values may receive a synthetic estimate based on eligible actual source-reported references; all such records carry estimate status/method fields. Ambiguous currency, conflicting currency fields, and unknown periods remain flagged and are not guessed. `Actual` means reported in a source file, not independently verified against a live listing. The external project SQLite/Parquet reconciliation was not available; the in-memory SQLite round-trip is a separate check.
+
+To reproduce a full run, restore all seven job sources and three base exports to a staging directory and pass the same source reference and date:
+
+```bash
+python scripts/data_cleaning/build_cleaning_audit.py \\
+  --raw-data-directory /path/to/restored/data/raw \\
+  --dataset-output data/processed/jobs_cleaned_audited.csv.gz \\
+  --report-directory analysis/reports/data_cleaning \\
+  --source-ref 'main@<commit>+GoogleDrive:International_Tech_Jobs_Filtered.zip' \\
+  --as-of-date 2026-10-28 --require-all-sources
+python scripts/data_cleaning/finalize_full_cleaning_audit.py \\
+  --raw-data-directory /path/to/restored/data/raw \\
+  --dataset data/processed/jobs_cleaned_audited.csv.gz \\
+  --report-directory analysis/reports/data_cleaning \\
+  --source-ref 'main@<commit>+GoogleDrive:International_Tech_Jobs_Filtered.zip' \\
+  --as-of-date 2026-10-28 \\
+  --fx-policy-file data/reference/fx_rates_2026-10-28.json
+```
+
+The completed artifacts include `analysis/notebooks/cleaning_data_audit.ipynb` and `analysis/reports/data_cleaning/final_data_quality_report.md`; detailed field definitions are in `docs/data/DATA_DICTIONARY.md`. The cleaned dataset is stored in the approved Google Drive folder and is excluded from Git; the report and reproducible code are intended to be tracked.

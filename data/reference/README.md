@@ -11,8 +11,10 @@ Small, curated, source-attributed reference data used by job-skill matching and 
 Matching policy is deliberately conservative:
 
 - `approved_aliases`: use only aliases explicitly listed in the curation JSON.
-- `exact_only`: compare the casefolded, whitespace-collapsed label only; do not use fuzzy or semantic matching. Uncurated terms remain marked `needs_review`.
+- `exact_only`: compare the casefolded, whitespace-collapsed label only; do not use fuzzy or semantic matching. An exact-only policy is not approval by itself: include only terms explicitly marked `curated_exact_only`; terms marked `needs_review` remain excluded.
 - `exclude_pending_review`: do not count as a match or recommend the term until the data owner resolves its meaning. This currently applies to `CAN`, `Flow`, and `Word`.
+
+All analytics and future matching must check the matching-policy/review-status pair on both `job_skills` and `skills`. The only currently eligible pairs are `(approved_aliases, curated)` and `(exact_only, curated_exact_only)`. Unreviewed exact-only assignments remain preserved in SQLite for audit/review but are not included in demand counts or recommendations.
 
 The normalizer preserves punctuation. It does not equate similar-but-distinct technologies such as Java and JavaScript, SQL and T-SQL, Spark and PySpark, or a generic REST label and REST API.
 
@@ -22,6 +24,13 @@ The normalizer preserves punctuation. It does not equate similar-but-distinct te
 - `learning_resources.csv` is generated from the JSON and validated against curated skill IDs.
 
 Each resource records skill links, language confidence, access/cost caveats, account and credential notes, official URL, verification status, and verification date. `cost_status` is one of `free_verified`, `some_free_options`, `conditional_or_mixed`, or `cost_unverified`. Only `free_verified` may be labelled free in recommendations; catalog-level statements do not prove that every course or lab is free. Course-specific language and enrollment conditions are marked unknown when not confirmed.
+
+## Salary normalization reference rates
+
+- `fx_rates_2026-10-28.json` freezes the reporting FX date at 2026-10-28. It records USD per source-currency unit, the USD-to-EGP/SAR output rates, source references, and explicit annualization assumptions.
+- ECB daily reference rates are used for same-date EUR cross-rates; central-bank reference/weighted-average rates or documented fixed pegs are used for other currencies. Each rate must be reviewed against its own provenance before reuse; do not silently substitute a latest rate for the audit date.
+- The CBK KWD series is labelled `Fils` on its official chart: `308.350` on the audit date means fils per USD (`1 USD = 0.308350 KWD`), not 308.350 KWD per USD.
+- A source salary is annualized only when its currency and pay period are explicit. Hourly and daily factors are assumptions (2,080 hours and 260 workdays per year), not observed source facts.
 
 ## Rebuild
 

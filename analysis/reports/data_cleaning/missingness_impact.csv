@@ -1,0 +1,85 @@
+source_file,logical_field,rows,missing_original_count,missing_original_percent,missing_cleaned_count,missing_cleaned_percent,impact_if_missing
+International_Tech_Jobs_Filtered.csv,title,705866,0,0.0,0,0.0,High: role matching and family salary estimate degrade; no title is invented.
+International_Tech_Jobs_Filtered.csv,company,705866,20,0.0028,20,0.0028,Medium: cross-source duplicate resolution is less reliable.
+International_Tech_Jobs_Filtered.csv,country,705866,43,0.0061,43,0.0061,High: local salary context and location segmentation are unavailable.
+International_Tech_Jobs_Filtered.csv,description,705866,705866,100.0,705866,100.0,Medium: semantic skill validation and role detail are limited.
+International_Tech_Jobs_Filtered.csv,source_url,705866,705866,100.0,705866,100.0,Medium: the listing cannot be independently reviewed from a URL.
+International_Tech_Jobs_Filtered.csv,skills,705866,98054,13.8913,98054,13.8913,High for skill matching: no skill assignment is invented; blank stays blank.
+International_Tech_Jobs_Filtered.csv,salary_original_text,705866,705866,100.0,676609,95.8552,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+International_Tech_Jobs_Filtered.csv,salary_any_numeric_source,705866,676609,95.8552,0,0.0,High for observed pay analysis; synthetic estimate does not replace source pay.
+International_Tech_Jobs_Filtered.csv,annualized_salary_usd,705866,676609,95.8552,29257,4.1448,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+International_Tech_Jobs_Filtered.csv,publication_date,705866,0,0.0,0,0.0,Medium: freshness/historical analysis cannot use an inferred date.
+International_Tech_Jobs_Filtered.csv,source_update_date,705866,705866,100.0,705866,100.0,Medium: update time is not treated as publication or collection date.
+International_Tech_Jobs_Filtered.csv,source_collection_date,705866,705866,100.0,705866,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,title,45591,0,0.0,0,0.0,High: role matching and family salary estimate degrade; no title is invented.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,company,45591,34,0.0746,34,0.0746,Medium: cross-source duplicate resolution is less reliable.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,country,45591,60,0.1316,96,0.2106,High: local salary context and location segmentation are unavailable.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,description,45591,38898,85.3195,38898,85.3195,Medium: semantic skill validation and role detail are limited.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,source_url,45591,38898,85.3195,38898,85.3195,Medium: the listing cannot be independently reviewed from a URL.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,skills,45591,0,0.0,0,0.0,High for skill matching: no skill assignment is invented; blank stays blank.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,salary_original_text,45591,22464,49.2729,22464,49.2729,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,salary_any_numeric_source,45591,22464,49.2729,3,0.0066,High for observed pay analysis; synthetic estimate does not replace source pay.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,annualized_salary_usd,45591,22464,49.2729,2687,5.8937,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,publication_date,45591,6693,14.6805,6693,14.6805,Medium: freshness/historical analysis cannot use an inferred date.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,source_update_date,45591,40669,89.204,40669,89.204,Medium: update time is not treated as publication or collection date.
+Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx,source_collection_date,45591,45591,100.0,45591,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,title,439,0,0.0,0,0.0,High: role matching and family salary estimate degrade; no title is invented.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,company,439,143,32.574,143,32.574,Medium: cross-source duplicate resolution is less reliable.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,country,439,1,0.2278,1,0.2278,High: local salary context and location segmentation are unavailable.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,description,439,296,67.426,296,67.426,Medium: semantic skill validation and role detail are limited.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,source_url,439,351,79.9544,351,79.9544,Medium: the listing cannot be independently reviewed from a URL.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,skills,439,0,0.0,0,0.0,High for skill matching: no skill assignment is invented; blank stays blank.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,salary_original_text,439,387,88.1549,0,0.0,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,salary_any_numeric_source,439,0,0.0,0,0.0,High for observed pay analysis; synthetic estimate does not replace source pay.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,annualized_salary_usd,439,0,0.0,135,30.7517,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,publication_date,439,360,82.0046,360,82.0046,Medium: freshness/historical analysis cannot use an inferred date.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,source_update_date,439,439,100.0,439,100.0,Medium: update time is not treated as publication or collection date.
+arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv,source_collection_date,439,439,100.0,439,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.
+cybersecurity_jobs_expanded_6_columns.csv,title,58,0,0.0,0,0.0,High: role matching and family salary estimate degrade; no title is invented.
+cybersecurity_jobs_expanded_6_columns.csv,company,58,0,0.0,0,0.0,Medium: cross-source duplicate resolution is less reliable.
+cybersecurity_jobs_expanded_6_columns.csv,country,58,0,0.0,0,0.0,High: local salary context and location segmentation are unavailable.
+cybersecurity_jobs_expanded_6_columns.csv,description,58,58,100.0,58,100.0,Medium: semantic skill validation and role detail are limited.
+cybersecurity_jobs_expanded_6_columns.csv,source_url,58,58,100.0,58,100.0,Medium: the listing cannot be independently reviewed from a URL.
+cybersecurity_jobs_expanded_6_columns.csv,skills,58,0,0.0,0,0.0,High for skill matching: no skill assignment is invented; blank stays blank.
+cybersecurity_jobs_expanded_6_columns.csv,salary_original_text,58,0,0.0,0,0.0,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+cybersecurity_jobs_expanded_6_columns.csv,salary_any_numeric_source,58,56,96.5517,56,96.5517,High for observed pay analysis; synthetic estimate does not replace source pay.
+cybersecurity_jobs_expanded_6_columns.csv,annualized_salary_usd,58,0,0.0,56,96.5517,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+cybersecurity_jobs_expanded_6_columns.csv,publication_date,58,58,100.0,58,100.0,Medium: freshness/historical analysis cannot use an inferred date.
+cybersecurity_jobs_expanded_6_columns.csv,source_update_date,58,58,100.0,58,100.0,Medium: update time is not treated as publication or collection date.
+cybersecurity_jobs_expanded_6_columns.csv,source_collection_date,58,58,100.0,58,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.
+remote_tech_jobs_foreign_after_adding_skills.csv,title,1075,0,0.0,0,0.0,High: role matching and family salary estimate degrade; no title is invented.
+remote_tech_jobs_foreign_after_adding_skills.csv,company,1075,0,0.0,0,0.0,Medium: cross-source duplicate resolution is less reliable.
+remote_tech_jobs_foreign_after_adding_skills.csv,country,1075,0,0.0,0,0.0,High: local salary context and location segmentation are unavailable.
+remote_tech_jobs_foreign_after_adding_skills.csv,description,1075,0,0.0,0,0.0,Medium: semantic skill validation and role detail are limited.
+remote_tech_jobs_foreign_after_adding_skills.csv,source_url,1075,0,0.0,0,0.0,Medium: the listing cannot be independently reviewed from a URL.
+remote_tech_jobs_foreign_after_adding_skills.csv,skills,1075,0,0.0,0,0.0,High for skill matching: no skill assignment is invented; blank stays blank.
+remote_tech_jobs_foreign_after_adding_skills.csv,salary_original_text,1075,1025,95.3488,1025,95.3488,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+remote_tech_jobs_foreign_after_adding_skills.csv,salary_any_numeric_source,1075,1025,95.3488,0,0.0,High for observed pay analysis; synthetic estimate does not replace source pay.
+remote_tech_jobs_foreign_after_adding_skills.csv,annualized_salary_usd,1075,1025,95.3488,42,3.907,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+remote_tech_jobs_foreign_after_adding_skills.csv,publication_date,1075,1075,100.0,1075,100.0,Medium: freshness/historical analysis cannot use an inferred date.
+remote_tech_jobs_foreign_after_adding_skills.csv,source_update_date,1075,0,0.0,0,0.0,Medium: update time is not treated as publication or collection date.
+remote_tech_jobs_foreign_after_adding_skills.csv,source_collection_date,1075,1075,100.0,1075,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.
+startup_jobs_foreign_after_adding_skills.csv,title,3543,0,0.0,0,0.0,High: role matching and family salary estimate degrade; no title is invented.
+startup_jobs_foreign_after_adding_skills.csv,company,3543,0,0.0,0,0.0,Medium: cross-source duplicate resolution is less reliable.
+startup_jobs_foreign_after_adding_skills.csv,country,3543,0,0.0,0,0.0,High: local salary context and location segmentation are unavailable.
+startup_jobs_foreign_after_adding_skills.csv,description,3543,3543,100.0,3543,100.0,Medium: semantic skill validation and role detail are limited.
+startup_jobs_foreign_after_adding_skills.csv,source_url,3543,0,0.0,0,0.0,Medium: the listing cannot be independently reviewed from a URL.
+startup_jobs_foreign_after_adding_skills.csv,skills,3543,0,0.0,0,0.0,High for skill matching: no skill assignment is invented; blank stays blank.
+startup_jobs_foreign_after_adding_skills.csv,salary_original_text,3543,1952,55.0946,1952,55.0946,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+startup_jobs_foreign_after_adding_skills.csv,salary_any_numeric_source,3543,1952,55.0946,1,0.0282,High for observed pay analysis; synthetic estimate does not replace source pay.
+startup_jobs_foreign_after_adding_skills.csv,annualized_salary_usd,3543,1952,55.0946,1153,32.543,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+startup_jobs_foreign_after_adding_skills.csv,publication_date,3543,3543,100.0,3543,100.0,Medium: freshness/historical analysis cannot use an inferred date.
+startup_jobs_foreign_after_adding_skills.csv,source_update_date,3543,0,0.0,0,0.0,Medium: update time is not treated as publication or collection date.
+startup_jobs_foreign_after_adding_skills.csv,source_collection_date,3543,3543,100.0,3543,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,title,18583,4,0.0215,4,0.0215,High: role matching and family salary estimate degrade; no title is invented.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,company,18583,122,0.6565,122,0.6565,Medium: cross-source duplicate resolution is less reliable.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,country,18583,0,0.0,0,0.0,High: local salary context and location segmentation are unavailable.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,description,18583,0,0.0,0,0.0,Medium: semantic skill validation and role detail are limited.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,source_url,18583,0,0.0,0,0.0,Medium: the listing cannot be independently reviewed from a URL.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,skills,18583,0,0.0,0,0.0,High for skill matching: no skill assignment is invented; blank stays blank.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,salary_original_text,18583,13340,71.786,13340,71.786,High for observed salary analysis; synthetic annual estimate is separate and explicitly labeled.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,salary_any_numeric_source,18583,13340,71.786,0,0.0,High for observed pay analysis; synthetic estimate does not replace source pay.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,annualized_salary_usd,18583,13340,71.786,2341,12.5975,High for comparable annual-pay analysis; conversion remains blank when source currency or pay period is unresolved.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,publication_date,18583,18583,100.0,18583,100.0,Medium: freshness/historical analysis cannot use an inferred date.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,source_update_date,18583,0,0.0,0,0.0,Medium: update time is not treated as publication or collection date.
+tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv,source_collection_date,18583,18583,100.0,18583,100.0,Low/unknown: collection time is only reported when an explicit source column is present; no external timestamp is inferred.

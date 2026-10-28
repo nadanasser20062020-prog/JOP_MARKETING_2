@@ -1,0 +1,914 @@
+{
+  "actual_salary_statistics_path": "analysis/reports/data_cleaning/salary_statistics_actual.csv",
+  "audit_date": "2026-10-28",
+  "available_job_source_count": 7,
+  "base_enriched_pair_audit": {
+    "remote_tech_jobs_foreign_after_adding_skills.csv": {
+      "available": true,
+      "base_duplicate_id_occurrences": 0,
+      "base_file": "remote_tech_jobs_foreign.csv",
+      "base_rows": 1075,
+      "base_unique_ids": 1075,
+      "enriched_duplicate_id_occurrences": 0,
+      "enriched_file": "remote_tech_jobs_foreign_after_adding_skills.csv",
+      "enriched_rows": 1075,
+      "enriched_unique_ids": 1075,
+      "ids_only_in_base": 0,
+      "ids_only_in_enriched": 0,
+      "matched_ids": 1075,
+      "matched_ids_with_changed_skills": 1050,
+      "skill_values_filled_from_empty": 83,
+      "source_record_id_missing_rows": 0,
+      "status": "row_counts_and_id_sets_match"
+    },
+    "startup_jobs_foreign_after_adding_skills.csv": {
+      "available": true,
+      "base_duplicate_id_occurrences": 0,
+      "base_file": "startup_jobs_foreign.csv",
+      "base_rows": 3543,
+      "base_unique_ids": 3543,
+      "enriched_duplicate_id_occurrences": 0,
+      "enriched_file": "startup_jobs_foreign_after_adding_skills.csv",
+      "enriched_rows": 3543,
+      "enriched_unique_ids": 3543,
+      "ids_only_in_base": 0,
+      "ids_only_in_enriched": 0,
+      "matched_ids": 3543,
+      "matched_ids_with_changed_skills": 3543,
+      "skill_values_filled_from_empty": 2993,
+      "source_record_id_missing_rows": 0,
+      "status": "row_counts_and_id_sets_match"
+    },
+    "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv": {
+      "available": true,
+      "base_duplicate_id_occurrences": 0,
+      "base_file": "tech_jobs_jooble_careerjet_AGNABY.csv",
+      "base_rows": 18583,
+      "base_unique_ids": 18583,
+      "enriched_duplicate_id_occurrences": 0,
+      "enriched_file": "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv",
+      "enriched_rows": 18583,
+      "enriched_unique_ids": 18583,
+      "ids_only_in_base": 0,
+      "ids_only_in_enriched": 0,
+      "matched_ids": 18583,
+      "matched_ids_with_changed_skills": 18583,
+      "skill_values_filled_from_empty": 11477,
+      "source_record_id_missing_rows": 0,
+      "status": "row_counts_and_id_sets_match"
+    }
+  },
+  "cleaned_dataset_path": "data/processed/jobs_cleaned_audited.csv.gz",
+  "cleaned_dataset_sha256": "6f53340a00a17f4a6d86087a6bf6d98a4fce1a1bb79b795b6237f87fd927fd72",
+  "date_out_of_expected_range_records": 1255,
+  "deliverables": {
+    "actual_salary_statistics": "analysis/reports/data_cleaning/salary_statistics_actual.csv",
+    "annual_salary_statistics_actual": "analysis/reports/data_cleaning/annual_salary_statistics_actual.csv",
+    "cleaned_column_coverage": "analysis/reports/data_cleaning/cleaned_column_coverage.csv",
+    "cleaned_column_type_audit": "analysis/reports/data_cleaning/cleaned_column_type_audit.csv",
+    "cleaned_dataset": "data/processed/jobs_cleaned_audited.csv.gz",
+    "cleaning_change_log": "analysis/reports/data_cleaning/cleaning_change_log.csv.gz",
+    "cleaning_change_summary": "analysis/reports/data_cleaning/cleaning_change_summary.csv",
+    "cleaning_notebook": "analysis/notebooks/cleaning_data_audit.ipynb",
+    "cleaning_summary": "analysis/reports/data_cleaning/cleaning_summary.json",
+    "country_profile": "analysis/reports/data_cleaning/country_profile.csv",
+    "country_standardization_audit": "analysis/reports/data_cleaning/country_standardization_audit.csv",
+    "date_quality_audit": "analysis/reports/data_cleaning/date_quality_audit.csv",
+    "duplicate_review_candidates": "analysis/reports/data_cleaning/duplicate_review_candidates.csv",
+    "field_consistency_checks": "analysis/reports/data_cleaning/field_consistency_checks.csv",
+    "field_coverage_comparison": "analysis/reports/data_cleaning/field_coverage_comparison.csv",
+    "final_report": "analysis/reports/data_cleaning/final_data_quality_report.md",
+    "full_cleaned_dataset": "data/processed/jobs_cleaned_audited.csv.gz",
+    "legacy_salary_estimate_inventory": "analysis/reports/data_cleaning/legacy_salary_estimate_inventory.csv",
+    "missingness_impact": "analysis/reports/data_cleaning/missingness_impact.csv",
+    "quality_after": "analysis/reports/data_cleaning/data_quality_after.json",
+    "quality_before": "analysis/reports/data_cleaning/data_quality_before.json",
+    "raw_source_column_coverage": "analysis/reports/data_cleaning/raw_source_column_coverage.csv",
+    "raw_source_type_audit": "analysis/reports/data_cleaning/raw_source_type_audit.csv",
+    "role_family_profile": "analysis/reports/data_cleaning/role_family_profile.csv",
+    "salary_coverage_by_role_country": "analysis/reports/data_cleaning/salary_coverage_by_role_country.csv",
+    "salary_estimate_summary": "analysis/reports/data_cleaning/salary_estimate_summary.csv",
+    "salary_fx_rates_used": "analysis/reports/data_cleaning/salary_fx_rates_used.csv",
+    "salary_model_and_fx_policy": "analysis/reports/data_cleaning/salary_model_and_fx_policy.json",
+    "salary_review_candidates": "analysis/reports/data_cleaning/salary_review_candidates.csv",
+    "skill_profile": "analysis/reports/data_cleaning/skill_profile.csv",
+    "source_manifest": "analysis/reports/data_cleaning/source_manifest.csv"
+  },
+  "duplicate_source_id_occurrences_retained": 0,
+  "exact_duplicate_occurrences_retained": 91,
+  "existing_database_status": "not_available_in_current_checkout",
+  "file_reports": {
+    "International_Tech_Jobs_Filtered.csv": {
+      "currency_detection_status_counts": {
+        "not_stated": 705866
+      },
+      "date_out_of_expected_range_records": 0,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 80,
+      "missing_fields_after": {
+        "company_clean": 20,
+        "country_standardized": 43,
+        "description_raw": 705866,
+        "posted_date_parsed": 0,
+        "salary_numeric_parsed": 676609,
+        "skills_tokens_parsed": 98054,
+        "source_updated_at_parsed": 705866,
+        "source_url_syntax_valid": 705866,
+        "title_clean": 0
+      },
+      "missing_fields_before": {
+        "company": 20,
+        "country": 43,
+        "description": 705866,
+        "explicit_posted_date": 0,
+        "salary_any_numeric_source": 676609,
+        "salary_raw_numeric": 705866,
+        "skills": 98054,
+        "source_collection_date": 705866,
+        "source_updated_at": 705866,
+        "source_url": 705866,
+        "title": 0
+      },
+      "period_detection_status_counts": {
+        "explicit_in_source_period_field": 29629,
+        "period_not_stated": 676237
+      },
+      "possible_mojibake_records": 45,
+      "rows": 705866,
+      "salary_parse_status_counts": {
+        "no_salary_value": 676609,
+        "parsed_single_amount": 29257
+      },
+      "salary_value_type_counts": {
+        "missing": 676609,
+        "source_reported_unverified": 29257
+      },
+      "skill_duplicate_tokens_removed": 59919,
+      "skills_enrichment_status_counts": {
+        "not_paired_with_base_export": 705866
+      },
+      "source_dataset": "international_jobs",
+      "source_sha256": "1c168e124207d28992ebe790812d07df2e4fd117e2dc013713ecf4e7c38fed7a",
+      "status": "processed"
+    },
+    "Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx": {
+      "currency_detection_status_counts": {
+        "ambiguous_currency_symbol": 5,
+        "explicit_text": 20444,
+        "not_stated": 25142
+      },
+      "date_out_of_expected_range_records": 1255,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 11,
+      "missing_fields_after": {
+        "company_clean": 34,
+        "country_standardized": 96,
+        "description_raw": 38898,
+        "posted_date_parsed": 6693,
+        "salary_numeric_parsed": 22467,
+        "skills_tokens_parsed": 0,
+        "source_updated_at_parsed": 40669,
+        "source_url_syntax_valid": 38898,
+        "title_clean": 0
+      },
+      "missing_fields_before": {
+        "company": 34,
+        "country": 60,
+        "description": 38898,
+        "explicit_posted_date": 6693,
+        "salary_any_numeric_source": 22464,
+        "salary_raw_numeric": 22464,
+        "skills": 0,
+        "source_collection_date": 45591,
+        "source_updated_at": 40669,
+        "source_url": 38898,
+        "title": 0
+      },
+      "period_detection_status_counts": {
+        "conflict_between_salary_text_and_source_period": 3,
+        "explicit_in_salary_text": 23122,
+        "explicit_in_source_period_field": 9,
+        "period_not_stated": 22457
+      },
+      "possible_mojibake_records": 2,
+      "rows": 45591,
+      "salary_parse_status_counts": {
+        "multiple_numeric_tokens_review": 1,
+        "no_numeric_amount": 2,
+        "no_salary_value": 22464,
+        "parsed_range": 6762,
+        "parsed_single_amount": 16362
+      },
+      "salary_value_type_counts": {
+        "estimated_legacy_unverified": 20266,
+        "missing": 22464,
+        "source_reported_unverified": 2858,
+        "unparseable_or_no_numeric_amount": 3
+      },
+      "skill_duplicate_tokens_removed": 73017,
+      "skills_enrichment_status_counts": {
+        "not_paired_with_base_export": 45591
+      },
+      "source_dataset": "merged_tech_jobs",
+      "source_sha256": "15077471b52af54cf717811c459fb834853b20a5242d7bcf17dd1793c0101155",
+      "status": "processed"
+    },
+    "arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv": {
+      "currency_detection_status_counts": {
+        "conflict_between_source_column_and_salary_text": 1,
+        "explicit_source_column": 110,
+        "explicit_source_column_and_text": 327,
+        "explicit_text": 1
+      },
+      "date_out_of_expected_range_records": 0,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 0,
+      "missing_fields_after": {
+        "company_clean": 143,
+        "country_standardized": 1,
+        "description_raw": 296,
+        "posted_date_parsed": 360,
+        "salary_numeric_parsed": 0,
+        "skills_tokens_parsed": 0,
+        "source_updated_at_parsed": 439,
+        "source_url_syntax_valid": 351,
+        "title_clean": 0
+      },
+      "missing_fields_before": {
+        "company": 143,
+        "country": 1,
+        "description": 296,
+        "explicit_posted_date": 360,
+        "salary_any_numeric_source": 0,
+        "salary_raw_numeric": 387,
+        "skills": 0,
+        "source_collection_date": 439,
+        "source_updated_at": 439,
+        "source_url": 351,
+        "title": 0
+      },
+      "period_detection_status_counts": {
+        "explicit_in_salary_text": 304,
+        "period_not_stated": 135
+      },
+      "possible_mojibake_records": 0,
+      "rows": 439,
+      "salary_parse_status_counts": {
+        "parsed_range": 330,
+        "parsed_single_amount": 109
+      },
+      "salary_value_type_counts": {
+        "actual_reported": 52,
+        "estimated_legacy_unverified": 296,
+        "source_reported_unverified": 91
+      },
+      "skill_duplicate_tokens_removed": 0,
+      "skills_enrichment_status_counts": {
+        "not_paired_with_base_export": 439
+      },
+      "source_dataset": "arab_tech_jobs",
+      "source_sha256": "0ed150693d089cf19c163c4448ba874e9a3728f80109c4dfd51ca27746398412",
+      "status": "processed"
+    },
+    "cybersecurity_jobs_expanded_6_columns.csv": {
+      "currency_detection_status_counts": {
+        "explicit_text": 3,
+        "not_stated": 55
+      },
+      "date_out_of_expected_range_records": 0,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 0,
+      "missing_fields_after": {
+        "company_clean": 0,
+        "country_standardized": 0,
+        "description_raw": 58,
+        "posted_date_parsed": 58,
+        "salary_numeric_parsed": 56,
+        "skills_tokens_parsed": 0,
+        "source_updated_at_parsed": 58,
+        "source_url_syntax_valid": 58,
+        "title_clean": 0
+      },
+      "missing_fields_before": {
+        "company": 0,
+        "country": 0,
+        "description": 58,
+        "explicit_posted_date": 58,
+        "salary_any_numeric_source": 56,
+        "salary_raw_numeric": 56,
+        "skills": 0,
+        "source_collection_date": 58,
+        "source_updated_at": 58,
+        "source_url": 58,
+        "title": 0
+      },
+      "period_detection_status_counts": {
+        "explicit_in_salary_text": 2,
+        "period_not_stated": 56
+      },
+      "possible_mojibake_records": 0,
+      "rows": 58,
+      "salary_parse_status_counts": {
+        "no_numeric_amount": 56,
+        "parsed_range": 2
+      },
+      "salary_value_type_counts": {
+        "actual_reported": 2,
+        "not_disclosed": 56
+      },
+      "skill_duplicate_tokens_removed": 0,
+      "skills_enrichment_status_counts": {
+        "not_paired_with_base_export": 58
+      },
+      "source_dataset": "cybersecurity_jobs",
+      "source_sha256": "1edc730ab5edfebdaa094585907069dc21351dc5d2cb0c8e970ee215be145931",
+      "status": "processed"
+    },
+    "remote_tech_jobs_foreign_after_adding_skills.csv": {
+      "currency_detection_status_counts": {
+        "ambiguous_currency_symbol": 1,
+        "explicit_text": 49,
+        "not_stated": 1025
+      },
+      "date_out_of_expected_range_records": 0,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 0,
+      "missing_fields_after": {
+        "company_clean": 0,
+        "country_standardized": 0,
+        "description_raw": 0,
+        "posted_date_parsed": 1075,
+        "salary_numeric_parsed": 1025,
+        "skills_tokens_parsed": 0,
+        "source_updated_at_parsed": 0,
+        "source_url_syntax_valid": 0,
+        "title_clean": 0
+      },
+      "missing_fields_before": {
+        "company": 0,
+        "country": 0,
+        "description": 0,
+        "explicit_posted_date": 1075,
+        "salary_any_numeric_source": 1025,
+        "salary_raw_numeric": 1025,
+        "skills": 0,
+        "source_collection_date": 1075,
+        "source_updated_at": 0,
+        "source_url": 0,
+        "title": 0
+      },
+      "period_detection_status_counts": {
+        "explicit_in_salary_text": 8,
+        "period_not_stated": 1067
+      },
+      "possible_mojibake_records": 20,
+      "rows": 1075,
+      "salary_parse_status_counts": {
+        "no_salary_value": 1025,
+        "parsed_range": 50
+      },
+      "salary_value_type_counts": {
+        "actual_reported": 50,
+        "missing": 1025
+      },
+      "skill_duplicate_tokens_removed": 0,
+      "skills_enrichment_status_counts": {
+        "changed_vs_base_export": 1050,
+        "matches_base_export": 25
+      },
+      "source_dataset": "remote_tech_jobs",
+      "source_sha256": "75e540a3e51dd1120093d1706a484f5b2e59de3a04f367dd6d035e241ad7f5ca",
+      "status": "processed"
+    },
+    "startup_jobs_foreign_after_adding_skills.csv": {
+      "currency_detection_status_counts": {
+        "ambiguous_currency_symbol": 1152,
+        "explicit_text": 439,
+        "not_stated": 1952
+      },
+      "date_out_of_expected_range_records": 0,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 0,
+      "missing_fields_after": {
+        "company_clean": 0,
+        "country_standardized": 0,
+        "description_raw": 3543,
+        "posted_date_parsed": 3543,
+        "salary_numeric_parsed": 1953,
+        "skills_tokens_parsed": 0,
+        "source_updated_at_parsed": 0,
+        "source_url_syntax_valid": 0,
+        "title_clean": 0
+      },
+      "missing_fields_before": {
+        "company": 0,
+        "country": 0,
+        "description": 3543,
+        "explicit_posted_date": 3543,
+        "salary_any_numeric_source": 1952,
+        "salary_raw_numeric": 1952,
+        "skills": 0,
+        "source_collection_date": 3543,
+        "source_updated_at": 0,
+        "source_url": 0,
+        "title": 0
+      },
+      "period_detection_status_counts": {
+        "explicit_in_salary_text": 1591,
+        "period_not_stated": 1952
+      },
+      "possible_mojibake_records": 0,
+      "rows": 3543,
+      "salary_parse_status_counts": {
+        "multiple_numeric_tokens_review": 1,
+        "no_salary_value": 1952,
+        "parsed_range": 1536,
+        "parsed_single_amount": 54
+      },
+      "salary_value_type_counts": {
+        "actual_reported": 1590,
+        "missing": 1952,
+        "unparseable_or_no_numeric_amount": 1
+      },
+      "skill_duplicate_tokens_removed": 0,
+      "skills_enrichment_status_counts": {
+        "changed_vs_base_export": 3543
+      },
+      "source_dataset": "startup_jobs",
+      "source_sha256": "4edcf9fca58616672a8fae8c817d6abfe459763bbe900eaed6404d6241429f36",
+      "status": "processed"
+    },
+    "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv": {
+      "currency_detection_status_counts": {
+        "ambiguous_currency_symbol": 2341,
+        "explicit_text": 2902,
+        "not_stated": 13340
+      },
+      "date_out_of_expected_range_records": 0,
+      "duplicate_source_id_occurrences_retained": 0,
+      "exact_duplicate_occurrences_retained": 0,
+      "missing_fields_after": {
+        "company_clean": 122,
+        "country_standardized": 0,
+        "description_raw": 0,
+        "posted_date_parsed": 18583,
+        "salary_numeric_parsed": 13340,
+        "skills_tokens_parsed": 0,
+        "source_updated_at_parsed": 0,
+        "source_url_syntax_valid": 0,
+        "title_clean": 4
+      },
+      "missing_fields_before": {
+        "company": 122,
+        "country": 0,
+        "description": 0,
+        "explicit_posted_date": 18583,
+        "salary_any_numeric_source": 13340,
+        "salary_raw_numeric": 13340,
+        "skills": 0,
+        "source_collection_date": 18583,
+        "source_updated_at": 0,
+        "source_url": 0,
+        "title": 4
+      },
+      "period_detection_status_counts": {
+        "explicit_in_salary_text": 3429,
+        "period_not_stated": 15154
+      },
+      "possible_mojibake_records": 43,
+      "rows": 18583,
+      "salary_parse_status_counts": {
+        "no_salary_value": 13340,
+        "parsed_range": 4246,
+        "parsed_single_amount": 994,
+        "range_order_reversed": 3
+      },
+      "salary_value_type_counts": {
+        "actual_reported": 5243,
+        "missing": 13340
+      },
+      "skill_duplicate_tokens_removed": 0,
+      "skills_enrichment_status_counts": {
+        "changed_vs_base_export": 18583
+      },
+      "source_dataset": "jooble_careerjet_jobs",
+      "source_sha256": "bb7f57371e7a9e8dd99ea8dd64ea6ab5418e3eacc1169e3eea6b4f3ed3f9e5d0",
+      "status": "processed"
+    }
+  },
+  "full_archive_analysis_status": "not_rerun_project_parquet_archive_or_database_unavailable",
+  "full_data_quality_audit": {
+    "database_validation": {
+      "status": "not_checked"
+    },
+    "date_collection_source_columns": [],
+    "duplicate_review": {
+      "candidate_file": "analysis/reports/data_cleaning/duplicate_review_candidates.csv",
+      "candidate_groups_total": 2,
+      "cross_source_exact_listing_signature_groups": 1,
+      "cross_source_exact_raw_row_groups": 0,
+      "cross_source_exact_url_groups": 1,
+      "cross_source_near_duplicate_pairs": 0,
+      "deleted_or_merged_rows": 0,
+      "large_near_duplicate_blocks_skipped_over_60_rows": 478,
+      "near_duplicate_title_pairs_evaluated": 77284,
+      "review_policy": "All cross-source candidates are retained; match signals are not proof that two listings are the same job."
+    },
+    "field_consistency": {},
+    "field_consistency_checks": {
+      "database_reconciliation": {
+        "records_or_columns_checked": 0,
+        "status": "not_checked",
+        "violations": null
+      },
+      "field_type_validation": {
+        "records_or_columns_checked": 123,
+        "status": "passed",
+        "violations": 0
+      },
+      "record_id_uniqueness": {
+        "records_or_columns_checked": 775155,
+        "status": "passed",
+        "violations": 0
+      },
+      "row_retention": {
+        "records_or_columns_checked": 775155,
+        "status": "passed",
+        "violations": 0
+      },
+      "salary_cross_rates": {
+        "records_or_columns_checked": 739484,
+        "status": "passed",
+        "violations": 0
+      },
+      "salary_ranges": {
+        "records_or_columns_checked": 2218452,
+        "status": "passed",
+        "violations": 0
+      },
+      "skill_json_counts": {
+        "records_or_columns_checked": 775155,
+        "status": "passed",
+        "violations": 0
+      },
+      "synthetic_salary_provenance": {
+        "records_or_columns_checked": 715390,
+        "status": "passed",
+        "violations": 0
+      },
+      "updated_not_promoted": {
+        "records_or_columns_checked": 28123,
+        "status": "passed",
+        "violations": 0
+      },
+      "withheld_salary_protection": {
+        "records_or_columns_checked": 775155,
+        "status": "passed",
+        "violations": 0
+      }
+    },
+    "output_columns_checked": 123,
+    "source_column_count": 189,
+    "type_invalid_values": 0
+  },
+  "input_rows": 775155,
+  "missing_required_sources": [],
+  "output_rows": 775155,
+  "possible_mojibake_records": 110,
+  "profile_outputs": {
+    "annual_salary_statistics_actual": "analysis/reports/data_cleaning/annual_salary_statistics_actual.csv",
+    "country_profile": "analysis/reports/data_cleaning/country_profile.csv",
+    "legacy_salary_estimate_inventory": "analysis/reports/data_cleaning/legacy_salary_estimate_inventory.csv",
+    "salary_coverage_by_role_country": "analysis/reports/data_cleaning/salary_coverage_by_role_country.csv",
+    "salary_estimate_summary": "analysis/reports/data_cleaning/salary_estimate_summary.csv",
+    "skill_profile": "analysis/reports/data_cleaning/skill_profile.csv"
+  },
+  "raw_data_directory": "main@6755883a8c043592d349cace4cd84aaae81d73d0+GoogleDrive:International_Tech_Jobs_Filtered.zip:data/raw (main Git archive plus user-requested Google Drive ZIP; read-only)",
+  "rows_dropped": 0,
+  "salary": {
+    "absolute_scale_review_records": 2,
+    "actual_reported_records": 6937,
+    "actual_rows_annualized_fx_converted": 3358,
+    "actual_statistics_eligible_records": 3354,
+    "annual_salary_available_by_currency": {
+      "EGP": 739484,
+      "SAR": 739484,
+      "USD": 739484
+    },
+    "annual_salary_egp_missing": 35671,
+    "annual_salary_sar_missing": 35671,
+    "annual_salary_usd_missing": 35671,
+    "benchmark_actual_count_by_currency": {
+      "AUD": 159,
+      "BRL": 1,
+      "CAD": 963,
+      "EUR": 174,
+      "GBP": 901,
+      "INR": 14,
+      "MXN": 4,
+      "NZD": 2,
+      "PLN": 34,
+      "QAR": 1,
+      "SAR": 9,
+      "USD": 1092
+    },
+    "benchmark_actual_count_by_source": {
+      "arab_tech_jobs": 8,
+      "cybersecurity_jobs": 2,
+      "jooble_careerjet_jobs": 2899,
+      "remote_tech_jobs": 7,
+      "startup_jobs": 438
+    },
+    "currency_conversion_missing_by_code": {
+      "AED": 5,
+      "CAD": 6,
+      "CHF": 1,
+      "EGP": 105,
+      "EUR": 3,
+      "INR": 1,
+      "JOD": 21,
+      "SAR": 4,
+      "USD": 35
+    },
+    "currency_detection_status_counts": {
+      "ambiguous_currency_symbol": 3499,
+      "conflict_between_source_column_and_salary_text": 1,
+      "explicit_source_column": 110,
+      "explicit_source_column_and_text": 327,
+      "explicit_text": 23838,
+      "not_stated": 747380
+    },
+    "currency_missing_or_conflict_records": 35433,
+    "eligible_actual_records_used_for_benchmarks": 3354,
+    "estimates_added_by_this_run": 715390,
+    "estimation_status_counts": {
+      "Actual": 6937,
+      "Estimated": 735952,
+      "Not disclosed": 56,
+      "Unparseable": 4,
+      "Unverified": 32206
+    },
+    "fx_rates_applied": {
+      "AED": 0.27229407760381213,
+      "AUD": 0.7032849020846494,
+      "BRL": 0.18771814456978098,
+      "CAD": 0.7119196828238905,
+      "CHF": 1.2039580404455499,
+      "EGP": 0.01781610219316218,
+      "EUR": 1.1133,
+      "GBP": 1.3287581309303573,
+      "INR": 0.01050188898164787,
+      "JOD": 1.4104372355430184,
+      "KWD": 3.2430679422733903,
+      "MAD": 0.1014569213911773,
+      "MXN": 0.05367474061788869,
+      "NZD": 0.5613371653305097,
+      "OMR": 2.6008,
+      "PHP": 0.01562745648512072,
+      "PLN": 0.25276421841298674,
+      "QAR": 0.2747252747252747,
+      "SAR": 0.26666666666666666,
+      "USD": 1.0
+    },
+    "legacy_estimate_rows_annualized_fx_converted": 20559,
+    "legacy_estimate_unverified_records": 20562,
+    "missing_records": 0,
+    "missing_records_after_estimation": 0,
+    "not_disclosed_records": 56,
+    "numeric_parseable_records": 59705,
+    "numeric_rows_with_period_unknown": 1996,
+    "original_missing_records": 715390,
+    "parse_status_counts": {
+      "multiple_numeric_tokens_review": 2,
+      "no_numeric_amount": 58,
+      "no_salary_value": 715390,
+      "parsed_range": 12926,
+      "parsed_single_amount": 46776,
+      "range_order_reversed": 3
+    },
+    "period_annualization_factors": {
+      "DAY": 260.0,
+      "HOUR": 2080.0,
+      "MONTH": 12.0,
+      "WEEK": 52.0
+    },
+    "period_detection_status_counts": {
+      "conflict_between_salary_text_and_source_period": 3,
+      "explicit_in_salary_text": 28456,
+      "explicit_in_source_period_field": 29638,
+      "period_not_stated": 717058
+    },
+    "period_unknown_records": 1996,
+    "potential_iqr_outlier_records_review_only": 0,
+    "review_candidate_records": 35793,
+    "salary_estimation_method_counts": {
+      "legacy_source_estimate_preserved_not_revalidated": 20562,
+      "source_explicitly_withholds_or_negotiates_salary": 56,
+      "source_reported_annualization_and_fx_conversion": 6937,
+      "source_reported_numeric_value_provenance_unverified": 32206,
+      "source_salary_text_not_safely_parseable": 4,
+      "synthetic_country_family_median": 59907,
+      "synthetic_country_family_seniority_median": 114779,
+      "synthetic_exact_country_title_median": 247,
+      "synthetic_global_family_median": 26556,
+      "synthetic_global_family_seniority_median": 341868,
+      "synthetic_global_technology_median": 172033
+    },
+    "source_reported_unverified_records": 32206,
+    "source_reported_unverified_rows_annualized_fx_converted": 177,
+    "source_value_type_counts": {
+      "actual_reported": 6937,
+      "estimated_legacy_unverified": 20562,
+      "estimated_synthetic": 715390,
+      "not_disclosed": 56,
+      "source_reported_unverified": 32206,
+      "unparseable_or_no_numeric_amount": 4
+    },
+    "statistics_group_count": 1957,
+    "synthetic_estimates_added_by_this_run": 715390,
+    "unparseable_records": 4,
+    "value_type_counts": {
+      "actual_reported": 6937,
+      "estimated_legacy_unverified": 20562,
+      "estimated_synthetic": 715390,
+      "not_disclosed": 56,
+      "source_reported_unverified": 32206,
+      "unparseable_or_no_numeric_amount": 4
+    }
+  },
+  "salary_policy": {
+    "annualization_factors": {
+      "DAY": 260.0,
+      "HOUR": 2080.0,
+      "MONTH": 12.0,
+      "WEEK": 52.0
+    },
+    "benchmark_training": {
+      "benchmark_actual_record_count": 3354,
+      "benchmark_count_by_currency": {
+        "AUD": 159,
+        "BRL": 1,
+        "CAD": 963,
+        "EUR": 174,
+        "GBP": 901,
+        "INR": 14,
+        "MXN": 4,
+        "NZD": 2,
+        "PLN": 34,
+        "QAR": 1,
+        "SAR": 9,
+        "USD": 1092
+      },
+      "benchmark_count_by_source": {
+        "arab_tech_jobs": 8,
+        "cybersecurity_jobs": 2,
+        "jooble_careerjet_jobs": 2899,
+        "remote_tech_jobs": 7,
+        "startup_jobs": 438
+      },
+      "benchmark_eligibility_policy": "Only salary_value_type=actual_reported records with salary_statistics_eligible=yes, explicit currency and recognized pay period, and a valid positive annual USD midpoint train the model. Synthetic and legacy estimates are excluded; scale-review records remain in the dataset but not in references.",
+      "benchmark_group_count": 2395,
+      "fallback_order": [
+        "exact_country_title",
+        "country_family_seniority",
+        "country_family",
+        "global_family_seniority",
+        "global_family",
+        "global_technology"
+      ],
+      "group_count": 2395,
+      "minimum_reference_counts": {
+        "country_family": 12,
+        "country_family_seniority": 8,
+        "exact_country_title": 5,
+        "global_family": 15,
+        "global_family_seniority": 12,
+        "global_technology": 25
+      },
+      "outlier_policy": "IQR outliers within the eligible actual reference pool are retained; medians are used for robustness. No source row is deleted.",
+      "reference_salary_policy": "Only source-reported actual rows with salary_statistics_eligible=yes, explicit currency/pay period, and valid annual USD values train the model. Legacy/synthetic estimates and scale-review rows are excluded; IQR outliers within the eligible reference pool are retained and median is robust to them."
+    },
+    "conversion_note": "All source currencies are first converted to USD, then to EGP/SAR. One audit-date rate is used uniformly; publication date does not set FX date.",
+    "fx_policy_path": "data/reference/fx_rates_2026-10-28.json",
+    "fx_rate_date": "2026-10-28",
+    "fx_rate_source": "Frozen 2026-10-28 audit-date reference rates: ECB daily reference rates and same-day EUR cross-rates; official central-bank market/reference rates; and documented fixed pegs. See the per-currency provenance entries.",
+    "missing_value_estimation": "synthetic hierarchical medians of actual source-reported annual salaries only; each estimate is explicitly marked Estimated/Synthetic with method/confidence/reference count; original salary remains unchanged",
+    "reporting_currency": "USD",
+    "salary_history_inflation_or_ppp_adjustment": "none",
+    "target_currencies": [
+      "USD",
+      "EGP",
+      "SAR"
+    ]
+  },
+  "scope": "all_declared_sources_available",
+  "source_integrity": {
+    "all_unchanged_during_full_audit": true,
+    "all_unchanged_during_run": true,
+    "changed_during_full_audit": [],
+    "changed_or_disappeared_files": [],
+    "files_hashed_before": 10,
+    "files_hashed_unchanged": 10
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "file": "International_Tech_Jobs_Filtered.csv",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "1c168e124207d28992ebe790812d07df2e4fd117e2dc013713ecf4e7c38fed7a",
+      "size_bytes": 210070595,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "15077471b52af54cf717811c459fb834853b20a5242d7bcf17dd1793c0101155",
+      "size_bytes": 15077666,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "0ed150693d089cf19c163c4448ba874e9a3728f80109c4dfd51ca27746398412",
+      "size_bytes": 409844,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "cybersecurity_jobs_expanded_6_columns.csv",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "1edc730ab5edfebdaa094585907069dc21351dc5d2cb0c8e970ee215be145931",
+      "size_bytes": 14821,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "remote_tech_jobs_foreign_after_adding_skills.csv",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "75e540a3e51dd1120093d1706a484f5b2e59de3a04f367dd6d035e241ad7f5ca",
+      "size_bytes": 6112573,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "startup_jobs_foreign_after_adding_skills.csv",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "4edcf9fca58616672a8fae8c817d6abfe459763bbe900eaed6404d6241429f36",
+      "size_bytes": 2721052,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv",
+      "required_for_full_scope": true,
+      "role": "selected_job_source",
+      "sha256": "bb7f57371e7a9e8dd99ea8dd64ea6ab5418e3eacc1169e3eea6b4f3ed3f9e5d0",
+      "size_bytes": 14550395,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "remote_tech_jobs_foreign.csv",
+      "required_for_full_scope": false,
+      "role": "base_skill_comparison_only",
+      "sha256": "8c859e2b9f2427e34c8e3f6e2a24940a4177889105219a7130c9e72b7c021809",
+      "size_bytes": 6013500,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "startup_jobs_foreign.csv",
+      "required_for_full_scope": false,
+      "role": "base_skill_comparison_only",
+      "sha256": "21b7bb54c3b368d241e10f58e27857a16eced46b657b2149db5934f8c23ccdbc",
+      "size_bytes": 2282192,
+      "status": "available"
+    },
+    {
+      "exists": true,
+      "file": "tech_jobs_jooble_careerjet_AGNABY.csv",
+      "required_for_full_scope": false,
+      "role": "base_skill_comparison_only",
+      "sha256": "2856320b31b81a61e7442b49b195fa2f84d9f1f22bb4e4794c137978e7033ba3",
+      "size_bytes": 12355051,
+      "status": "available"
+    }
+  ],
+  "source_ref": "main@6755883a8c043592d349cace4cd84aaae81d73d0+GoogleDrive:International_Tech_Jobs_Filtered.zip",
+  "sqlite_round_trip": {
+    "dataset_rows_read": 775155,
+    "eligible_salary_rows_loaded": 3354,
+    "mismatches": [],
+    "salary_groups_compared": 1957,
+    "scope_note": "in-memory SQLite round-trip of the final CSV and salary aggregates; not a comparison to the missing project job_market.sqlite3 database",
+    "status": "passed"
+  }
+}
