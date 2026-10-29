@@ -1,8 +1,10 @@
-# Data
+# Data Workspace
 
-This directory is for documenting data sources, data dictionaries, and only small samples approved for sharing.
+The data workflow uses these directories:
 
-- Keep large raw CSV and ZIP files in Google Drive or another agreed storage location; do not commit them to GitHub.
-- Do not upload personal data or files that the team is not permitted to redistribute.
-- Complete the Data Audit and Data Dictionary described in `docs/DATA_AND_DATABASE.md` before using the dataset.
-- Any illustrative sample must be small, anonymized, and free of credentials or sensitive information.
+- [`raw/`](raw/README.md): unchanged, authorized source files. Keep actual data files out of Git.
+- [`interim/`](interim/README.md): temporary outputs created during cleaning.
+- [`processed/`](processed/README.md): final cleaned, standardized, validated dataset for loading and analysis. Actual dataset files remain outside Git.
+- [`reference/`](reference/README.md): approved small reference catalogues such as skill aliases and learning-resource metadata.
+
+The original Drive files are read-only source material. See [`docs/data/`](../docs/data/README.md) for audit and data-dictionary documentation.

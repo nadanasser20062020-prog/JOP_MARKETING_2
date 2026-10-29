@@ -1,5 +1,8 @@
 # Frontend
 
-This directory is for website pages and the English/Arabic user experience.
+This directory is reserved for the website interface.
 
-Planned pages include the home dashboard, job explorer, job details, market analysis and comparison, skill explorer, skill matching and learning resources, and methodology. See `docs/FEATURE_SPEC.md` and `docs/WEB_APP_PLAN.md` for details.
+- [`design/`](design/README.md): approved wireframes, screen flows, accessibility notes, and localization references.
+- The frontend will implement the dashboard, job explorer and details, market comparisons, skill explorer, skill matcher, learning-resource pages, and methodology view.
+
+See `docs/FEATURE_SPEC.md`, `docs/WEB_APP_PLAN.md`, and `docs/software-engineering/UX_ACCESSIBILITY_I18N.md`.

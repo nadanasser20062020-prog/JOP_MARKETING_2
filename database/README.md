@@ -1,7 +1,10 @@
 # Database
 
-This directory is for the ERD, table definitions, Neon setup instructions, and data-loading decisions.
+This directory is reserved for the relational database design and implementation materials.
 
-- Treat the proposed schema as provisional until the dataset columns have been reviewed.
-- Review `docs/DATA_AND_DATABASE.md` before approving relationships.
-- Do not store Neon connection strings, passwords, or keys in Git.
+- [`erd/`](erd/README.md): finalized ERD references after the dataset audit.
+- [`migrations/`](migrations/README.md): ordered schema migrations when implementation begins.
+- [`docs/DATA_AND_DATABASE.md`](../docs/DATA_AND_DATABASE.md): data preparation and Neon planning.
+- [`docs/software-engineering/DATABASE_SPECIFICATION.md`](../docs/software-engineering/DATABASE_SPECIFICATION.md): logical database specification.
+
+The schema is provisional until the source columns are audited. Never store database credentials in the repository.
