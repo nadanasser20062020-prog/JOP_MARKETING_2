@@ -141,20 +141,20 @@ The website is intended to run in current desktop and mobile browsers selected f
 
 ## 7. Assumptions, Dependencies, and Constraints
 
-- The team reports that data collection is the only completed project activity. Dataset fields and quality must be confirmed in T01.
+- The first raw-data audit and reproducible preparation pass are complete. Revalidate fields, coverage, and quality for every new source refresh.
 - The dataset consists of collected job advertisements and may contain duplicates, expired listings, inconsistent terms, missing values, and market-coverage bias.
 - A feature may be enabled only when its required fields and sample size pass a documented gate.
 - Salary comparisons require compatible currency and pay-period definitions. Salary regression requires enough disclosed, comparable salary records.
 - Classification requires reliable labels or a reviewed labelled sample. Clustering does not require labels but requires human interpretation.
 - Source terms, redistribution rights, attribution, and any personal information must be reviewed before public release.
-- Original Drive data remains unchanged. Raw and processed data files must not be committed to GitHub.
+- Original Drive data remains unchanged. Raw files remain excluded from GitHub. Processed files are excluded by default and may be committed only with explicit approval; the current processed outputs are an approved exception, while redistribution rights remain unverified.
 - Skill-input retention is a proposed privacy decision under D-015 and must be confirmed before implementation.
 
 ## 8. Data Requirements and Business Rules
 
 ### 8.1 Candidate Data Entities
 
-The logical model contains candidate entities for job posts, companies, locations, sources, skills, job-skill associations, and learning resources. The actual entities and attributes must be validated against the data audit. See the [logical ERD](../diagrams/04_LOGICAL_ERD.md) and [physical schema proposal](PHYSICAL_SCHEMA_PROPOSAL.md).
+The audit-validated initial Neon DDL models jobs, source datasets/files, skills and aliases, job-skill links, skill observations, learning resources and their skill/language links, and import runs. Company and location dimensions remain optional future normalization candidates; the initial schema preserves the current source fields on each job row. See the [logical ERD](../diagrams/04_LOGICAL_ERD.md), [initial DDL](../../scripts/database_loading/neon_schema.sql), and [physical schema proposal](PHYSICAL_SCHEMA_PROPOSAL.md).
 
 ### 8.2 Business Rules
 
@@ -248,7 +248,7 @@ No specialized hardware interface is required. Standard devices with a supported
 ## 12. Data, API, and Database Design References
 
 - **Logical model:** See [Database Specification](DATABASE_SPECIFICATION.md) and [Logical ERD](../diagrams/04_LOGICAL_ERD.md).
-- **Physical model:** See [Proposed PostgreSQL Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md). It remains provisional until the audit confirms source fields.
+- **Physical model:** See the [initial Neon PostgreSQL DDL](../../scripts/database_loading/neon_schema.sql) and [Physical Schema Proposal](PHYSICAL_SCHEMA_PROPOSAL.md). The DDL reflects the completed audit but remains provisional until reviewed and applied to Neon.
 - **Data flow:** See [DFD Level 0](../diagrams/16_DFD_LEVEL_0.md), [DFD Level 1](../diagrams/17_DFD_LEVEL_1.md), and [Data Pipeline](../diagrams/05_DATA_PIPELINE.md).
 - **System behavior:** See [Use Cases](USE_CASES.md), [Job Search Sequence](../diagrams/19_JOB_SEARCH_SEQUENCE.md), [Skill Matching Sequence](../diagrams/09_SKILL_MATCHING_SEQUENCE.md), [Matching Request State](../diagrams/20_MATCH_REQUEST_STATE.md), and [Job Record State](../diagrams/21_DATA_RECORD_STATE.md).
 - **External API contract:** See [API Specification](API_SPECIFICATION.md).

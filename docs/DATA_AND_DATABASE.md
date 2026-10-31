@@ -2,7 +2,7 @@
 
 ## Current Status
 
-The raw-file audit and first reproducible data-preparation pass are complete. The repository contains a standard-library Python builder and documentation; generated job datasets remain in the ignored `data/processed/` directory. This does not constitute a running frontend or backend.
+The raw-file audit and first reproducible data-preparation pass are complete. The repository contains a standard-library Python builder and documentation. The current processed datasets are included under `data/processed/` by explicit approval; redistribution rights and listing activity are still unverified. Initial Neon/PostgreSQL DDL is available at [`scripts/database_loading/neon_schema.sql`](../scripts/database_loading/neon_schema.sql), but it has not been applied to a Neon database and is not a data loader. There is no running frontend or backend.
 
 - [`docs/data/DATA_AUDIT.md`](data/DATA_AUDIT.md) records the source inventory, coverage, duplicates, and caveats.
 - [`docs/data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) documents the normalized job, skill, and learning-resource schemas.
@@ -13,7 +13,7 @@ The International export is a historical 2023 sample for aggregate analysis. The
 ## Reproducible data stages
 
 1. **Raw source:** Read unchanged, authorized source files from `data/raw/`; do not edit Drive originals.
-2. **Staging:** Run `python scripts/data_cleaning/clean_all_data.py` from the repository root. It runs the builders in dependency order, creating three compressed job files, long-form job-skill assignments, frequency observations, a quality report, and refreshed reference catalogs. Generated job files remain under ignored `data/processed/`.
+2. **Staging:** Run `python scripts/data_cleaning/clean_all_data.py` from the repository root. It runs the builders in dependency order, creating three compressed job files, long-form job-skill assignments, frequency observations, a quality report, and refreshed reference catalogs under `data/processed/`. The current outputs are versioned in this branch by explicit approval; other untracked generated outputs remain ignored by default.
 3. **Skill references:** The runner calls `scripts/data_cleaning/build_skill_reference.py` to rebuild the catalog and alias map from observed terms and the reviewed curation JSON.
 4. **Learning resources:** The runner calls `scripts/data_cleaning/build_learning_resources.py` to validate skill references and produce the resource CSV.
 5. **Database loading:** Load only after checking the latest quality report and confirming data publication permissions. Keep source buckets and provenance fields.
@@ -21,16 +21,18 @@ The International export is a historical 2023 sample for aggregate analysis. The
 
 No output is imputed from missing values. Exact duplicate source rows are flagged and retained; no cross-source deduplication is attempted. Salary values and update dates are not normalized beyond the documented conservative handling.
 
-## Relational model proposal
+## Neon/PostgreSQL relational schema
 
-Implement or adapt these entities after reviewing the actual database choice and query patterns:
+The initial DDL in `scripts/database_loading/neon_schema.sql` implements this relational model for Neon/PostgreSQL:
 
-- **Job Posts:** `record_id` primary key; source dataset/file/row; upstream source ID; original title, company, description, location, work arrangement, employment type, experience, category, source date values, raw salary values and provenance, URL, listing status, snapshot bucket, and quality flags.
-- **Skills:** `skill_id` primary key; canonical name, category, match policy, review status, and curation notes.
-- **Skill Aliases:** normalized alias key, label, skill foreign key, alias type, and review/match policy.
-- **Job Skills:** one row per job-skill assignment, with job and skill foreign keys plus source skill label and provenance status.
-- **Learning Resources:** resource ID, provider, title, type, language, level, URL, access/cost caveat, credential note, verification status/date, and notes.
-- **Job Sources / Dataset Runs:** source dataset, source file, bucket, audit date, counts, and transformation version. Use these to retain provenance and track rebuilds.
+- **Data Sources and Source Files:** dataset labels, exact input filenames, snapshot groups, and detailed snapshot types.
+- **Import Runs and Import Run Files:** execution status, timestamps, quality-report JSON, and per-file row counts.
+- **Jobs:** `record_id` primary key; source dataset/file/row; upstream source identifier; original title, company, description, location, work arrangement, employment type, experience, category, raw date and salary fields, provenance, URL, listing status, snapshot type, and quality flags.
+- **Skills and Skill Aliases:** canonical skill metadata and normalized alias keys with matching/review policies.
+- **Job Skills:** one row per job-skill assignment with foreign keys to both jobs and skills, plus source label and provenance status.
+- **Skill Observations:** source-level raw and normalized labels, counts, and a relationship to the matching alias.
+- **Learning Resources:** provider, title, type, level, URL, cost/access caveats, credential notes, verification status/date, and notes.
+- **Learning Resource Skills and Languages:** join tables for a resource's skills and supported or unconfirmed language labels.
 
 Company and location dimension tables may be added when there is a demonstrated need; source values remain nullable and are not forcibly normalized. Keep the raw source strings even if a later canonical display field is introduced.
 
@@ -56,4 +58,4 @@ Before loading a new source refresh or publishing data:
 5. Verify the learning-resource links and course-specific access/language terms again before recommending them.
 6. Ensure credentials and private source data are not committed or exposed in API responses.
 
-The current schema is a data-loading proposal, not a completed database implementation or production ingestion service.
+The initial DDL is stored in `scripts/database_loading/neon_schema.sql`; it creates the tables, relationships, indexes, and source-file lookup rows, but has not been run against Neon. A repeat-safe CSV data loader and production ingestion service have not been implemented.

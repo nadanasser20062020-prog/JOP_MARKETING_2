@@ -1,6 +1,6 @@
 # Database Specification
 
-**Status:** Logical proposal. A candidate physical PostgreSQL schema is documented in [Physical Schema Proposal](PHYSICAL_SCHEMA_PROPOSAL.md); fields, types, constraints, and the final schema must be confirmed after T01 dataset inspection and T04 ERD review.
+**Status:** The first data audit is complete, Neon/PostgreSQL is selected, and initial executable DDL is available in [`scripts/database_loading/neon_schema.sql`](../../scripts/database_loading/neon_schema.sql). The DDL has not been applied to Neon; review the schema with the ERD and build a tested data loader before production use. This document remains the logical model and includes candidate dimensions not all represented in the initial DDL.
 
 ## Database Goals
 

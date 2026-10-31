@@ -1,6 +1,6 @@
 # Proposed PostgreSQL Physical Schema
 
-**Status:** Provisional design artifact for the SRS. This is not executable DDL. Confirm every field, constraint, and data type against the actual collected files before creating migrations.
+**Status:** This document remains a provisional design artifact and is not itself executable DDL. The audited initial Neon/PostgreSQL DDL is in [`scripts/database_loading/neon_schema.sql`](../../scripts/database_loading/neon_schema.sql); it has not been applied to Neon. Review differences between this conceptual proposal and the initial DDL before adding migrations or a data loader.
 
 ## 1. Design Objectives
 

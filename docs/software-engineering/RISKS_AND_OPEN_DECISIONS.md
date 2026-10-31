@@ -6,7 +6,7 @@ This register captures risks and decisions that affect the software design. Revi
 
 | ID | Risk | Impact | Mitigation or response | Status |
 |---|---|---|---|---|
-| R-001 | Actual dataset columns and quality are unknown | Planned features, schema, and models may not be feasible | Complete T01 and map each feature to verified fields before implementation | Open |
+| R-001 | New or refreshed source files may differ from the audited columns and quality | Planned features, schema, and models may not be feasible for a changed dataset | The first audit is complete in `docs/data/`; revalidate every new source refresh and gate features on verified fields | Mitigated for current files; ongoing for refreshes |
 | R-002 | Salary data may be sparse or incomparable across currencies and pay periods | Salary comparisons or regression may be misleading | Measure coverage, define a normalization policy, and use a no-go gate for unreliable estimates | Open |
 | R-003 | Job advertisements may be duplicated, expired, or reposted | Counts and trends may be inflated | Define a documented deduplication policy and distinguish posting from collection dates | Open |
 | R-004 | Collected markets may be biased or unrepresentative | Users may interpret a partial sample as a complete labor market | Show sample sizes, source coverage, dates, and limitations on relevant views | Open |
@@ -16,7 +16,7 @@ This register captures risks and decisions that affect the software design. Revi
 | R-008 | Language variants and spelling differences may fragment skills and titles | Search, comparisons, and matching may miss relevant records | Maintain reviewed aliases and test English/Arabic normalization where applicable | Open |
 | R-009 | Learning-resource access status can change | Users may follow resources that are no longer free or available | Record verification dates and establish a periodic review owner | Open |
 | R-010 | External job links may expire | Users may not be able to verify an advertisement | Show collection dates and avoid promising external-link availability | Open |
-| R-011 | Technology stack and deployment platform are not selected | Architecture and delivery estimates may change | Review team capabilities and deployment requirements before implementation | Open |
+| R-011 | Application frameworks and deployment platform are not selected; Neon is selected for PostgreSQL | Architecture and delivery estimates may change | Confirm frameworks, hosting, region, and deployment requirements before implementation | Open |
 | R-012 | User-entered skills could be exposed in logs or storage | User privacy could be compromised | Do not persist skill inputs; exclude request bodies from logs; verify with tests | Open |
 | R-013 | Data volume and query patterns are not measured | Common queries may be slow at demonstration time | Profile data size, benchmark queries, and add indexes only when measured | Open |
 | R-014 | Model results may perform unevenly across markets | Recommendations may be less useful for underrepresented countries | Report market coverage and evaluate errors by market where sample sizes allow | Open |
@@ -27,7 +27,7 @@ This register captures risks and decisions that affect the software design. Revi
 |---|---|---|---|
 | D-001 | Frontend and backend frameworks | Team familiarity, integration needs, deployment support | Implementation |
 | D-002 | Hosting platform and environment separation | Cost, student-project access, secrets, database connectivity | Deployment design |
-| D-003 | Database provider and plan | PostgreSQL/Neon is under consideration; confirm region, limits, and access | Database implementation |
+| D-003 | Database provider and plan | Neon with PostgreSQL is selected; confirm region, limits, access, and connection settings | Database implementation |
 | D-004 | Initial market and role coverage | Select based on actual records and project objectives | Final feature scope |
 | D-005 | Supported search filters | Include only reliable audited fields | API and UI implementation |
 | D-006 | Salary normalization and exchange-rate policy | Decide whether conversion is needed and how historical rates are handled | Salary analysis and regression |

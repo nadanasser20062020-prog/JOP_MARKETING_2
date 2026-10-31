@@ -1,10 +1,12 @@
 # Processed Site Data
 
-Generated, compressed datasets are kept in this ignored directory. Rebuild them from the unchanged authorized files in `data/raw/` with:
+This directory contains compressed, reproducible datasets generated from the unchanged files in `data/raw/`. Rebuild all job outputs and references from the repository root with:
 
 ```bash
-python scripts/data_cleaning/build_site_data.py
+python scripts/data_cleaning/clean_all_data.py
 ```
+
+The current processed datasets are included in this branch by explicit approval. New or untracked generated files remain ignored by default.
 
 The builder writes:
 
@@ -17,4 +19,4 @@ The builder writes:
 
 All source rows are retained. The builder does not deduplicate across sources or remove exact duplicate rows. Every job row is marked `unknown_not_verified` for listing status. Skill matching should honor the `skill_match_policy` and provenance fields; do not match or recommend ambiguous terms pending review.
 
-These generated files are ignored by Git because the raw source exports are also excluded. Keep processed data local or in approved external storage, and do not upload it without confirming redistribution permissions.
+The raw source exports remain excluded from Git. The processed outputs currently committed here are a specifically approved exception; confirm redistribution rights before any production or broader public release. The `.gitignore` rule remains in place for new, untracked generated files.
