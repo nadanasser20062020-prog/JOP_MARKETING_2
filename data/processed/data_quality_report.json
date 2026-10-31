@@ -1,0 +1,185 @@
+{
+  "generated_at_utc": "2026-10-31T13:16:31.296138+00:00",
+  "generated_by": "scripts/data_cleaning/build_site_data.py",
+  "record_status_policy": "Every row is marked unknown_not_verified; the source exports do not establish that a listing is currently active.",
+  "deduplication_policy": "No cross-source deduplication is performed. Exact duplicate rows within each source are flagged, not deleted.",
+  "date_policy": "Only explicit posted_at/job_posted_date fields populate posted_at. A field named updated is preserved separately and not treated as a posting or collection date.",
+  "salary_policy": "Salary values and provenance are preserved as text. No currency conversion or estimate-to-advertised-salary inference is performed.",
+  "files": {
+    "International_Tech_Jobs_Filtered.csv": {
+      "source_file": "International_Tech_Jobs_Filtered.csv",
+      "source_dataset": "international_jobs",
+      "bucket": "historical_sample",
+      "rows": 705866,
+      "exact_duplicate_rows": 80,
+      "missing": {
+        "description": 705866,
+        "source_url": 705866,
+        "salary_raw": 705866,
+        "skills": 98054,
+        "salary_any_value": 676609,
+        "country": 43,
+        "company": 20
+      },
+      "skill_rows_changed_vs_base": 0,
+      "skill_rows_filled_vs_base": 0,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 59919,
+      "duplicate_skill_assignments_after_canonicalization": 463,
+      "salary_raw_text_without_numeric_amount": 0
+    },
+    "Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx": {
+      "source_file": "Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx",
+      "source_dataset": "merged_tech_jobs",
+      "bucket": "other_snapshot",
+      "rows": 45591,
+      "exact_duplicate_rows": 11,
+      "missing": {
+        "posted_at": 6693,
+        "salary_raw": 22464,
+        "salary_any_value": 22464,
+        "company": 34,
+        "country": 60,
+        "description": 38898,
+        "source_url": 38898
+      },
+      "skill_rows_changed_vs_base": 0,
+      "skill_rows_filled_vs_base": 0,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 73017,
+      "duplicate_skill_assignments_after_canonicalization": 47,
+      "salary_raw_text_without_numeric_amount": 0
+    },
+    "arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv": {
+      "source_file": "arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv",
+      "source_dataset": "arab_tech_jobs",
+      "bucket": "other_snapshot",
+      "rows": 439,
+      "exact_duplicate_rows": 0,
+      "missing": {
+        "description": 296,
+        "source_url": 351,
+        "salary_raw": 387,
+        "posted_at": 360,
+        "salary_any_value": 387,
+        "company": 143,
+        "country": 1
+      },
+      "skill_rows_changed_vs_base": 0,
+      "skill_rows_filled_vs_base": 0,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 0,
+      "duplicate_skill_assignments_after_canonicalization": 14,
+      "salary_raw_text_without_numeric_amount": 0
+    },
+    "cybersecurity_jobs_expanded_6_columns.csv": {
+      "source_file": "cybersecurity_jobs_expanded_6_columns.csv",
+      "source_dataset": "cybersecurity_jobs",
+      "bucket": "other_snapshot",
+      "rows": 58,
+      "exact_duplicate_rows": 0,
+      "missing": {
+        "description": 58,
+        "source_url": 58,
+        "posted_at": 58,
+        "salary_any_value": 56
+      },
+      "skill_rows_changed_vs_base": 0,
+      "skill_rows_filled_vs_base": 0,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 0,
+      "duplicate_skill_assignments_after_canonicalization": 1,
+      "salary_raw_text_without_numeric_amount": 56
+    },
+    "remote_tech_jobs_foreign_after_adding_skills.csv": {
+      "source_file": "remote_tech_jobs_foreign_after_adding_skills.csv",
+      "source_dataset": "remote_tech_jobs",
+      "bucket": "latest_export",
+      "rows": 1075,
+      "exact_duplicate_rows": 0,
+      "missing": {
+        "posted_at": 1075,
+        "salary_raw": 1025,
+        "salary_any_value": 1025
+      },
+      "skill_rows_changed_vs_base": 1050,
+      "skill_rows_filled_vs_base": 83,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 0,
+      "duplicate_skill_assignments_after_canonicalization": 1,
+      "salary_raw_text_without_numeric_amount": 0
+    },
+    "startup_jobs_foreign_after_adding_skills.csv": {
+      "source_file": "startup_jobs_foreign_after_adding_skills.csv",
+      "source_dataset": "startup_jobs",
+      "bucket": "latest_export",
+      "rows": 3543,
+      "exact_duplicate_rows": 0,
+      "missing": {
+        "description": 3543,
+        "posted_at": 3543,
+        "salary_raw": 1952,
+        "salary_any_value": 1952
+      },
+      "skill_rows_changed_vs_base": 3543,
+      "skill_rows_filled_vs_base": 2993,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 0,
+      "duplicate_skill_assignments_after_canonicalization": 1,
+      "salary_raw_text_without_numeric_amount": 0
+    },
+    "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv": {
+      "source_file": "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv",
+      "source_dataset": "jooble_careerjet_jobs",
+      "bucket": "latest_export",
+      "rows": 18583,
+      "exact_duplicate_rows": 0,
+      "missing": {
+        "salary_raw": 13340,
+        "posted_at": 18583,
+        "salary_any_value": 13340,
+        "company": 122,
+        "title": 4
+      },
+      "skill_rows_changed_vs_base": 18583,
+      "skill_rows_filled_vs_base": 11477,
+      "skill_rows_base_comparison_unavailable": 0,
+      "duplicate_skill_tokens_removed": 0,
+      "duplicate_skill_assignments_after_canonicalization": 9,
+      "salary_raw_text_without_numeric_amount": 0
+    }
+  },
+  "bucket_policy": {
+    "historical_sample": "International export only; all source posting dates were observed in 2023.",
+    "latest_export": "Remote, startup, and Jooble/Careerjet after-adding-skills exports. Listing activity is not verified.",
+    "other_snapshot": "Merged, Arab, and cybersecurity exports kept separate because their date and current-status semantics do not establish historical coverage or active listings."
+  },
+  "totals": {
+    "historical_sample_rows": 705866,
+    "latest_export_rows": 23201,
+    "other_snapshot_rows": 46088,
+    "job_skill_rows": 4026953
+  },
+  "outputs": {
+    "jobs_historical_2023_sample": {
+      "path": "data/processed/jobs_historical_2023_sample.csv.gz",
+      "size_bytes": 58922313
+    },
+    "jobs_latest_export_unverified": {
+      "path": "data/processed/jobs_latest_export_unverified.csv.gz",
+      "size_bytes": 7605943
+    },
+    "jobs_other_snapshots_unverified": {
+      "path": "data/processed/jobs_other_snapshots_unverified.csv.gz",
+      "size_bytes": 9196782
+    },
+    "job_skills": {
+      "path": "data/processed/job_skills.csv.gz",
+      "size_bytes": 41430653
+    },
+    "skill_observations": {
+      "path": "data/processed/skill_observations.csv.gz",
+      "size_bytes": 22843
+    }
+  }
+}

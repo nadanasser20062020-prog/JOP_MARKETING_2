@@ -40,7 +40,7 @@ Reviewers should verify:
 ## Data, Notebooks, and Secrets
 
 - Treat original Drive data as read-only.
-- Do not commit large raw or processed datasets, secrets, environment files, or private records.
+- Do not commit raw datasets, secrets, environment files, or private records. Keep processed datasets excluded by default; commit them only with explicit approval and document any unresolved redistribution-rights or privacy review.
 - Make analytical notebooks reproducible and keep credentials outside notebook content.
 - Separate exploratory work from the data-loading or application pipeline.
 

@@ -50,7 +50,7 @@ The browser must not connect directly to Neon or contain database credentials. T
 
 - Accept user-entered skills and optional market or work-arrangement preferences.
 - Show closest roles or jobs and explain matching and missing skills.
-- Link missing skills to verified free resources, including their free-access status.
+- Link missing skills to resources; label items free only when `cost_status=free_verified`, and disclose mixed, conditional, or unverified access terms.
 
 ### 7. Methodology
 

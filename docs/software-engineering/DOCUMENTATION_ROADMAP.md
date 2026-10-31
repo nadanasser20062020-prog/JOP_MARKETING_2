@@ -31,7 +31,7 @@ This roadmap distinguishes specifications that can be established from the proje
 
 ## Documents to Finalize During and After Implementation
 
-- **Screen wireframes and design-system specification:** Review with the team and representative users before building the UI.
+- **High-fidelity mockups and final design-system specification:** Review the low-fidelity wireframes and proposed palette with the team and representative users before building the UI.
 - **Detailed test cases and test reports:** Map to implemented components and acceptance criteria.
 - **Operational runbooks and release notes:** Verify against the actual hosting and recovery procedures.
 - **User guide:** Capture the implemented interface and final behavior after feature freeze.

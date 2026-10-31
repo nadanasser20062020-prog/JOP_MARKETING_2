@@ -26,6 +26,7 @@ All diagrams in this directory are version-controlled Mermaid diagrams and rende
 | [Skill Matching Activity](08_SKILL_MATCHING_ACTIVITY.md) | Shows validation, normalization, ranking, gaps, and resource navigation. |
 | [Skill Matching Sequence](09_SKILL_MATCHING_SEQUENCE.md) | Shows request and response interactions across UI, API, services, and database. |
 | [Site Map](13_SITE_MAP.md) | Shows the proposed navigation and page hierarchy. |
+| [UI/UX Guidelines and Low-Fidelity Wireframes](../software-engineering/UI_UX_GUIDELINES_AND_WIREFRAMES.md) | Shows proposed layout sketches and design/accessibility guidance. |
 
 ## Analytics, ML, and Delivery
 

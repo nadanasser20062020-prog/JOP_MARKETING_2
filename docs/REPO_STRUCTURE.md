@@ -1,6 +1,6 @@
 # Repository Structure and Workflow-to-Folder Map
 
-This repository uses folders to separate project stages. The folders are documented scaffolding; no data-processing or application implementation code has been added. Large data files remain outside Git, and all data-specific fields must be confirmed by the initial audit.
+This repository separates project stages. A reproducible data-preparation pipeline, reviewed skill/learning-resource references, selected processed outputs, and an initial Neon/PostgreSQL schema now exist. The processed outputs were explicitly approved for this branch; raw data remains excluded. There is still no running frontend, backend, executable database loader, or production application. Source-specific fields and limitations are documented in the completed first audit; re-audit any new source refresh.
 
 ## End-to-End Step-to-Folder Map
 
@@ -12,10 +12,11 @@ This repository uses folders to separate project stages. The folders are documen
 | Data audit and data dictionary | `docs/data/` | Audit reports, data dictionary, dataset provenance, coverage, quality findings, and data-use restrictions |
 | Temporary cleaning outputs | `data/interim/` | Local intermediate files produced during cleaning; contents are Git-ignored |
 | Python data-cleaning scripts | `scripts/data_cleaning/` | Reproducible Python cleaning, normalization, and deduplication scripts |
-| Final cleaned and normalized data | `data/processed/` | Local analysis-ready outputs; contents are Git-ignored and must not be committed as large datasets |
+| Final cleaned and normalized data | `data/processed/` | Analysis-ready outputs. The current six generated artifacts are committed by explicit approval; the ignore rule remains for new outputs unless separately authorized |
 | Database model and ERD material | `database/erd/` and `docs/diagrams/` | Database design references and the version-controlled logical ERD |
 | Database schema changes | `database/migrations/` | Ordered, reviewable database migration files when implementation begins |
-| Python database-loading script | `scripts/database_loading/` | Python scripts that load validated processed data into PostgreSQL/Neon and verify counts and relationships |
+| Neon/PostgreSQL schema | `scripts/database_loading/neon_schema.sql` | Initial DDL for source metadata, jobs, skills, aliases, learning resources, import logs, indexes, and foreign-key relationships |
+| Python database loader | `scripts/database_loading/` | Planned repeat-safe import code; no executable loader exists yet |
 | SQL analysis | `analysis/sql/` | Reproducible SQL queries for market and skills analysis |
 | Python exploratory analysis | `analysis/notebooks/` | Jupyter notebooks using Pandas, NumPy, Matplotlib, and Seaborn |
 | Charts and analysis reports | `analysis/reports/` | Reviewed visualizations, result summaries, and analytical limitations |
@@ -71,8 +72,8 @@ This repository uses folders to separate project stages. The folders are documen
 
 ## Data and Security Rules
 
-- `data/raw/`, `data/interim/`, and `data/processed/` are local working areas. Their data contents are excluded from Git; only the folder README files are tracked.
+- `data/raw/` and `data/interim/` remain local working areas excluded from Git. The current `data/processed/` outputs are explicitly approved and tracked; the ignore rule remains for future generated files.
 - Store connection credentials outside the repository.
 - Keep original source data unchanged. Cleaning scripts should read raw input and write separate outputs.
-- Do not finalize the schema, loader, or model fields until the data audit is complete.
-- The Python database loader must read the processed dataset, use secure credentials, support safe repeat runs, and validate the inserted record counts and relationships.
+- The initial data audit is complete; keep schema and loader decisions aligned with `docs/data/DATA_AUDIT.md` and `docs/data/DATA_DICTIONARY.md`, and re-audit any changed source files.
+- No Python database loader exists yet. When added, it must read the processed dataset, use secure credentials, support safe repeat runs, and validate inserted record counts and relationships.

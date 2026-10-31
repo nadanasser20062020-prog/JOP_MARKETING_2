@@ -1,7 +1,7 @@
 # Data Documentation
 
-Store data-audit reports, the completed data dictionary, dataset provenance, coverage findings, and data-quality decisions here.
+- [`DATA_AUDIT.md`](DATA_AUDIT.md) summarizes audited source files, coverage, data-quality findings, processing decisions, and current limitations.
+- [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md) defines the generated job, skill, alias, resource, and quality-report fields.
+- Use [`docs/DATA_AND_DATABASE.md`](../DATA_AND_DATABASE.md) for the staging workflow, proposed relational model, and release gates.
 
-- Start with `docs/software-engineering/DATA_DICTIONARY_TEMPLATE.md` and `DATASET_CARD_TEMPLATE.md`.
-- Do not publish private source records or unsupported assumptions.
-- Keep the final data documentation consistent with `docs/DATA_AND_DATABASE.md` and the ERD.
+Do not publish private source records or unsupported assumptions. Keep these documents synchronized with the scripts and reference catalogs.

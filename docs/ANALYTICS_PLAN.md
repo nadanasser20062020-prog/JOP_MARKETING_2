@@ -1,6 +1,6 @@
 # SQL and Python Analytics Plan
 
-The analysis should answer specific questions about the **collected job advertisements**, not make unsupported claims about entire labor markets. Begin after T01–T05: audit the dataset, clean it, design the relational model, and load it into the database.
+The analysis should answer specific questions about the **collected job advertisements**, not make unsupported claims about entire labor markets. The initial audit and staging pass are complete; database design/loading and analytical queries remain to be implemented. Use the International 2023 sample for historical aggregates, keep the newest exports as a separate unverified snapshot, and do not use mixed `updated` fields as a time series until their semantics are confirmed. See [`docs/data/DATA_AUDIT.md`](data/DATA_AUDIT.md).
 
 ## Analysis Questions
 

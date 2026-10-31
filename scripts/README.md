@@ -1,5 +1,5 @@
 # Data Pipeline Scripts
 
-This directory is reserved for reproducible Python scripts that prepare collected job-advertisement data and load validated outputs into the database.
+This directory contains reproducible Python data-preparation scripts in `data_cleaning/`. Run `python scripts/data_cleaning/clean_all_data.py` from the repository root to rebuild all processed datasets and references. The scripts use the Python standard library.
 
-The planned stages are separated into `data_cleaning/` and `database_loading/`. No executable scripts have been added yet; implementation follows the dataset audit and approved data model.
+The initial Neon/PostgreSQL schema is available at [`database_loading/neon_schema.sql`](database_loading/neon_schema.sql). A repeat-safe Python data loader has not been implemented yet. Data-preparation commands and caveats are documented in [`data_cleaning/README.md`](data_cleaning/README.md).

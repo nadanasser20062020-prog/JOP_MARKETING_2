@@ -4,11 +4,13 @@ This section defines the product and engineering baseline for JOP Marketing Inte
 
 ## Document Status
 
-These documents are design specifications, not implementation. The dataset schema, technology stack, hosting provider, and operational targets are not yet confirmed. Requirements that depend on those decisions are explicitly provisional or conditional. Finalize them after the dataset audit and team review.
+Most documents remain design specifications rather than implementation. The initial data audit is complete, and Neon/PostgreSQL has been selected for the database. An initial executable DDL file is available at `../../scripts/database_loading/neon_schema.sql`, but it has not been applied to Neon and does not include a data loader. Frontend/backend frameworks, deployment hosting, and operational targets remain open; dependent requirements are provisional or conditional.
 
 ## Product Definition
 
-- [Software Requirements Specification](REQUIREMENTS_SPECIFICATION.md)
+- [Software Requirements Specification (SRS)](REQUIREMENTS_SPECIFICATION.md)
+- [System Analysis and Design Deliverables Coverage](SYSTEM_ANALYSIS_DELIVERABLES.md)
+- [Documentation Status and Roadmap](DOCUMENTATION_ROADMAP.md)
 - [User Stories and Acceptance Criteria](USER_STORIES.md)
 - [Use Cases and User Flows](USE_CASES.md)
 - [Requirements Traceability Matrix](TRACEABILITY_MATRIX.md)
@@ -17,8 +19,11 @@ These documents are design specifications, not implementation. The dataset schem
 
 - [System Architecture](ARCHITECTURE.md)
 - [API Specification](API_SPECIFICATION.md)
-- [Database Specification](DATABASE_SPECIFICATION.md)
+- [Logical Database Specification](DATABASE_SPECIFICATION.md)
+- [Proposed PostgreSQL Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md)
+- [Initial Neon PostgreSQL DDL](../../scripts/database_loading/neon_schema.sql)
 - [UX, Accessibility, and Localization](UX_ACCESSIBILITY_I18N.md)
+- [UI/UX Guidelines and Low-Fidelity Wireframes](UI_UX_GUIDELINES_AND_WIREFRAMES.md)
 - [Complete Diagram Pack](../diagrams/README.md)
 
 ## Quality and Operations

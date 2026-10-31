@@ -52,7 +52,7 @@ This document defines the user-facing product scope. A feature that depends on a
 ## 7. Free Learning Resources
 
 - Link each resource to a specific skill and display its title, provider, language, level, and URL.
-- Record when the free-access status was last checked. If only part of a resource is free, state that clearly.
+- Record when the access/cost status was last checked. Only resources marked `free_verified` may be presented as free; `some_free_options`, `conditional_or_mixed`, and `cost_unverified` must be clearly caveated and excluded from free-only recommendations until course-level terms are confirmed.
 - Prefer official documentation and verifiable learning resources, and review links periodically.
 
 ## 8. Language and Usability

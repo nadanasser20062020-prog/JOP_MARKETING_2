@@ -10,6 +10,10 @@
 - Make recommendations explainable and expose data limitations.
 - Support English and Arabic interfaces without duplicating the underlying data.
 
+## Proposed Architecture Style
+
+Use a layered, modular three-tier architecture: presentation (web frontend), application (versioned API and application services), and data (relational database). Keep data preparation, SQL/Python analysis, and machine-learning experiments as separate workflows that feed approved outputs into the application. Do not introduce microservices for the initial project unless a demonstrated requirement justifies the added operational complexity. This style is proposed and should be accepted through an ADR before implementation.
+
 ## System Context
 
 The system serves visitors exploring the team's collected job advertisements. The project team prepares and validates the data, operates the application, and maintains the learning-resource catalogue. Visitors follow outbound links to original job postings and external learning providers; those sites are outside the application's control.
