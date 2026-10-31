@@ -16,6 +16,8 @@
 ## Software Engineering
 
 - [Software engineering documentation index](software-engineering/README.md)
+- [Software Requirements Specification](software-engineering/REQUIREMENTS_SPECIFICATION.md)
+- [System Analysis and Design Deliverables Coverage](software-engineering/SYSTEM_ANALYSIS_DELIVERABLES.md)
 - [Project diagram pack](diagrams/README.md)
 - [Web application plan](WEB_APP_PLAN.md)
 
