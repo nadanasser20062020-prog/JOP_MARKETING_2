@@ -1,6 +1,6 @@
 # Repository Structure and Workflow-to-Folder Map
 
-This repository uses folders to separate project stages. The folders are documented scaffolding; no data-processing or application implementation code has been added. Large data files remain outside Git, and all data-specific fields must be confirmed by the initial audit.
+This repository separates project stages. A reproducible data-preparation pipeline and reviewed skill/learning-resource references now exist; generated data remains local and Git-ignored. There is still no running frontend, backend, database loader, or production application. Source-specific fields and limitations are documented in the completed first audit; re-audit any new source refresh.
 
 ## End-to-End Step-to-Folder Map
 
@@ -74,5 +74,5 @@ This repository uses folders to separate project stages. The folders are documen
 - `data/raw/`, `data/interim/`, and `data/processed/` are local working areas. Their data contents are excluded from Git; only the folder README files are tracked.
 - Store connection credentials outside the repository.
 - Keep original source data unchanged. Cleaning scripts should read raw input and write separate outputs.
-- Do not finalize the schema, loader, or model fields until the data audit is complete.
-- The Python database loader must read the processed dataset, use secure credentials, support safe repeat runs, and validate the inserted record counts and relationships.
+- The initial data audit is complete; keep schema and loader decisions aligned with `docs/data/DATA_AUDIT.md` and `docs/data/DATA_DICTIONARY.md`, and re-audit any changed source files.
+- No Python database loader exists yet. When added, it must read the processed dataset, use secure credentials, support safe repeat runs, and validate inserted record counts and relationships.

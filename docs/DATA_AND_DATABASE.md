@@ -1,67 +1,59 @@
 # Data and Database Plan
 
-## Current Status and Guiding Principle
+## Current Status
 
-The team reports that data collection is the only completed project activity. The contents and fields of the large files in Drive have not yet been documented in this repository. All database designs below are provisional until T01 is complete. Do not modify the original Drive files, and do not commit large raw CSV/ZIP files or database credentials to GitHub.
+The raw-file audit and first reproducible data-preparation pass are complete. The repository contains a standard-library Python builder and documentation; generated job datasets remain in the ignored `data/processed/` directory. This does not constitute a running frontend or backend.
 
-## T01 — Dataset Audit Checklist
+- [`docs/data/DATA_AUDIT.md`](data/DATA_AUDIT.md) records the source inventory, coverage, duplicates, and caveats.
+- [`docs/data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) documents the normalized job, skill, and learning-resource schemas.
+- [`scripts/data_cleaning/README.md`](../scripts/data_cleaning/README.md) documents the rebuild commands.
 
-Record the following before building the schema or models:
+The International export is a historical 2023 sample for aggregate analysis. The latest Remote, Startup, and Jooble/Careerjet exports are separate snapshots whose advertisement status is unverified. The merged workbook, Arab-tech, and cybersecurity exports are kept in a third snapshot bucket because their date semantics do not establish a consistent historical range or live status. Do not merge these groups into a single “current jobs” feed without new source verification.
 
-- File names, formats, sizes, text encodings, and languages.
-- Record and column counts, field definitions, and representative values.
-- Missing-value rates and duplicates; determine whether repeated records are duplicate postings or reposted advertisements.
-- Coverage by country, employer, role, date range, and advertisement source.
-- Availability of job descriptions, skills, work arrangement, experience, and education.
-- Salary coverage, currencies, pay periods, and whether values are single amounts or ranges.
-- Source-link validity, the distinction between posting date and collection date, and any restrictions on data use or redistribution.
+## Reproducible data stages
 
-**Deliverable:** A Data Audit and Data Dictionary. Do not publish samples that expose personal information or data that the team is not permitted to redistribute.
+1. **Raw source:** Read unchanged, authorized source files from `data/raw/`; do not edit Drive originals.
+2. **Staging:** Run `python scripts/data_cleaning/clean_all_data.py` from the repository root. It runs the builders in dependency order, creating three compressed job files, long-form job-skill assignments, frequency observations, a quality report, and refreshed reference catalogs. Generated job files remain under ignored `data/processed/`.
+3. **Skill references:** The runner calls `scripts/data_cleaning/build_skill_reference.py` to rebuild the catalog and alias map from observed terms and the reviewed curation JSON.
+4. **Learning resources:** The runner calls `scripts/data_cleaning/build_learning_resources.py` to validate skill references and produce the resource CSV.
+5. **Database loading:** Load only after checking the latest quality report and confirming data publication permissions. Keep source buckets and provenance fields.
+6. **Application:** Build search/filtering, analytics, skill matching, and learning recommendations against documented fields. Show source and verification caveats in the UI.
 
-## Data Stages
+No output is imputed from missing values. Exact duplicate source rows are flagged and retained; no cross-source deduplication is attempted. Salary values and update dates are not normalized beyond the documented conservative handling.
 
-1. **Raw source:** Preserve the original files in their current location; do not edit them directly.
-2. **Inspection and staging:** Record file structure, data-quality issues, and cleaning decisions. If a working copy is required, store it securely outside Git.
-3. **Standardization:** Normalize titles, values, aliases, and duplicates while retaining original values where useful.
-4. **Analytical database:** Load structured data into PostgreSQL/Neon for analysis and application access.
-5. **Outputs:** Produce reproducible queries, charts, models, and reports with documented transformations.
+## Relational model proposal
 
-## Provisional Relational Model
+Implement or adapt these entities after reviewing the actual database choice and query patterns:
 
-Confirm or revise this model after auditing the actual fields:
+- **Job Posts:** `record_id` primary key; source dataset/file/row; upstream source ID; original title, company, description, location, work arrangement, employment type, experience, category, source date values, raw salary values and provenance, URL, listing status, snapshot bucket, and quality flags.
+- **Skills:** `skill_id` primary key; canonical name, category, match policy, review status, and curation notes.
+- **Skill Aliases:** normalized alias key, label, skill foreign key, alias type, and review/match policy.
+- **Job Skills:** one row per job-skill assignment, with job and skill foreign keys plus source skill label and provenance status.
+- **Learning Resources:** resource ID, provider, title, type, language, level, URL, access/cost caveat, credential note, verification status/date, and notes.
+- **Job Sources / Dataset Runs:** source dataset, source file, bucket, audit date, counts, and transformation version. Use these to retain provenance and track rebuilds.
 
-- **Job Posts:** Original and normalized title, description, posting and collection dates, work arrangement, experience, original salary text and normalized salary fields where available, and source URL.
-- **Companies:** Normalized and original employer names; employer may be unknown.
-- **Locations:** Country and city/region where available; unknown locations remain unknown.
-- **Skills:** Canonical skill name, optional category, and known aliases.
-- **Job Skills:** Junction table linking job posts to skills. Add required/preferred status only when it can be inferred reliably from the source.
-- **Sources:** Source platform or site, advertisement/source URL, and collection date.
-- **Learning Resources:** Skill, resource title, provider, language, level, URL, free-access status, and verification date.
+Company and location dimension tables may be added when there is a demonstrated need; source values remain nullable and are not forcibly normalized. Keep the raw source strings even if a later canonical display field is introduced.
 
-## Proposed Relationships
+## Field and integrity rules
 
-- One company may be associated with many job posts; an advertisement may have no known company.
-- One location may be associated with many job posts; a post may have no known location.
-- Job posts and skills form a many-to-many relationship through Job Skills.
-- One source may provide many job posts.
-- One skill may be linked to multiple learning resources.
+- `record_id` is a generated staging key, not a stable external job ID. Keep `source_record_id` separate and nullable.
+- Keep `posted_at` separate from `source_updated_at`. Do not sort or filter mixed `updated` values as dates until their format and semantics are validated.
+- Store listing state as unknown unless an authoritative source check provides it. Do not present the latest export bucket as verified active jobs.
+- Never convert missing salary, company, country, or description to a default value. Preserve salary text and separate annual/hourly source fields; do not compare unlike currencies or pay periods.
+- Research-derived or inferred salary ranges must be marked and must not be described as employer-published compensation.
+- For skill matching, use only the policies in the reviewed reference data. No fuzzy synonym expansion; exclude ambiguous labels pending review. Keep whether a skill is base-source or enrichment-derived.
+- Preserve duplicate source rows and their flags unless a separately reviewed deduplication method is approved.
+- Learning-resource status must be attached to the specific page/course and include language, account, fee, and certificate uncertainty. Do not imply that an entire provider catalog is free because some offerings are.
 
-## Field Design Rules
+## Audit and release gates
 
-- Preserve original title, salary, and description text; do not replace originals with normalized values only.
-- Salary fields require amount or range, currency, pay period (monthly, yearly, hourly, etc.), and original text. Do not aggregate incomparable currencies or pay periods.
-- Normalize work arrangements to values such as remote, hybrid, onsite, or unknown only after reviewing the source text.
-- Never convert missing values to zero or create an unreported salary, employer, or location.
-- Keep posting date separate from collection date.
-- Avoid duplicate skill assignments within the same advertisement after alias normalization; retain source or confidence information where feasible.
+Before loading a new source refresh or publishing data:
 
-## ERD and Keys
+1. Confirm the file list, schema, row counts, date range, and data-use/redistribution permission.
+2. Re-run the data builder and inspect `data_quality_report.json`; compare row counts and missingness to the prior audit.
+3. Review source-ID overlap, duplicate rows, and changes in skills and salary provenance.
+4. Check whether source URLs resolve and whether any official listing-status indicator is available; until then, keep status unknown.
+5. Verify the learning-resource links and course-specific access/language terms again before recommending them.
+6. Ensure credentials and private source data are not committed or exposed in API responses.
 
-After T01 and T02, create an ERD showing tables, primary and foreign keys, optional relationships, and nullable fields. Review it with another team member. Clearly represent the Job Posts-to-Skills relationship through Job Skills, as well as source, company, and location relationships.
-
-## Neon and Secure Connections
-
-- Store connection details in local environment variables or hosting configuration; never commit them or embed them in notebooks.
-- If environment-variable names need to be documented, use an example configuration with no real credentials.
-- Python analysis should query selected results from the database rather than repeatedly loading a large raw file.
-- Validate record counts, relationships, and constraints after each load. Keep transformation steps reproducible.
+The current schema is a data-loading proposal, not a completed database implementation or production ingestion service.

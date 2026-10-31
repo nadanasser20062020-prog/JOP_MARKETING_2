@@ -1,6 +1,6 @@
 # Database Specification
 
-**Status:** Logical proposal only. Physical field types, constraints, and schema must be finalized after T01 dataset inspection and T04 ERD review.
+**Status:** Logical proposal. A candidate physical PostgreSQL schema is documented in [Physical Schema Proposal](PHYSICAL_SCHEMA_PROPOSAL.md); fields, types, constraints, and the final schema must be confirmed after T01 dataset inspection and T04 ERD review.
 
 ## Database Goals
 
