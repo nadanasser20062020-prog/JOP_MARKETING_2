@@ -10,6 +10,8 @@
 ## Data Science and Data Engineering
 
 - [Data and database plan](DATA_AND_DATABASE.md)
+- [Data audit](data/DATA_AUDIT.md)
+- [Data dictionary](data/DATA_DICTIONARY.md)
 - [SQL and Python analytics plan](ANALYTICS_PLAN.md)
 - [Machine learning plan](ML_PLAN.md)
 

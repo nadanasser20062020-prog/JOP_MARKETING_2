@@ -16,7 +16,7 @@ Use this checklist for a demonstration or production release. Mark items not app
 - [ ] Record counts, relationships, duplicates, and key fields have been validated.
 - [ ] Salary values use documented units and are clearly distinguished from estimates.
 - [ ] Models shown to users have current Model Cards, baselines, and evaluation evidence.
-- [ ] Learning-resource links and free-access status have been reviewed.
+- [ ] Learning-resource links and course-level cost status have been reviewed; only `free_verified` items are labelled free.
 
 ## Security and Privacy
 

@@ -30,7 +30,7 @@
 4. Compare markets with unequal sample sizes and ensure the limitation is visible.
 5. Submit valid, empty, unrecognized, and oversized skill input.
 6. Review match explanations and verify that skill input is not persisted or logged.
-7. Open a learning resource and verify its language and free-access description.
+7. Open a learning resource and verify its language and access description; confirm only `free_verified` items are labelled free.
 8. Switch between English and Arabic and check RTL/LTR layout.
 9. Simulate database or model unavailability and verify safe recovery states.
 

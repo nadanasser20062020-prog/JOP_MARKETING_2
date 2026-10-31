@@ -94,8 +94,8 @@ Stories are grouped by product capability. Market fields and filters remain cond
 
 **Acceptance criteria**
 - Each resource identifies its skill, provider, language, and access status.
-- Free status has a recorded verification date.
-- A resource is not presented as fully free if only selected content is free.
+- Free status has a recorded verification date, and only `cost_status=free_verified` is labelled free.
+- `some_free_options`, `conditional_or_mixed`, and `cost_unverified` are not presented as verified-free recommendations; their access caveats remain visible.
 
 ## Epic E4 — Use the Product in My Language
 
