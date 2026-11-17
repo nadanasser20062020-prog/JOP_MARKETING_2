@@ -24,6 +24,18 @@ python scripts/data_cleaning/build_learning_resources.py
 
 `build_learning_resources.py` validates the curated JSON resource list against the skill IDs and writes `data/reference/learning_resources.csv`.
 
+## Build the Neon Free upload profile
+
+After the full processed exports and reference CSVs are available, run:
+
+```bash
+python scripts/data_cleaning/build_neon_free_dataset.py
+```
+
+This creates `jobs_neon_free.csv.gz`, `job_skills_neon_free.csv.gz`, `skill_observations_neon_free.csv.gz`, and `neon_free_quality_report.json` under `data/processed/neon_free/`. The default retains all 22,958 Arab-country job rows found in the available processed exports, every related job-skill row, and all 6,050 rows whose geography is blank, `Other/Unknown`, `Remote (Anywhere)`, or `Worldwide`. It also retains up to 5 named non-Arab rows per `(source_dataset, country)` stratum: 925 rows across 192 strata, covering all seven current source datasets. Sampling is deterministic and does not deduplicate across sources. Profile-specific skill observations are recalculated from the retained job-skill rows.
+
+The builder adds new files only; it does not modify or replace the existing processed exports, raw files, or reference files. Its five-times-COPY-plus-fixed-overhead storage figure is a planning proxy, not a PostgreSQL or Neon measurement. The loader also enforces an 800 MB current-database size guard and reports relation, index, and TOAST sizes after loading; confirm the actual project quota and usage in Neon before considering the upload verified.
+
 ## Safety and interpretation rules
 
 - Never edit or overwrite files in `data/raw/`.
@@ -33,4 +45,4 @@ python scripts/data_cleaning/build_learning_resources.py
 - Exact duplicates are flagged and retained; there is no cross-source deduplication.
 - Retain raw salaries and their source/provenance. Do not convert currencies or describe research-derived salary ranges as employer-posted pay.
 - Treat enriched skills as source/enrichment data, not independently verified requirements. `CAN`, `Flow`, and `Word` are explicitly excluded from matching until reviewed.
-- Processed files remain excluded from Git; the reports and scripts are reproducible from the authorized local raw files.
+- Processed files remain Git-ignored by default. Only the new reduced Neon Free files are force-added to this PR under explicit request; existing full files remain unchanged. This scoped addition does not establish general redistribution rights, which remain unverified.

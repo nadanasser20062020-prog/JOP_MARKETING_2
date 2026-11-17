@@ -10,8 +10,16 @@ from pathlib import Path
 PROJECT_ROOT_DIRECTORY = Path(__file__).resolve().parents[2]
 DEFAULT_PROCESSED_DATA_DIRECTORY = PROJECT_ROOT_DIRECTORY / "data" / "processed"
 DEFAULT_REFERENCE_DATA_DIRECTORY = PROJECT_ROOT_DIRECTORY / "data" / "reference"
-QUALITY_REPORT_FILE_NAME = "data_quality_report.json"
-PIPELINE_VERSION = "site_data_import_v1"
+QUALITY_REPORT_FILE_NAMES = {
+    "neon-free": "neon_free/neon_free_quality_report.json",
+    "full": "data_quality_report.json",
+}
+PIPELINE_VERSIONS = {
+    "neon-free": "neon_free_arab_complete_v1",
+    "full": "site_data_import_v1",
+}
+DEFAULT_DATASET_PROFILE = "neon-free"
+DEFAULT_DATABASE_SIZE_GUARD_BYTES = 800_000_000
 ADVISORY_LOCK_IDENTIFIER = 791263542018
 COPY_CHUNK_SIZE = 1024 * 1024
 MANAGED_TABLE_NAMES = (
@@ -43,15 +51,51 @@ class LoadFileSpecification:
 def build_load_file_plan(
     processed_data_directory: Path,
     reference_data_directory: Path,
+    dataset_profile: str = DEFAULT_DATASET_PROFILE,
 ) -> tuple[LoadFileSpecification, ...]:
+    if dataset_profile not in QUALITY_REPORT_FILE_NAMES:
+        raise ValueError(f"Unsupported dataset profile: {dataset_profile}")
+
+    if dataset_profile == "neon-free":
+        job_file_specifications = (
+            LoadFileSpecification(
+                "jobs",
+                processed_data_directory / "neon_free" / "jobs_neon_free.csv.gz",
+            ),
+            LoadFileSpecification(
+                "job_skills",
+                processed_data_directory / "neon_free" / "job_skills_neon_free.csv.gz",
+            ),
+            LoadFileSpecification(
+                "skill_observations",
+                processed_data_directory / "neon_free" / "skill_observations_neon_free.csv.gz",
+            ),
+        )
+    else:
+        job_file_specifications = (
+            LoadFileSpecification(
+                "jobs",
+                processed_data_directory / "jobs_historical_2023_sample.csv.gz",
+            ),
+            LoadFileSpecification(
+                "jobs",
+                processed_data_directory / "jobs_latest_export_unverified.csv.gz",
+            ),
+            LoadFileSpecification(
+                "jobs",
+                processed_data_directory / "jobs_other_snapshots_unverified.csv.gz",
+            ),
+            LoadFileSpecification("job_skills", processed_data_directory / "job_skills.csv.gz"),
+            LoadFileSpecification(
+                "skill_observations",
+                processed_data_directory / "skill_observations.csv.gz",
+            ),
+        )
+
     return (
         LoadFileSpecification("skills", reference_data_directory / "skill_catalog.csv"),
         LoadFileSpecification("skill_aliases", reference_data_directory / "skill_aliases.csv"),
-        LoadFileSpecification("jobs", processed_data_directory / "jobs_historical_2023_sample.csv.gz"),
-        LoadFileSpecification("jobs", processed_data_directory / "jobs_latest_export_unverified.csv.gz"),
-        LoadFileSpecification("jobs", processed_data_directory / "jobs_other_snapshots_unverified.csv.gz"),
-        LoadFileSpecification("job_skills", processed_data_directory / "job_skills.csv.gz"),
-        LoadFileSpecification("skill_observations", processed_data_directory / "skill_observations.csv.gz"),
+        *job_file_specifications,
         LoadFileSpecification("learning_resources", reference_data_directory / "learning_resources.csv"),
     )
 
@@ -60,6 +104,16 @@ def open_text_data_file(file_path: Path):
     if file_path.suffix == ".gz":
         return gzip.open(file_path, "rt", encoding="utf-8-sig", newline="")
     return file_path.open("r", encoding="utf-8-sig", newline="")
+
+
+def positive_integer(argument_value: str) -> int:
+    try:
+        parsed_value = int(argument_value)
+    except ValueError as parsing_failure:
+        raise argparse.ArgumentTypeError("Enter a positive integer") from parsing_failure
+    if parsed_value < 1:
+        raise argparse.ArgumentTypeError("Enter a positive integer")
+    return parsed_value
 
 
 def read_csv_header(file_path: Path) -> list[str]:
@@ -172,6 +226,41 @@ def get_managed_table_counts(database_cursor, postgres_sql) -> dict[str, int]:
     return table_counts
 
 
+def get_database_storage_report(database_cursor) -> dict[str, object]:
+    database_cursor.execute("SELECT pg_database_size(current_database())")
+    current_database_size_bytes = database_cursor.fetchone()[0]
+    table_storage_bytes = {}
+    for table_name in MANAGED_TABLE_NAMES:
+        database_cursor.execute(
+            """
+            SELECT
+                pg_relation_size(%s::regclass),
+                pg_indexes_size(%s::regclass),
+                pg_total_relation_size(%s::regclass)
+            """,
+            (
+                f"public.{table_name}",
+                f"public.{table_name}",
+                f"public.{table_name}",
+            ),
+        )
+        heap_size_bytes, index_size_bytes, total_size_bytes = database_cursor.fetchone()
+        table_storage_bytes[table_name] = {
+            "heap_bytes": heap_size_bytes,
+            "index_bytes": index_size_bytes,
+            "total_bytes_including_toast": total_size_bytes,
+        }
+    return {
+        "measurement_scope": "current PostgreSQL database; not the entire Neon project or its other branches",
+        "current_database_bytes": current_database_size_bytes,
+        "managed_tables": table_storage_bytes,
+        "managed_tables_total_bytes": sum(
+            table_size["total_bytes_including_toast"]
+            for table_size in table_storage_bytes.values()
+        ),
+    }
+
+
 def add_learning_resource_relationships(database_cursor) -> None:
     database_cursor.execute(
         """
@@ -239,7 +328,11 @@ def record_source_file_counts(database_cursor, import_run_identifier: int) -> No
         )
 
 
-def create_import_run(database_connection, quality_report: dict[str, object]) -> int:
+def create_import_run(
+    database_connection,
+    quality_report: dict[str, object],
+    pipeline_version: str,
+) -> int:
     with database_connection.transaction():
         with database_connection.cursor() as database_cursor:
             database_cursor.execute(
@@ -254,7 +347,7 @@ def create_import_run(database_connection, quality_report: dict[str, object]) ->
                 RETURNING import_run_id
                 """,
                 (
-                    PIPELINE_VERSION,
+                    pipeline_version,
                     json.dumps(quality_report, ensure_ascii=False),
                     "Import started by scripts/database_loading/load_to_database.py.",
                 ),
@@ -290,8 +383,17 @@ def perform_database_import(
     load_file_plan: tuple[LoadFileSpecification, ...],
     quality_report: dict[str, object],
     replace_existing_data: bool,
+    dataset_profile: str = DEFAULT_DATASET_PROFILE,
+    max_database_size_bytes: int = DEFAULT_DATABASE_SIZE_GUARD_BYTES,
 ) -> tuple[int, dict[str, int]]:
-    import_run_identifier = create_import_run(database_connection, quality_report)
+    if dataset_profile not in PIPELINE_VERSIONS:
+        raise ValueError(f"Unsupported dataset profile: {dataset_profile}")
+    pipeline_version = PIPELINE_VERSIONS[dataset_profile]
+    import_run_identifier = create_import_run(
+        database_connection,
+        quality_report,
+        pipeline_version,
+    )
     try:
         with database_connection.transaction():
             with database_connection.cursor() as database_cursor:
@@ -337,11 +439,22 @@ def perform_database_import(
                 add_learning_resource_relationships(database_cursor)
                 record_source_file_counts(database_cursor, import_run_identifier)
                 loaded_table_counts = get_managed_table_counts(database_cursor, postgres_sql)
+                database_storage_report = get_database_storage_report(database_cursor)
+                measured_database_size_bytes = database_storage_report["current_database_bytes"]
+                if measured_database_size_bytes > max_database_size_bytes:
+                    raise RuntimeError(
+                        "The loaded current database exceeds the configured storage guard: "
+                        f"{measured_database_size_bytes:,} bytes > {max_database_size_bytes:,} bytes. "
+                        "The load transaction will be rolled back."
+                    )
                 quality_report["database_load"] = {
                     "import_run_id": import_run_identifier,
-                    "pipeline_version": PIPELINE_VERSION,
+                    "dataset_profile": dataset_profile,
+                    "pipeline_version": pipeline_version,
                     "replace_existing_data": replace_existing_data,
+                    "max_database_size_bytes": max_database_size_bytes,
                     "table_row_counts": loaded_table_counts,
+                    "storage": database_storage_report,
                 }
                 database_cursor.execute(
                     """
@@ -388,6 +501,18 @@ def main() -> int:
         default=DEFAULT_REFERENCE_DATA_DIRECTORY,
     )
     command_line_parser.add_argument(
+        "--dataset-profile",
+        choices=tuple(QUALITY_REPORT_FILE_NAMES),
+        default=DEFAULT_DATASET_PROFILE,
+        help="Use the Arab-complete Neon Free subset by default, or explicitly select the full export set",
+    )
+    command_line_parser.add_argument(
+        "--max-database-size-bytes",
+        type=positive_integer,
+        default=DEFAULT_DATABASE_SIZE_GUARD_BYTES,
+        help="Roll back if the loaded current database exceeds this size; default leaves 20%% headroom below 1 GB",
+    )
+    command_line_parser.add_argument(
         "--replace-existing-data",
         action="store_true",
         help="Truncate and reload the managed data tables inside one transaction",
@@ -401,17 +526,47 @@ def main() -> int:
 
     processed_data_directory = command_line_arguments.processed_data_directory.resolve()
     reference_data_directory = command_line_arguments.reference_data_directory.resolve()
-    load_file_plan = build_load_file_plan(processed_data_directory, reference_data_directory)
-    quality_report_file_path = processed_data_directory / QUALITY_REPORT_FILE_NAME
+    dataset_profile = command_line_arguments.dataset_profile
+    max_database_size_bytes = command_line_arguments.max_database_size_bytes
+    load_file_plan = build_load_file_plan(
+        processed_data_directory,
+        reference_data_directory,
+        dataset_profile,
+    )
+    quality_report_file_path = processed_data_directory / QUALITY_REPORT_FILE_NAMES[dataset_profile]
     try:
         quality_report = validate_local_files(load_file_plan, quality_report_file_path)
     except (OSError, UnicodeError, csv.Error, ValueError) as validation_failure:
         raise SystemExit(f"Local input validation failed: {validation_failure}") from None
 
+    if dataset_profile == "neon-free":
+        expected_quality_profile = "neon_free_arab_complete_non_arab_stratified_v1"
+        if quality_report.get("profile") != expected_quality_profile:
+            raise SystemExit(
+                "Local input validation failed: the quality report does not describe the Neon Free dataset profile."
+            )
+        storage_estimate = quality_report.get("database_storage_estimate")
+        if not isinstance(storage_estimate, dict):
+            raise SystemExit(
+                "Local input validation failed: the Neon Free storage planning estimate is missing."
+            )
+        estimated_database_size_bytes = storage_estimate.get("estimated_database_size_bytes")
+        if not isinstance(estimated_database_size_bytes, int):
+            raise SystemExit(
+                "Local input validation failed: the Neon Free storage planning estimate is invalid."
+            )
+        if estimated_database_size_bytes > max_database_size_bytes:
+            raise SystemExit(
+                "Local input validation failed: the dataset planning estimate exceeds the configured database-size guard. "
+                "Rebuild with a lower non-Arab sample cap or raise the guard only after verifying the actual Neon quota."
+            )
+
     if command_line_arguments.validate_files_only:
         print(
             json.dumps(
                 {
+                    "dataset_profile": dataset_profile,
+                    "max_database_size_bytes": max_database_size_bytes,
                     "validated_input_files": len(load_file_plan),
                     "quality_report": str(quality_report_file_path),
                     "tables": [file_specification.table_name for file_specification in load_file_plan],
@@ -446,6 +601,8 @@ def main() -> int:
                 load_file_plan,
                 quality_report,
                 command_line_arguments.replace_existing_data,
+                dataset_profile,
+                max_database_size_bytes,
             )
     except Exception as database_failure:
         failure_message = f"{type(database_failure).__name__}: {database_failure}"
@@ -458,6 +615,7 @@ def main() -> int:
                 "import_run_id": import_run_identifier,
                 "run_status": "succeeded",
                 "table_row_counts": loaded_table_counts,
+                "database_storage": quality_report["database_load"]["storage"],
             },
             ensure_ascii=False,
             indent=2,
