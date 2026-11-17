@@ -1,6 +1,6 @@
 # Database Specification
 
-**Status:** The first data audit is complete, Neon/PostgreSQL is selected, and initial executable DDL is available in [`scripts/database_loading/neon_schema.sql`](../../scripts/database_loading/neon_schema.sql). The DDL has not been applied to Neon; review the schema with the ERD and build a tested data loader before production use. This document remains the logical model and includes candidate dimensions not all represented in the initial DDL.
+**Status:** Logical proposal. A provisional physical PostgreSQL schema and loader are implemented in `scripts/database_loading/`; confirm their fields, constraints, and deployment behavior against the source data and live Neon requirements before production use.
 
 ## Database Goals
 
@@ -33,7 +33,7 @@ Company and location relationships may be optional when an advertisement does no
 
 ## ERD Concept
 
-See the [logical ERD](../diagrams/04_LOGICAL_ERD.md) and [conceptual domain class diagram](../diagrams/18_DOMAIN_CLASS_DIAGRAM.md). Both are provisional; candidate entities, attributes, and cardinalities must be checked against the actual source data before schema implementation.
+See the [logical ERD](../diagrams/04_LOGICAL_ERD.md) and [conceptual domain class diagram](../diagrams/18_DOMAIN_CLASS_DIAGRAM.md). Both remain provisional; compare them with the initial executable schema and actual source data before production deployment.
 
 ## Integrity and Normalization Rules
 

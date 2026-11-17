@@ -1,6 +1,6 @@
 # Repository Structure and Workflow-to-Folder Map
 
-This repository separates project stages. A reproducible data-preparation pipeline, reviewed skill/learning-resource references, selected processed outputs, and an initial Neon/PostgreSQL schema now exist. The processed outputs were explicitly approved for this branch; raw data remains excluded. There is still no running frontend, backend, executable database loader, or production application. Source-specific fields and limitations are documented in the completed first audit; re-audit any new source refresh.
+This repository contains a reproducible data-preparation pipeline, PostgreSQL/Neon schema and loader, and reviewed skill/learning-resource references. The loader defaults to a reduced Arab-complete profile; the existing full processed files remain unchanged. A live Neon import, production backend, and frontend have not been verified or implemented. Source-specific fields and limitations are documented in the data audit; re-audit any source refresh.
 
 ## End-to-End Step-to-Folder Map
 
@@ -12,11 +12,10 @@ This repository separates project stages. A reproducible data-preparation pipeli
 | Data audit and data dictionary | `docs/data/` | Audit reports, data dictionary, dataset provenance, coverage, quality findings, and data-use restrictions |
 | Temporary cleaning outputs | `data/interim/` | Local intermediate files produced during cleaning; contents are Git-ignored |
 | Python data-cleaning scripts | `scripts/data_cleaning/` | Reproducible Python cleaning, normalization, and deduplication scripts |
-| Final cleaned and normalized data | `data/processed/` | Analysis-ready outputs. The current six generated artifacts are committed by explicit approval; the ignore rule remains for new outputs unless separately authorized |
+| Final cleaned and normalized data | `data/processed/` | Existing full exports remain unchanged; the reduced `neon_free/` upload profile is added by explicit request while the `.gitignore` rule remains in place |
 | Database model and ERD material | `database/erd/` and `docs/diagrams/` | Database design references and the version-controlled logical ERD |
 | Database schema changes | `database/migrations/` | Ordered, reviewable database migration files when implementation begins |
-| Neon/PostgreSQL schema | `scripts/database_loading/neon_schema.sql` | Initial DDL for source metadata, jobs, skills, aliases, learning resources, import logs, indexes, and foreign-key relationships |
-| Python database loader | `scripts/database_loading/` | Planned repeat-safe import code; no executable loader exists yet |
+| Python database-loading script | `scripts/database_loading/` | Python scripts that load validated processed data into PostgreSQL/Neon and verify counts and relationships |
 | SQL analysis | `analysis/sql/` | Reproducible SQL queries for market and skills analysis |
 | Python exploratory analysis | `analysis/notebooks/` | Jupyter notebooks using Pandas, NumPy, Matplotlib, and Seaborn |
 | Charts and analysis reports | `analysis/reports/` | Reviewed visualizations, result summaries, and analytical limitations |
@@ -72,8 +71,8 @@ This repository separates project stages. A reproducible data-preparation pipeli
 
 ## Data and Security Rules
 
-- `data/raw/` and `data/interim/` remain local working areas excluded from Git. The current `data/processed/` outputs are explicitly approved and tracked; the ignore rule remains for future generated files.
+- `data/raw/`, `data/interim/`, and `data/processed/` are Git-ignored by default. The user has explicitly approved the new reduced files under `data/processed/neon_free/` for this PR only; do not replace the existing full exports or infer general redistribution permission.
 - Store connection credentials outside the repository.
 - Keep original source data unchanged. Cleaning scripts should read raw input and write separate outputs.
 - The initial data audit is complete; keep schema and loader decisions aligned with `docs/data/DATA_AUDIT.md` and `docs/data/DATA_DICTIONARY.md`, and re-audit any changed source files.
-- No Python database loader exists yet. When added, it must read the processed dataset, use secure credentials, support safe repeat runs, and validate inserted record counts and relationships.
+- `scripts/database_loading/load_to_database.py` loads the validated reduced profile by default, supports the original full profile explicitly, and checks current-database storage before commit. Live Neon/project-quota verification remains required.

@@ -5,8 +5,9 @@ A job-market intelligence platform designed to help engineers in Egypt and the w
 ## Project Status
 
 - The initial audit and reproducible staging pass are complete for the source files currently available in `data/raw/`. Data-preparation scripts and reviewed skill/learning-resource references are now included.
-- The cleaned datasets are available under `data/processed/` and are included in this branch by explicit approval. Redistribution rights and listing activity remain unverified.
-- Analytics, database loading, model implementation, and the frontend/backend application have not been implemented. Current data field coverage is documented in the audit and dictionary.
+- The existing processed job files are left unchanged. By explicit request, this PR adds a reduced Neon Free upload profile that retains every Arab-country job row in the available processed sources and samples other source-country groups; its planning estimate is not a Neon storage measurement.
+- PostgreSQL/Neon schema and loader code are included, but no import into a live Neon database has been verified. Redistribution rights remain unverified, and no listing is asserted to be active.
+- Analytics, model implementation, and the frontend/backend application have not been implemented. Current data field coverage is documented in the audit and dictionary.
 
 ## Agreed Scope
 
@@ -31,7 +32,8 @@ A job-market intelligence platform designed to help engineers in Egypt and the w
 - [Project plan and task breakdown](docs/PROJECT_PLAN.md)
 - [Feature specification](docs/FEATURE_SPEC.md)
 - [Data and database plan](docs/DATA_AND_DATABASE.md)
-- [Neon PostgreSQL schema SQL](scripts/database_loading/neon_schema.sql)
+- [Neon/PostgreSQL schema and loader](scripts/database_loading/README.md)
+- [Neon schema SQL](scripts/database_loading/neon_schema.sql)
 - [Data audit](docs/data/DATA_AUDIT.md)
 - [Data dictionary](docs/data/DATA_DICTIONARY.md)
 - [Analytics plan](docs/ANALYTICS_PLAN.md)

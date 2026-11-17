@@ -1,6 +1,6 @@
 # Proposed PostgreSQL Physical Schema
 
-**Status:** This document remains a provisional design artifact and is not itself executable DDL. The audited initial Neon/PostgreSQL DDL is in [`scripts/database_loading/neon_schema.sql`](../../scripts/database_loading/neon_schema.sql); it has not been applied to Neon. Review differences between this conceptual proposal and the initial DDL before adding migrations or a data loader.
+**Status:** Provisional alternative design artifact for the SRS. An initial executable PostgreSQL schema and loader now exist at `scripts/database_loading/`; this document is not that DDL. Confirm the actual implementation against the collected files and live query needs before production use.
 
 ## 1. Design Objectives
 
@@ -167,4 +167,4 @@ Create indexes only after confirming expected query patterns and measuring perfo
 - Load processed data in a repeat-safe manner; define how reruns handle duplicates before production use.
 - Validate schema, row counts, foreign keys, salary units, and rejected records after each load.
 - Keep database credentials outside Git and notebooks.
-- The Python loader is planned for `scripts/database_loading/`; its implementation must wait for T01–T05.
+- An initial Python loader is implemented in `scripts/database_loading/load_to_database.py`; it defaults to the reduced Neon Free profile. It has not been run against a live Neon database, so schema execution and quota fit remain unverified.
