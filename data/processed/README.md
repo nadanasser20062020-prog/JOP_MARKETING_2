@@ -1,37 +1,54 @@
 # Processed Site Data
 
-The existing full processed exports in this directory remain unchanged. The separate `neon_free/` folder contains a smaller upload profile built from those exports; it does not replace or rewrite any of the existing data files.
-
-## Existing full processed exports
-
-`build_site_data.py` writes the original full outputs when all required authorized raw sources are available:
-
-- `jobs_historical_2023_sample.csv.gz` — the International export only; its source posting dates are within 2023. Use as a historical sample for aggregate analysis, not as an active-jobs feed.
-- `jobs_latest_export_unverified.csv.gz` — selected enriched Remote, Startup, and Jooble/Careerjet exports. These are the latest export snapshots available in this workspace, but listing activity is not verified.
-- `jobs_other_snapshots_unverified.csv.gz` — the merged workbook, Arab-tech sample, and cybersecurity sample. They remain separate because their date/source semantics do not establish that they are historical or active.
-- `job_skills.csv.gz` — source-attributed job-skill assignments from the full exports.
-- `skill_observations.csv.gz` — per-source skill labels and occurrence counts from the full exports.
-- `data_quality_report.json` — source row counts, missing-field counts, duplicates, skill-enrichment comparisons, salary checks, output sizes, and processing policies.
-
-These are the pre-existing artifacts; the Neon Free builder reads them but does not modify them. The raw International source file is not present in the current workspace, so a full rebuild requires obtaining that source through an authorized channel.
-
-## Neon Free upload profile
-
-Build the reduced profile from the existing processed exports and reference files with:
+Generated, compressed datasets are kept in this Git-ignored directory. The current cleaning audit includes all seven declared job sources (775,155 rows), including the International CSV extracted from the user-requested Drive ZIP; see `analysis/reports/data_cleaning/`. Generated files remain local rather than tracked. The operational application database `job_market.sqlite3` and full Parquet archive package are not present in this checkout; a separate cleaned-audit database, `jobs_cleaned_audited.sqlite3`, has been built locally. Restore the archive package before rerunning analytics/API operations that depend on `job_market.sqlite3`. To rebuild the CSV staging outputs, place the authorized raw sources under `data/raw/` and run:
 
 ```bash
-python scripts/data_cleaning/build_neon_free_dataset.py
+python scripts/data_cleaning/build_site_data.py
 ```
 
-The default selection retains every row whose country matches an Arab League member state or documented alias. From the currently available processed exports, that is 22,958 job rows, and all corresponding job-skill rows are kept. To avoid dropping possible Arab-region listings with missing or non-country geography, all 6,050 rows labeled blank, `Other/Unknown`, `Remote (Anywhere)`, or `Worldwide` are also retained in full. Named non-Arab rows are sampled deterministically with a maximum of 5 per `(source_dataset, country)` stratum; the current result contains 925 such rows across 192 strata, representing all seven source datasets. No cross-source deduplication is performed. The current profile contains 29,933 job rows and 256,549 job-skill rows, including all 194,673 job-skill rows associated with the country-labeled Arab jobs; its storage figure is a planning estimate, not a measured Neon size.
+The builder writes:
 
-The builder adds these files under `neon_free/` without changing the existing full exports:
+- `jobs_historical_2023_sample.csv.gz` — the International export only; its source posting dates are within 2023. Use as a historical sample for aggregate analysis, not as an active jobs feed.
+- `jobs_latest_export_unverified.csv.gz` — selected enriched Remote, Startup, and Jooble/Careerjet exports. These are the latest export snapshots available in this workspace, but listing activity is not verified.
+- `jobs_other_snapshots_unverified.csv.gz` — the merged workbook, Arab-tech sample, and cybersecurity sample. They are kept apart because their dates/source semantics do not establish that they are historical or active.
+- `job_skills.csv.gz` — one row per job-skill assignment after source-specific parsing and exact duplicate-token removal. Includes source/enrichment provenance, skill IDs, categories, and matching policy.
+- `skill_observations.csv.gz` — per-source skill labels and occurrence counts used to regenerate the skill catalog.
+- `data_quality_report.json` — source row counts, missing-field counts, exact duplicates, skill-enrichment comparisons, salary-amount checks (non-disclosure text is not counted as an amount), output sizes, and processing policies.
 
-- `jobs_neon_free.csv.gz` — all retained Arab-country jobs plus the stratified non-Arab sample.
-- `job_skills_neon_free.csv.gz` — every job-skill relationship for the selected jobs.
-- `skill_observations_neon_free.csv.gz` — per-source skill counts recalculated from the selected job-skill rows.
-- `neon_free_quality_report.json` — selection counts by country, source and stratum, file sizes, and an explicitly labeled planning-only storage estimate.
+All source rows are retained. The builder does not deduplicate across sources or remove exact duplicate rows. Every job row is marked `unknown_not_verified` for listing status. Skill analytics/matching should include only consistent `(approved_aliases, curated)` and `(exact_only, curated_exact_only)` pairs from the link and catalog tables. Preserve, but exclude, `needs_review`, `needs_owner_review`, policy/status mismatches, and `exclude_pending_review` terms.
 
-The loader uses this profile by default. To regenerate a larger non-Arab sample, pass `--maximum-non-arab-rows-per-source-country N` to the builder. New generated files remain ignored by the unchanged `.gitignore` rule; the reduced profile is force-added to this PR only under the user's explicit request. This scoped inclusion does not establish general redistribution rights. Confirm the applicable rights before any broader release or production use.
+These generated files are ignored by Git because the raw source exports are also excluded. Keep processed data local or in approved storage, and do not share it without confirming redistribution permissions.
 
-Every retained job row keeps `unknown_not_verified` listing status. The source data do not prove that a listing is currently active. The builder and loader do not alter raw Drive files.
+## Full Local SQLite Database
+
+The complete archive package `full_archive_parquet_v1_20261028/` contains all 775,155 job rows, 4,026,953 job-skill links, reference tables, and source-import metadata. In the last full-data validation run, all package files passed `checksums.sha256`, and the local database loaded from this archive passed migrations 001–005 with zero foreign-key violations. The archive and database are ignored local files, not source-control deliverables; neither is present in the current snapshot. Restore the package from the approved preserved copy into this directory, verify its checksums, and rebuild the local database before repeating those checks.
+
+Install the Parquet reader and load the full archive with:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r scripts/database_loading/requirements.txt
+python scripts/database_loading/load_to_database.py load --source archive
+python scripts/database_loading/load_to_database.py check
+```
+
+The database defaults to `data/processed/job_market.sqlite3`. Automatic mode prefers the verified full archive and does not fall back to the test seed. If this directory is restored from a fresh checkout, download the complete archive package from the preserved Drive folder into `full_archive_parquet_v1_20261028/` before loading. The database, archive package, and SQLite sidecars remain covered by the existing `/data/processed/*` ignore rule.
+
+## Loss-preserving cleaning audit output
+
+The separate `build_cleaning_audit.py` pipeline writes `jobs_cleaned_audited.csv.gz` here. It retains every selected source row, embeds the full original row in `source_row_json`, and adds conservative normalized fields, salary provenance/parse fields, review flags, and explicit comparability eligibility. The file is generated locally and remains ignored by Git. Its reproducibility reports, salary tables, and notebook are under `analysis/reports/data_cleaning/` and `analysis/notebooks/`.
+
+The current audited dataset contains 775,155 rows from all seven declared job sources: the six available files in `main@6755883a8c043592d349cace4cd84aaae81d73d0` plus `International_Tech_Jobs_Filtered.csv`, extracted from the user-requested Google Drive ZIP. The Drive-reported modified date (2026-10-31) is later than the audit date (2026-10-28); the archive was included at the user's direction and the timestamp discrepancy is documented. No estimates were added, pre-existing unverified salary estimates are excluded from actual-only statistics, and no FX conversion or non-year annualization was applied. The operational `job_market.sqlite3` comparison remains unavailable, but the separate cleaned-audit SQLite file below was built and validated.
+
+## Cleaned-audit relational SQLite output
+
+`jobs_cleaned_audited.sqlite3` is the separate full-fidelity relational database generated from the complete Drive cleaned CSV. It contains 775,155 `jobs` rows and 775,155 `job_cleaning_audit` rows; the audit table stores all 123 CSV columns and each source row's JSON. It also contains 4,026,953 `job_skills` links, 1,498 catalog skills, source provenance, and the normalized reference tables and API rollups. The completed import reported **zero foreign-key violations** and `PRAGMA integrity_check = ok`; its file size is about 7.65 GB. It does not replace the application database `job_market.sqlite3`.
+
+The Drive copy has SHA-256 `6f53340a00a17f4a6d86087a6bf6d98a4fce1a1bb79b795b6237f87fd927fd72`, matching `analysis/reports/data_cleaning/cleaning_summary.json`. The builder checks the CSV against that summary before importing. To rebuild from the same Drive snapshot after restoring the CSV and summary, run:
+
+```bash
+python scripts/database_loading/build_cleaned_relational_sqlite.py
+```
+
+The generated database and CSV are covered by `/data/processed/*` and are intentionally not tracked in Git. The matching ERD and schema details are in [`docs/diagrams/22_CLEANED_AUDIT_RELATIONAL_ERD.md`](../../docs/diagrams/22_CLEANED_AUDIT_RELATIONAL_ERD.md).

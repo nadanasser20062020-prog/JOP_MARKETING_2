@@ -9,7 +9,8 @@ All diagrams in this directory are version-controlled Mermaid diagrams and rende
 | [System Context](01_SYSTEM_CONTEXT.md) | Shows users, the product boundary, source files, and external destinations. |
 | [Container Architecture](02_CONTAINER_ARCHITECTURE.md) | Shows the proposed frontend, API, services, database, preparation, analytics, and model containers. |
 | [Backend Components](03_BACKEND_COMPONENTS.md) | Shows responsibilities and interactions within the proposed backend. |
-| [Logical ERD](04_LOGICAL_ERD.md) | Shows candidate relational entities and relationships; fields remain subject to data audit. |
+| [Logical ERD](04_LOGICAL_ERD.md) | Shows the implemented local SQLite tables, keys, and relationships. |
+| [Cleaned-Audit Relational ERD](22_CLEANED_AUDIT_RELATIONAL_ERD.md) | Extends the ERD with the loss-preserving 123-column audit table and SQLite rollups. |
 | [Data Pipeline](05_DATA_PIPELINE.md) | Shows read-only source handling, quality gates, loading, and downstream use. |
 | [DFD Level 0](16_DFD_LEVEL_0.md) | Shows the system as one process and its external information exchanges. |
 | [DFD Level 1](17_DFD_LEVEL_1.md) | Decomposes the system into data processes and logical stores. |
@@ -39,7 +40,7 @@ All diagrams in this directory are version-controlled Mermaid diagrams and rende
 
 ## Diagram Conventions
 
-- These are design-level diagrams, not evidence that a component has been implemented.
+- Most diagrams are design-level proposals; the logical ERD is aligned with the implemented SQLite migration. The cleaned-audit ERD documents migration 006 and its full-fidelity CSV import. Frontend/API containers are still planned.
 - Optional fields, unknown data coverage, and conditional model paths are intentional.
-- PostgreSQL/Neon is a proposed database choice; finalize it with the team.
+- Local SQLite is the implemented database choice; the file is stored on the backend host and is not a network service.
 - Do not add a diagram-specific implementation detail without updating the related architecture or requirements document.

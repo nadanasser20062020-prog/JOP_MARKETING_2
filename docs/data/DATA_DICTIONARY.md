@@ -1,7 +1,7 @@
 # Normalized Data Dictionary
 
-- **Generated from:** `scripts/data_cleaning/build_site_data.py` for the staging exports, and `build_cleaning_audit.py` plus `finalize_full_cleaning_audit.py` for the separate loss-preserving audit dataset described below.
-- **Interpretation rule:** raw/source fields are preserved. The staging exports do not impute values; the final audit may add a separately labeled synthetic salary estimate in dedicated derived columns, without overwriting original salary fields. No field establishes that a listing is active.
+- **Generated from:** `scripts/data_cleaning/build_site_data.py` and the raw files listed in [`DATA_AUDIT.md`](DATA_AUDIT.md).
+- **Interpretation rule:** source values are preserved; missing values are not filled; no field establishes that a listing is active.
 
 ## Job export files
 
@@ -128,26 +128,14 @@ The current generated snapshot uses all seven declared job-source files: the six
 | `salary_period_code`, `salary_period_detection_status` | Explicit `YEAR`, `MONTH`, `WEEK`, `DAY`, `HOUR`, or `UNKNOWN`; conflicting/missing period text is not guessed. |
 | `salary_amount_1_original_currency`, `salary_amount_2_original_currency` | Parsed amount endpoint(s) in source order and native currency. A reversed range is retained and flagged. |
 | `salary_min_original_currency`, `salary_max_original_currency`, `salary_midpoint_original_currency` | Parsed endpoints and arithmetic midpoint; single values are represented as equal endpoints. They do not change the original salary text. |
-| `salary_value_type`, `salary_provenance_status` | Before finalization, values include `actual_reported`, `estimated_legacy_unverified`, `source_reported_unverified`, `not_disclosed`, `missing`, or `unparseable_or_no_numeric_amount`. The finalizer may change only an originally `missing` value to `estimated_synthetic`; `salary_source_value_type` retains the original classification. “Actual” means reported in a source row, not independently checked against a live listing. |
+| `salary_value_type`, `salary_provenance_status` | `actual_reported`, `estimated_legacy_unverified`, `source_reported_unverified`, `not_disclosed`, `missing`, or `unparseable_or_no_numeric_amount`, with a reason. “Actual” means reported in the source row, not independently checked against a live listing. |
 | `salary_source_raw`, `salary_sources_raw`, `salary_fill_source_raw`, `salary_estimate_source_url`, `salary_estimate_source_date`, `salary_estimate_source_date_status` | Original source and fill-provenance text/URL. Legacy estimate source dates absent from the input remain blank and are explicitly marked missing. |
-| `salary_annualized_*_native` | Native-currency annual amount. A `YEAR` amount is copied unchanged; another period is annualized only when it is explicitly identified and an approved policy supplies its factor. Unknown or ambiguous periods remain unannualized. |
-| `salary_reporting_currency`, `salary_fx_rate_to_reporting_currency`, `salary_fx_rate_source`, `salary_fx_rate_date`, `salary_annualized_*_reporting_currency` | Derived only under a dated, source-attributed FX policy. The completed finalization uses the frozen `data/reference/fx_rates_2026-10-28.json` policy and reports separate USD, EGP, and SAR columns; missing or conflicting currency is not inferred. |
+| `salary_annualized_*_native` | Native-currency annual amount. A `YEAR` amount is copied as an identity; non-year periods remain blank unless an explicit policy file supplies the period factor. |
+| `salary_reporting_currency`, `salary_fx_rate_to_reporting_currency`, `salary_fx_rate_source`, `salary_fx_rate_date`, `salary_annualized_*_reporting_currency` | Populated only when an explicit salary-policy file supplies a target currency plus positive FX rates with source and date. No default rates are embedded. |
 | `salary_comparability_status`, `salary_statistics_eligible` | Eligibility for actual-only grouped statistics. Currency and pay period must be explicit and nonconflicting; unverified estimates and records triggering the broad period-scale review screen are excluded pending review. |
 | `salary_integrity_flags`, `salary_iqr_outlier_flag` | Manual-review flags for source conflicts, invalid range/amount, broad-scale checks, or IQR outliers. Flags never delete or silently exclude a source row. |
 
-`salary_statistics_actual.csv` groups source-reported actual rows by exact normalized title, country/scope, explicit currency, and explicit pay period; it does not mix synthetic estimates or currencies. `annual_salary_statistics_actual.csv` reports actual-only annualized values in USD, EGP, and SAR under the dated policy. The finalizer adds the dedicated fields below for explicit annualization and separately labeled estimates. `salary_review_candidates.csv` lists rows needing manual review; `legacy_salary_estimate_inventory.csv` inventories pre-existing estimates without treating them as verified salary benchmarks.
-
-#### Finalizer-only annualized and synthetic estimate fields
-
-| Field | Meaning |
-|---|---|
-| `salary_original`, `salary_source_value_type` | Preserve the source salary text and its pre-finalization classification. Synthetic estimates do not replace either field. |
-| `salary_estimation_status`, `salary_estimation_method`, `salary_estimation_source` | Final salary status plus the explicit derivation tier and provenance. `Estimated`/`synthetic_*` indicates a model-derived value, not employer-reported pay or an external salary source. |
-| `salary_estimation_confidence`, `salary_estimate_reference_count`, `salary_estimation_as_of_date` | Confidence label, number of eligible actual reference records, and the date of the policy/run used for the estimate. |
-| `salary_annual_min_usd`, `salary_annual_salary_usd`, `salary_annual_max_usd` (and corresponding `_egp`/`_sar` fields) | Derived annual low/midpoint/high values in each output currency. For synthetic estimates, the low/high endpoints are the reference group's Q1/Q3 spread, not an advertised pay range. |
-| `salary_annualized_midpoint_reporting_currency`, `salary_estimate_currency_code`, `salary_estimate_range_basis` | Reporting-currency midpoint and estimate-only currency/range explanation. The report's primary reporting currency is USD; EGP and SAR are parallel outputs. |
-
-Only eligible source-reported actual salaries with explicit, nonconflicting currency and period train the reference medians; synthetic and legacy estimates are excluded. Missing salaries may be estimated from those references and remain clearly labeled. `Not disclosed`, unparseable values, ambiguous currency, and unknown pay periods are not guessed or filled. The model is descriptive of this dataset, not a labor-market forecast.
+`salary_statistics_actual.csv` groups actual-reported rows by exact normalized title, country/scope, explicit currency, and explicit pay period. Average and median are calculated over each record's arithmetic range midpoint; the lower and upper advertised endpoints are also reported. Estimates, currencies, and periods are not mixed. The summary is not annualized across periods or converted to a reporting currency until policy is approved. `salary_review_candidates.csv` lists rows needing manual salary review; `legacy_salary_estimate_inventory.csv` inventories existing estimates without treating them as validated salary benchmarks.
 
 ### Skills and source-row preservation
 
@@ -158,15 +146,11 @@ Only eligible source-reported actual salaries with explicit, nonconflicting curr
 
 ### Cleaning audit outputs
 
+- `analysis/reports/data_cleaning/data_quality_before.json` and `data_quality_after.json`: source and normalized coverage, respectively.
 - `analysis/reports/data_cleaning/final_data_quality_report.md`: scope, decisions, limitations, and headline results.
-- `analysis/reports/data_cleaning/cleaning_summary.json`, `data_quality_before.json`, and `data_quality_after.json`: run metadata, source coverage, and normalized coverage.
-- `analysis/reports/data_cleaning/missingness_impact.csv`, `cleaned_column_type_audit.csv`, and `field_consistency_checks.csv`: compact aggregate checks used by the notebook.
-- `analysis/reports/data_cleaning/raw_source_column_coverage.csv`, `cleaned_column_coverage.csv`, and `field_coverage_comparison.csv`: source/derived field-coverage aggregates.
 - `analysis/reports/data_cleaning/source_manifest.csv`: source revision, file sizes, and SHA-256 hashes.
 - `analysis/reports/data_cleaning/salary_coverage_by_role_country.csv`: salary-type and comparability coverage for each exact title/country group.
 - `analysis/reports/data_cleaning/salary_statistics_actual.csv`: actual-reported statistics only.
 - `analysis/reports/data_cleaning/legacy_salary_estimate_inventory.csv`: unverified pre-existing estimate provenance counts.
 - `analysis/reports/data_cleaning/salary_review_candidates.csv`: row-level queue for ambiguous/unverified salary values, source/period/currency issues, parse failures, and review flags.
-- `analysis/notebooks/cleaning_data_audit.ipynb`: standard-library notebook that checks the compact saved report summaries and, when the Drive-hosted processed file is restored locally, can stream-validate its row count without loading it all into memory.
-
-Git tracks the final Markdown report plus the compact notebook inputs listed above: the run summary, before/after quality JSON, missingness/type/consistency summaries, field-coverage aggregates, and source manifest. The cleaned dataset, raw sources, row-level salary-review candidates, change log, and remaining generated tables are not committed; restore approved data from Drive or regenerate the full reports from the cleaning scripts and authorized source files.
+- `analysis/notebooks/cleaning_data_audit.ipynb`: reproducible notebook that audits the source manifest, inspects raw-to-derived row fields, and validates saved reports/final dataset using Python's standard library.

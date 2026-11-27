@@ -1,170 +1,79 @@
-# Proposed PostgreSQL Physical Schema
+# SQLite Physical Schema
 
-**Status:** Provisional alternative design artifact for the SRS. An initial executable PostgreSQL schema and loader now exist at `scripts/database_loading/`; this document is not that DDL. Confirm the actual implementation against the collected files and live query needs before production use.
+**Status:** Implemented as local SQLite migrations `001`–`005`, covering the domain schema, provenance, query indexes, API rollups, and role-skill lookup index. The last full-data validation used the verified archive with 775,155 jobs and 4,026,953 job-skill links; the ignored SQLite file and archive are absent from the current snapshot and must be restored before full-data API operation. SQLite is the only configured database engine. No hosted database, database server, or connection URL is used.
 
-## 1. Design Objectives
+## 1. Local Storage and Runtime
 
-- Normalize reusable companies, locations, sources, skills, and resources.
-- Preserve original advertisement values alongside normalized values.
-- Represent the many-to-many relationship between job posts and skills.
-- Make salary units, source provenance, and posting/collection dates explicit.
-- Support the expected search, market aggregation, matching, and resource queries without storing user profiles in the initial scope.
+- Default file: `data/processed/job_market.sqlite3`.
+- Optional path override: `JOP_DATABASE_PATH` or the loader's `--database` argument; the value must be a local filesystem path.
+- The data loader and offline analysis use Python's standard-library `sqlite3`; the Node.js API uses the built-in `node:sqlite` module in read-only mode.
+- The existing `.gitignore` rule for `data/processed/*` keeps the generated database and sidecar files out of Git. The ignore file is intentionally unchanged.
+- SQLite foreign-key enforcement is enabled on every project connection.
+- The database is reproducible from the complete checksum-verified Parquet archive or a separately reviewed complete normalized local staging set. Automatic loading never substitutes the development fixture.
 
-## 2. Candidate Tables
+## 2. Implemented Tables
 
-### `sources`
+The 12 domain tables are implemented in migration `001_initial_sqlite_schema.sql`.
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
+| Table | Primary key | Purpose |
 |---|---|---|
-| `source_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `source_name` | `TEXT` | Required source/platform label |
-| `source_domain` | `TEXT` | Nullable normalized domain |
-| `created_at` | `TIMESTAMPTZ` | Ingestion metadata, if required |
+| `data_sources` | `source_dataset TEXT` | Stable source/dataset name plus source kind, snapshot bucket, date semantics, listing status, source-file count, and row count. |
+| `source_files` | `(source_dataset, source_file)` | Source-file identity, logical/physical names, role, archive membership, byte size, SHA-256, row count, and archive-member count; references `data_sources`. |
+| `import_runs` | `import_run_id INTEGER` | Local import status, timestamps, pipeline version, input fingerprint, quality report, and the original full-archive run ID, date, generator, status, and totals. |
+| `import_run_files` | `(import_run_id, source_dataset, source_file)` | Rows read/loaded/rejected and status per source file, plus archive source-file ID, emitted output counts, tables, and processing role; references the run and source file. |
+| `skills` | `skill_id TEXT` | Canonical skill name, category, match/review policy, archive counts, and curation notes. |
+| `skill_aliases` | `(alias_normalized, skill_id)` | Normalized label, display label, alias type, review/match policy, observed counts, and skill foreign key. One normalized label can be represented for multiple skills if a future audited source requires it. |
+| `jobs` | `record_id TEXT` | Preserved source fields and provenance for each staged advertisement. A unique `(record_id, source_dataset, source_file)` key supports the composite relationship below. |
+| `job_skills` | `(record_id, skill_id)` | Many-to-many job/skill relationship with source labels and extraction provenance. |
+| `skill_observations` | `(source_dataset, skill_normalized, skill_raw)` | Observed source term and its frequency for each dataset. |
+| `learning_resources` | `resource_id TEXT` | Curated resource metadata, course-specific access/cost status, verification details, and URL. |
+| `learning_resource_skills` | `(resource_id, skill_id)` | Many-to-many resource-to-skill relationship. |
+| `learning_resource_languages` | `(resource_id, language_label)` | Resource language labels as recorded; labels are not assumed to be standardized language codes. |
 
-### `companies`
+The migration runner also creates `schema_migrations` to record applied migration versions and checksums. It is schema metadata, not a domain table.
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `company_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `name_original` | `TEXT` | Original employer name when available |
-| `name_normalized` | `TEXT` | Normalized value used for grouping; nullable until resolved |
+## 3. SQLite Storage and Integrity Rules
 
-Do not impose uniqueness on normalized employer names until the audit identifies collisions and alias rules.
+- Stable identifiers and source content use `TEXT`; counts and the one-based `source_row_number` use `INTEGER`.
+- Job dates, salary fields, source IDs, and source text remain `TEXT` so source formats and semantics are not silently normalized. In particular, `posted_at` is distinct from `source_updated_at`, and a text salary is not an inferred numeric salary.
+- Missing optional source values are stored as `NULL`; no placeholder employer, location, salary, or posting date is created.
+- `jobs.source_dataset/source_file` references `source_files`; `job_skills` references both its job (including its provenance tuple) and `skills`.
+- `(record_id, skill_id)` prevents duplicate job-skill links. Foreign keys prevent orphaned jobs, skills, aliases, observations, resources, and import-file records.
+- Match policy and learning-resource cost status use checked vocabularies. Source activity remains `unknown_not_verified` unless independently verified.
+- Skills, aliases, observations, job links, and resources retain the documented review/provenance labels. Resource verification dates and cost notes are loaded as recorded; loading them does not certify current availability or licensing.
 
-### `locations`
+## 4. Indexes
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `location_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `country_name` | `TEXT` | Original or normalized country label, with a documented convention |
-| `country_code` | `CHAR(2)` | Nullable standardized code if validation is possible |
-| `city` | `TEXT` | Nullable city |
-| `region` | `TEXT` | Nullable region/state |
+Migrations 001–002 add indexes for source, country, title, and posting-date job filters; reverse skill-to-job lookup; skill alias lookup through its primary key; observed-skill lookup; and skill/language-to-resource lookup. Migration 003 adds normalized-title/source, normalized-country/source, and source/posting-date query indexes. Migration 004 adds materialized API rollup tables and lookup indexes; migration 005 adds the role-skill rollup lookup index. Further indexes should be based on measured full-database query plans.
 
-### `job_posts`
+## 5. Migration and Load Policy
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `job_post_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `source_id` | `BIGINT` | Foreign key to `sources`; nullability depends on source coverage |
-| `source_job_id` | `TEXT` | Nullable external identifier, if present |
-| `company_id` | `BIGINT` | Nullable foreign key to `companies` |
-| `location_id` | `BIGINT` | Nullable foreign key to `locations` |
-| `title_original` | `TEXT` | Preserve source title |
-| `title_normalized` | `TEXT` | Nullable canonical title used for grouping |
-| `description_original` | `TEXT` | Original description if available and permitted to retain |
-| `posted_at` | `DATE` | Nullable source posting date; do not substitute collection date |
-| `collected_at` | `TIMESTAMPTZ` | Collection timestamp assigned or verified by the ingestion process |
-| `work_mode` | `TEXT` | Nullable controlled value such as remote, hybrid, onsite, or unknown |
-| `employment_type` | `TEXT` | Nullable normalized employment type, if supported |
-| `experience_level` | `TEXT` | Nullable normalized experience level, if supported |
-| `salary_min` | `NUMERIC(14,2)` | Nullable lower bound for disclosed salary |
-| `salary_max` | `NUMERIC(14,2)` | Nullable upper bound for disclosed salary |
-| `salary_currency` | `CHAR(3)` | Nullable currency code; required when normalized salary values are stored |
-| `salary_period` | `TEXT` | Nullable period such as hourly, monthly, or annual |
-| `salary_original_text` | `TEXT` | Original salary text for traceability |
-| `source_url` | `TEXT` | Nullable original advertisement URL |
-| `source_record_hash` | `TEXT` | Optional deduplication/audit fingerprint; define after profiling |
+Apply the current migration and load the local database from the repository root:
 
-### `skills`
+```bash
+python scripts/database_loading/load_to_database.py init
+python scripts/database_loading/load_to_database.py load
+python scripts/database_loading/load_to_database.py check
+```
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `skill_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `canonical_name` | `TEXT` | Required standardized skill name; uniqueness policy must be reviewed |
-| `category` | `TEXT` | Nullable category such as language, framework, or tool |
+Install the local Parquet reader, place the checksum-verified `full_archive_parquet_v1_20261028` package in `data/processed/full_archive_parquet_v1_20261028/`, and load the full dataset:
 
-### `skill_aliases`
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r scripts/database_loading/requirements.txt
+python scripts/database_loading/load_to_database.py load --source archive
+python scripts/database_loading/load_to_database.py check
+```
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `alias_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `skill_id` | `BIGINT` | Required foreign key to `skills` |
-| `alias_text` | `TEXT` | Original alias or spelling variant |
-| `normalized_alias` | `TEXT` | Normalized lookup value |
-| `language_code` | `TEXT` | Nullable language identifier where useful |
+Automatic mode prefers the complete archive, uses complete normalized local staging files only when the archive is absent, and fails if neither full input is present. The loader has no sample-data source. Repeating an import with the same input fingerprint is a no-op; a different existing snapshot is not overwritten unless `--replace` is explicitly supplied.
 
-Alias uniqueness must be checked for collisions before adding a global unique constraint; one alias may be ambiguous in different contexts.
+The imported full dataset contains 775,155 jobs, 4,026,953 job-skill links, 1,498 skills, 1,648 aliases, 2,482 skill observations, 32 learning resources, 48 resource-skill links, and all 37 language-label links. Learning-resource detail and skill links are loaded from JSON, and language labels are loaded from the CSV. The legacy development seed is retained only for tests, not for application or analysis data.
 
-### `job_skills`
+## 6. Query and Use Constraints
 
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `job_post_id` | `BIGINT` | Foreign key and part of composite primary key |
-| `skill_id` | `BIGINT` | Foreign key and part of composite primary key |
-| `mention_type` | `TEXT` | Controlled value only if the source distinguishes required, preferred, or unspecified |
-| `evidence_text` | `TEXT` | Optional source phrase or short evidence reference, subject to data-use policy |
-| `extraction_method` | `TEXT` | Optional indicator for manual, rule-based, or model-assisted extraction |
-| `confidence` | `NUMERIC(4,3)` | Optional value only if an extraction method provides a calibrated confidence measure |
-
-Candidate primary key: `(job_post_id, skill_id)`. Add a separate association identifier only if repeated mentions must be stored independently.
-
-### `learning_resources`
-
-| Column | Candidate PostgreSQL type | Constraint / purpose |
-|---|---|---|
-| `resource_id` | `BIGINT GENERATED ... AS IDENTITY` | Primary key |
-| `skill_id` | `BIGINT` | Required foreign key to `skills` under the one-resource-to-one-primary-skill model |
-| `title` | `TEXT` | Required display title |
-| `provider` | `TEXT` | Provider or publisher |
-| `url` | `TEXT` | Required validated external URL |
-| `language_code` | `TEXT` | Language of the resource |
-| `level` | `TEXT` | Optional learning level |
-| `access_status` | `TEXT` | Reviewed status such as free, partially free, or paid |
-| `verified_at` | `DATE` | Date access status was last reviewed |
-| `is_active` | `BOOLEAN` | Whether the resource is currently listed |
-
-If one resource must map to several skills, replace the direct `skill_id` relationship with a `resource_skills` junction table.
-
-## 3. Relationships and Keys
-
-- `job_posts.source_id` references `sources.source_id` when a source is known.
-- `job_posts.company_id` references `companies.company_id` and may be null.
-- `job_posts.location_id` references `locations.location_id` and may be null.
-- `job_skills.job_post_id` references `job_posts.job_post_id`.
-- `job_skills.skill_id` references `skills.skill_id`.
-- `skill_aliases.skill_id` references `skills.skill_id`.
-- `learning_resources.skill_id` references `skills.skill_id` under the initial one-primary-skill model.
-- Use primary keys independent of titles and source text; titles are not reliable identifiers.
-
-## 4. Normalization Considerations
-
-- **First normal form:** Store individual skill relationships as rows in `job_skills`, not as a comma-separated field in `job_posts`.
-- **Second and third normal forms:** Keep companies, locations, sources, skills, aliases, and resources in separate entities so attributes depend on their keys rather than repeated advertisement data.
-- Retain source values alongside normalized values where the transformation is useful for search or comparison.
-- Do not create a table solely to claim normalization if it does not represent a stable entity or query need.
-- Record unknown and missing values consistently; never create a placeholder entity for an unreported company or location unless a documented design requires it.
-
-## 5. Candidate Constraints and Validation Rules
-
-All constraints are provisional until source profiling is complete.
-
-- If both salary bounds exist, `salary_min` must be non-negative and `salary_max` must be greater than or equal to `salary_min`.
-- Normalized salary amounts require a known currency and pay period.
-- Work-mode values should use an approved controlled vocabulary; preserve unknown values explicitly.
-- `collected_at` should be non-null for loaded records if the ingestion process can provide it.
-- Prevent duplicate `(job_post_id, skill_id)` associations.
-- Use foreign keys to prevent orphaned relationships.
-- Validate URL syntax but do not assume a valid URL remains available.
-- Any uniqueness rule for source URLs, source identifiers, company names, or aliases must be verified against the dataset before enforcement.
-
-## 6. Candidate Indexes
-
-Create indexes only after confirming expected query patterns and measuring performance. Candidates include:
-
-- `job_posts(title_normalized)` for title filtering.
-- `job_posts(location_id)` and location country fields for market filters.
-- `job_posts(posted_at)` for supported time analysis.
-- `job_posts(source_id)` and a source identifier or URL for provenance and deduplication.
-- `job_skills(skill_id)` and `job_skills(job_post_id)` for skill search and detail pages.
-- `skill_aliases(normalized_alias)` for matching input normalization.
-- A database-appropriate full-text index for job description search, if needed.
-
-## 7. Migration and Data-Load Policy
-
-- Create ordered, reviewable migrations after the physical schema is approved.
-- Test migrations against a non-production database before deployment.
-- Load processed data in a repeat-safe manner; define how reruns handle duplicates before production use.
-- Validate schema, row counts, foreign keys, salary units, and rejected records after each load.
-- Keep database credentials outside Git and notebooks.
-- An initial Python loader is implemented in `scripts/database_loading/load_to_database.py`; it defaults to the reduced Neon Free profile. It has not been run against a live Neon database, so schema execution and quota fit remain unverified.
+- Use parameterized SQL and allowlisted sort/filter fields from the backend.
+- Retrieve suitable aggregates or batches for analysis rather than loading a full local archive without need.
+- Preserve source distinctions and show sample size, coverage, and dates in analytical results.
+- Do not claim that a listing is active or that a resource is currently free/available solely because it is in the SQLite file.
+- Keep the database file local and rebuildable; do not add a server connection string or replace the local file with a hosted database.

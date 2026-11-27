@@ -1,67 +1,65 @@
 # Database Specification
 
-**Status:** Logical proposal. A provisional physical PostgreSQL schema and loader are implemented in `scripts/database_loading/`; confirm their fields, constraints, and deployment behavior against the source data and live Neon requirements before production use.
+**Status:** The complete 775,155-job, 4,026,953-link dataset is loaded in local SQLite. The executable schema is [SQLite Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md), implemented by migrations `001_initial_sqlite_schema.sql` and `002_full_archive_provenance.sql`. The project uses a local SQLite file only; do not configure an external or hosted database.
 
 ## Database Goals
 
-- Support relational analysis and application queries.
-- Preserve provenance and distinguish original source values from standardized values.
-- Represent the many-to-many relationship between job advertisements and skills.
+- Support reproducible analysis and local application queries.
+- Preserve source provenance and distinguish original source values from curated or standardized values.
+- Represent job-skill and resource-skill many-to-many relationships with explicit foreign keys.
 - Avoid treating missing or inferred fields as observed facts.
+- Keep the database local, easy to rebuild, and independent of network database services.
 
-## Proposed Entities
+## Implemented Entities
 
-| Entity | Purpose | Candidate attributes to confirm |
+| Entity | Purpose | Key data |
 |---|---|---|
-| Job Post | One collected job advertisement | Stable ID, original title, normalized title, description, posting date, collection date, work arrangement, experience, original salary text, normalized salary range/currency/period, source URL, company/location/source references |
-| Company | Employer named in an advertisement | Stable ID, original name, normalized name |
-| Location | Location associated with an advertisement | Stable ID, country, city, region, standardized country code where available |
-| Source | Platform or source from which an advertisement was collected | Stable ID, source name, source URL/domain, collection metadata |
-| Skill | Standardized skill and aliases | Stable ID, canonical name, optional category, aliases |
-| Job Skill | Association between an advertisement and a skill | Job ID, skill ID, mention classification if reliably distinguishable, extraction/source evidence where feasible |
-| Learning Resource | Reviewed resource associated with a skill | Stable ID, skill ID, title, provider, URL, language, level, access status, verification date |
+| Data Source | Dataset/source label | `source_dataset`, display name, source kind, date/listing semantics, file and row counts |
+| Source File | Source-file and snapshot provenance | Dataset/file composite key, archive file ID, physical/logical names, role, size, SHA-256, row counts |
+| Import Run | Reproducible local load history | Status, timestamps, input fingerprint, quality report, original archive run ID/date/counts |
+| Import Run File | Per-file load counts and status | Run/source/file key, rows read/loaded/rejected, emitted counts, output tables, processing role |
+| Job | One collected job-ad record | Staging ID, source/row provenance, original source fields, quality flags |
+| Skill | Canonical and observed skill term | Stable `skill_id`, category, match policy, review status, archive counts |
+| Skill Alias | Reviewed or observed skill label | Normalized alias, label, skill ID, alias type, match/review policy |
+| Job Skill | Job-to-skill association | Job/skill composite key, raw/normalized label, provenance and review status |
+| Skill Observation | Source-specific observed term count | Dataset, raw/normalized term, occurrence count |
+| Learning Resource | Reviewed learning page/course | Provider, type, URL, access/cost caveats, verification details |
+| Learning Resource Skill | Resource-to-skill association | Resource/skill composite key |
+| Learning Resource Language | Recorded language label | Resource/language composite key; source label is preserved |
 
-Company and location relationships may be optional when an advertisement does not provide those values. The initial release does not require user, saved-job, saved-search, or notification tables.
+Company, country, city, and region values remain on the job record as supplied by the source rather than being forced into unverified dimensions. The initial scope has no user account, saved-search, or persistent skill-input tables.
 
 ## Relationship Cardinalities
 
-- One company may be associated with zero or many job posts; each job post has zero or one known company.
-- One location may be associated with zero or many job posts; each job post has zero or one normalized location.
-- One source may be associated with many job posts; each job post should retain its source where available.
-- Job posts and skills have a many-to-many relationship represented by Job Skill.
-- One skill may be associated with many learning resources.
-
-## ERD Concept
-
-See the [logical ERD](../diagrams/04_LOGICAL_ERD.md) and [conceptual domain class diagram](../diagrams/18_DOMAIN_CLASS_DIAGRAM.md). Both remain provisional; compare them with the initial executable schema and actual source data before production deployment.
+- One dataset may have many source files; each file belongs to one known dataset.
+- One import run may include many source files, with one status/count record per run and file.
+- One source file may contribute many jobs; each job references one known dataset and file.
+- Job records and skills have a many-to-many relationship represented by `job_skills`.
+- A skill may have many aliases and many observations across source datasets.
+- Learning resources and skills have a many-to-many relationship represented by `learning_resource_skills`.
+- A learning resource may retain multiple language labels in `learning_resource_languages`.
 
 ## Integrity and Normalization Rules
 
-- Assign stable primary keys independent of display titles.
-- Use foreign keys for company, location, source, skill, and resource relationships.
-- Prevent duplicate skill links for the same job and canonical skill.
-- Preserve original title, salary text, and relevant source text alongside normalized values.
-- Store unknown values as null or an explicitly documented unknown state, not as fabricated defaults.
-- Make salary units explicit; do not compare ranges with incompatible currencies or pay periods.
-- Keep posting date distinct from collection date.
-- Record the source URL or source identifier where available to support deduplication and traceability.
+- Use stable identifiers independent of display titles and source text.
+- Enforce foreign keys for sources/files, jobs, skills, aliases, observations, imports, and resources; every project connection enables SQLite foreign-key checks.
+- Prevent duplicate `(record_id, skill_id)` assignments.
+- Preserve original title, salary text, source date values, skills string, and source provenance; source dates and salary values remain text until a separately reviewed normalization rule exists.
+- Keep posting date distinct from source-updated date and from collection/import timestamps.
+- Store missing optional values as `NULL`, not fabricated defaults.
+- Do not compare salaries with incompatible currency or pay-period semantics.
+- Treat listing activity as unknown unless an authoritative status check is recorded.
+- Preserve the reviewed skill matching policies; do not use fuzzy synonym expansion or include pending-review terms in recommendations.
 
-## Deduplication Policy
+## Migrations, Local Path, and Access
 
-The final policy must be decided after inspecting the data. Candidate signals include source posting ID, normalized source URL, normalized employer, title, location, and posting date. Do not delete records solely because their titles match; distinct advertisements can share a title. Preserve a documented decision trail for deduplicated records.
+- Ordered SQLite migrations live in `database/migrations/`; the runner records their versions and checksums in `schema_migrations`.
+- The default database file is `data/processed/job_market.sqlite3`, covered by the repository's existing ignore rule.
+- `JOP_DATABASE_PATH` may override the file path. It must be a local filesystem path, not a database URL.
+- The loader writes through Python's standard-library `sqlite3` module and uses DuckDB only to read the local Parquet archive. It verifies package checksums and row counts, checks the source fingerprint, and requires `--replace` to replace a different local snapshot.
+- Run `python scripts/database_loading/load_to_database.py check` to inspect migrations, row counts, and foreign-key integrity.
+- No remote database credentials or server-side database service are part of this project configuration.
 
-## Query and Index Strategy
+## Data and Licensing Constraints
 
-Index choices should follow observed query patterns and explainable performance measurements. Candidate indexes include job title, normalized country/location, work arrangement, posting date, source, and junction-table foreign keys. Full-text search and salary indexes are conditional on the selected database and actual workload. Avoid adding indexes without evidence because they increase storage and write cost.
-
-## Migrations and Access
-
-- Store schema changes as ordered, reviewable migrations after implementation begins.
-- Test migrations against a non-production database before deployment.
-- Use separate credentials or roles where the hosting plan supports them; the application should receive only the access it needs.
-- Do not store connection secrets in this repository.
-- Validate record counts, foreign-key integrity, nullability, and salary normalization after every load.
-
-## Open Schema Questions
-
-Exact columns, data types, uniqueness rules, role taxonomy, currency conversion policy, source retention, and whether model outputs are stored in the database remain unresolved until the data audit and architecture review are complete.
+The operational database is loaded from the complete checksum-verified archive; no partial sample is available as a load source. The local Parquet package remains under the existing ignored `data/processed/` path and can rebuild SQLite. Review source-use and redistribution terms before sharing job data or deploying a public product. SQLite loading does not verify external listing activity, resource availability, or data licensing.
