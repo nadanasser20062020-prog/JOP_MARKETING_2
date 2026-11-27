@@ -1,0 +1,17 @@
+source_dataset,salary_provenance_status,salary_currency,salary_basis,salary_rate,records_with_any_salary_field,salary_text_records,annual_value_records,hourly_value_records,currency_present_records,basis_present_records
+international_jobs,source_or_origin_unverified,not_supplied,year,year,19921,0,19921,0,0,19921
+merged_tech_jobs,estimate_or_research_indicated,not_supplied,not_supplied,not_supplied,19912,19912,0,0,0,0
+international_jobs,source_or_origin_unverified,not_supplied,hour,hour,9336,0,0,9336,0,9336
+jooble_careerjet_jobs,source_or_origin_unverified,not_supplied,not_supplied,not_supplied,5243,5243,0,0,0,0
+merged_tech_jobs,source_or_origin_unverified,not_supplied,year,year,1664,1664,1664,0,0,1664
+startup_jobs,source_or_origin_unverified,not_supplied,not_supplied,not_supplied,1591,1591,0,0,0,0
+merged_tech_jobs,source_or_origin_unverified,not_supplied,hour,hour,1001,1001,0,1001,0,1001
+merged_tech_jobs,source_or_origin_unverified,not_supplied,not_supplied,not_supplied,547,547,0,0,0,0
+cybersecurity_jobs,not_available,not_supplied,not_supplied,not_supplied,56,56,0,0,0,0
+remote_tech_jobs,source_or_origin_unverified,not_supplied,not_supplied,not_supplied,50,50,0,0,0,0
+arab_tech_jobs,source_or_origin_unverified,EGP,posted,not_supplied,34,34,0,0,34,34
+arab_tech_jobs,source_or_origin_unverified,SAR,posted,not_supplied,9,9,0,0,9,9
+arab_tech_jobs,source_or_origin_unverified,JOD,posted,not_supplied,8,8,0,0,8,8
+merged_tech_jobs,estimate_or_research_indicated,not_supplied,month,month,3,3,0,0,0,3
+cybersecurity_jobs,source_or_origin_unverified,not_supplied,not_supplied,not_supplied,2,2,0,0,0,0
+arab_tech_jobs,source_or_origin_unverified,AED,posted,not_supplied,1,1,0,0,1,1

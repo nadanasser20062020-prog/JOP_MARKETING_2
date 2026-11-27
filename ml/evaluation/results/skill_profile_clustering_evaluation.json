@@ -1,0 +1,499 @@
+{
+  "source_archive_run_id": "full_archive_parquet_v1_20261028",
+  "source_dataset": "international_jobs",
+  "feature_representation": "binary_presence_of_skill_id",
+  "included_skill_policies": [
+    "approved_aliases",
+    "exact_only"
+  ],
+  "included_skill_policy_status_pairs": [
+    [
+      "approved_aliases",
+      "curated"
+    ],
+    [
+      "exact_only",
+      "curated_exact_only"
+    ]
+  ],
+  "excluded_unreviewed_exact_only_terms": true,
+  "excluded_exact_duplicates": true,
+  "candidate_cluster_counts": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "candidate_models": [
+    {
+      "cluster_count": 4,
+      "training_inertia": 32110.875,
+      "holdout_silhouette_cosine": 0.045116059482097626,
+      "random_label_baseline_silhouette_cosine": -0.016452185809612274,
+      "holdout_cluster_sizes": [
+        255,
+        861,
+        468,
+        816
+      ],
+      "holdout_cluster_size_percentages": [
+        10.62,
+        35.88,
+        19.5,
+        34.0
+      ]
+    },
+    {
+      "cluster_count": 6,
+      "training_inertia": 30210.45703125,
+      "holdout_silhouette_cosine": 0.11396832019090652,
+      "random_label_baseline_silhouette_cosine": -0.02111269347369671,
+      "holdout_cluster_sizes": [
+        643,
+        357,
+        323,
+        322,
+        244,
+        511
+      ],
+      "holdout_cluster_size_percentages": [
+        26.79,
+        14.88,
+        13.46,
+        13.42,
+        10.17,
+        21.29
+      ]
+    },
+    {
+      "cluster_count": 8,
+      "training_inertia": 29348.765625,
+      "holdout_silhouette_cosine": 0.08739962428808212,
+      "random_label_baseline_silhouette_cosine": -0.026477279141545296,
+      "holdout_cluster_sizes": [
+        127,
+        559,
+        306,
+        509,
+        250,
+        191,
+        320,
+        138
+      ],
+      "holdout_cluster_size_percentages": [
+        5.29,
+        23.29,
+        12.75,
+        21.21,
+        10.42,
+        7.96,
+        13.33,
+        5.75
+      ]
+    },
+    {
+      "cluster_count": 10,
+      "training_inertia": 28718.091796875,
+      "holdout_silhouette_cosine": 0.09345164149999619,
+      "random_label_baseline_silhouette_cosine": -0.037544067949056625,
+      "holdout_cluster_sizes": [
+        312,
+        400,
+        257,
+        454,
+        175,
+        115,
+        373,
+        63,
+        182,
+        69
+      ],
+      "holdout_cluster_size_percentages": [
+        13.0,
+        16.67,
+        10.71,
+        18.92,
+        7.29,
+        4.79,
+        15.54,
+        2.62,
+        7.58,
+        2.88
+      ]
+    }
+  ],
+  "selected_candidate": {
+    "cluster_count": 6,
+    "training_inertia": 30210.45703125,
+    "holdout_silhouette_cosine": 0.11396832019090652,
+    "random_label_baseline_silhouette_cosine": -0.02111269347369671,
+    "holdout_cluster_sizes": [
+      643,
+      357,
+      323,
+      322,
+      244,
+      511
+    ],
+    "holdout_cluster_size_percentages": [
+      26.79,
+      14.88,
+      13.46,
+      13.42,
+      10.17,
+      21.29
+    ]
+  },
+  "stability_adjusted_rand_index": 0.36068058648502804,
+  "selected_cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "holdout_job_count": 643,
+      "holdout_job_share_percent": 26.79,
+      "top_skills": [
+        {
+          "skill_id": "skill:python",
+          "skill_name": "Python",
+          "job_count": 642,
+          "within_cluster_share_percent": 99.84
+        },
+        {
+          "skill_id": "skill:sql",
+          "skill_name": "SQL",
+          "job_count": 364,
+          "within_cluster_share_percent": 56.61
+        },
+        {
+          "skill_id": "skill:r",
+          "skill_name": "R",
+          "job_count": 195,
+          "within_cluster_share_percent": 30.33
+        },
+        {
+          "skill_id": "skill:aws",
+          "skill_name": "Amazon Web Services (AWS)",
+          "job_count": 130,
+          "within_cluster_share_percent": 20.22
+        },
+        {
+          "skill_id": "skill:java",
+          "skill_name": "Java",
+          "job_count": 84,
+          "within_cluster_share_percent": 13.06
+        },
+        {
+          "skill_id": "skill:git",
+          "skill_name": "Git",
+          "job_count": 76,
+          "within_cluster_share_percent": 11.82
+        },
+        {
+          "skill_id": "skill:tensorflow",
+          "skill_name": "TensorFlow",
+          "job_count": 61,
+          "within_cluster_share_percent": 9.49
+        },
+        {
+          "skill_id": "skill:pytorch",
+          "skill_name": "PyTorch",
+          "job_count": 59,
+          "within_cluster_share_percent": 9.18
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "holdout_job_count": 357,
+      "holdout_job_share_percent": 14.88,
+      "top_skills": [
+        {
+          "skill_id": "skill:excel",
+          "skill_name": "Microsoft Excel",
+          "job_count": 357,
+          "within_cluster_share_percent": 100.0
+        },
+        {
+          "skill_id": "skill:sql",
+          "skill_name": "SQL",
+          "job_count": 158,
+          "within_cluster_share_percent": 44.26
+        },
+        {
+          "skill_id": "skill:power-bi",
+          "skill_name": "Power BI",
+          "job_count": 96,
+          "within_cluster_share_percent": 26.89
+        },
+        {
+          "skill_id": "skill:powerpoint",
+          "skill_name": "Microsoft PowerPoint",
+          "job_count": 84,
+          "within_cluster_share_percent": 23.53
+        },
+        {
+          "skill_id": "skill:python",
+          "skill_name": "Python",
+          "job_count": 68,
+          "within_cluster_share_percent": 19.05
+        },
+        {
+          "skill_id": "skill:tableau",
+          "skill_name": "Tableau",
+          "job_count": 64,
+          "within_cluster_share_percent": 17.93
+        },
+        {
+          "skill_id": "skill:sas",
+          "skill_name": "SAS",
+          "job_count": 38,
+          "within_cluster_share_percent": 10.64
+        },
+        {
+          "skill_id": "skill:r",
+          "skill_name": "R",
+          "job_count": 31,
+          "within_cluster_share_percent": 8.68
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "holdout_job_count": 323,
+      "holdout_job_share_percent": 13.46,
+      "top_skills": [
+        {
+          "skill_id": "skill:azure",
+          "skill_name": "Microsoft Azure",
+          "job_count": 317,
+          "within_cluster_share_percent": 98.14
+        },
+        {
+          "skill_id": "skill:python",
+          "skill_name": "Python",
+          "job_count": 259,
+          "within_cluster_share_percent": 80.19
+        },
+        {
+          "skill_id": "skill:sql",
+          "skill_name": "SQL",
+          "job_count": 231,
+          "within_cluster_share_percent": 71.52
+        },
+        {
+          "skill_id": "skill:aws",
+          "skill_name": "Amazon Web Services (AWS)",
+          "job_count": 154,
+          "within_cluster_share_percent": 47.68
+        },
+        {
+          "skill_id": "skill:databricks",
+          "skill_name": "Databricks",
+          "job_count": 116,
+          "within_cluster_share_percent": 35.91
+        },
+        {
+          "skill_id": "skill:gcp",
+          "skill_name": "Google Cloud Platform (GCP)",
+          "job_count": 71,
+          "within_cluster_share_percent": 21.98
+        },
+        {
+          "skill_id": "skill:spark",
+          "skill_name": "Apache Spark",
+          "job_count": 70,
+          "within_cluster_share_percent": 21.67
+        },
+        {
+          "skill_id": "skill:git",
+          "skill_name": "Git",
+          "job_count": 54,
+          "within_cluster_share_percent": 16.72
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "holdout_job_count": 322,
+      "holdout_job_share_percent": 13.42,
+      "top_skills": [
+        {
+          "skill_id": "skill:tableau",
+          "skill_name": "Tableau",
+          "job_count": 320,
+          "within_cluster_share_percent": 99.38
+        },
+        {
+          "skill_id": "skill:sql",
+          "skill_name": "SQL",
+          "job_count": 278,
+          "within_cluster_share_percent": 86.34
+        },
+        {
+          "skill_id": "skill:python",
+          "skill_name": "Python",
+          "job_count": 240,
+          "within_cluster_share_percent": 74.53
+        },
+        {
+          "skill_id": "skill:r",
+          "skill_name": "R",
+          "job_count": 155,
+          "within_cluster_share_percent": 48.14
+        },
+        {
+          "skill_id": "skill:power-bi",
+          "skill_name": "Power BI",
+          "job_count": 112,
+          "within_cluster_share_percent": 34.78
+        },
+        {
+          "skill_id": "skill:excel",
+          "skill_name": "Microsoft Excel",
+          "job_count": 62,
+          "within_cluster_share_percent": 19.25
+        },
+        {
+          "skill_id": "skill:looker",
+          "skill_name": "Looker",
+          "job_count": 45,
+          "within_cluster_share_percent": 13.98
+        },
+        {
+          "skill_id": "skill:aws",
+          "skill_name": "Amazon Web Services (AWS)",
+          "job_count": 45,
+          "within_cluster_share_percent": 13.98
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "holdout_job_count": 244,
+      "holdout_job_share_percent": 10.17,
+      "top_skills": [
+        {
+          "skill_id": "skill:spark",
+          "skill_name": "Apache Spark",
+          "job_count": 225,
+          "within_cluster_share_percent": 92.21
+        },
+        {
+          "skill_id": "skill:python",
+          "skill_name": "Python",
+          "job_count": 214,
+          "within_cluster_share_percent": 87.7
+        },
+        {
+          "skill_id": "skill:sql",
+          "skill_name": "SQL",
+          "job_count": 169,
+          "within_cluster_share_percent": 69.26
+        },
+        {
+          "skill_id": "skill:hadoop",
+          "skill_name": "Apache Hadoop",
+          "job_count": 153,
+          "within_cluster_share_percent": 62.7
+        },
+        {
+          "skill_id": "skill:aws",
+          "skill_name": "Amazon Web Services (AWS)",
+          "job_count": 149,
+          "within_cluster_share_percent": 61.07
+        },
+        {
+          "skill_id": "skill:java",
+          "skill_name": "Java",
+          "job_count": 132,
+          "within_cluster_share_percent": 54.1
+        },
+        {
+          "skill_id": "skill:scala",
+          "skill_name": "Scala",
+          "job_count": 127,
+          "within_cluster_share_percent": 52.05
+        },
+        {
+          "skill_id": "skill:kafka",
+          "skill_name": "Apache Kafka",
+          "job_count": 114,
+          "within_cluster_share_percent": 46.72
+        }
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "holdout_job_count": 511,
+      "holdout_job_share_percent": 21.29,
+      "top_skills": [
+        {
+          "skill_id": "skill:sql",
+          "skill_name": "SQL",
+          "job_count": 237,
+          "within_cluster_share_percent": 46.38
+        },
+        {
+          "skill_id": "skill:power-bi",
+          "skill_name": "Power BI",
+          "job_count": 79,
+          "within_cluster_share_percent": 15.46
+        },
+        {
+          "skill_id": "skill:azure",
+          "skill_name": "Microsoft Azure",
+          "job_count": 67,
+          "within_cluster_share_percent": 13.11
+        },
+        {
+          "skill_id": "skill:aws",
+          "skill_name": "Amazon Web Services (AWS)",
+          "job_count": 65,
+          "within_cluster_share_percent": 12.72
+        },
+        {
+          "skill_id": "skill:oracle-database",
+          "skill_name": "Oracle Database",
+          "job_count": 48,
+          "within_cluster_share_percent": 9.39
+        },
+        {
+          "skill_id": "skill:sql-server",
+          "skill_name": "Microsoft SQL Server",
+          "job_count": 40,
+          "within_cluster_share_percent": 7.83
+        },
+        {
+          "skill_id": "skill:tableau",
+          "skill_name": "Tableau",
+          "job_count": 33,
+          "within_cluster_share_percent": 6.46
+        },
+        {
+          "skill_id": "skill:spark",
+          "skill_name": "Apache Spark",
+          "job_count": 31,
+          "within_cluster_share_percent": 6.07
+        }
+      ]
+    }
+  ],
+  "sample": {
+    "eligible_population": 595711,
+    "sample_size": 12000,
+    "feature_count": 88,
+    "feature_nonzero_count": 60639,
+    "training_size": 9600,
+    "holdout_size": 2400,
+    "holdout_silhouette_subsample_size": 1000,
+    "random_seed": 20261028,
+    "training_fraction": 0.8,
+    "holdout_fraction": 0.2
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.9.1"
+  },
+  "release_status": "exploratory_report_only",
+  "model_artifact_saved": false
+}

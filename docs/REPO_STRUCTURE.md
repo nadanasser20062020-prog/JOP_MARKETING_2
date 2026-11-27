@@ -1,6 +1,6 @@
 # Repository Structure and Workflow-to-Folder Map
 
-This repository uses folders to separate project stages. The folders are documented scaffolding; no data-processing or application implementation code has been added. Large data files remain outside Git, and all data-specific fields must be confirmed by the initial audit.
+This repository separates project stages. The reproducible data-preparation pipeline and reviewed skill/learning-resource references are documented. The local SQLite schema, archive-provenance migrations, full 775,155-job/4,026,953-link importer, and integrity checks are implemented; the frontend/backend application is still planned. Generated data remains local and Git-ignored. Re-audit any new source refresh.
 
 ## End-to-End Step-to-Folder Map
 
@@ -14,8 +14,8 @@ This repository uses folders to separate project stages. The folders are documen
 | Python data-cleaning scripts | `scripts/data_cleaning/` | Reproducible Python cleaning, normalization, and deduplication scripts |
 | Final cleaned and normalized data | `data/processed/` | Local analysis-ready outputs; contents are Git-ignored and must not be committed as large datasets |
 | Database model and ERD material | `database/erd/` and `docs/diagrams/` | Database design references and the version-controlled logical ERD |
-| Database schema changes | `database/migrations/` | Ordered, reviewable database migration files when implementation begins |
-| Python database-loading script | `scripts/database_loading/` | Python scripts that load validated processed data into PostgreSQL/Neon and verify counts and relationships |
+| Database schema changes | `database/migrations/` | Ordered, reviewable SQLite migrations applied to the local database file |
+| Python database-loading script | `scripts/database_loading/` | Local SQLite loader, migration runner, sample/staging imports, and relationship checks |
 | SQL analysis | `analysis/sql/` | Reproducible SQL queries for market and skills analysis |
 | Python exploratory analysis | `analysis/notebooks/` | Jupyter notebooks using Pandas, NumPy, Matplotlib, and Seaborn |
 | Charts and analysis reports | `analysis/reports/` | Reviewed visualizations, result summaries, and analytical limitations |
@@ -25,10 +25,10 @@ This repository uses folders to separate project stages. The folders are documen
 | Classification | `ml/classification/` | Label definitions, training experiments, evaluation, and error analysis |
 | Salary regression | `ml/regression/` | Salary parsing assumptions, experiments, and evaluation; only if sufficient comparable salary data exists |
 | Shared model evaluation | `ml/evaluation/` | Baselines, metrics, model cards, and review evidence for all model tasks |
-| Backend API and services | `backend/api/` and `backend/services/` | API request handling, validation, search, analytics, matching, and database access |
+| Backend database helper, API, and services | `backend/database.py`, `backend/api/`, and `backend/services/` | Local SQLite path resolution and access; planned API request handling, validation, search, analytics, and matching |
 | Website interface and design | `frontend/` and `frontend/design/` | Website pages and design specifications for English/Arabic and RTL flows |
 | Unit, integration, data-quality, and end-to-end tests | `tests/` | Test suites grouped by validation level |
-| Deployment and operations | `deployment/` | Environment, release, migration, rollback, and operating instructions specific to the chosen platform |
+| Local operation and delivery | `deployment/` | Local SQLite setup, release, migration, backup, rollback, and recovery instructions; no hosted database configuration |
 
 ## Proposed Folder Tree
 
@@ -43,6 +43,7 @@ This repository uses folders to separate project stages. The folders are documen
 - `database/`
   - `erd/`
   - `migrations/`
+  - `seeds/`
 - `analysis/`
   - `sql/`
   - `notebooks/`
@@ -72,7 +73,7 @@ This repository uses folders to separate project stages. The folders are documen
 ## Data and Security Rules
 
 - `data/raw/`, `data/interim/`, and `data/processed/` are local working areas. Their data contents are excluded from Git; only the folder README files are tracked.
-- Store connection credentials outside the repository.
+- Keep the generated SQLite file and any local backups out of Git; use `JOP_DATABASE_PATH` only as a local filesystem path, not a connection URL.
 - Keep original source data unchanged. Cleaning scripts should read raw input and write separate outputs.
-- Do not finalize the schema, loader, or model fields until the data audit is complete.
-- The Python database loader must read the processed dataset, use secure credentials, support safe repeat runs, and validate the inserted record counts and relationships.
+- The initial data audit is complete; keep schema and loader decisions aligned with `docs/data/DATA_AUDIT.md` and `docs/data/DATA_DICTIONARY.md`, and re-audit any changed source files.
+- The Python database loader exists at `scripts/database_loading/load_to_database.py`; it uses local SQLite, records source fingerprints and import counts, is idempotent for unchanged inputs, requires explicit `--replace` for a different snapshot, and validates foreign keys.

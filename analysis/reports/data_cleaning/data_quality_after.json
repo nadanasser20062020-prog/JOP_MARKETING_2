@@ -1,0 +1,845 @@
+{
+  "column_type_audit_path": "analysis/reports/data_cleaning/cleaned_column_type_audit.csv",
+  "country_standardization_pair_count": 164,
+  "database_validation": {
+    "status": "not_checked"
+  },
+  "date_quality_audit_path": "analysis/reports/data_cleaning/date_quality_audit.csv",
+  "dates": {
+    "collection_date_records_present": 0,
+    "collection_date_source_fields_found": [],
+    "policy": "Publication, source-update, and source-collection columns are separate. 'updated' is never promoted to publication; no collection date is inferred from file/Drive timestamps."
+  },
+  "duplicates": {
+    "candidate_file": "analysis/reports/data_cleaning/duplicate_review_candidates.csv",
+    "candidate_groups_total": 2,
+    "cross_source_exact_listing_signature_groups": 1,
+    "cross_source_exact_raw_row_groups": 0,
+    "cross_source_exact_url_groups": 1,
+    "cross_source_near_duplicate_pairs": 0,
+    "deleted_or_merged_rows": 0,
+    "large_near_duplicate_blocks_skipped_over_60_rows": 478,
+    "near_duplicate_title_pairs_evaluated": 77284,
+    "review_policy": "All cross-source candidates are retained; match signals are not proof that two listings are the same job."
+  },
+  "field_consistency": {},
+  "field_coverage": {
+    "category_raw": {
+      "missing": 744822,
+      "missing_rate": 0.960868,
+      "present": 30333
+    },
+    "city_raw": {
+      "missing": 754121,
+      "missing_rate": 0.972865,
+      "present": 21034
+    },
+    "collection_date_field": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "company_clean": {
+      "missing": 319,
+      "missing_rate": 0.000412,
+      "present": 774836
+    },
+    "company_raw": {
+      "missing": 316,
+      "missing_rate": 0.000408,
+      "present": 774839
+    },
+    "country_raw": {
+      "missing": 104,
+      "missing_rate": 0.000134,
+      "present": 775051
+    },
+    "country_standardized": {
+      "missing": 140,
+      "missing_rate": 0.000181,
+      "present": 775015
+    },
+    "data_quality_flags": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "date_quality_flags": {
+      "missing": 744843,
+      "missing_rate": 0.960896,
+      "present": 30312
+    },
+    "description_char_count": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "description_raw": {
+      "missing": 748661,
+      "missing_rate": 0.965821,
+      "present": 26494
+    },
+    "employment_type_raw": {
+      "missing": 29247,
+      "missing_rate": 0.037731,
+      "present": 745908
+    },
+    "employment_type_standardized": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "encoding_suspected_mojibake": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "exact_duplicate_within_source": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "experience_parse_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "experience_raw": {
+      "missing": 774947,
+      "missing_rate": 0.999732,
+      "present": 208
+    },
+    "experience_years_max": {
+      "missing": 775038,
+      "missing_rate": 0.999849,
+      "present": 117
+    },
+    "experience_years_min": {
+      "missing": 774951,
+      "missing_rate": 0.999737,
+      "present": 204
+    },
+    "listing_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "location_clean": {
+      "missing": 1130,
+      "missing_rate": 0.001458,
+      "present": 774025
+    },
+    "location_key": {
+      "missing": 1130,
+      "missing_rate": 0.001458,
+      "present": 774025
+    },
+    "location_raw": {
+      "missing": 1130,
+      "missing_rate": 0.001458,
+      "present": 774025
+    },
+    "location_scope": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "posted_at_iso": {
+      "missing": 30312,
+      "missing_rate": 0.039104,
+      "present": 744843
+    },
+    "posted_at_raw": {
+      "missing": 30312,
+      "missing_rate": 0.039104,
+      "present": 744843
+    },
+    "record_id": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "record_origin": {
+      "missing": 729125,
+      "missing_rate": 0.940618,
+      "present": 46030
+    },
+    "region_raw": {
+      "missing": 771207,
+      "missing_rate": 0.994907,
+      "present": 3948
+    },
+    "remote_flag_raw": {
+      "missing": 30391,
+      "missing_rate": 0.039206,
+      "present": 744764
+    },
+    "role_family": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_amount_1_original_currency": {
+      "missing": 715450,
+      "missing_rate": 0.922977,
+      "present": 59705
+    },
+    "salary_amount_2_original_currency": {
+      "missing": 715450,
+      "missing_rate": 0.922977,
+      "present": 59705
+    },
+    "salary_annual_max_egp": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_max_sar": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_max_usd": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_min_egp": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_min_sar": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_min_usd": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_salary_egp": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_salary_sar": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annual_salary_usd": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annualized_max_native": {
+      "missing": 717446,
+      "missing_rate": 0.925552,
+      "present": 57709
+    },
+    "salary_annualized_max_reporting_currency": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annualized_midpoint_native": {
+      "missing": 717446,
+      "missing_rate": 0.925552,
+      "present": 57709
+    },
+    "salary_annualized_midpoint_reporting_currency": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_annualized_min_native": {
+      "missing": 717446,
+      "missing_rate": 0.925552,
+      "present": 57709
+    },
+    "salary_annualized_min_reporting_currency": {
+      "missing": 35671,
+      "missing_rate": 0.046018,
+      "present": 739484
+    },
+    "salary_basis_raw": {
+      "missing": 774716,
+      "missing_rate": 0.999434,
+      "present": 439
+    },
+    "salary_candidate_raw": {
+      "missing": 715390,
+      "missing_rate": 0.922899,
+      "present": 59765
+    },
+    "salary_comparability_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_currency_code": {
+      "missing": 750880,
+      "missing_rate": 0.968684,
+      "present": 24275
+    },
+    "salary_currency_detection_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_currency_raw": {
+      "missing": 774717,
+      "missing_rate": 0.999435,
+      "present": 438
+    },
+    "salary_estimate_currency_code": {
+      "missing": 59765,
+      "missing_rate": 0.077101,
+      "present": 715390
+    },
+    "salary_estimate_range_basis": {
+      "missing": 59765,
+      "missing_rate": 0.077101,
+      "present": 715390
+    },
+    "salary_estimate_reference_count": {
+      "missing": 59765,
+      "missing_rate": 0.077101,
+      "present": 715390
+    },
+    "salary_estimate_source_date": {
+      "missing": 775155,
+      "missing_rate": 1.0,
+      "present": 0
+    },
+    "salary_estimate_source_date_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_estimate_source_url": {
+      "missing": 727576,
+      "missing_rate": 0.93862,
+      "present": 47579
+    },
+    "salary_estimation_as_of_date": {
+      "missing": 60,
+      "missing_rate": 7.7e-05,
+      "present": 775095
+    },
+    "salary_estimation_confidence": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_estimation_method": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_estimation_source": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_estimation_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_fill_source_raw": {
+      "missing": 774716,
+      "missing_rate": 0.999434,
+      "present": 439
+    },
+    "salary_fx_rate_date": {
+      "missing": 750880,
+      "missing_rate": 0.968684,
+      "present": 24275
+    },
+    "salary_fx_rate_source": {
+      "missing": 750880,
+      "missing_rate": 0.968684,
+      "present": 24275
+    },
+    "salary_fx_rate_to_reporting_currency": {
+      "missing": 750880,
+      "missing_rate": 0.968684,
+      "present": 24275
+    },
+    "salary_integrity_flags": {
+      "missing": 3591,
+      "missing_rate": 0.004633,
+      "present": 771564
+    },
+    "salary_iqr_outlier_flag": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_local_source_value": {
+      "missing": 774716,
+      "missing_rate": 0.999434,
+      "present": 439
+    },
+    "salary_max_original_currency": {
+      "missing": 715450,
+      "missing_rate": 0.922977,
+      "present": 59705
+    },
+    "salary_midpoint_original_currency": {
+      "missing": 715450,
+      "missing_rate": 0.922977,
+      "present": 59705
+    },
+    "salary_min_original_currency": {
+      "missing": 715450,
+      "missing_rate": 0.922977,
+      "present": 59705
+    },
+    "salary_original": {
+      "missing": 715390,
+      "missing_rate": 0.922899,
+      "present": 59765
+    },
+    "salary_parse_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_period_code": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_period_detection_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_provenance_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_range_est_source_value": {
+      "missing": 774859,
+      "missing_rate": 0.999618,
+      "present": 296
+    },
+    "salary_range_kind": {
+      "missing": 715450,
+      "missing_rate": 0.922977,
+      "present": 59705
+    },
+    "salary_rate_raw": {
+      "missing": 742849,
+      "missing_rate": 0.958323,
+      "present": 32306
+    },
+    "salary_raw": {
+      "missing": 745034,
+      "missing_rate": 0.961142,
+      "present": 30121
+    },
+    "salary_reporting_currency": {
+      "missing": 35490,
+      "missing_rate": 0.045784,
+      "present": 739665
+    },
+    "salary_source_field_used": {
+      "missing": 715390,
+      "missing_rate": 0.922899,
+      "present": 59765
+    },
+    "salary_source_raw": {
+      "missing": 729564,
+      "missing_rate": 0.941185,
+      "present": 45591
+    },
+    "salary_source_value_type": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_sources_raw": {
+      "missing": 774859,
+      "missing_rate": 0.999618,
+      "present": 296
+    },
+    "salary_statistics_eligible": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "salary_usd_source_value": {
+      "missing": 774716,
+      "missing_rate": 0.999434,
+      "present": 439
+    },
+    "salary_value_type": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "seniority_band": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "skill_canonical_id_count": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "skill_duplicate_token_count": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "skill_ids_json": {
+      "missing": 98054,
+      "missing_rate": 0.126496,
+      "present": 677101
+    },
+    "skill_token_count_raw": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "skill_token_count_unique": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "skills_base_raw": {
+      "missing": 766507,
+      "missing_rate": 0.988844,
+      "present": 8648
+    },
+    "skills_enrichment_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "skills_raw": {
+      "missing": 98054,
+      "missing_rate": 0.126496,
+      "present": 677101
+    },
+    "skills_source_raw": {
+      "missing": 729125,
+      "missing_rate": 0.940618,
+      "present": 46030
+    },
+    "skills_tokens_json": {
+      "missing": 98054,
+      "missing_rate": 0.126496,
+      "present": 677101
+    },
+    "snapshot_type": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_collected_at_iso": {
+      "missing": 775155,
+      "missing_rate": 1.0,
+      "present": 0
+    },
+    "source_collected_at_raw": {
+      "missing": 775155,
+      "missing_rate": 1.0,
+      "present": 0
+    },
+    "source_dataset": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_date_field": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_file": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_platform": {
+      "missing": 417,
+      "missing_rate": 0.000538,
+      "present": 774738
+    },
+    "source_record_id": {
+      "missing": 744822,
+      "missing_rate": 0.960868,
+      "present": 30333
+    },
+    "source_record_id_duplicate_occurrence": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_row_json": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_row_number": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "source_updated_at_iso": {
+      "missing": 747032,
+      "missing_rate": 0.96372,
+      "present": 28123
+    },
+    "source_updated_at_raw": {
+      "missing": 747032,
+      "missing_rate": 0.96372,
+      "present": 28123
+    },
+    "source_url_raw": {
+      "missing": 745173,
+      "missing_rate": 0.961321,
+      "present": 29982
+    },
+    "source_url_syntax_status": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    },
+    "title_clean": {
+      "missing": 4,
+      "missing_rate": 5e-06,
+      "present": 775151
+    },
+    "title_key": {
+      "missing": 4,
+      "missing_rate": 5e-06,
+      "present": 775151
+    },
+    "title_raw": {
+      "missing": 4,
+      "missing_rate": 5e-06,
+      "present": 775151
+    },
+    "work_mode_raw": {
+      "missing": 775109,
+      "missing_rate": 0.999941,
+      "present": 46
+    },
+    "work_mode_standardized": {
+      "missing": 0,
+      "missing_rate": 0.0,
+      "present": 775155
+    }
+  },
+  "field_coverage_comparison_path": "analysis/reports/data_cleaning/field_coverage_comparison.csv",
+  "full_column_coverage_path": "analysis/reports/data_cleaning/cleaned_column_coverage.csv",
+  "metadata": {
+    "audit_date": "2026-10-28",
+    "cleaned_dataset_path": "data/processed/jobs_cleaned_audited.csv.gz",
+    "note": "All original rows and raw source JSON are retained. Synthetic salary fields are separate from source salary fields.",
+    "salary_reporting_currency_base": "USD",
+    "source_ref": "main@6755883a8c043592d349cace4cd84aaae81d73d0+GoogleDrive:International_Tech_Jobs_Filtered.zip",
+    "target_currencies": [
+      "USD",
+      "EGP",
+      "SAR"
+    ]
+  },
+  "output_column_count": 123,
+  "raw_source_column_coverage_path": "analysis/reports/data_cleaning/raw_source_column_coverage.csv",
+  "role_family_counts": {
+    "arab_tech_jobs|business_systems_analysis": 13,
+    "arab_tech_jobs|cloud_devops_platform": 18,
+    "arab_tech_jobs|cybersecurity": 1,
+    "arab_tech_jobs|data_analytics_bi": 7,
+    "arab_tech_jobs|data_engineering": 5,
+    "arab_tech_jobs|data_science_ai_ml": 4,
+    "arab_tech_jobs|engineering_other": 24,
+    "arab_tech_jobs|network_it_support": 16,
+    "arab_tech_jobs|other_technology": 220,
+    "arab_tech_jobs|product_management": 11,
+    "arab_tech_jobs|project_program_management": 7,
+    "arab_tech_jobs|qa_testing": 12,
+    "arab_tech_jobs|sales_marketing": 5,
+    "arab_tech_jobs|software_engineering": 87,
+    "arab_tech_jobs|ux_ui_design": 9,
+    "cybersecurity_jobs|cybersecurity": 54,
+    "cybersecurity_jobs|engineering_other": 1,
+    "cybersecurity_jobs|other_technology": 3,
+    "international_jobs|business_systems_analysis": 901,
+    "international_jobs|cloud_devops_platform": 8853,
+    "international_jobs|cybersecurity": 1803,
+    "international_jobs|data_analytics_bi": 176078,
+    "international_jobs|data_engineering": 206471,
+    "international_jobs|data_science_ai_ml": 155423,
+    "international_jobs|engineering_other": 33587,
+    "international_jobs|hardware_embedded_iot": 549,
+    "international_jobs|network_it_support": 1258,
+    "international_jobs|other_technology": 97982,
+    "international_jobs|product_management": 720,
+    "international_jobs|project_program_management": 588,
+    "international_jobs|qa_testing": 2208,
+    "international_jobs|sales_marketing": 352,
+    "international_jobs|software_engineering": 19048,
+    "international_jobs|ux_ui_design": 45,
+    "jooble_careerjet_jobs|business_systems_analysis": 152,
+    "jooble_careerjet_jobs|cloud_devops_platform": 1232,
+    "jooble_careerjet_jobs|cybersecurity": 2486,
+    "jooble_careerjet_jobs|data_analytics_bi": 115,
+    "jooble_careerjet_jobs|data_engineering": 452,
+    "jooble_careerjet_jobs|data_science_ai_ml": 414,
+    "jooble_careerjet_jobs|engineering_other": 4074,
+    "jooble_careerjet_jobs|hardware_embedded_iot": 888,
+    "jooble_careerjet_jobs|network_it_support": 241,
+    "jooble_careerjet_jobs|other_technology": 2897,
+    "jooble_careerjet_jobs|product_management": 72,
+    "jooble_careerjet_jobs|project_program_management": 112,
+    "jooble_careerjet_jobs|qa_testing": 248,
+    "jooble_careerjet_jobs|sales_marketing": 80,
+    "jooble_careerjet_jobs|software_engineering": 5092,
+    "jooble_careerjet_jobs|ux_ui_design": 28,
+    "merged_tech_jobs|business_systems_analysis": 62,
+    "merged_tech_jobs|cloud_devops_platform": 839,
+    "merged_tech_jobs|cybersecurity": 274,
+    "merged_tech_jobs|data_analytics_bi": 6325,
+    "merged_tech_jobs|data_engineering": 11271,
+    "merged_tech_jobs|data_science_ai_ml": 11936,
+    "merged_tech_jobs|engineering_other": 3445,
+    "merged_tech_jobs|hardware_embedded_iot": 205,
+    "merged_tech_jobs|network_it_support": 194,
+    "merged_tech_jobs|other_technology": 7877,
+    "merged_tech_jobs|product_management": 78,
+    "merged_tech_jobs|project_program_management": 65,
+    "merged_tech_jobs|qa_testing": 171,
+    "merged_tech_jobs|sales_marketing": 116,
+    "merged_tech_jobs|software_engineering": 2720,
+    "merged_tech_jobs|ux_ui_design": 13,
+    "remote_tech_jobs|business_systems_analysis": 1,
+    "remote_tech_jobs|cloud_devops_platform": 58,
+    "remote_tech_jobs|cybersecurity": 158,
+    "remote_tech_jobs|data_analytics_bi": 7,
+    "remote_tech_jobs|data_engineering": 42,
+    "remote_tech_jobs|data_science_ai_ml": 88,
+    "remote_tech_jobs|engineering_other": 125,
+    "remote_tech_jobs|hardware_embedded_iot": 10,
+    "remote_tech_jobs|network_it_support": 1,
+    "remote_tech_jobs|other_technology": 258,
+    "remote_tech_jobs|product_management": 25,
+    "remote_tech_jobs|project_program_management": 6,
+    "remote_tech_jobs|qa_testing": 15,
+    "remote_tech_jobs|sales_marketing": 24,
+    "remote_tech_jobs|software_engineering": 246,
+    "remote_tech_jobs|ux_ui_design": 11,
+    "startup_jobs|business_systems_analysis": 2,
+    "startup_jobs|cloud_devops_platform": 558,
+    "startup_jobs|cybersecurity": 356,
+    "startup_jobs|data_analytics_bi": 13,
+    "startup_jobs|data_engineering": 211,
+    "startup_jobs|data_science_ai_ml": 454,
+    "startup_jobs|engineering_other": 104,
+    "startup_jobs|hardware_embedded_iot": 91,
+    "startup_jobs|network_it_support": 40,
+    "startup_jobs|other_technology": 320,
+    "startup_jobs|product_management": 4,
+    "startup_jobs|project_program_management": 1,
+    "startup_jobs|qa_testing": 73,
+    "startup_jobs|sales_marketing": 2,
+    "startup_jobs|software_engineering": 1314
+  },
+  "rows": {
+    "after": 775155,
+    "before": 775155,
+    "dropped": 0
+  },
+  "salary": {
+    "annual_salary_available_by_currency": {
+      "EGP": 739484,
+      "SAR": 739484,
+      "USD": 739484
+    },
+    "annual_salary_egp_missing": 35671,
+    "annual_salary_sar_missing": 35671,
+    "annual_salary_usd_missing": 35671,
+    "estimation_status_counts": {
+      "Actual": 6937,
+      "Estimated": 735952,
+      "Not disclosed": 56,
+      "Unparseable": 4,
+      "Unverified": 32206
+    },
+    "salary_estimation_method_counts": {
+      "legacy_source_estimate_preserved_not_revalidated": 20562,
+      "source_explicitly_withholds_or_negotiates_salary": 56,
+      "source_reported_annualization_and_fx_conversion": 6937,
+      "source_reported_numeric_value_provenance_unverified": 32206,
+      "source_salary_text_not_safely_parseable": 4,
+      "synthetic_country_family_median": 59907,
+      "synthetic_country_family_seniority_median": 114779,
+      "synthetic_exact_country_title_median": 247,
+      "synthetic_global_family_median": 26556,
+      "synthetic_global_family_seniority_median": 341868,
+      "synthetic_global_technology_median": 172033
+    },
+    "salary_original_missing_after_estimation": 715390,
+    "source_currency_counts": {
+      "AED": 6126,
+      "AUD": 162,
+      "BRL": 1,
+      "CAD": 969,
+      "CHF": 1,
+      "EGP": 3863,
+      "EUR": 198,
+      "GBP": 905,
+      "INR": 45,
+      "JOD": 22,
+      "KWD": 2,
+      "MAD": 303,
+      "MXN": 4,
+      "NZD": 2,
+      "OMR": 2,
+      "PHP": 3,
+      "PLN": 39,
+      "QAR": 260,
+      "SAR": 2501,
+      "USD": 8867
+    },
+    "source_value_type_counts": {
+      "actual_reported": 6937,
+      "estimated_legacy_unverified": 20562,
+      "estimated_synthetic": 715390,
+      "not_disclosed": 56,
+      "source_reported_unverified": 32206,
+      "unparseable_or_no_numeric_amount": 4
+    }
+  },
+  "skills": {
+    "alias_audit_path": "analysis/reports/data_cleaning/skill_alias_audit.csv",
+    "canonical_skill_assignment_rows": 4026953,
+    "curated_alias_token_keys": 195,
+    "rows_with_any_skill_tokens": 677101,
+    "unique_canonical_skill_ids_observed": 1496,
+    "unique_observed_skill_aliases": 1515,
+    "unreviewed_exact_only_token_keys": 1320
+  },
+  "source_integrity": {
+    "all_unchanged_during_run": true,
+    "changed_or_disappeared_files": [],
+    "files_hashed_before": 10,
+    "files_hashed_unchanged": 10
+  },
+  "types": {
+    "output_columns_checked": 123,
+    "output_invalid_type_values": 0,
+    "output_type_audit_status": "passed",
+    "source_columns_checked": 189
+  }
+}

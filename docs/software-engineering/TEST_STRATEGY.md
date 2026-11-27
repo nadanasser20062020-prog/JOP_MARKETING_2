@@ -7,6 +7,10 @@
 - Protect data integrity, user privacy, and safe failure behavior.
 - Evaluate ML outputs separately from ordinary application functionality.
 
+## Implemented API Evidence
+
+The 16 Node API contract tests in `tests/backend/` run with `npm test` and use isolated synthetic SQLite fixtures; they do not alter the demonstration DB. They cover readiness, metadata, overview denominators, empty searches, pagination, details, role analysis, skills/co-occurrence/resources, historical trends, Jaccard matching, the Naive Bayes route/status, validation, salary-filter rejection, and CORS. `npm run check` passes the Node syntax checks. Python's documented `unittest` suites also pass: 26 tests under `tests/` and 6 skill-matching baseline tests. In the last full-data run the DB check reported 775,155 jobs, 4,026,953 skill links, migrations 001–005, and zero FK violations; selected API routes passed an HTTP smoke check on that file. The ignored archive/database are absent from the current snapshot, so those checks require restoring them to repeat. Comprehensive all-route reconciliation, query performance/concurrency benchmarks, frontend/browser tests, accessibility, and RTL tests remain pending.
+
 ## Test Levels
 
 | Level | Scope | Examples |
@@ -30,7 +34,7 @@
 4. Compare markets with unequal sample sizes and ensure the limitation is visible.
 5. Submit valid, empty, unrecognized, and oversized skill input.
 6. Review match explanations and verify that skill input is not persisted or logged.
-7. Open a learning resource and verify its language and free-access description.
+7. Open a learning resource and verify its language and access description; confirm only `free_verified` items are labelled free.
 8. Switch between English and Arabic and check RTL/LTR layout.
 9. Simulate database or model unavailability and verify safe recovery states.
 
@@ -46,7 +50,7 @@
 
 ## Test Data and Environments
 
-Use separate development/test and demonstration/production configurations where the selected hosting setup permits. Test fixtures should be synthetic or approved, minimized, and free of credentials. Do not use private production credentials in notebooks or local test files.
+Use temporary local SQLite files for automated tests and a separate local demonstration file; tests must not overwrite the demonstration database. Fixtures should be synthetic or approved, minimized, and contain no credentials. No test or application workflow should require a network database service.
 
 ## Exit Criteria
 

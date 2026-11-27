@@ -1,29 +1,31 @@
 # Container Architecture Diagram
 
-This is a proposed logical container view. Technology and hosting choices remain open.
+The local SQLite container is implemented. The frontend, API, and application services remain planned; any implementation must access the database only from trusted backend code on the same machine.
 
 ```mermaid
 flowchart LR
     Visitor[Visitor] --> Web[Web frontend]
     Web --> API[Backend API]
     API --> Services[Application services]
-    Services --> DB[(Relational database: PostgreSQL / Neon under consideration)]
+    Services --> DB[(Local SQLite file<br/>data/processed/job_market.sqlite3)]
     Services --> Matching[Skill matching and approved model logic]
     Services --> Resources[Learning-resource catalogue]
 
-    Drive[(Shared Drive source files)] --> Prep[Data preparation and validation]
+    Drive[(Read-only original source files)] --> Prep[Local data preparation and validation]
     Prep --> DB
-    Analysis[SQL and Python analysis] --> DB
+    Analysis[Local SQL and Python analysis] --> DB
     Analysis --> Reports[Charts and analytical findings]
     Reports --> Web
 
-    Web --> JobSources[External job sources through user-selected links]
-    Web --> LearningSites[External learning providers through user-selected links]
+    Web --> JobSources[External job pages through user-selected links]
+    Web --> LearningSites[External learning pages through user-selected links]
 ```
 
 ## Interaction Rules
 
-- The frontend communicates with the backend API; it does not connect directly to the database.
-- Data preparation, analytical notebooks, and the user-facing application are separate responsibilities.
-- Model logic may be served by the backend only after passing its evaluation gate; otherwise, model work remains report-only.
+- The frontend communicates with the backend API; it does not connect directly to the SQLite file.
+- The backend opens only a local filesystem database path. There is no remote database service or network database fallback.
+- Data preparation, analytical notebooks, and the user-facing application remain separate responsibilities.
+- Any future approved model inference runs inside the same backend process; no separate ML service or model server is in scope. Until a model passes its evidence/evaluation gate, its work remains offline and report-only.
+- Original source files are read-only inputs; database loading writes only to the local SQLite file.
 - External links are opened by the visitor and are not application-controlled services.

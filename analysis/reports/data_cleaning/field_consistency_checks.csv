@@ -1,0 +1,11 @@
+check_name,records_or_columns_checked,violations,status,description
+record_id_uniqueness,775155,0,passed,Record IDs are unique; no output row is lost or duplicated by the transform.
+row_retention,775155,0,passed,Input/output row totals match and zero rows were dropped.
+field_type_validation,123,0,passed,Every cleaned output column is checked against its declared logical type.
+salary_cross_rates,739484,0,passed,USD to EGP/SAR annual salary conversions match the frozen date-specific cross rates.
+salary_ranges,2218452,0,passed,"For every annual salary with a range, minimum <= point estimate <= maximum."
+skill_json_counts,775155,0,passed,Skill JSON arrays agree with their recorded token/ID counts.
+updated_not_promoted,28123,0,passed,An update timestamp is not silently promoted to a posting timestamp.
+synthetic_salary_provenance,715390,0,passed,"Every synthetic estimate has an explicit synthetic method, source note and status."
+withheld_salary_protection,775155,0,passed,Not-disclosed and unparseable values are not filled by the imputation model.
+database_reconciliation,0,,not_checked,Project SQLite job and job-skill counts agree with the cleaned source rows / skill assignments.

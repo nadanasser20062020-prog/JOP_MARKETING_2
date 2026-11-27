@@ -1,0 +1,262 @@
+market_group,skill_id,canonical_name,match_policy,review_status,job_record_count,country_mapped_job_records,jobs_with_eligible_skills,share_of_jobs_with_eligible_skills_percent
+Arab markets,skill:python,Python,approved_aliases,curated,19781,22442,22398,88.32
+Arab markets,skill:sql,SQL,approved_aliases,curated,18280,22442,22398,81.61
+Arab markets,skill:excel,Microsoft Excel,approved_aliases,curated,8412,22442,22398,37.56
+Arab markets,skill:tableau,Tableau,approved_aliases,curated,7220,22442,22398,32.24
+Arab markets,skill:power-bi,Power BI,approved_aliases,curated,6338,22442,22398,28.3
+Arab markets,skill:java,Java,approved_aliases,curated,5998,22442,22398,26.78
+Arab markets,skill:javascript,JavaScript,approved_aliases,curated,4589,22442,22398,20.49
+Arab markets,skill:spark,Apache Spark,approved_aliases,curated,4476,22442,22398,19.98
+Arab markets,skill:aws,Amazon Web Services (AWS),approved_aliases,curated,4121,22442,22398,18.4
+Arab markets,skill:cpp,C++,approved_aliases,curated,3974,22442,22398,17.74
+Arab markets,skill:kafka,Apache Kafka,approved_aliases,curated,3763,22442,22398,16.8
+Arab markets,skill:r,R,exact_only,curated_exact_only,3722,22442,22398,16.62
+Arab markets,skill:airflow,Apache Airflow,approved_aliases,curated,3574,22442,22398,15.96
+Arab markets,skill:azure,Microsoft Azure,approved_aliases,curated,3567,22442,22398,15.93
+Arab markets,skill:tensorflow,TensorFlow,approved_aliases,curated,3236,22442,22398,14.45
+Arab markets,skill:pytorch,PyTorch,approved_aliases,curated,3203,22442,22398,14.3
+Arab markets,skill:machine-learning,Machine Learning,approved_aliases,curated,3073,22442,22398,13.72
+Arab markets,skill:deep-learning,Deep Learning,approved_aliases,curated,3015,22442,22398,13.46
+Arab markets,skill:git,Git,approved_aliases,curated,2294,22442,22398,10.24
+Arab markets,skill:docker,Docker,approved_aliases,curated,2197,22442,22398,9.81
+Arab markets,skill:requirements-analysis,Requirements Analysis,approved_aliases,curated,2051,22442,22398,9.16
+Arab markets,skill:arabic,Arabic,approved_aliases,curated,2010,22442,22398,8.97
+Arab markets,skill:hadoop,Apache Hadoop,approved_aliases,curated,1769,22442,22398,7.9
+Arab markets,skill:agile,Agile,approved_aliases,curated,1653,22442,22398,7.38
+Arab markets,skill:kubernetes,Kubernetes,approved_aliases,curated,1453,22442,22398,6.49
+Arab markets,skill:nosql,NoSQL,approved_aliases,curated,1440,22442,22398,6.43
+Arab markets,skill:system-design,System Design,approved_aliases,curated,1390,22442,22398,6.21
+Arab markets,skill:gcp,Google Cloud Platform (GCP),approved_aliases,curated,1386,22442,22398,6.19
+Arab markets,skill:linux,Linux,approved_aliases,curated,1386,22442,22398,6.19
+Arab markets,skill:scrum,Scrum,approved_aliases,curated,1356,22442,22398,6.05
+Arab markets,skill:english,English,approved_aliases,curated,1305,22442,22398,5.83
+Arab markets,skill:communication,Communication,approved_aliases,curated,1269,22442,22398,5.67
+Arab markets,skill:software-development,Software Development,approved_aliases,curated,1212,22442,22398,5.41
+Arab markets,skill:react,React,approved_aliases,curated,1129,22442,22398,5.04
+Arab markets,skill:teamwork,Teamwork,approved_aliases,curated,1118,22442,22398,4.99
+Arab markets,skill:problem-solving,Problem Solving,approved_aliases,curated,1099,22442,22398,4.91
+Arab markets,skill:nodejs,Node.js,approved_aliases,curated,1096,22442,22398,4.89
+Arab markets,skill:oracle-database,Oracle Database,approved_aliases,curated,1054,22442,22398,4.71
+Arab markets,skill:typescript,TypeScript,approved_aliases,curated,992,22442,22398,4.43
+Arab markets,skill:cicd,CI/CD,approved_aliases,curated,972,22442,22398,4.34
+Arab markets,skill:scala,Scala,approved_aliases,curated,967,22442,22398,4.32
+Arab markets,skill:go,Go,exact_only,curated_exact_only,936,22442,22398,4.18
+Arab markets,skill:data-analysis,Data Analysis,approved_aliases,curated,848,22442,22398,3.79
+Arab markets,skill:sql-server,Microsoft SQL Server,approved_aliases,curated,820,22442,22398,3.66
+Arab markets,skill:postgresql,PostgreSQL,approved_aliases,curated,803,22442,22398,3.59
+Arab markets,skill:mysql,MySQL,approved_aliases,curated,763,22442,22398,3.41
+Arab markets,skill:sas,SAS,approved_aliases,curated,755,22442,22398,3.37
+Arab markets,skill:angular,Angular,approved_aliases,curated,651,22442,22398,2.91
+Arab markets,skill:mongodb,MongoDB,approved_aliases,curated,640,22442,22398,2.86
+Arab markets,skill:jenkins,Jenkins,approved_aliases,curated,593,22442,22398,2.65
+Arab markets,skill:windows,Windows,approved_aliases,curated,579,22442,22398,2.59
+Arab markets,skill:powerpoint,Microsoft PowerPoint,approved_aliases,curated,574,22442,22398,2.56
+Arab markets,skill:unit-testing,Unit Testing,approved_aliases,curated,565,22442,22398,2.52
+Arab markets,skill:c,C,exact_only,curated_exact_only,546,22442,22398,2.44
+Arab markets,skill:statistics,Statistics,approved_aliases,curated,534,22442,22398,2.38
+Arab markets,skill:csharp,C#,approved_aliases,curated,521,22442,22398,2.33
+Arab markets,skill:microservices,Microservices,approved_aliases,curated,515,22442,22398,2.3
+Arab markets,skill:pandas,pandas,approved_aliases,curated,515,22442,22398,2.3
+Arab markets,skill:terraform,Terraform,approved_aliases,curated,508,22442,22398,2.27
+Arab markets,skill:databricks,Databricks,approved_aliases,curated,485,22442,22398,2.17
+Arab markets,skill:snowflake,Snowflake,approved_aliases,curated,433,22442,22398,1.93
+Arab markets,skill:spss,SPSS,approved_aliases,curated,422,22442,22398,1.88
+Arab markets,skill:redshift,Amazon Redshift,approved_aliases,curated,412,22442,22398,1.84
+Arab markets,skill:html,HTML,approved_aliases,curated,412,22442,22398,1.84
+Arab markets,skill:numpy,NumPy,approved_aliases,curated,400,22442,22398,1.79
+Arab markets,skill:qa,Quality Assurance (QA),approved_aliases,curated,386,22442,22398,1.72
+Arab markets,skill:cassandra,Apache Cassandra,approved_aliases,curated,376,22442,22398,1.68
+Arab markets,skill:dotnet,.NET,approved_aliases,curated,372,22442,22398,1.66
+Arab markets,skill:scikit-learn,scikit-learn,approved_aliases,curated,370,22442,22398,1.65
+Arab markets,skill:ssis,SQL Server Integration Services (SSIS),approved_aliases,curated,364,22442,22398,1.63
+Arab markets,skill:cybersecurity,Cybersecurity,approved_aliases,curated,337,22442,22398,1.5
+Arab markets,skill:keras,Keras,approved_aliases,curated,329,22442,22398,1.47
+Arab markets,skill:jira,Jira,approved_aliases,curated,320,22442,22398,1.43
+Arab markets,skill:swift,Swift,approved_aliases,curated,315,22442,22398,1.41
+Arab markets,skill:bigquery,Google BigQuery,approved_aliases,curated,307,22442,22398,1.37
+Arab markets,skill:pyspark,PySpark,approved_aliases,curated,306,22442,22398,1.37
+Arab markets,skill:looker,Looker,approved_aliases,curated,301,22442,22398,1.34
+Arab markets,skill:kotlin,Kotlin,approved_aliases,curated,293,22442,22398,1.31
+Arab markets,skill:flutter,Flutter,approved_aliases,curated,289,22442,22398,1.29
+Arab markets,skill:ansible,Ansible,approved_aliases,curated,287,22442,22398,1.28
+Arab markets,skill:selenium,Selenium,approved_aliases,curated,282,22442,22398,1.26
+Arab markets,skill:spring,Spring Framework,approved_aliases,curated,280,22442,22398,1.25
+Arab markets,skill:qlik,Qlik,approved_aliases,curated,263,22442,22398,1.17
+Arab markets,skill:alteryx,Alteryx,approved_aliases,curated,244,22442,22398,1.09
+Arab markets,skill:github,GitHub,approved_aliases,curated,231,22442,22398,1.03
+Arab markets,skill:matlab,MATLAB,approved_aliases,curated,226,22442,22398,1.01
+Arab markets,skill:redis,Redis,approved_aliases,curated,224,22442,22398,1.0
+Arab markets,skill:troubleshooting,Troubleshooting,approved_aliases,curated,219,22442,22398,0.98
+Arab markets,skill:networking,Computer Networking,approved_aliases,curated,218,22442,22398,0.97
+Arab markets,skill:vba,VBA,approved_aliases,curated,214,22442,22398,0.96
+Arab markets,skill:technical-support,Technical Support,approved_aliases,curated,212,22442,22398,0.95
+Arab markets,skill:dax,DAX,approved_aliases,curated,211,22442,22398,0.94
+Arab markets,skill:active-directory,Active Directory,approved_aliases,curated,209,22442,22398,0.93
+Arab markets,skill:itil,ITIL,approved_aliases,curated,209,22442,22398,0.93
+Arab markets,skill:php,PHP,approved_aliases,curated,206,22442,22398,0.92
+Arab markets,skill:android,Android,approved_aliases,curated,205,22442,22398,0.92
+Arab markets,skill:api-testing,API Testing,approved_aliases,curated,205,22442,22398,0.92
+Arab markets,skill:elasticsearch,Elasticsearch,approved_aliases,curated,205,22442,22398,0.92
+Arab markets,skill:test-automation,Test Automation,approved_aliases,curated,205,22442,22398,0.92
+Arab markets,skill:matplotlib,Matplotlib,approved_aliases,curated,204,22442,22398,0.91
+Arab markets,skill:ios,iOS,approved_aliases,curated,196,22442,22398,0.88
+Arab markets,skill:firewalls,Firewalls,approved_aliases,curated,180,22442,22398,0.8
+Arab markets,skill:css,CSS,approved_aliases,curated,179,22442,22398,0.8
+Arab markets,skill:leadership,Leadership,approved_aliases,curated,179,22442,22398,0.8
+Arab markets,skill:gitlab,GitLab,approved_aliases,curated,178,22442,22398,0.79
+Arab markets,skill:ssrs,SQL Server Reporting Services (SSRS),approved_aliases,curated,178,22442,22398,0.79
+Arab markets,skill:bash,Bash,approved_aliases,curated,175,22442,22398,0.78
+Arab markets,skill:stakeholder-management,Stakeholder Management,approved_aliases,curated,173,22442,22398,0.77
+Arab markets,skill:vue,Vue.js,approved_aliases,curated,172,22442,22398,0.77
+Arab markets,skill:ids-ips,IDS/IPS,approved_aliases,curated,168,22442,22398,0.75
+Arab markets,skill:iso-27001,ISO/IEC 27001,approved_aliases,curated,168,22442,22398,0.75
+Arab markets,skill:vulnerability-assessment,Vulnerability Assessment,approved_aliases,curated,168,22442,22398,0.75
+Arab markets,skill:ruby,Ruby,approved_aliases,curated,147,22442,22398,0.66
+Arab markets,skill:prometheus,Prometheus,approved_aliases,curated,139,22442,22398,0.62
+Arab markets,skill:project-management,Project Management,approved_aliases,curated,138,22442,22398,0.62
+Arab markets,skill:tsql,T-SQL,approved_aliases,curated,137,22442,22398,0.61
+Arab markets,skill:splunk,Splunk,approved_aliases,curated,124,22442,22398,0.55
+Arab markets,skill:graphql,GraphQL,approved_aliases,curated,119,22442,22398,0.53
+Arab markets,skill:gdpr,GDPR,approved_aliases,curated,114,22442,22398,0.51
+Arab markets,skill:express,Express.js,approved_aliases,curated,110,22442,22398,0.49
+Arab markets,skill:react-native,React Native,approved_aliases,curated,105,22442,22398,0.47
+Arab markets,skill:dynamodb,Amazon DynamoDB,approved_aliases,curated,81,22442,22398,0.36
+Arab markets,skill:powershell,PowerShell,approved_aliases,curated,79,22442,22398,0.35
+Arab markets,skill:nist,NIST,exact_only,curated_exact_only,68,22442,22398,0.3
+Arab markets,skill:incident-response,Incident Response,approved_aliases,curated,65,22442,22398,0.29
+Arab markets,skill:siem,SIEM,approved_aliases,curated,65,22442,22398,0.29
+Arab markets,skill:threat-hunting,Threat Hunting,approved_aliases,curated,65,22442,22398,0.29
+Arab markets,skill:firebase,Firebase,approved_aliases,curated,45,22442,22398,0.2
+Arab markets,skill:assembly,Assembly Language,approved_aliases,curated,44,22442,22398,0.2
+Arab markets,skill:rust,Rust,approved_aliases,curated,44,22442,22398,0.2
+Arab markets,skill:llms,Large Language Models (LLMs),approved_aliases,curated,38,22442,22398,0.17
+Arab markets,skill:etl-elt,ETL/ELT,approved_aliases,curated,24,22442,22398,0.11
+Arab markets,skill:plc,Programmable Logic Controller (PLC),approved_aliases,curated,21,22442,22398,0.09
+Arab markets,skill:iam,Identity and Access Management (IAM),approved_aliases,curated,6,22442,22398,0.03
+Arab markets,skill:dbt,dbt,approved_aliases,curated,3,22442,22398,0.01
+Arab markets,skill:postman,Postman,approved_aliases,curated,3,22442,22398,0.01
+Arab markets,skill:data-visualization,Data Visualization,approved_aliases,curated,1,22442,22398,0.0
+Arab markets,skill:debugging,Debugging,approved_aliases,curated,1,22442,22398,0.0
+Arab markets,skill:mitre-attck,MITRE ATT&CK,approved_aliases,curated,1,22442,22398,0.0
+Arab markets,skill:nlp,Natural Language Processing (NLP),approved_aliases,curated,1,22442,22398,0.0
+Other represented markets,skill:python,Python,approved_aliases,curated,16865,17279,17279,97.6
+Other represented markets,skill:sql,SQL,approved_aliases,curated,14318,17279,17279,82.86
+Other represented markets,skill:spark,Apache Spark,approved_aliases,curated,8152,17279,17279,47.18
+Other represented markets,skill:tensorflow,TensorFlow,approved_aliases,curated,7416,17279,17279,42.92
+Other represented markets,skill:pytorch,PyTorch,approved_aliases,curated,7339,17279,17279,42.47
+Other represented markets,skill:machine-learning,Machine Learning,approved_aliases,curated,7168,17279,17279,41.48
+Other represented markets,skill:deep-learning,Deep Learning,approved_aliases,curated,7166,17279,17279,41.47
+Other represented markets,skill:kafka,Apache Kafka,approved_aliases,curated,6326,17279,17279,36.61
+Other represented markets,skill:airflow,Apache Airflow,approved_aliases,curated,6323,17279,17279,36.59
+Other represented markets,skill:r,R,exact_only,curated_exact_only,5661,17279,17279,32.76
+Other represented markets,skill:aws,Amazon Web Services (AWS),approved_aliases,curated,4856,17279,17279,28.1
+Other represented markets,skill:tableau,Tableau,approved_aliases,curated,4155,17279,17279,24.05
+Other represented markets,skill:excel,Microsoft Excel,approved_aliases,curated,3832,17279,17279,22.18
+Other represented markets,skill:azure,Microsoft Azure,approved_aliases,curated,3694,17279,17279,21.38
+Other represented markets,skill:java,Java,approved_aliases,curated,3546,17279,17279,20.52
+Other represented markets,skill:power-bi,Power BI,approved_aliases,curated,2509,17279,17279,14.52
+Other represented markets,skill:hadoop,Apache Hadoop,approved_aliases,curated,2335,17279,17279,13.51
+Other represented markets,skill:scala,Scala,approved_aliases,curated,2275,17279,17279,13.17
+Other represented markets,skill:snowflake,Snowflake,approved_aliases,curated,2180,17279,17279,12.62
+Other represented markets,skill:nosql,NoSQL,approved_aliases,curated,1694,17279,17279,9.8
+Other represented markets,skill:sas,SAS,approved_aliases,curated,1624,17279,17279,9.4
+Other represented markets,skill:databricks,Databricks,approved_aliases,curated,1527,17279,17279,8.84
+Other represented markets,skill:oracle-database,Oracle Database,approved_aliases,curated,1379,17279,17279,7.98
+Other represented markets,skill:git,Git,approved_aliases,curated,1345,17279,17279,7.78
+Other represented markets,skill:redshift,Amazon Redshift,approved_aliases,curated,1263,17279,17279,7.31
+Other represented markets,skill:gcp,Google Cloud Platform (GCP),approved_aliases,curated,1181,17279,17279,6.83
+Other represented markets,skill:pyspark,PySpark,approved_aliases,curated,1100,17279,17279,6.37
+Other represented markets,skill:go,Go,exact_only,curated_exact_only,1062,17279,17279,6.15
+Other represented markets,skill:cpp,C++,approved_aliases,curated,1058,17279,17279,6.12
+Other represented markets,skill:sql-server,Microsoft SQL Server,approved_aliases,curated,1053,17279,17279,6.09
+Other represented markets,skill:javascript,JavaScript,approved_aliases,curated,1005,17279,17279,5.82
+Other represented markets,skill:docker,Docker,approved_aliases,curated,962,17279,17279,5.57
+Other represented markets,skill:requirements-analysis,Requirements Analysis,approved_aliases,curated,960,17279,17279,5.56
+Other represented markets,skill:pandas,pandas,approved_aliases,curated,847,17279,17279,4.9
+Other represented markets,skill:mysql,MySQL,approved_aliases,curated,842,17279,17279,4.87
+Other represented markets,skill:linux,Linux,approved_aliases,curated,802,17279,17279,4.64
+Other represented markets,skill:kubernetes,Kubernetes,approved_aliases,curated,800,17279,17279,4.63
+Other represented markets,skill:system-design,System Design,approved_aliases,curated,799,17279,17279,4.62
+Other represented markets,skill:mongodb,MongoDB,approved_aliases,curated,780,17279,17279,4.51
+Other represented markets,skill:agile,Agile,approved_aliases,curated,779,17279,17279,4.51
+Other represented markets,skill:scrum,Scrum,approved_aliases,curated,763,17279,17279,4.42
+Other represented markets,skill:software-development,Software Development,approved_aliases,curated,759,17279,17279,4.39
+Other represented markets,skill:scikit-learn,scikit-learn,approved_aliases,curated,693,17279,17279,4.01
+Other represented markets,skill:powerpoint,Microsoft PowerPoint,approved_aliases,curated,637,17279,17279,3.69
+Other represented markets,skill:jenkins,Jenkins,approved_aliases,curated,624,17279,17279,3.61
+Other represented markets,skill:numpy,NumPy,approved_aliases,curated,599,17279,17279,3.47
+Other represented markets,skill:jira,Jira,approved_aliases,curated,587,17279,17279,3.4
+Other represented markets,skill:cassandra,Apache Cassandra,approved_aliases,curated,552,17279,17279,3.19
+Other represented markets,skill:github,GitHub,approved_aliases,curated,546,17279,17279,3.16
+Other represented markets,skill:matlab,MATLAB,approved_aliases,curated,523,17279,17279,3.03
+Other represented markets,skill:c,C,exact_only,curated_exact_only,512,17279,17279,2.96
+Other represented markets,skill:ssis,SQL Server Integration Services (SSIS),approved_aliases,curated,474,17279,17279,2.74
+Other represented markets,skill:csharp,C#,approved_aliases,curated,450,17279,17279,2.6
+Other represented markets,skill:bigquery,Google BigQuery,approved_aliases,curated,442,17279,17279,2.56
+Other represented markets,skill:keras,Keras,approved_aliases,curated,442,17279,17279,2.56
+Other represented markets,skill:postgresql,PostgreSQL,approved_aliases,curated,423,17279,17279,2.45
+Other represented markets,skill:terraform,Terraform,approved_aliases,curated,367,17279,17279,2.12
+Other represented markets,skill:data-analysis,Data Analysis,approved_aliases,curated,346,17279,17279,2.0
+Other represented markets,skill:windows,Windows,approved_aliases,curated,338,17279,17279,1.96
+Other represented markets,skill:looker,Looker,approved_aliases,curated,334,17279,17279,1.93
+Other represented markets,skill:matplotlib,Matplotlib,approved_aliases,curated,331,17279,17279,1.92
+Other represented markets,skill:qlik,Qlik,approved_aliases,curated,314,17279,17279,1.82
+Other represented markets,skill:spss,SPSS,approved_aliases,curated,303,17279,17279,1.75
+Other represented markets,skill:alteryx,Alteryx,approved_aliases,curated,296,17279,17279,1.71
+Other represented markets,skill:spring,Spring Framework,approved_aliases,curated,267,17279,17279,1.55
+Other represented markets,skill:elasticsearch,Elasticsearch,approved_aliases,curated,266,17279,17279,1.54
+Other represented markets,skill:dynamodb,Amazon DynamoDB,approved_aliases,curated,239,17279,17279,1.38
+Other represented markets,skill:bash,Bash,approved_aliases,curated,231,17279,17279,1.34
+Other represented markets,skill:ssrs,SQL Server Reporting Services (SSRS),approved_aliases,curated,220,17279,17279,1.27
+Other represented markets,skill:tsql,T-SQL,approved_aliases,curated,200,17279,17279,1.16
+Other represented markets,skill:react,React,approved_aliases,curated,183,17279,17279,1.06
+Other represented markets,skill:gitlab,GitLab,approved_aliases,curated,179,17279,17279,1.04
+Other represented markets,skill:html,HTML,approved_aliases,curated,171,17279,17279,0.99
+Other represented markets,skill:splunk,Splunk,approved_aliases,curated,159,17279,17279,0.92
+Other represented markets,skill:problem-solving,Problem Solving,approved_aliases,curated,154,17279,17279,0.89
+Other represented markets,skill:vba,VBA,approved_aliases,curated,153,17279,17279,0.89
+Other represented markets,skill:express,Express.js,approved_aliases,curated,133,17279,17279,0.77
+Other represented markets,skill:angular,Angular,approved_aliases,curated,130,17279,17279,0.75
+Other represented markets,skill:powershell,PowerShell,approved_aliases,curated,121,17279,17279,0.7
+Other represented markets,skill:css,CSS,approved_aliases,curated,111,17279,17279,0.64
+Other represented markets,skill:communication,Communication,approved_aliases,curated,110,17279,17279,0.64
+Other represented markets,skill:teamwork,Teamwork,approved_aliases,curated,110,17279,17279,0.64
+Other represented markets,skill:ansible,Ansible,approved_aliases,curated,107,17279,17279,0.62
+Other represented markets,skill:dax,DAX,approved_aliases,curated,105,17279,17279,0.61
+Other represented markets,skill:redis,Redis,approved_aliases,curated,97,17279,17279,0.56
+Other represented markets,skill:php,PHP,approved_aliases,curated,95,17279,17279,0.55
+Other represented markets,skill:ruby,Ruby,approved_aliases,curated,93,17279,17279,0.54
+Other represented markets,skill:gdpr,GDPR,approved_aliases,curated,76,17279,17279,0.44
+Other represented markets,skill:nodejs,Node.js,approved_aliases,curated,67,17279,17279,0.39
+Other represented markets,skill:statistics,Statistics,approved_aliases,curated,64,17279,17279,0.37
+Other represented markets,skill:typescript,TypeScript,approved_aliases,curated,59,17279,17279,0.34
+Other represented markets,skill:assembly,Assembly Language,approved_aliases,curated,54,17279,17279,0.31
+Other represented markets,skill:selenium,Selenium,approved_aliases,curated,49,17279,17279,0.28
+Other represented markets,skill:cybersecurity,Cybersecurity,approved_aliases,curated,47,17279,17279,0.27
+Other represented markets,skill:firewalls,Firewalls,approved_aliases,curated,47,17279,17279,0.27
+Other represented markets,skill:ids-ips,IDS/IPS,approved_aliases,curated,47,17279,17279,0.27
+Other represented markets,skill:iso-27001,ISO/IEC 27001,approved_aliases,curated,47,17279,17279,0.27
+Other represented markets,skill:vulnerability-assessment,Vulnerability Assessment,approved_aliases,curated,47,17279,17279,0.27
+Other represented markets,skill:graphql,GraphQL,approved_aliases,curated,45,17279,17279,0.26
+Other represented markets,skill:microservices,Microservices,approved_aliases,curated,45,17279,17279,0.26
+Other represented markets,skill:rust,Rust,approved_aliases,curated,32,17279,17279,0.19
+Other represented markets,skill:kotlin,Kotlin,approved_aliases,curated,24,17279,17279,0.14
+Other represented markets,skill:networking,Computer Networking,approved_aliases,curated,23,17279,17279,0.13
+Other represented markets,skill:swift,Swift,approved_aliases,curated,23,17279,17279,0.13
+Other represented markets,skill:vue,Vue.js,approved_aliases,curated,21,17279,17279,0.12
+Other represented markets,skill:qa,Quality Assurance (QA),approved_aliases,curated,20,17279,17279,0.12
+Other represented markets,skill:api-testing,API Testing,approved_aliases,curated,11,17279,17279,0.06
+Other represented markets,skill:test-automation,Test Automation,approved_aliases,curated,11,17279,17279,0.06
+Other represented markets,skill:active-directory,Active Directory,approved_aliases,curated,10,17279,17279,0.06
+Other represented markets,skill:itil,ITIL,approved_aliases,curated,10,17279,17279,0.06
+Other represented markets,skill:troubleshooting,Troubleshooting,approved_aliases,curated,10,17279,17279,0.06
+Other represented markets,skill:cicd,CI/CD,approved_aliases,curated,7,17279,17279,0.04
+Other represented markets,skill:android,Android,approved_aliases,curated,6,17279,17279,0.03
+Other represented markets,skill:ios,iOS,approved_aliases,curated,6,17279,17279,0.03
+Other represented markets,skill:firebase,Firebase,approved_aliases,curated,5,17279,17279,0.03
+Other represented markets,skill:flutter,Flutter,approved_aliases,curated,5,17279,17279,0.03
+Other represented markets,skill:incident-response,Incident Response,approved_aliases,curated,4,17279,17279,0.02
+Other represented markets,skill:siem,SIEM,approved_aliases,curated,4,17279,17279,0.02
+Other represented markets,skill:threat-hunting,Threat Hunting,approved_aliases,curated,4,17279,17279,0.02
+Other represented markets,skill:penetration-testing,Penetration Testing,approved_aliases,curated,1,17279,17279,0.01
+Other represented markets,skill:stakeholder-management,Stakeholder Management,approved_aliases,curated,1,17279,17279,0.01

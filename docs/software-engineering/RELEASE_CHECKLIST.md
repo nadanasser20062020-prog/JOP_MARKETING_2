@@ -1,6 +1,6 @@
 # Release Checklist
 
-Use this checklist for a demonstration or production release. Mark items not applicable with a brief reason rather than leaving them ambiguous.
+Use this checklist for the local demonstration and any future application release. The database must remain a local SQLite file; mark items not applicable with a brief reason rather than leaving them ambiguous.
 
 ## Scope and Documentation
 
@@ -16,12 +16,12 @@ Use this checklist for a demonstration or production release. Mark items not app
 - [ ] Record counts, relationships, duplicates, and key fields have been validated.
 - [ ] Salary values use documented units and are clearly distinguished from estimates.
 - [ ] Models shown to users have current Model Cards, baselines, and evaluation evidence.
-- [ ] Learning-resource links and free-access status have been reviewed.
+- [ ] Learning-resource links and course-level cost status have been reviewed; only `free_verified` items are labelled free.
 
 ## Security and Privacy
 
 - [ ] No credentials or raw private data are included in source or build artifacts.
-- [ ] Database credentials are configured outside the frontend.
+- [ ] The SQLite file remains local to the trusted backend, is not served as a public asset, and its path is not exposed to the frontend.
 - [ ] Skill input is not persisted or logged in the initial release.
 - [ ] External links and error responses have been reviewed.
 - [ ] Data source terms and attribution requirements have been checked.

@@ -1,0 +1,8 @@
+source_dataset,job_record_count,category_label_count,distinct_category_label_count,title_count,description_count,annual_salary_field_count,hourly_salary_field_count,currency_count,pay_basis_count
+international_jobs,705866,0,0,705866,0,19921,9336,0,29629
+merged_tech_jobs,45591,6693,2,45591,6693,1664,1001,0,2677
+jooble_careerjet_jobs,18583,18583,3,18579,18583,0,0,0,0
+startup_jobs,3543,3543,3,3543,0,0,0,0,0
+remote_tech_jobs,1075,1075,3,1075,1075,0,0,0,0
+arab_tech_jobs,439,439,22,439,143,0,0,438,439
+cybersecurity_jobs,58,0,0,58,0,0,0,0,0

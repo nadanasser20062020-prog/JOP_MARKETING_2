@@ -1,10 +1,10 @@
 # Security and Privacy Requirements
 
-**Status:** Baseline controls for a public, read-oriented educational application. Non-persistence of skill input is the recommended default pending team approval under D-015. Reassess if authentication, persistent profiles, or user-submitted documents are added.
+**Status:** Current API controls: local SQLite is opened read-only; matching input is transient, not persisted, and not logged; request size and page sizes are bounded. Reassess if authentication, persistent profiles, user-submitted documents, or broader deployment are added.
 
 ## Security Objectives
 
-- Protect database credentials and operational configuration.
+- Protect access to the local SQLite file and operational configuration.
 - Prevent unsafe query construction and injection.
 - Limit exposure of collected records and external links.
 - Keep user-submitted skill input temporary and out of persistent storage in the initial release.
@@ -14,7 +14,7 @@
 
 | Asset or boundary | Protection requirement |
 |---|---|
-| Neon/database credentials | Server-side only; least-privilege access; rotate if exposed |
+| Local SQLite database file and path | Keep the file local to the backend host, restrict operating-system permissions, and keep the generated database out of Git |
 | Collected job-advertisement data | Follow source terms and agreed access restrictions; do not commit large raw files |
 | Skill-matching request | Validate and process for the current request; do not retain or log the submitted list |
 | API and database | Validate inputs, use parameterized queries, and return safe errors |
@@ -25,14 +25,14 @@
 
 | Threat | Minimum control |
 |---|---|
-| Credentials exposed in source control or browser bundle | Environment-based configuration, secret scanning where available, review build artifacts, rotate exposed credentials |
+| Local database or private configuration exposed in source control or browser bundle | Keep SQLite under the ignored local data directory, restrict file permissions, scan changes and build artifacts, and remove unintended copies |
 | SQL injection | Parameterized database operations, allowlisted sorting and filters, input validation |
 | Cross-site scripting | Context-appropriate output encoding; treat job descriptions and source text as untrusted content |
 | Abuse of public endpoints | Bound request sizes and page sizes; apply rate limits where the deployment platform supports them |
 | Sensitive skills captured in logs | Do not log request bodies for matching; minimize identifiers and retention in application logs |
 | Database errors exposed to visitors | Return generic user-safe messages and retain diagnostic details only in restricted logs |
 | Malicious or misleading external URL | Validate scheme and format; identify outbound links; use safe browser link behavior |
-| Unauthorized database access | Keep database access in the backend; restrict credentials and network exposure where supported |
+| Unauthorized database-file access | Keep SQLite access in the trusted backend; restrict local file and backup permissions; do not expose the file through a static file server |
 | Dependency or build compromise | Use reviewed dependencies, lock dependency versions, and review automated security findings |
 
 ## Privacy Requirements
@@ -58,4 +58,4 @@
 
 ## Incident Response
 
-If credentials or sensitive data are exposed, restrict or rotate access immediately, remove the exposure from active configuration, assess affected data and services, document the incident, and notify the appropriate project owner. Do not assume that deleting a credential from the latest commit removes it from Git history or external logs.
+If the local database, a backup, or sensitive data is exposed, restrict file access immediately, remove unintended active copies, assess affected data and services, document the incident, and notify the appropriate project owner. If private configuration or any non-database credential is exposed, revoke or rotate it. Do not assume that deleting a file from the latest working tree removes it from Git history or external logs.

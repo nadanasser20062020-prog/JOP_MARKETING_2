@@ -1,0 +1,34 @@
+{
+  "source_archive_run_id": "full_archive_parquet_v1_20261028",
+  "database_path": "/home/user/JOP_MARKETING_2/data/processed/job_market.sqlite3",
+  "query_count": 19,
+  "aggregate_tables": [
+    "dataset_profile.csv",
+    "source_coverage.csv",
+    "field_coverage.csv",
+    "top_skills.csv",
+    "top_exact_titles.csv",
+    "country_profile.csv",
+    "historical_2023_monthly.csv",
+    "salary_feasibility.csv",
+    "model_feasibility.csv",
+    "arab_market_skill_demand.csv",
+    "work_mode_flags.csv",
+    "exact_duplicate_counts.csv",
+    "learning_resource_verification.csv",
+    "skill_curation_coverage.csv",
+    "merged_arab_country_coverage.csv",
+    "role_country_distribution.csv",
+    "role_skill_demand.csv",
+    "role_country_skill_demand.csv",
+    "salary_role_country_coverage.csv"
+  ],
+  "report_path": "/home/user/JOP_MARKETING_2/analysis/reports/pre_backend/PRE_BACKEND_ANALYSIS.md",
+  "figure_paths": [
+    "figures/01_source_records.png",
+    "figures/02_top_skills.png",
+    "figures/03_historical_2023_monthly.png",
+    "figures/04_field_coverage.png",
+    "figures/05_arab_other_market_skills.png"
+  ]
+}

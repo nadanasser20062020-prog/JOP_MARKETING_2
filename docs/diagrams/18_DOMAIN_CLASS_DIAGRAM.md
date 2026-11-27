@@ -1,68 +1,142 @@
-# Conceptual Domain Class Diagram
+# Domain Class Diagram
 
-This UML-style class diagram complements the relational ERD by showing the conceptual objects and associations. It is not an implemented object model; attributes must be confirmed against the dataset.
+This diagram gives an object-oriented view of the implemented SQLite domain model and the planned application services. Database classes map to the local relational schema in [`04_LOGICAL_ERD.md`](04_LOGICAL_ERD.md); service methods remain conceptual until the API is implemented.
 
 ```mermaid
 classDiagram
-    class JobPost {
-        +JobPostId id
-        +String originalTitle
-        +String normalizedTitle
-        +String description
-        +Date postedAt
-        +DateTime collectedAt
-        +WorkMode workMode
-        +SalaryRange advertisedSalary
-        +URL sourceUrl
+    class DataSource {
+        +String sourceDataset
+        +String displayName
+        +String notes
     }
-    class Company {
-        +CompanyId id
-        +String originalName
-        +String normalizedName
+    class SourceFile {
+        +String sourceDataset
+        +String sourceFile
+        +String snapshotGroup
+        +String snapshotType
+        +String notes
     }
-    class Location {
-        +LocationId id
+    class ImportRun {
+        +Integer importRunId
+        +String runStatus
+        +String startedAt
+        +String finishedAt
+        +String pipelineVersion
+        +String sourceFingerprint
+        +String qualityReport
+    }
+    class ImportRunFile {
+        +Integer importRunId
+        +String sourceDataset
+        +String sourceFile
+        +Integer rowsRead
+        +Integer rowsLoaded
+        +Integer rowsRejected
+        +String importStatus
+    }
+    class Job {
+        +String recordId
+        +String sourceDataset
+        +String sourceFile
+        +Integer sourceRowNumber
+        +String title
+        +String company
         +String country
         +String city
         +String region
-    }
-    class Source {
-        +SourceId id
-        +String sourceName
-        +String sourceDomain
+        +String postedAt
+        +String sourceUpdatedAt
+        +String salaryRaw
+        +String listingStatus
     }
     class Skill {
-        +SkillId id
+        +String skillId
         +String canonicalName
         +String category
+        +String matchPolicy
+        +String reviewStatus
+    }
+    class SkillAlias {
+        +String aliasNormalized
+        +String aliasLabel
+        +String aliasType
+        +String matchPolicy
+        +String reviewStatus
     }
     class JobSkill {
-        +JobPostId jobPostId
-        +SkillId skillId
-        +MentionType mentionType
-        +String evidence
+        +String recordId
+        +String skillId
+        +String skillRaw
+        +String skillNormalized
+        +String skillProvenance
+        +String skillStatus
+    }
+    class SkillObservation {
+        +String sourceDataset
+        +String skillRaw
+        +String skillNormalized
+        +Integer occurrenceCount
     }
     class LearningResource {
-        +ResourceId id
+        +String resourceId
         +String title
         +String provider
-        +String language
+        +String resourceType
         +String accessStatus
-        +Date verifiedAt
-        +URL url
+        +String costStatus
+        +String verificationStatus
+        +String verifiedOn
+        +String resourceUrl
+    }
+    class LearningResourceSkill {
+        +String resourceId
+        +String skillId
+    }
+    class LearningResourceLanguage {
+        +String resourceId
+        +String languageLabel
+    }
+    class JobSearchService {
+        +search(criteria, pagination) JobPage
+        +getDetails(recordId) Job
+    }
+    class MarketAnalyticsService {
+        +getOverview(filters) MarketOverview
+        +compareMarkets(markets, metric) ComparisonResult
+        +getSkillDemand(filters) SkillDemand
+    }
+    class SkillMatchingService {
+        +normalizeInputSkills(input) NormalizedSkills
+        +rankJobs(skills, preferences) MatchResult
+        +identifySkillGaps(skills, role) SkillGap
+    }
+    class LearningResourceService {
+        +findBySkill(skillId, language) LearningResource
     }
 
-    JobPost "0..*" --> "0..1" Company : published by
-    JobPost "0..*" --> "0..1" Location : located in
-    JobPost "0..*" --> "0..1" Source : collected from
-    JobPost "1" --> "0..*" JobSkill : has skill associations
+    DataSource "1" --> "0..*" SourceFile : identifies
+    SourceFile "1" --> "0..*" Job : provides
+    ImportRun "1" --> "0..*" ImportRunFile : records
+    SourceFile "1" --> "0..*" ImportRunFile : accounts for
+    Skill "1" --> "0..*" SkillAlias : has
+    Job "1" --> "0..*" JobSkill : links
     Skill "1" --> "0..*" JobSkill : appears in
-    Skill "1" --> "0..*" LearningResource : has learning resources
+    DataSource "1" --> "0..*" SkillObservation : records
+    LearningResource "1" --> "0..*" LearningResourceSkill : links
+    Skill "1" --> "0..*" LearningResourceSkill : recommends
+    LearningResource "1" --> "0..*" LearningResourceLanguage : labels
+    JobSearchService ..> Job : searches and retrieves
+    MarketAnalyticsService ..> Job : aggregates
+    MarketAnalyticsService ..> JobSkill : analyzes demand
+    SkillMatchingService ..> Skill : normalizes input
+    SkillMatchingService ..> JobSkill : ranks matches and gaps
+    LearningResourceService ..> LearningResource : finds reviewed resources
 ```
 
 ## Modeling Notes
 
-- The diagram includes only candidate domain concepts.
+- `Job` retains source company and location values as fields; they are not separate normalized database entities.
+- Date and salary values retain their source text and semantics. The model does not infer posting dates, collection timestamps, or numeric salary amounts.
 - A skill mention is not automatically a mandatory qualification.
-- Salary and work-mode attributes may be unavailable for many advertisements.
+- Resource cost, language, access, and verification data are specific to the curated record and are not guarantees of current access.
 - A persistent user or candidate-profile class is not included in the current scope.

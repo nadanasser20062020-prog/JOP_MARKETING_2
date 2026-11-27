@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-    DB[(Validated relational database)] --> SQL[Documented SQL queries]
+    DB[(Local SQLite database file)] --> SQL[Documented SQL queries]
     SQL --> Python[Python analysis environment]
     Python --> Pandas[Pandas data frames]
     Pandas --> NumPy[NumPy calculations and transformations]
@@ -18,6 +18,6 @@ flowchart LR
 ## Controls
 
 - Use SQL for reproducible aggregation and filtering; use Python for exploration, validation, and visualization.
-- Keep database credentials outside notebooks and source control.
+- Open the local SQLite file through Python; keep private data and generated database files out of notebooks and source control.
 - Record metric definitions, filters, sample sizes, units, and date coverage.
 - Reconcile the values selected for the interface against the source queries.

@@ -19,4 +19,5 @@ Architecture Decision Records (ADRs) capture decisions that materially affect sy
 
 ## Current Records
 
-- [ADR-0001: Route browser data access through a backend API](0001-backend-api-boundary.md)
+- [ADR-0001: Route browser data access through a Node.js backend API](0001-backend-api-boundary.md) — accepted and implemented; local SQLite is read-only to the API.
+- [ADR-0002: Run all online inference in-process in Node.js](0002-in-process-ml-execution.md) — accepted and implemented; Jaccard is a separate deterministic baseline, the exact-title Naive Bayes ranker is served only for limited-scope review, training/evaluation remain offline Python, and clustering stays report-only.

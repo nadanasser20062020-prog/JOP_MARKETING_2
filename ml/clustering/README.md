@@ -1,5 +1,5 @@
-# Clustering
+# Clustering Experiments
 
-This directory is reserved for experiments that group job advertisements by skill or text similarity.
+`fit_skill_profile_clusters.py` evaluates exploratory groups of job records using a sparse binary matrix of reviewed canonical skill IDs. It reads the local SQLite database in read-only mode, uses the International-source historical cohort, excludes exact duplicate rows and all skill links outside the reviewed policy/status pairs, compares MiniBatchKMeans cluster counts on a deterministic train/holdout sample, and writes metrics plus descriptive skill profiles to `ml/evaluation/results/`.
 
-Document feature construction, candidate methods, evaluation measures, representative examples, human interpretation, and limitations. Do not treat cluster labels as official job categories without review.
+This is not an approved occupation taxonomy, recommendation model, or user-facing feature. No model artifact is saved. The current evaluation and its limitations are documented in [`../evaluation/results/SKILL_PROFILE_CLUSTERING_EVALUATION.md`](../evaluation/results/SKILL_PROFILE_CLUSTERING_EVALUATION.md). See [`../README.md`](../README.md) for installation and reproduction instructions.

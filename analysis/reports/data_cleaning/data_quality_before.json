@@ -1,0 +1,137 @@
+{
+  "date_audit_path": "analysis/reports/data_cleaning/date_quality_audit.csv",
+  "duplicate_source_id_occurrences_retained": 0,
+  "exact_duplicate_occurrences_retained": 91,
+  "field_coverage": {
+    "company": {
+      "missing": 319,
+      "missing_rate": 0.000412,
+      "present": 774836
+    },
+    "country": {
+      "missing": 104,
+      "missing_rate": 0.000134,
+      "present": 775051
+    },
+    "description": {
+      "missing": 748661,
+      "missing_rate": 0.965821,
+      "present": 26494
+    },
+    "explicit_posted_date": {
+      "missing": 30312,
+      "missing_rate": 0.039104,
+      "present": 744843
+    },
+    "salary_any_numeric_source": {
+      "missing": 715446,
+      "missing_rate": 0.922972,
+      "present": 59709
+    },
+    "salary_raw_numeric": {
+      "missing": 745090,
+      "missing_rate": 0.961214,
+      "present": 30065
+    },
+    "skills": {
+      "missing": 98054,
+      "missing_rate": 0.126496,
+      "present": 677101
+    },
+    "source_collection_date": {
+      "missing": 775155,
+      "missing_rate": 1.0,
+      "present": 0
+    },
+    "source_updated_at": {
+      "missing": 747032,
+      "missing_rate": 0.96372,
+      "present": 28123
+    },
+    "source_url": {
+      "missing": 745173,
+      "missing_rate": 0.961321,
+      "present": 29982
+    },
+    "title": {
+      "missing": 4,
+      "missing_rate": 5e-06,
+      "present": 775151
+    }
+  },
+  "full_source_audit": {
+    "all_selected_sources_present": true,
+    "collection_date_source_columns": [],
+    "files": {
+      "International_Tech_Jobs_Filtered.csv": {
+        "columns": 17,
+        "rows": 705866,
+        "status": "available"
+      },
+      "Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx": {
+        "columns": 34,
+        "rows": 45591,
+        "status": "available"
+      },
+      "arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv": {
+        "columns": 36,
+        "rows": 439,
+        "status": "available"
+      },
+      "cybersecurity_jobs_expanded_6_columns.csv": {
+        "columns": 6,
+        "rows": 58,
+        "status": "available"
+      },
+      "remote_tech_jobs_foreign.csv": {
+        "columns": 16,
+        "rows": 1075,
+        "status": "available"
+      },
+      "remote_tech_jobs_foreign_after_adding_skills.csv": {
+        "columns": 16,
+        "rows": 1075,
+        "status": "available"
+      },
+      "startup_jobs_foreign.csv": {
+        "columns": 16,
+        "rows": 3543,
+        "status": "available"
+      },
+      "startup_jobs_foreign_after_adding_skills.csv": {
+        "columns": 16,
+        "rows": 3543,
+        "status": "available"
+      },
+      "tech_jobs_jooble_careerjet_AGNABY.csv": {
+        "columns": 16,
+        "rows": 18583,
+        "status": "available"
+      },
+      "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv": {
+        "columns": 16,
+        "rows": 18583,
+        "status": "available"
+      }
+    }
+  },
+  "metadata": {
+    "audit_date": "2026-10-28",
+    "definition": "coverage measured on source values before any derived normalization; non-disclosure text is not a numeric salary",
+    "source_ref": "main@6755883a8c043592d349cace4cd84aaae81d73d0+GoogleDrive:International_Tech_Jobs_Filtered.zip"
+  },
+  "note": "Before-cleaning field availability was measured on raw input rows; all source values are read as strings, with logical value shapes recorded separately.",
+  "raw_source_column_count": 189,
+  "raw_source_column_coverage_path": "analysis/reports/data_cleaning/raw_source_column_coverage.csv",
+  "raw_source_type_audit_path": "analysis/reports/data_cleaning/raw_source_type_audit.csv",
+  "rows": 775155,
+  "source_file_rows": {
+    "International_Tech_Jobs_Filtered.csv": 705866,
+    "Merged_Tech_Jobs_45k_skills_enriched_AFTER_ADDING_SKILLS.xlsx": 45591,
+    "arab_tech_jobs_skills_enriched_AFTER_ADDING_SKILLS_439.csv": 439,
+    "cybersecurity_jobs_expanded_6_columns.csv": 58,
+    "remote_tech_jobs_foreign_after_adding_skills.csv": 1075,
+    "startup_jobs_foreign_after_adding_skills.csv": 3543,
+    "tech_jobs_jooble_careerjet_AGNABY_after_adding_skills.csv": 18583
+  }
+}

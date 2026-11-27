@@ -19,7 +19,7 @@ flowchart LR
     Matching --> Repositories
     Matching -. optional after evaluation .-> Model[Approved model component]
     Resources --> Repositories
-    Repositories --> Database[(Relational database)]
+    Repositories --> Database[(Local SQLite file)]
 ```
 
 ## Component Boundaries

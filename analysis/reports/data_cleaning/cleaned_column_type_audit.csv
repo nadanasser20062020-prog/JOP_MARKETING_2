@@ -1,0 +1,124 @@
+column_name,expected_logical_type,nonmissing_values,missing_values,missing_percent,observed_value_shapes,invalid_type_values,status
+record_id,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+source_dataset,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+source_file,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+source_row_number,integer,775155,0,0.0,"{""integer_like_text"": 775155}",0,passed
+source_record_id,text/category/string,30333,744822,96.0868,"{""integer_like_text"": 353, ""text_or_mixed_text"": 29980}",0,passed
+source_record_id_duplicate_occurrence,boolean (yes/no),775155,0,0.0,"{""boolean_like_text"": 775155}",0,passed
+record_origin,text/category/string,46030,729125,94.0618,"{""text_or_mixed_text"": 46030}",0,passed
+source_platform,text/category/string,774738,417,0.0538,"{""text_or_mixed_text"": 774738}",0,passed
+title_raw,text/category/string,775151,4,0.0005,"{""text_or_mixed_text"": 775151}",0,passed
+title_clean,text/category/string,775151,4,0.0005,"{""text_or_mixed_text"": 775151}",0,passed
+title_key,text/category/string,775151,4,0.0005,"{""text_or_mixed_text"": 775151}",0,passed
+company_raw,text/category/string,774839,316,0.0408,"{""boolean_like_text"": 3, ""decimal_like_text"": 21, ""integer_like_text"": 55, ""text_or_mixed_text"": 774760}",0,passed
+company_clean,text/category/string,774836,319,0.0412,"{""boolean_like_text"": 3, ""decimal_like_text"": 21, ""integer_like_text"": 55, ""text_or_mixed_text"": 774757}",0,passed
+country_raw,text/category/string,775051,104,0.0134,"{""text_or_mixed_text"": 775051}",0,passed
+country_standardized,text/category/string,775015,140,0.0181,"{""text_or_mixed_text"": 775015}",0,passed
+location_scope,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+city_raw,text/category/string,21034,754121,97.2865,"{""text_or_mixed_text"": 21034}",0,passed
+region_raw,text/category/string,3948,771207,99.4907,"{""integer_like_text"": 3, ""text_or_mixed_text"": 3945}",0,passed
+location_raw,text/category/string,774025,1130,0.1458,"{""text_or_mixed_text"": 774025}",0,passed
+work_mode_raw,text/category/string,46,775109,99.9941,"{""text_or_mixed_text"": 46}",0,passed
+remote_flag_raw,text/category/string,744764,30391,3.9206,"{""boolean_like_text"": 705866, ""integer_like_text"": 38898}",0,passed
+employment_type_raw,text/category/string,745908,29247,3.7731,"{""text_or_mixed_text"": 745908}",0,passed
+experience_raw,text/category/string,208,774947,99.9732,"{""text_or_mixed_text"": 208}",0,passed
+experience_years_min,integer,204,774951,99.9737,"{""integer_like_text"": 204}",0,passed
+experience_years_max,integer,117,775038,99.9849,"{""integer_like_text"": 117}",0,passed
+experience_parse_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+category_raw,text/category/string,30333,744822,96.0868,"{""text_or_mixed_text"": 30333}",0,passed
+description_raw,text/category/string,26494,748661,96.5821,"{""text_or_mixed_text"": 26494}",0,passed
+description_char_count,integer,775155,0,0.0,"{""integer_like_text"": 775155}",0,passed
+posted_at_raw,text/category/string,744843,30312,3.9104,"{""date_time_like_text"": 744843}",0,passed
+posted_at_iso,UTC ISO-8601 datetime/date,744843,30312,3.9104,"{""date_time_like_text"": 744843}",0,passed
+source_updated_at_raw,text/category/string,28123,747032,96.372,"{""date_time_like_text"": 28123}",0,passed
+source_updated_at_iso,UTC ISO-8601 datetime/date,28123,747032,96.372,"{""date_time_like_text"": 28123}",0,passed
+source_collected_at_raw,text/category/string,0,775155,100.0,{},0,passed
+source_collected_at_iso,UTC ISO-8601 datetime/date,0,775155,100.0,{},0,passed
+collection_date_field,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+source_date_field,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+date_quality_flags,text/category/string,30312,744843,96.0896,"{""text_or_mixed_text"": 30312}",0,passed
+salary_raw,text/category/string,30121,745034,96.1142,"{""text_or_mixed_text"": 30121}",0,passed
+salary_candidate_raw,text/category/string,59765,715390,92.2899,"{""date_time_like_text"": 6973, ""decimal_like_text"": 5945, ""integer_like_text"": 16430, ""text_or_mixed_text"": 30417}",0,passed
+salary_source_field_used,text/category/string,59765,715390,92.2899,"{""text_or_mixed_text"": 59765}",0,passed
+salary_local_source_value,text/category/string,439,774716,99.9434,"{""decimal_like_text"": 71, ""integer_like_text"": 368}",0,passed
+salary_usd_source_value,text/category/string,439,774716,99.9434,"{""decimal_like_text"": 91, ""integer_like_text"": 348}",0,passed
+salary_range_est_source_value,text/category/string,296,774859,99.9618,"{""text_or_mixed_text"": 296}",0,passed
+salary_currency_raw,text/category/string,438,774717,99.9435,"{""text_or_mixed_text"": 438}",0,passed
+salary_basis_raw,text/category/string,439,774716,99.9434,"{""text_or_mixed_text"": 439}",0,passed
+salary_rate_raw,text/category/string,32306,742849,95.8323,"{""text_or_mixed_text"": 32306}",0,passed
+salary_source_raw,text/category/string,45591,729564,94.1185,"{""text_or_mixed_text"": 45591}",0,passed
+salary_sources_raw,text/category/string,296,774859,99.9618,"{""text_or_mixed_text"": 296}",0,passed
+salary_fill_source_raw,text/category/string,439,774716,99.9434,"{""text_or_mixed_text"": 439}",0,passed
+salary_estimate_source_url,text/category/string,47579,727576,93.862,"{""text_or_mixed_text"": 47579}",0,passed
+salary_estimate_source_date,text/category/string,0,775155,100.0,{},0,passed
+salary_estimate_source_date_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_value_type,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_provenance_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_parse_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_amount_1_original_currency,finite numeric,59705,715450,92.2977,"{""decimal_like_text"": 7095, ""integer_like_text"": 52610}",0,passed
+salary_amount_2_original_currency,finite numeric,59705,715450,92.2977,"{""decimal_like_text"": 7103, ""integer_like_text"": 52602}",0,passed
+salary_min_original_currency,finite numeric,59705,715450,92.2977,"{""decimal_like_text"": 7095, ""integer_like_text"": 52610}",0,passed
+salary_max_original_currency,finite numeric,59705,715450,92.2977,"{""decimal_like_text"": 7103, ""integer_like_text"": 52602}",0,passed
+salary_midpoint_original_currency,finite numeric,59705,715450,92.2977,"{""decimal_like_text"": 12077, ""integer_like_text"": 47628}",0,passed
+salary_range_kind,text/category/string,59705,715450,92.2977,"{""text_or_mixed_text"": 59705}",0,passed
+salary_currency_code,text/category/string,24275,750880,96.8684,"{""text_or_mixed_text"": 24275}",0,passed
+salary_currency_detection_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_period_code,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_period_detection_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_annualized_min_native,finite numeric,57709,717446,92.5552,"{""decimal_like_text"": 4194, ""integer_like_text"": 53515}",0,passed
+salary_annualized_max_native,finite numeric,57709,717446,92.5552,"{""decimal_like_text"": 4208, ""integer_like_text"": 53501}",0,passed
+salary_annualized_midpoint_native,finite numeric,57709,717446,92.5552,"{""decimal_like_text"": 4341, ""integer_like_text"": 53368}",0,passed
+salary_reporting_currency,text/category/string,739665,35490,4.5784,"{""text_or_mixed_text"": 739665}",0,passed
+salary_fx_rate_to_reporting_currency,finite numeric,24275,750880,96.8684,"{""decimal_like_text"": 15408, ""integer_like_text"": 8867}",0,passed
+salary_fx_rate_source,text/category/string,24275,750880,96.8684,"{""text_or_mixed_text"": 24275}",0,passed
+salary_fx_rate_date,text/category/string,24275,750880,96.8684,"{""date_time_like_text"": 24275}",0,passed
+salary_annualized_min_reporting_currency,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 607438, ""integer_like_text"": 132046}",0,passed
+salary_annualized_max_reporting_currency,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 419248, ""integer_like_text"": 320236}",0,passed
+salary_comparability_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_statistics_eligible,boolean (yes/no),775155,0,0.0,"{""boolean_like_text"": 775155}",0,passed
+salary_integrity_flags,text/category/string,771564,3591,0.4633,"{""text_or_mixed_text"": 771564}",0,passed
+salary_iqr_outlier_flag,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+skills_raw,text/category/string,677101,98054,12.6496,"{""text_or_mixed_text"": 677101}",0,passed
+skills_base_raw,text/category/string,8648,766507,98.8844,"{""text_or_mixed_text"": 8648}",0,passed
+skills_tokens_json,JSON array,677101,98054,12.6496,"{""json_like_text"": 677101}",0,passed
+skill_ids_json,JSON array,677101,98054,12.6496,"{""json_like_text"": 677101}",0,passed
+skill_token_count_raw,integer,775155,0,0.0,"{""integer_like_text"": 775155}",0,passed
+skill_token_count_unique,integer,775155,0,0.0,"{""integer_like_text"": 775155}",0,passed
+skill_canonical_id_count,integer,775155,0,0.0,"{""integer_like_text"": 775155}",0,passed
+skill_duplicate_token_count,integer,775155,0,0.0,"{""integer_like_text"": 775155}",0,passed
+skills_source_raw,text/category/string,46030,729125,94.0618,"{""text_or_mixed_text"": 46030}",0,passed
+skills_enrichment_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+source_url_raw,text/category/string,29982,745173,96.1321,"{""text_or_mixed_text"": 29982}",0,passed
+source_url_syntax_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+listing_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+snapshot_type,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+exact_duplicate_within_source,boolean (yes/no),775155,0,0.0,"{""boolean_like_text"": 775155}",0,passed
+encoding_suspected_mojibake,boolean (yes/no),775155,0,0.0,"{""boolean_like_text"": 775155}",0,passed
+data_quality_flags,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+source_row_json,JSON object,775155,0,0.0,"{""json_like_text"": 775155}",0,passed
+salary_original,text/category/string,59765,715390,92.2899,"{""decimal_like_text"": 6436, ""integer_like_text"": 22912, ""text_or_mixed_text"": 30417}",0,passed
+salary_source_value_type,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_estimation_status,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_estimate_currency_code,text/category/string,715390,59765,7.7101,"{""text_or_mixed_text"": 715390}",0,passed
+salary_estimation_method,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_estimation_source,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_estimation_confidence,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+salary_estimate_reference_count,integer,715390,59765,7.7101,"{""integer_like_text"": 715390}",0,passed
+salary_estimation_as_of_date,UTC ISO-8601 datetime/date,775095,60,0.0077,"{""date_time_like_text"": 775095}",0,passed
+salary_annualized_midpoint_reporting_currency,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 624422, ""integer_like_text"": 115062}",0,passed
+salary_annual_min_usd,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 607438, ""integer_like_text"": 132046}",0,passed
+salary_annual_salary_usd,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 624422, ""integer_like_text"": 115062}",0,passed
+salary_annual_max_usd,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 419248, ""integer_like_text"": 320236}",0,passed
+salary_annual_min_egp,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 730511, ""integer_like_text"": 8973}",0,passed
+salary_annual_salary_egp,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 702406, ""integer_like_text"": 37078}",0,passed
+salary_annual_max_egp,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 717933, ""integer_like_text"": 21551}",0,passed
+salary_annual_min_sar,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 669410, ""integer_like_text"": 70074}",0,passed
+salary_annual_salary_sar,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 693489, ""integer_like_text"": 45995}",0,passed
+salary_annual_max_sar,finite numeric,739484,35671,4.6018,"{""decimal_like_text"": 652050, ""integer_like_text"": 87434}",0,passed
+salary_estimate_range_basis,text/category/string,715390,59765,7.7101,"{""text_or_mixed_text"": 715390}",0,passed
+role_family,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+seniority_band,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+location_clean,text/category/string,774025,1130,0.1458,"{""text_or_mixed_text"": 774025}",0,passed
+location_key,text/category/string,774025,1130,0.1458,"{""text_or_mixed_text"": 774025}",0,passed
+work_mode_standardized,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed
+employment_type_standardized,text/category/string,775155,0,0.0,"{""text_or_mixed_text"": 775155}",0,passed

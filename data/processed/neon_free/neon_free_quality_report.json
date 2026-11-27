@@ -1,0 +1,1771 @@
+{
+  "database_storage_estimate": {
+    "actual_neon_database_size_bytes": null,
+    "estimate_caveat": "This conservative planning proxy is not a PostgreSQL measurement or guaranteed upper bound; verify actual database and Neon project usage after import.",
+    "estimated_database_size_bytes": 762994614,
+    "estimated_database_size_megabytes_decimal": 762.99,
+    "formula": "5 times total uncompressed COPY bytes plus 67108864 bytes fixed overhead.",
+    "is_measured_neon_storage": false,
+    "is_planning_estimate_only": true,
+    "load_guard_bytes": 800000000,
+    "neon_free_target_bytes": 1000000000,
+    "uncompressed_copy_bytes_including_references": 139177150,
+    "verification_required_after_import": "Measure pg_database_size and pg_total_relation_size after loading; confirm the project's actual quota and usage in the Neon dashboard."
+  },
+  "generated_by": "scripts/data_cleaning/build_neon_free_dataset.py",
+  "input_files": {
+    "job_exports": [
+      "jobs_historical_2023_sample.csv.gz",
+      "jobs_latest_export_unverified.csv.gz",
+      "jobs_other_snapshots_unverified.csv.gz"
+    ],
+    "job_skills": "job_skills.csv.gz",
+    "reference_csv_bytes_in_estimate": [
+      "skill_catalog.csv",
+      "skill_aliases.csv",
+      "learning_resources.csv"
+    ]
+  },
+  "outputs": {
+    "job_skills": {
+      "compressed_bytes": 3619161,
+      "path": "data/processed/neon_free/job_skills_neon_free.csv.gz",
+      "rows": 256549,
+      "uncompressed_copy_bytes": 93770761
+    },
+    "jobs": {
+      "compressed_bytes": 7745059,
+      "path": "data/processed/neon_free/jobs_neon_free.csv.gz",
+      "rows": 29933,
+      "uncompressed_copy_bytes": 44771663
+    },
+    "skill_observations": {
+      "compressed_bytes": 19270,
+      "path": "data/processed/neon_free/skill_observations_neon_free.csv.gz",
+      "rows": 2128,
+      "uncompressed_copy_bytes": 89916
+    }
+  },
+  "profile": "neon_free_arab_complete_non_arab_stratified_v1",
+  "selection_policy": {
+    "arab_countries": [
+      "Algeria",
+      "Bahrain",
+      "Comoros",
+      "Djibouti",
+      "Egypt",
+      "Iraq",
+      "Jordan",
+      "Kuwait",
+      "Lebanon",
+      "Libya",
+      "Mauritania",
+      "Morocco",
+      "Oman",
+      "Palestine",
+      "Qatar",
+      "Saudi Arabia",
+      "Somalia",
+      "Sudan",
+      "Syria",
+      "Tunisia",
+      "United Arab Emirates",
+      "Yemen"
+    ],
+    "arab_country_aliases": [
+      "algeria",
+      "bahrain",
+      "comoro islands",
+      "comoros",
+      "comoros islands",
+      "djibouti",
+      "egypt",
+      "iraq",
+      "jordan",
+      "ksa",
+      "kuwait",
+      "lebanon",
+      "libya",
+      "mauritania",
+      "morocco",
+      "oman",
+      "palestine",
+      "palestinian territories",
+      "palestinian territory",
+      "qatar",
+      "saudi arabia",
+      "somalia",
+      "state of palestine",
+      "sudan",
+      "syria",
+      "syrian arab republic",
+      "tunisia",
+      "u a e",
+      "uae",
+      "united arab emirates",
+      "yemen"
+    ],
+    "arab_country_rows": "Retain every job row whose country value matches an Arab League member country or a listed alias.",
+    "arab_job_rows_dropped": 0,
+    "cross_source_deduplication": "Not performed; source rows remain distinct.",
+    "maximum_non_arab_rows_per_source_country": 5,
+    "non_arab_rows": "Retain at most the configured row cap from every (source_dataset, country) stratum. Select deterministically by the smallest SHA-256 ranks of source_dataset, normalized country, and record_id.",
+    "non_arab_strata": [
+      {
+        "available_rows": 12,
+        "country": "Afghanistan",
+        "country_normalized": "afghanistan",
+        "omitted_rows": 7,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 111,
+        "country": "Albania",
+        "country_normalized": "albania",
+        "omitted_rows": 106,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 10,
+        "country": "Angola",
+        "country_normalized": "angola",
+        "omitted_rows": 5,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 8405,
+        "country": "Argentina",
+        "country_normalized": "argentina",
+        "omitted_rows": 8400,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 263,
+        "country": "Armenia",
+        "country_normalized": "armenia",
+        "omitted_rows": 258,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 12150,
+        "country": "Australia",
+        "country_normalized": "australia",
+        "omitted_rows": 12145,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 9088,
+        "country": "Austria",
+        "country_normalized": "austria",
+        "omitted_rows": 9083,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 69,
+        "country": "Azerbaijan",
+        "country_normalized": "azerbaijan",
+        "omitted_rows": 64,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 64,
+        "country": "Bahamas",
+        "country_normalized": "bahamas",
+        "omitted_rows": 59,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 251,
+        "country": "Bangladesh",
+        "country_normalized": "bangladesh",
+        "omitted_rows": 246,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 16,
+        "country": "Barbados",
+        "country_normalized": "barbados",
+        "omitted_rows": 11,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 451,
+        "country": "Belarus",
+        "country_normalized": "belarus",
+        "omitted_rows": 446,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 11182,
+        "country": "Belgium",
+        "country_normalized": "belgium",
+        "omitted_rows": 11177,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 42,
+        "country": "Benin",
+        "country_normalized": "benin",
+        "omitted_rows": 37,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 3,
+        "country": "Bhutan",
+        "country_normalized": "bhutan",
+        "omitted_rows": 0,
+        "retained_rows": 3,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 59,
+        "country": "Bolivia",
+        "country_normalized": "bolivia",
+        "omitted_rows": 54,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 44,
+        "country": "Bosnia and Herzegovina",
+        "country_normalized": "bosnia and herzegovina",
+        "omitted_rows": 39,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 25,
+        "country": "Botswana",
+        "country_normalized": "botswana",
+        "omitted_rows": 20,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 6592,
+        "country": "Brazil",
+        "country_normalized": "brazil",
+        "omitted_rows": 6587,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 13,
+        "country": "Brunei",
+        "country_normalized": "brunei",
+        "omitted_rows": 8,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1101,
+        "country": "Bulgaria",
+        "country_normalized": "bulgaria",
+        "omitted_rows": 1096,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 19,
+        "country": "Burkina Faso",
+        "country_normalized": "burkina faso",
+        "omitted_rows": 14,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 64,
+        "country": "Cambodia",
+        "country_normalized": "cambodia",
+        "omitted_rows": 59,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 19,
+        "country": "Cameroon",
+        "country_normalized": "cameroon",
+        "omitted_rows": 14,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 15127,
+        "country": "Canada",
+        "country_normalized": "canada",
+        "omitted_rows": 15122,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 17,
+        "country": "Cayman Islands",
+        "country_normalized": "cayman islands",
+        "omitted_rows": 12,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 7617,
+        "country": "Chile",
+        "country_normalized": "chile",
+        "omitted_rows": 7612,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2386,
+        "country": "China",
+        "country_normalized": "china",
+        "omitted_rows": 2381,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 6903,
+        "country": "Colombia",
+        "country_normalized": "colombia",
+        "omitted_rows": 6898,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 28,
+        "country": "Congo, Democratic Republic of the",
+        "country_normalized": "congo, democratic republic of the",
+        "omitted_rows": 23,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 5306,
+        "country": "Costa Rica",
+        "country_normalized": "costa rica",
+        "omitted_rows": 5301,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 336,
+        "country": "Croatia",
+        "country_normalized": "croatia",
+        "omitted_rows": 331,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 4,
+        "country": "Curaçao",
+        "country_normalized": "curaçao",
+        "omitted_rows": 0,
+        "retained_rows": 4,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 674,
+        "country": "Cyprus",
+        "country_normalized": "cyprus",
+        "omitted_rows": 669,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 4105,
+        "country": "Czechia",
+        "country_normalized": "czechia",
+        "omitted_rows": 4100,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 48,
+        "country": "Côte d'Ivoire",
+        "country_normalized": "côte d'ivoire",
+        "omitted_rows": 43,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 6272,
+        "country": "Denmark",
+        "country_normalized": "denmark",
+        "omitted_rows": 6267,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 408,
+        "country": "Dominican Republic",
+        "country_normalized": "dominican republic",
+        "omitted_rows": 403,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 617,
+        "country": "Ecuador",
+        "country_normalized": "ecuador",
+        "omitted_rows": 612,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 115,
+        "country": "El Salvador",
+        "country_normalized": "el salvador",
+        "omitted_rows": 110,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 499,
+        "country": "Estonia",
+        "country_normalized": "estonia",
+        "omitted_rows": 494,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 86,
+        "country": "Ethiopia",
+        "country_normalized": "ethiopia",
+        "omitted_rows": 81,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 7,
+        "country": "Fiji",
+        "country_normalized": "fiji",
+        "omitted_rows": 2,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2408,
+        "country": "Finland",
+        "country_normalized": "finland",
+        "omitted_rows": 2403,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 39306,
+        "country": "France",
+        "country_normalized": "france",
+        "omitted_rows": 39301,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 5,
+        "country": "Gambia",
+        "country_normalized": "gambia",
+        "omitted_rows": 0,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 27109,
+        "country": "Germany",
+        "country_normalized": "germany",
+        "omitted_rows": 27104,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 245,
+        "country": "Ghana",
+        "country_normalized": "ghana",
+        "omitted_rows": 240,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1874,
+        "country": "Greece",
+        "country_normalized": "greece",
+        "omitted_rows": 1869,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 7,
+        "country": "Guadeloupe",
+        "country_normalized": "guadeloupe",
+        "omitted_rows": 2,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 207,
+        "country": "Guam",
+        "country_normalized": "guam",
+        "omitted_rows": 202,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 254,
+        "country": "Guatemala",
+        "country_normalized": "guatemala",
+        "omitted_rows": 249,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 4,
+        "country": "Guinea",
+        "country_normalized": "guinea",
+        "omitted_rows": 0,
+        "retained_rows": 4,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 5,
+        "country": "Guyana",
+        "country_normalized": "guyana",
+        "omitted_rows": 0,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 25,
+        "country": "Haiti",
+        "country_normalized": "haiti",
+        "omitted_rows": 20,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 69,
+        "country": "Honduras",
+        "country_normalized": "honduras",
+        "omitted_rows": 64,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 6697,
+        "country": "Hong Kong",
+        "country_normalized": "hong kong",
+        "omitted_rows": 6692,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2180,
+        "country": "Hungary",
+        "country_normalized": "hungary",
+        "omitted_rows": 2175,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 42,
+        "country": "Iceland",
+        "country_normalized": "iceland",
+        "omitted_rows": 37,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 49415,
+        "country": "India",
+        "country_normalized": "india",
+        "omitted_rows": 49410,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2901,
+        "country": "Indonesia",
+        "country_normalized": "indonesia",
+        "omitted_rows": 2896,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 10247,
+        "country": "Ireland",
+        "country_normalized": "ireland",
+        "omitted_rows": 10242,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 4484,
+        "country": "Israel",
+        "country_normalized": "israel",
+        "omitted_rows": 4479,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 15922,
+        "country": "Italy",
+        "country_normalized": "italy",
+        "omitted_rows": 15917,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 124,
+        "country": "Jamaica",
+        "country_normalized": "jamaica",
+        "omitted_rows": 119,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1968,
+        "country": "Japan",
+        "country_normalized": "japan",
+        "omitted_rows": 1963,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 609,
+        "country": "Kazakhstan",
+        "country_normalized": "kazakhstan",
+        "omitted_rows": 604,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1527,
+        "country": "Kenya",
+        "country_normalized": "kenya",
+        "omitted_rows": 1522,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 72,
+        "country": "Kyrgyzstan",
+        "country_normalized": "kyrgyzstan",
+        "omitted_rows": 67,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 10,
+        "country": "Laos",
+        "country_normalized": "laos",
+        "omitted_rows": 5,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 355,
+        "country": "Latvia",
+        "country_normalized": "latvia",
+        "omitted_rows": 350,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 3,
+        "country": "Lesotho",
+        "country_normalized": "lesotho",
+        "omitted_rows": 0,
+        "retained_rows": 3,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 39,
+        "country": "Liberia",
+        "country_normalized": "liberia",
+        "omitted_rows": 34,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1306,
+        "country": "Lithuania",
+        "country_normalized": "lithuania",
+        "omitted_rows": 1301,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1956,
+        "country": "Luxembourg",
+        "country_normalized": "luxembourg",
+        "omitted_rows": 1951,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 115,
+        "country": "Macedonia (FYROM)",
+        "country_normalized": "macedonia (fyrom)",
+        "omitted_rows": 110,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 5,
+        "country": "Madagascar",
+        "country_normalized": "madagascar",
+        "omitted_rows": 0,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 25,
+        "country": "Malawi",
+        "country_normalized": "malawi",
+        "omitted_rows": 20,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 8076,
+        "country": "Malaysia",
+        "country_normalized": "malaysia",
+        "omitted_rows": 8071,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2,
+        "country": "Maldives",
+        "country_normalized": "maldives",
+        "omitted_rows": 0,
+        "retained_rows": 2,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 14,
+        "country": "Mali",
+        "country_normalized": "mali",
+        "omitted_rows": 9,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 587,
+        "country": "Malta",
+        "country_normalized": "malta",
+        "omitted_rows": 582,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 208,
+        "country": "Mauritius",
+        "country_normalized": "mauritius",
+        "omitted_rows": 203,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 14038,
+        "country": "Mexico",
+        "country_normalized": "mexico",
+        "omitted_rows": 14033,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 202,
+        "country": "Moldova",
+        "country_normalized": "moldova",
+        "omitted_rows": 197,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 31,
+        "country": "Mongolia",
+        "country_normalized": "mongolia",
+        "omitted_rows": 26,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 46,
+        "country": "Montenegro",
+        "country_normalized": "montenegro",
+        "omitted_rows": 41,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 19,
+        "country": "Mozambique",
+        "country_normalized": "mozambique",
+        "omitted_rows": 14,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 54,
+        "country": "Myanmar",
+        "country_normalized": "myanmar",
+        "omitted_rows": 49,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 369,
+        "country": "Namibia",
+        "country_normalized": "namibia",
+        "omitted_rows": 364,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 253,
+        "country": "Nepal",
+        "country_normalized": "nepal",
+        "omitted_rows": 248,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 19536,
+        "country": "Netherlands",
+        "country_normalized": "netherlands",
+        "omitted_rows": 19531,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2191,
+        "country": "New Zealand",
+        "country_normalized": "new zealand",
+        "omitted_rows": 2186,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 95,
+        "country": "Nicaragua",
+        "country_normalized": "nicaragua",
+        "omitted_rows": 90,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 986,
+        "country": "Nigeria",
+        "country_normalized": "nigeria",
+        "omitted_rows": 981,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 4,
+        "country": "Northern Mariana Islands",
+        "country_normalized": "northern mariana islands",
+        "omitted_rows": 0,
+        "retained_rows": 4,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1544,
+        "country": "Norway",
+        "country_normalized": "norway",
+        "omitted_rows": 1539,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2071,
+        "country": "Pakistan",
+        "country_normalized": "pakistan",
+        "omitted_rows": 2066,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 989,
+        "country": "Panama",
+        "country_normalized": "panama",
+        "omitted_rows": 984,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 6,
+        "country": "Papua New Guinea",
+        "country_normalized": "papua new guinea",
+        "omitted_rows": 1,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 61,
+        "country": "Paraguay",
+        "country_normalized": "paraguay",
+        "omitted_rows": 56,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 5678,
+        "country": "Peru",
+        "country_normalized": "peru",
+        "omitted_rows": 5673,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 10331,
+        "country": "Philippines",
+        "country_normalized": "philippines",
+        "omitted_rows": 10326,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 13744,
+        "country": "Poland",
+        "country_normalized": "poland",
+        "omitted_rows": 13739,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 13678,
+        "country": "Portugal",
+        "country_normalized": "portugal",
+        "omitted_rows": 13673,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1396,
+        "country": "Puerto Rico",
+        "country_normalized": "puerto rico",
+        "omitted_rows": 1391,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 3398,
+        "country": "Romania",
+        "country_normalized": "romania",
+        "omitted_rows": 3393,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 3672,
+        "country": "Russia",
+        "country_normalized": "russia",
+        "omitted_rows": 3667,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 56,
+        "country": "Rwanda",
+        "country_normalized": "rwanda",
+        "omitted_rows": 51,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 58,
+        "country": "Réunion",
+        "country_normalized": "réunion",
+        "omitted_rows": 53,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 101,
+        "country": "Senegal",
+        "country_normalized": "senegal",
+        "omitted_rows": 96,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 920,
+        "country": "Serbia",
+        "country_normalized": "serbia",
+        "omitted_rows": 915,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 22022,
+        "country": "Singapore",
+        "country_normalized": "singapore",
+        "omitted_rows": 22017,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 881,
+        "country": "Slovakia",
+        "country_normalized": "slovakia",
+        "omitted_rows": 876,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 194,
+        "country": "Slovenia",
+        "country_normalized": "slovenia",
+        "omitted_rows": 189,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 11686,
+        "country": "South Africa",
+        "country_normalized": "south africa",
+        "omitted_rows": 11681,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1516,
+        "country": "South Korea",
+        "country_normalized": "south korea",
+        "omitted_rows": 1511,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 23913,
+        "country": "Spain",
+        "country_normalized": "spain",
+        "omitted_rows": 23908,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 677,
+        "country": "Sri Lanka",
+        "country_normalized": "sri lanka",
+        "omitted_rows": 672,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 21,
+        "country": "Suriname",
+        "country_normalized": "suriname",
+        "omitted_rows": 16,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 5949,
+        "country": "Sweden",
+        "country_normalized": "sweden",
+        "omitted_rows": 5944,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 9471,
+        "country": "Switzerland",
+        "country_normalized": "switzerland",
+        "omitted_rows": 9466,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1379,
+        "country": "Taiwan",
+        "country_normalized": "taiwan",
+        "omitted_rows": 1374,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 10,
+        "country": "Tajikistan",
+        "country_normalized": "tajikistan",
+        "omitted_rows": 5,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 45,
+        "country": "Tanzania",
+        "country_normalized": "tanzania",
+        "omitted_rows": 40,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 3714,
+        "country": "Thailand",
+        "country_normalized": "thailand",
+        "omitted_rows": 3709,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 15,
+        "country": "Togo",
+        "country_normalized": "togo",
+        "omitted_rows": 10,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 44,
+        "country": "Trinidad and Tobago",
+        "country_normalized": "trinidad and tobago",
+        "omitted_rows": 39,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1308,
+        "country": "Turkey",
+        "country_normalized": "turkey",
+        "omitted_rows": 1303,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 195,
+        "country": "U.S. Virgin Islands",
+        "country_normalized": "u s virgin islands",
+        "omitted_rows": 190,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 234,
+        "country": "Uganda",
+        "country_normalized": "uganda",
+        "omitted_rows": 229,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1720,
+        "country": "Ukraine",
+        "country_normalized": "ukraine",
+        "omitted_rows": 1715,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 39700,
+        "country": "United Kingdom",
+        "country_normalized": "united kingdom",
+        "omitted_rows": 39695,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 200504,
+        "country": "United States",
+        "country_normalized": "united states",
+        "omitted_rows": 200499,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 1220,
+        "country": "Uruguay",
+        "country_normalized": "uruguay",
+        "omitted_rows": 1215,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 283,
+        "country": "Uzbekistan",
+        "country_normalized": "uzbekistan",
+        "omitted_rows": 278,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 67,
+        "country": "Venezuela",
+        "country_normalized": "venezuela",
+        "omitted_rows": 62,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2338,
+        "country": "Vietnam",
+        "country_normalized": "vietnam",
+        "omitted_rows": 2333,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 79,
+        "country": "Zambia",
+        "country_normalized": "zambia",
+        "omitted_rows": 74,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 76,
+        "country": "Zimbabwe",
+        "country_normalized": "zimbabwe",
+        "omitted_rows": 71,
+        "retained_rows": 5,
+        "source_dataset": "international_jobs"
+      },
+      {
+        "available_rows": 2215,
+        "country": "Australia",
+        "country_normalized": "australia",
+        "omitted_rows": 2210,
+        "retained_rows": 5,
+        "source_dataset": "jooble_careerjet_jobs"
+      },
+      {
+        "available_rows": 3943,
+        "country": "Canada",
+        "country_normalized": "canada",
+        "omitted_rows": 3938,
+        "retained_rows": 5,
+        "source_dataset": "jooble_careerjet_jobs"
+      },
+      {
+        "available_rows": 702,
+        "country": "Germany",
+        "country_normalized": "germany",
+        "omitted_rows": 697,
+        "retained_rows": 5,
+        "source_dataset": "jooble_careerjet_jobs"
+      },
+      {
+        "available_rows": 3807,
+        "country": "India",
+        "country_normalized": "india",
+        "omitted_rows": 3802,
+        "retained_rows": 5,
+        "source_dataset": "jooble_careerjet_jobs"
+      },
+      {
+        "available_rows": 3716,
+        "country": "United Kingdom",
+        "country_normalized": "united kingdom",
+        "omitted_rows": 3711,
+        "retained_rows": 5,
+        "source_dataset": "jooble_careerjet_jobs"
+      },
+      {
+        "available_rows": 4200,
+        "country": "United States",
+        "country_normalized": "united states",
+        "omitted_rows": 4195,
+        "retained_rows": 5,
+        "source_dataset": "jooble_careerjet_jobs"
+      },
+      {
+        "available_rows": 11,
+        "country": "Canada",
+        "country_normalized": "canada",
+        "omitted_rows": 6,
+        "retained_rows": 5,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 3,
+        "country": "France",
+        "country_normalized": "france",
+        "omitted_rows": 0,
+        "retained_rows": 3,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 13,
+        "country": "Germany",
+        "country_normalized": "germany",
+        "omitted_rows": 8,
+        "retained_rows": 5,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 9,
+        "country": "India",
+        "country_normalized": "india",
+        "omitted_rows": 4,
+        "retained_rows": 5,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 2,
+        "country": "Ireland",
+        "country_normalized": "ireland",
+        "omitted_rows": 0,
+        "retained_rows": 2,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 19,
+        "country": "Spain",
+        "country_normalized": "spain",
+        "omitted_rows": 14,
+        "retained_rows": 5,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 21,
+        "country": "United Kingdom",
+        "country_normalized": "united kingdom",
+        "omitted_rows": 16,
+        "retained_rows": 5,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 17201,
+        "country": "United States",
+        "country_normalized": "united states",
+        "omitted_rows": 17196,
+        "retained_rows": 5,
+        "source_dataset": "merged_tech_jobs"
+      },
+      {
+        "available_rows": 4,
+        "country": "Australia",
+        "country_normalized": "australia",
+        "omitted_rows": 0,
+        "retained_rows": 4,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 1,
+        "country": "Belgium",
+        "country_normalized": "belgium",
+        "omitted_rows": 0,
+        "retained_rows": 1,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 3,
+        "country": "Brazil",
+        "country_normalized": "brazil",
+        "omitted_rows": 0,
+        "retained_rows": 3,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 9,
+        "country": "Canada",
+        "country_normalized": "canada",
+        "omitted_rows": 4,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 25,
+        "country": "France",
+        "country_normalized": "france",
+        "omitted_rows": 20,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 665,
+        "country": "Germany",
+        "country_normalized": "germany",
+        "omitted_rows": 660,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 6,
+        "country": "India",
+        "country_normalized": "india",
+        "omitted_rows": 1,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 4,
+        "country": "Ireland",
+        "country_normalized": "ireland",
+        "omitted_rows": 0,
+        "retained_rows": 4,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 2,
+        "country": "Mexico",
+        "country_normalized": "mexico",
+        "omitted_rows": 0,
+        "retained_rows": 2,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 40,
+        "country": "Netherlands",
+        "country_normalized": "netherlands",
+        "omitted_rows": 35,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 6,
+        "country": "Poland",
+        "country_normalized": "poland",
+        "omitted_rows": 1,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 3,
+        "country": "Portugal",
+        "country_normalized": "portugal",
+        "omitted_rows": 0,
+        "retained_rows": 3,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 2,
+        "country": "Singapore",
+        "country_normalized": "singapore",
+        "omitted_rows": 0,
+        "retained_rows": 2,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 1,
+        "country": "Spain",
+        "country_normalized": "spain",
+        "omitted_rows": 0,
+        "retained_rows": 1,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 20,
+        "country": "Switzerland",
+        "country_normalized": "switzerland",
+        "omitted_rows": 15,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 53,
+        "country": "United Kingdom",
+        "country_normalized": "united kingdom",
+        "omitted_rows": 48,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 95,
+        "country": "United States",
+        "country_normalized": "united states",
+        "omitted_rows": 90,
+        "retained_rows": 5,
+        "source_dataset": "remote_tech_jobs"
+      },
+      {
+        "available_rows": 53,
+        "country": "Australia",
+        "country_normalized": "australia",
+        "omitted_rows": 48,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 23,
+        "country": "Belgium",
+        "country_normalized": "belgium",
+        "omitted_rows": 18,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 85,
+        "country": "Brazil",
+        "country_normalized": "brazil",
+        "omitted_rows": 80,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 278,
+        "country": "Canada",
+        "country_normalized": "canada",
+        "omitted_rows": 273,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 83,
+        "country": "France",
+        "country_normalized": "france",
+        "omitted_rows": 78,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 211,
+        "country": "Germany",
+        "country_normalized": "germany",
+        "omitted_rows": 206,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 466,
+        "country": "India",
+        "country_normalized": "india",
+        "omitted_rows": 461,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 50,
+        "country": "Ireland",
+        "country_normalized": "ireland",
+        "omitted_rows": 45,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 22,
+        "country": "Italy",
+        "country_normalized": "italy",
+        "omitted_rows": 17,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 21,
+        "country": "Japan",
+        "country_normalized": "japan",
+        "omitted_rows": 16,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 58,
+        "country": "Mexico",
+        "country_normalized": "mexico",
+        "omitted_rows": 53,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 70,
+        "country": "Netherlands",
+        "country_normalized": "netherlands",
+        "omitted_rows": 65,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 17,
+        "country": "New Zealand",
+        "country_normalized": "new zealand",
+        "omitted_rows": 12,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 110,
+        "country": "Poland",
+        "country_normalized": "poland",
+        "omitted_rows": 105,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 42,
+        "country": "Portugal",
+        "country_normalized": "portugal",
+        "omitted_rows": 37,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 71,
+        "country": "Singapore",
+        "country_normalized": "singapore",
+        "omitted_rows": 66,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 67,
+        "country": "Spain",
+        "country_normalized": "spain",
+        "omitted_rows": 62,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 22,
+        "country": "Sweden",
+        "country_normalized": "sweden",
+        "omitted_rows": 17,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 35,
+        "country": "Switzerland",
+        "country_normalized": "switzerland",
+        "omitted_rows": 30,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 329,
+        "country": "United Kingdom",
+        "country_normalized": "united kingdom",
+        "omitted_rows": 324,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      },
+      {
+        "available_rows": 1430,
+        "country": "United States",
+        "country_normalized": "united states",
+        "omitted_rows": 1425,
+        "retained_rows": 5,
+        "source_dataset": "startup_jobs"
+      }
+    ],
+    "non_arab_strata_count": 192,
+    "retained_arab_job_rows": 22958,
+    "retained_arab_rows_by_country": {
+      "Algeria": 76,
+      "Bahrain": 292,
+      "Comoros": 0,
+      "Djibouti": 7,
+      "Egypt": 6964,
+      "Iraq": 96,
+      "Jordan": 819,
+      "Kuwait": 586,
+      "Lebanon": 354,
+      "Libya": 37,
+      "Mauritania": 3,
+      "Morocco": 1080,
+      "Oman": 156,
+      "Palestine": 13,
+      "Qatar": 1182,
+      "Saudi Arabia": 3360,
+      "Somalia": 10,
+      "Sudan": 36,
+      "Syria": 0,
+      "Tunisia": 600,
+      "United Arab Emirates": 7281,
+      "Yemen": 6
+    },
+    "retained_job_rows": 29933,
+    "retained_non_arab_job_rows": 925,
+    "retained_unclassified_geography_rows": 6050,
+    "sampling_policy_version": "sha256_source_country_record_id_v1",
+    "source_datasets": {
+      "arab_tech_jobs": {
+        "arab_rows_retained": 438,
+        "available_rows": 439,
+        "job_rows_written": 439,
+        "job_skill_rows_written": 5357,
+        "non_arab_rows_available": 0,
+        "non_arab_rows_retained": 0,
+        "omitted_rows": 0,
+        "unclassified_geography_rows_retained": 1
+      },
+      "cybersecurity_jobs": {
+        "arab_rows_retained": 58,
+        "available_rows": 58,
+        "job_rows_written": 58,
+        "job_skill_rows_written": 631,
+        "non_arab_rows_available": 0,
+        "non_arab_rows_retained": 0,
+        "omitted_rows": 0,
+        "unclassified_geography_rows_retained": 0
+      },
+      "international_jobs": {
+        "arab_rows_retained": 20,
+        "available_rows": 705866,
+        "job_rows_written": 753,
+        "job_skill_rows_written": 3253,
+        "non_arab_rows_available": 705803,
+        "non_arab_rows_retained": 690,
+        "omitted_rows": 705113,
+        "unclassified_geography_rows_retained": 43
+      },
+      "jooble_careerjet_jobs": {
+        "arab_rows_retained": 0,
+        "available_rows": 18583,
+        "job_rows_written": 30,
+        "job_skill_rows_written": 393,
+        "non_arab_rows_available": 18583,
+        "non_arab_rows_retained": 30,
+        "omitted_rows": 18553,
+        "unclassified_geography_rows_retained": 0
+      },
+      "merged_tech_jobs": {
+        "arab_rows_retained": 22442,
+        "available_rows": 45591,
+        "job_rows_written": 28347,
+        "job_skill_rows_written": 242520,
+        "non_arab_rows_available": 17279,
+        "non_arab_rows_retained": 35,
+        "omitted_rows": 17244,
+        "unclassified_geography_rows_retained": 5870
+      },
+      "remote_tech_jobs": {
+        "arab_rows_retained": 0,
+        "available_rows": 1075,
+        "job_rows_written": 201,
+        "job_skill_rows_written": 2978,
+        "non_arab_rows_available": 939,
+        "non_arab_rows_retained": 65,
+        "omitted_rows": 874,
+        "unclassified_geography_rows_retained": 136
+      },
+      "startup_jobs": {
+        "arab_rows_retained": 0,
+        "available_rows": 3543,
+        "job_rows_written": 105,
+        "job_skill_rows_written": 1417,
+        "non_arab_rows_available": 3543,
+        "non_arab_rows_retained": 105,
+        "omitted_rows": 3438,
+        "unclassified_geography_rows_retained": 0
+      }
+    },
+    "source_job_rows": 775155,
+    "unclassified_country_values_retained_in_full": {
+      "(blank)": 104,
+      "Other/Unknown": 134,
+      "Remote (Anywhere)": 4557,
+      "Worldwide": 1255
+    },
+    "unclassified_geography_rows": "Retain all rows with a blank country, Other/Unknown, Remote (Anywhere), or Worldwide label in full; their geography is not treated as non-Arab without evidence."
+  },
+  "skill_relationship_policy": {
+    "arab_job_skill_rows": 194673,
+    "job_skill_rows": 256549,
+    "other_retained_job_skill_rows": 61876,
+    "selected_jobs_with_skills": 29798,
+    "selected_jobs_without_skills": 135,
+    "skill_observation_rows": 2128,
+    "skill_observations": "Recalculate per-source normalized-skill counts from the retained job-skill rows."
+  }
+}
