@@ -11,7 +11,7 @@ sequenceDiagram
     participant Validator as Request Validator
     participant Match as Matching Service
     participant Repo as Data Repository
-    participant DB as Relational Database
+    participant DB as Local SQLite file
 
     Visitor->>UI: Enter skills and optional supported preferences
     UI->>API: Submit matching request

@@ -1,0 +1,1570 @@
+role_rank,role_id,display_title,role_record_count,role_records_with_eligible_skills,source_dataset_count,source_dataset,role_source_record_count,country_rank,country_key,country_or_territory_label,role_country_job_record_count,country_mapped_role_source_records,share_of_country_mapped_role_source_records_percent,role_country_records_with_eligible_skills,role_country_skill_coverage_percent
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,1,united states,United States,9781,53698,18.21,9322,95.31
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,2,india,India,5107,53698,9.51,4812,94.22
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,3,united kingdom,United Kingdom,4318,53698,8.04,3840,88.93
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,4,netherlands,Netherlands,2616,53698,4.87,2386,91.21
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,5,spain,Spain,2426,53698,4.52,2282,94.06
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,6,singapore,Singapore,1826,53698,3.4,1759,96.33
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,7,france,France,1825,53698,3.4,1639,89.81
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,8,canada,Canada,1808,53698,3.37,1733,95.85
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,9,australia,Australia,1688,53698,3.14,1585,93.9
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,10,mexico,Mexico,1505,53698,2.8,1419,94.29
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,11,portugal,Portugal,1412,53698,2.63,1306,92.49
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,12,italy,Italy,1344,53698,2.5,1271,94.57
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,13,south africa,South Africa,1304,53698,2.43,1181,90.57
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,14,belgium,Belgium,1294,53698,2.41,1170,90.42
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,15,poland,Poland,1187,53698,2.21,1154,97.22
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,16,germany,Germany,926,53698,1.72,796,85.96
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,17,philippines,Philippines,731,53698,1.36,671,91.79
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,18,sweden,Sweden,731,53698,1.36,698,95.49
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,19,brazil,Brazil,722,53698,1.34,665,92.11
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,20,argentina,Argentina,719,53698,1.34,646,89.85
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,21,switzerland,Switzerland,678,53698,1.26,634,93.51
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,22,chile,Chile,658,53698,1.23,576,87.54
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,23,austria,Austria,610,53698,1.14,524,85.9
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,24,russia,Russia,608,53698,1.13,599,98.52
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,25,ireland,Ireland,561,53698,1.04,480,85.56
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,26,indonesia,Indonesia,517,53698,0.96,481,93.04
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,27,malaysia,Malaysia,496,53698,0.92,461,92.94
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,28,denmark,Denmark,442,53698,0.82,426,96.38
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,29,peru,Peru,422,53698,0.79,389,92.18
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,30,colombia,Colombia,412,53698,0.77,376,91.26
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,31,czechia,Czechia,326,53698,0.61,315,96.63
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,32,israel,Israel,322,53698,0.6,306,95.03
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,33,romania,Romania,312,53698,0.58,295,94.55
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,34,vietnam,Vietnam,274,53698,0.51,248,90.51
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,35,thailand,Thailand,270,53698,0.5,213,78.89
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,36,hong kong,Hong Kong,260,53698,0.48,251,96.54
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,37,finland,Finland,236,53698,0.44,219,92.8
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,38,pakistan,Pakistan,206,53698,0.38,200,97.09
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,39,costa rica,Costa Rica,194,53698,0.36,187,96.39
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,40,new zealand,New Zealand,177,53698,0.33,172,97.18
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,41,turkey,Turkey,168,53698,0.31,165,98.21
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,42,norway,Norway,159,53698,0.3,154,96.86
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,43,hungary,Hungary,156,53698,0.29,150,96.15
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,44,greece,Greece,140,53698,0.26,136,97.14
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,45,ukraine,Ukraine,114,53698,0.21,107,93.86
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,46,bulgaria,Bulgaria,111,53698,0.21,109,98.2
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,47,luxembourg,Luxembourg,106,53698,0.2,100,94.34
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,48,china,China,101,53698,0.19,83,82.18
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,49,lithuania,Lithuania,98,53698,0.18,95,96.94
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,50,japan,Japan,83,53698,0.15,68,81.93
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,51,uruguay,Uruguay,80,53698,0.15,66,82.5
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,52,cyprus,Cyprus,63,53698,0.12,57,90.48
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,53,ecuador,Ecuador,62,53698,0.12,54,87.1
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,54,slovakia,Slovakia,60,53698,0.11,58,96.67
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,55,south korea,South Korea,60,53698,0.11,51,85.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,56,sri lanka,Sri Lanka,57,53698,0.11,55,96.49
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,57,kazakhstan,Kazakhstan,56,53698,0.1,56,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,58,taiwan,Taiwan,51,53698,0.09,48,94.12
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,59,nigeria,Nigeria,48,53698,0.09,45,93.75
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,60,serbia,Serbia,48,53698,0.09,44,91.67
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,61,kenya,Kenya,46,53698,0.09,41,89.13
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,62,malta,Malta,42,53698,0.08,40,95.24
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,63,panama,Panama,41,53698,0.08,34,82.93
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,64,croatia,Croatia,38,53698,0.07,38,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,65,puerto rico,Puerto Rico,38,53698,0.07,31,81.58
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,66,estonia,Estonia,37,53698,0.07,37,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,67,belarus,Belarus,36,53698,0.07,33,91.67
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,68,latvia,Latvia,34,53698,0.06,32,94.12
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,69,nepal,Nepal,28,53698,0.05,27,96.43
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,70,macedonia (fyrom),Macedonia (FYROM),23,53698,0.04,23,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,71,moldova,Moldova,18,53698,0.03,7,38.89
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,72,slovenia,Slovenia,18,53698,0.03,18,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,73,uzbekistan,Uzbekistan,18,53698,0.03,18,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,74,dominican republic,Dominican Republic,16,53698,0.03,14,87.5
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,75,bangladesh,Bangladesh,13,53698,0.02,12,92.31
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,76,guatemala,Guatemala,13,53698,0.02,12,92.31
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,77,mauritius,Mauritius,13,53698,0.02,13,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,78,el salvador,El Salvador,11,53698,0.02,11,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,79,albania,Albania,9,53698,0.02,8,88.89
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,80,ghana,Ghana,9,53698,0.02,8,88.89
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,81,iceland,Iceland,9,53698,0.02,9,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,82,paraguay,Paraguay,8,53698,0.01,8,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,83,armenia,Armenia,7,53698,0.01,7,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,84,bosnia and herzegovina,Bosnia and Herzegovina,7,53698,0.01,7,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,85,cambodia,Cambodia,7,53698,0.01,5,71.43
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,86,zimbabwe,Zimbabwe,7,53698,0.01,6,85.71
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,87,honduras,Honduras,6,53698,0.01,6,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,88,namibia,Namibia,6,53698,0.01,6,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,89,nicaragua,Nicaragua,6,53698,0.01,5,83.33
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,90,uganda,Uganda,6,53698,0.01,6,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,91,venezuela,Venezuela,6,53698,0.01,6,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,92,guam,Guam,5,53698,0.01,5,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,93,jamaica,Jamaica,5,53698,0.01,5,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,94,u.s. virgin islands,U.S. Virgin Islands,5,53698,0.01,5,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,95,bolivia,Bolivia,4,53698,0.01,4,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,96,kyrgyzstan,Kyrgyzstan,4,53698,0.01,4,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,97,côte d'ivoire,Côte d'Ivoire,3,53698,0.01,3,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,98,mongolia,Mongolia,3,53698,0.01,2,66.67
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,99,trinidad and tobago,Trinidad and Tobago,3,53698,0.01,3,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,100,barbados,Barbados,2,53698,0.0,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,101,montenegro,Montenegro,2,53698,0.0,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,102,rwanda,Rwanda,2,53698,0.0,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,103,suriname,Suriname,2,53698,0.0,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,104,tajikistan,Tajikistan,2,53698,0.0,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,105,azerbaijan,Azerbaijan,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,106,benin,Benin,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,107,cameroon,Cameroon,1,53698,0.0,0,0.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,108,fiji,Fiji,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,109,haiti,Haiti,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,110,liberia,Liberia,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,111,myanmar,Myanmar,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,international_jobs,53699,112,togo,Togo,1,53698,0.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,jooble_careerjet_jobs,68,1,united states,United States,39,68,57.35,39,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,jooble_careerjet_jobs,68,2,australia,Australia,13,68,19.12,13,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,jooble_careerjet_jobs,68,3,canada,Canada,6,68,8.82,6,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,jooble_careerjet_jobs,68,4,india,India,5,68,7.35,5,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,jooble_careerjet_jobs,68,5,united kingdom,United Kingdom,5,68,7.35,5,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,1,united states,United States,1434,2373,60.43,1434,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,2,united arab emirates,United Arab Emirates,317,2373,13.36,317,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,3,saudi arabia,Saudi Arabia,161,2373,6.78,161,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,4,egypt,Egypt,145,2373,6.11,145,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,5,morocco,Morocco,104,2373,4.38,104,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,6,qatar,Qatar,52,2373,2.19,52,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,7,tunisia,Tunisia,50,2373,2.11,50,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,8,lebanon,Lebanon,28,2373,1.18,28,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,9,jordan,Jordan,25,2373,1.05,25,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,10,kuwait,Kuwait,15,2373,0.63,15,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,11,bahrain,Bahrain,11,2373,0.46,11,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,12,sudan,Sudan,11,2373,0.46,11,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,13,algeria,Algeria,7,2373,0.29,7,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,14,oman,Oman,6,2373,0.25,6,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,15,iraq,Iraq,5,2373,0.21,5,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,16,palestine,Palestine,1,2373,0.04,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,merged_tech_jobs,2716,17,yemen,Yemen,1,2373,0.04,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,remote_tech_jobs,4,1,germany,Germany,2,4,50.0,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,remote_tech_jobs,4,2,netherlands,Netherlands,1,4,25.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,remote_tech_jobs,4,3,united states,United States,1,4,25.0,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,1,united states,United States,10,26,38.46,10,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,2,united kingdom,United Kingdom,4,26,15.38,4,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,3,canada,Canada,2,26,7.69,2,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,4,belgium,Belgium,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,5,brazil,Brazil,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,6,india,India,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,7,mexico,Mexico,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,8,netherlands,Netherlands,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,9,poland,Poland,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,10,portugal,Portugal,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,11,singapore,Singapore,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,12,sweden,Sweden,1,26,3.85,1,100.0
+1,data engineer,DATA ENGINEER,56513,52778,5,startup_jobs,26,13,switzerland,Switzerland,1,26,3.85,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,1,united states,United States,15377,41623,36.94,13639,88.7
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,2,india,India,4215,41623,10.13,3773,89.51
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,3,united kingdom,United Kingdom,2961,41623,7.11,2591,87.5
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,4,spain,Spain,1703,41623,4.09,1558,91.49
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,5,italy,Italy,1579,41623,3.79,1386,87.78
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,6,portugal,Portugal,1165,41623,2.8,995,85.41
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,7,netherlands,Netherlands,1147,41623,2.76,999,87.1
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,8,france,France,1143,41623,2.75,949,83.03
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,9,singapore,Singapore,1021,41623,2.45,947,92.75
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,10,south africa,South Africa,863,41623,2.07,749,86.79
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,11,germany,Germany,862,41623,2.07,685,79.47
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,12,mexico,Mexico,715,41623,1.72,666,93.15
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,13,belgium,Belgium,628,41623,1.51,522,83.12
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,14,chile,Chile,599,41623,1.44,491,81.97
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,15,poland,Poland,505,41623,1.21,461,91.29
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,16,malaysia,Malaysia,437,41623,1.05,376,86.04
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,17,switzerland,Switzerland,397,41623,0.95,365,91.94
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,18,ireland,Ireland,378,41623,0.91,326,86.24
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,19,austria,Austria,369,41623,0.89,298,80.76
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,20,argentina,Argentina,366,41623,0.88,332,90.71
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,21,canada,Canada,362,41623,0.87,327,90.33
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,22,sweden,Sweden,291,41623,0.7,262,90.03
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,23,philippines,Philippines,286,41623,0.69,247,86.36
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,24,israel,Israel,272,41623,0.65,244,89.71
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,25,indonesia,Indonesia,265,41623,0.64,211,79.62
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,26,denmark,Denmark,263,41623,0.63,245,93.16
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,27,colombia,Colombia,231,41623,0.55,193,83.55
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,28,peru,Peru,219,41623,0.53,198,90.41
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,29,australia,Australia,210,41623,0.5,187,89.05
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,30,hong kong,Hong Kong,193,41623,0.46,179,92.75
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,31,czechia,Czechia,182,41623,0.44,151,82.97
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,32,brazil,Brazil,169,41623,0.41,151,89.35
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,33,turkey,Turkey,133,41623,0.32,130,97.74
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,34,pakistan,Pakistan,128,41623,0.31,108,84.38
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,35,thailand,Thailand,121,41623,0.29,92,76.03
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,36,luxembourg,Luxembourg,111,41623,0.27,106,95.5
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,37,norway,Norway,107,41623,0.26,94,87.85
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,38,romania,Romania,107,41623,0.26,98,91.59
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,39,vietnam,Vietnam,107,41623,0.26,93,86.92
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,40,finland,Finland,99,41623,0.24,98,98.99
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,41,russia,Russia,84,41623,0.2,80,95.24
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,42,japan,Japan,83,41623,0.2,72,86.75
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,43,costa rica,Costa Rica,82,41623,0.2,80,97.56
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,44,new zealand,New Zealand,81,41623,0.19,72,88.89
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,45,ukraine,Ukraine,68,41623,0.16,47,69.12
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,46,greece,Greece,67,41623,0.16,66,98.51
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,47,hungary,Hungary,62,41623,0.15,57,91.94
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,48,nigeria,Nigeria,47,41623,0.11,44,93.62
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,49,taiwan,Taiwan,47,41623,0.11,43,91.49
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,50,south korea,South Korea,46,41623,0.11,32,69.57
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,51,panama,Panama,42,41623,0.1,29,69.05
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,52,uruguay,Uruguay,38,41623,0.09,33,86.84
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,53,puerto rico,Puerto Rico,37,41623,0.09,22,59.46
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,54,lithuania,Lithuania,36,41623,0.09,33,91.67
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,55,kenya,Kenya,34,41623,0.08,28,82.35
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,56,bulgaria,Bulgaria,32,41623,0.08,30,93.75
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,57,china,China,28,41623,0.07,23,82.14
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,58,slovakia,Slovakia,28,41623,0.07,24,85.71
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,59,kazakhstan,Kazakhstan,27,41623,0.06,27,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,60,ecuador,Ecuador,25,41623,0.06,15,60.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,61,belarus,Belarus,23,41623,0.06,20,86.96
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,62,guatemala,Guatemala,22,41623,0.05,20,90.91
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,63,cyprus,Cyprus,18,41623,0.04,18,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,64,moldova,Moldova,18,41623,0.04,4,22.22
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,65,serbia,Serbia,17,41623,0.04,17,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,66,sri lanka,Sri Lanka,17,41623,0.04,15,88.24
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,67,dominican republic,Dominican Republic,16,41623,0.04,10,62.5
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,68,croatia,Croatia,14,41623,0.03,14,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,69,estonia,Estonia,14,41623,0.03,13,92.86
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,70,latvia,Latvia,14,41623,0.03,12,85.71
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,71,malta,Malta,12,41623,0.03,12,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,72,armenia,Armenia,11,41623,0.03,8,72.73
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,73,mauritius,Mauritius,11,41623,0.03,10,90.91
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,74,bangladesh,Bangladesh,10,41623,0.02,8,80.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,75,slovenia,Slovenia,10,41623,0.02,7,70.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,76,cambodia,Cambodia,9,41623,0.02,9,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,77,azerbaijan,Azerbaijan,8,41623,0.02,8,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,78,namibia,Namibia,8,41623,0.02,7,87.5
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,79,uzbekistan,Uzbekistan,8,41623,0.02,7,87.5
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,80,ghana,Ghana,7,41623,0.02,5,71.43
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,81,uganda,Uganda,7,41623,0.02,6,85.71
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,82,nicaragua,Nicaragua,6,41623,0.01,6,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,83,u.s. virgin islands,U.S. Virgin Islands,6,41623,0.01,5,83.33
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,84,côte d'ivoire,Côte d'Ivoire,5,41623,0.01,2,40.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,85,jamaica,Jamaica,5,41623,0.01,5,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,86,bolivia,Bolivia,4,41623,0.01,4,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,87,el salvador,El Salvador,4,41623,0.01,4,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,88,guam,Guam,4,41623,0.01,4,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,89,laos,Laos,3,41623,0.01,3,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,90,myanmar,Myanmar,3,41623,0.01,3,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,91,nepal,Nepal,3,41623,0.01,2,66.67
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,92,zimbabwe,Zimbabwe,3,41623,0.01,2,66.67
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,93,cayman islands,Cayman Islands,2,41623,0.0,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,94,macedonia (fyrom),Macedonia (FYROM),2,41623,0.0,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,95,rwanda,Rwanda,2,41623,0.0,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,96,senegal,Senegal,2,41623,0.0,1,50.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,97,burkina faso,Burkina Faso,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,98,"congo, democratic republic of the","Congo, Democratic Republic of the",1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,99,guyana,Guyana,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,100,kyrgyzstan,Kyrgyzstan,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,101,liberia,Liberia,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,102,madagascar,Madagascar,1,41623,0.0,0,0.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,103,malawi,Malawi,1,41623,0.0,0,0.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,104,mongolia,Mongolia,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,105,montenegro,Montenegro,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,106,mozambique,Mozambique,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,107,paraguay,Paraguay,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,108,réunion,Réunion,1,41623,0.0,0,0.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,109,tanzania,Tanzania,1,41623,0.0,0,0.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,110,venezuela,Venezuela,1,41623,0.0,0,0.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,international_jobs,41624,111,zambia,Zambia,1,41623,0.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,jooble_careerjet_jobs,8,1,germany,Germany,5,8,62.5,5,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,jooble_careerjet_jobs,8,2,united kingdom,United Kingdom,2,8,25.0,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,jooble_careerjet_jobs,8,3,united states,United States,1,8,12.5,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,1,united states,United States,2045,2930,69.8,2045,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,2,united arab emirates,United Arab Emirates,335,2930,11.43,335,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,3,saudi arabia,Saudi Arabia,187,2930,6.38,187,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,4,egypt,Egypt,111,2930,3.79,111,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,5,morocco,Morocco,77,2930,2.63,77,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,6,qatar,Qatar,52,2930,1.77,52,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,7,jordan,Jordan,33,2930,1.13,33,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,8,tunisia,Tunisia,27,2930,0.92,27,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,9,kuwait,Kuwait,25,2930,0.85,25,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,10,bahrain,Bahrain,17,2930,0.58,17,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,11,algeria,Algeria,10,2930,0.34,10,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,12,oman,Oman,6,2930,0.2,6,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,13,lebanon,Lebanon,4,2930,0.14,4,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,merged_tech_jobs,3320,14,sudan,Sudan,1,2930,0.03,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,remote_tech_jobs,4,1,germany,Germany,3,4,75.0,3,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,remote_tech_jobs,4,2,united states,United States,1,4,25.0,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,1,germany,Germany,4,21,19.05,4,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,2,united states,United States,4,21,19.05,4,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,3,united kingdom,United Kingdom,3,21,14.29,3,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,4,canada,Canada,2,21,9.52,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,5,mexico,Mexico,2,21,9.52,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,6,spain,Spain,2,21,9.52,2,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,7,australia,Australia,1,21,4.76,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,8,india,India,1,21,4.76,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,9,singapore,Singapore,1,21,4.76,1,100.0
+2,data scientist,DATA SCIENTIST,44977,40019,5,startup_jobs,21,10,switzerland,Switzerland,1,21,4.76,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,1,united states,United States,15079,42180,35.75,12753,84.57
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,2,united kingdom,United Kingdom,3438,42180,8.15,2802,81.5
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,3,singapore,Singapore,1764,42180,4.18,1611,91.33
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,4,france,France,1590,42180,3.77,1280,80.5
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,5,india,India,1571,42180,3.72,1291,82.18
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,6,spain,Spain,1284,42180,3.04,1144,89.1
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,7,philippines,Philippines,1275,42180,3.02,1008,79.06
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,8,portugal,Portugal,1211,42180,2.87,986,81.42
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,9,italy,Italy,1165,42180,2.76,906,77.77
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,10,belgium,Belgium,954,42180,2.26,782,81.97
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,11,netherlands,Netherlands,846,42180,2.01,707,83.57
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,12,south africa,South Africa,787,42180,1.87,643,81.7
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,13,ireland,Ireland,712,42180,1.69,570,80.06
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,14,germany,Germany,707,42180,1.68,523,73.97
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,15,mexico,Mexico,633,42180,1.5,520,82.15
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,16,malaysia,Malaysia,584,42180,1.38,445,76.2
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,17,poland,Poland,565,42180,1.34,536,94.87
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,18,canada,Canada,556,42180,1.32,450,80.94
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,19,australia,Australia,475,42180,1.13,381,80.21
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,20,hong kong,Hong Kong,406,42180,0.96,367,90.39
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,21,thailand,Thailand,393,42180,0.93,209,53.18
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,22,austria,Austria,384,42180,0.91,291,75.78
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,23,switzerland,Switzerland,351,42180,0.83,276,78.63
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,24,colombia,Colombia,350,42180,0.83,290,82.86
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,25,chile,Chile,346,42180,0.82,289,83.53
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,26,israel,Israel,337,42180,0.8,300,89.02
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,27,argentina,Argentina,298,42180,0.71,252,84.56
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,28,czechia,Czechia,243,42180,0.58,197,81.07
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,29,sweden,Sweden,235,42180,0.56,204,86.81
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,30,costa rica,Costa Rica,211,42180,0.5,195,92.42
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,31,peru,Peru,208,42180,0.49,168,80.77
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,32,denmark,Denmark,200,42180,0.47,183,91.5
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,33,romania,Romania,188,42180,0.45,162,86.17
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,34,indonesia,Indonesia,184,42180,0.44,148,80.43
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,35,ukraine,Ukraine,151,42180,0.36,82,54.3
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,36,hungary,Hungary,125,42180,0.3,109,87.2
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,37,new zealand,New Zealand,119,42180,0.28,84,70.59
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,38,greece,Greece,118,42180,0.28,102,86.44
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,39,brazil,Brazil,103,42180,0.24,81,78.64
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,40,luxembourg,Luxembourg,91,42180,0.22,81,89.01
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,41,puerto rico,Puerto Rico,91,42180,0.22,71,78.02
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,42,pakistan,Pakistan,86,42180,0.2,63,73.26
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,43,cyprus,Cyprus,85,42180,0.2,80,94.12
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,44,vietnam,Vietnam,85,42180,0.2,69,81.18
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,45,lithuania,Lithuania,83,42180,0.2,77,92.77
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,46,kenya,Kenya,77,42180,0.18,41,53.25
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,47,nigeria,Nigeria,77,42180,0.18,55,71.43
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,48,turkey,Turkey,74,42180,0.18,58,78.38
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,49,japan,Japan,66,42180,0.16,51,77.27
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,50,bulgaria,Bulgaria,60,42180,0.14,56,93.33
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,51,finland,Finland,60,42180,0.14,46,76.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,52,malta,Malta,59,42180,0.14,57,96.61
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,53,panama,Panama,59,42180,0.14,35,59.32
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,54,russia,Russia,58,42180,0.14,58,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,55,uruguay,Uruguay,56,42180,0.13,46,82.14
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,56,norway,Norway,53,42180,0.13,51,96.23
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,57,taiwan,Taiwan,51,42180,0.12,33,64.71
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,58,serbia,Serbia,49,42180,0.12,42,85.71
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,59,sri lanka,Sri Lanka,48,42180,0.11,39,81.25
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,60,mauritius,Mauritius,46,42180,0.11,40,86.96
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,61,south korea,South Korea,46,42180,0.11,27,58.7
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,62,belarus,Belarus,42,42180,0.1,42,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,63,slovakia,Slovakia,32,42180,0.08,28,87.5
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,64,china,China,26,42180,0.06,17,65.38
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,65,albania,Albania,23,42180,0.05,23,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,66,estonia,Estonia,23,42180,0.05,22,95.65
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,67,kazakhstan,Kazakhstan,22,42180,0.05,21,95.45
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,68,dominican republic,Dominican Republic,20,42180,0.05,8,40.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,69,ghana,Ghana,20,42180,0.05,16,80.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,70,latvia,Latvia,20,42180,0.05,19,95.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,71,guatemala,Guatemala,19,42180,0.05,17,89.47
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,72,uzbekistan,Uzbekistan,19,42180,0.05,17,89.47
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,73,senegal,Senegal,18,42180,0.04,12,66.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,74,bangladesh,Bangladesh,17,42180,0.04,17,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,75,croatia,Croatia,16,42180,0.04,16,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,76,slovenia,Slovenia,15,42180,0.04,15,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,77,uganda,Uganda,15,42180,0.04,12,80.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,78,armenia,Armenia,14,42180,0.03,14,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,79,nepal,Nepal,13,42180,0.03,10,76.92
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,80,azerbaijan,Azerbaijan,12,42180,0.03,11,91.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,81,ecuador,Ecuador,12,42180,0.03,8,66.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,82,moldova,Moldova,12,42180,0.03,2,16.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,83,namibia,Namibia,12,42180,0.03,11,91.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,84,zambia,Zambia,12,42180,0.03,9,75.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,85,el salvador,El Salvador,9,42180,0.02,7,77.78
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,86,jamaica,Jamaica,9,42180,0.02,3,33.33
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,87,nicaragua,Nicaragua,9,42180,0.02,9,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,88,ethiopia,Ethiopia,8,42180,0.02,5,62.5
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,89,trinidad and tobago,Trinidad and Tobago,8,42180,0.02,5,62.5
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,90,honduras,Honduras,7,42180,0.02,7,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,91,macedonia (fyrom),Macedonia (FYROM),7,42180,0.02,5,71.43
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,92,réunion,Réunion,7,42180,0.02,6,85.71
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,93,iceland,Iceland,6,42180,0.01,5,83.33
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,94,mongolia,Mongolia,6,42180,0.01,5,83.33
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,95,u.s. virgin islands,U.S. Virgin Islands,6,42180,0.01,4,66.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,96,cambodia,Cambodia,5,42180,0.01,4,80.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,97,myanmar,Myanmar,5,42180,0.01,5,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,98,zimbabwe,Zimbabwe,5,42180,0.01,1,20.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,99,bosnia and herzegovina,Bosnia and Herzegovina,4,42180,0.01,1,25.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,100,côte d'ivoire,Côte d'Ivoire,4,42180,0.01,3,75.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,101,guam,Guam,4,42180,0.01,3,75.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,102,venezuela,Venezuela,3,42180,0.01,2,66.67
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,103,benin,Benin,2,42180,0.0,2,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,104,bolivia,Bolivia,2,42180,0.0,2,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,105,cameroon,Cameroon,2,42180,0.0,2,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,106,gambia,Gambia,2,42180,0.0,1,50.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,107,malawi,Malawi,2,42180,0.0,2,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,108,tajikistan,Tajikistan,2,42180,0.0,2,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,109,togo,Togo,2,42180,0.0,1,50.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,110,afghanistan,Afghanistan,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,111,angola,Angola,1,42180,0.0,0,0.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,112,barbados,Barbados,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,113,botswana,Botswana,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,114,guadeloupe,Guadeloupe,1,42180,0.0,0,0.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,115,liberia,Liberia,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,116,madagascar,Madagascar,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,117,mozambique,Mozambique,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,118,northern mariana islands,Northern Mariana Islands,1,42180,0.0,0,0.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,119,papua new guinea,Papua New Guinea,1,42180,0.0,0,0.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,120,paraguay,Paraguay,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,121,rwanda,Rwanda,1,42180,0.0,0,0.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,122,suriname,Suriname,1,42180,0.0,0,0.0
+3,data analyst,DATA ANALYST,44597,37387,3,international_jobs,42180,123,tanzania,Tanzania,1,42180,0.0,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,jooble_careerjet_jobs,11,1,australia,Australia,6,11,54.55,6,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,jooble_careerjet_jobs,11,2,india,India,3,11,27.27,3,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,jooble_careerjet_jobs,11,3,united kingdom,United Kingdom,2,11,18.18,2,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,1,united arab emirates,United Arab Emirates,879,2279,38.57,879,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,2,saudi arabia,Saudi Arabia,372,2279,16.32,372,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,3,united states,United States,280,2279,12.29,280,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,4,qatar,Qatar,241,2279,10.57,241,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,5,egypt,Egypt,157,2279,6.89,157,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,6,kuwait,Kuwait,133,2279,5.84,133,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,7,morocco,Morocco,86,2279,3.77,86,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,8,lebanon,Lebanon,39,2279,1.71,39,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,9,jordan,Jordan,34,2279,1.49,34,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,10,tunisia,Tunisia,32,2279,1.4,32,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,11,bahrain,Bahrain,10,2279,0.44,10,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,12,iraq,Iraq,8,2279,0.35,8,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,13,algeria,Algeria,3,2279,0.13,3,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,14,oman,Oman,3,2279,0.13,3,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,15,palestine,Palestine,1,2279,0.04,1,100.0
+3,data analyst,DATA ANALYST,44597,37387,3,merged_tech_jobs,2406,16,yemen,Yemen,1,2279,0.04,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,1,united states,United States,4345,19454,22.33,4199,96.64
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,2,india,India,2229,19454,11.46,2140,96.01
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,3,united kingdom,United Kingdom,1918,19454,9.86,1752,91.35
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,4,australia,Australia,901,19454,4.63,850,94.34
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,5,canada,Canada,865,19454,4.45,840,97.11
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,6,spain,Spain,712,19454,3.66,682,95.79
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,7,poland,Poland,648,19454,3.33,630,97.22
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,8,netherlands,Netherlands,592,19454,3.04,552,93.24
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,9,singapore,Singapore,429,19454,2.21,420,97.9
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,10,france,France,423,19454,2.17,402,95.04
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,11,germany,Germany,396,19454,2.04,375,94.7
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,12,south africa,South Africa,388,19454,1.99,371,95.62
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,13,ireland,Ireland,376,19454,1.93,348,92.55
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,14,portugal,Portugal,341,19454,1.75,319,93.55
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,15,brazil,Brazil,337,19454,1.73,312,92.58
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,16,mexico,Mexico,326,19454,1.68,317,97.24
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,17,colombia,Colombia,242,19454,1.24,227,93.8
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,18,malaysia,Malaysia,214,19454,1.1,207,96.73
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,19,austria,Austria,208,19454,1.07,185,88.94
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,20,italy,Italy,185,19454,0.95,181,97.84
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,21,sweden,Sweden,182,19454,0.94,170,93.41
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,22,argentina,Argentina,181,19454,0.93,174,96.13
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,23,israel,Israel,170,19454,0.87,165,97.06
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,24,belgium,Belgium,162,19454,0.83,148,91.36
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,25,denmark,Denmark,159,19454,0.82,157,98.74
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,26,romania,Romania,144,19454,0.74,131,90.97
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,27,switzerland,Switzerland,143,19454,0.74,138,96.5
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,28,philippines,Philippines,142,19454,0.73,132,92.96
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,29,peru,Peru,115,19454,0.59,109,94.78
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,30,czechia,Czechia,111,19454,0.57,103,92.79
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,31,hong kong,Hong Kong,111,19454,0.57,105,94.59
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,32,new zealand,New Zealand,111,19454,0.57,99,89.19
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,33,costa rica,Costa Rica,109,19454,0.56,109,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,34,vietnam,Vietnam,92,19454,0.47,81,88.04
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,35,chile,Chile,88,19454,0.45,81,92.05
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,36,russia,Russia,86,19454,0.44,84,97.67
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,37,finland,Finland,84,19454,0.43,82,97.62
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,38,indonesia,Indonesia,84,19454,0.43,77,91.67
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,39,pakistan,Pakistan,84,19454,0.43,80,95.24
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,40,turkey,Turkey,80,19454,0.41,79,98.75
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,41,hungary,Hungary,65,19454,0.33,62,95.38
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,42,bulgaria,Bulgaria,64,19454,0.33,60,93.75
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,43,china,China,59,19454,0.3,57,96.61
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,44,norway,Norway,55,19454,0.28,52,94.55
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,45,greece,Greece,54,19454,0.28,54,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,46,uruguay,Uruguay,53,19454,0.27,44,83.02
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,47,sri lanka,Sri Lanka,47,19454,0.24,45,95.74
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,48,ukraine,Ukraine,46,19454,0.24,41,89.13
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,49,thailand,Thailand,44,19454,0.23,36,81.82
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,50,lithuania,Lithuania,41,19454,0.21,40,97.56
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,51,slovakia,Slovakia,31,19454,0.16,31,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,52,serbia,Serbia,29,19454,0.15,27,93.1
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,53,kenya,Kenya,23,19454,0.12,22,95.65
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,54,estonia,Estonia,21,19454,0.11,21,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,55,croatia,Croatia,20,19454,0.1,19,95.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,56,panama,Panama,20,19454,0.1,20,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,57,kazakhstan,Kazakhstan,18,19454,0.09,18,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,58,taiwan,Taiwan,18,19454,0.09,17,94.44
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,59,latvia,Latvia,15,19454,0.08,14,93.33
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,60,cyprus,Cyprus,13,19454,0.07,13,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,61,guatemala,Guatemala,13,19454,0.07,13,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,62,nigeria,Nigeria,13,19454,0.07,13,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,63,japan,Japan,12,19454,0.06,12,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,64,puerto rico,Puerto Rico,12,19454,0.06,9,75.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,65,south korea,South Korea,11,19454,0.06,11,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,66,armenia,Armenia,10,19454,0.05,10,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,67,bangladesh,Bangladesh,9,19454,0.05,9,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,68,moldova,Moldova,9,19454,0.05,5,55.56
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,69,uzbekistan,Uzbekistan,9,19454,0.05,9,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,70,luxembourg,Luxembourg,8,19454,0.04,8,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,71,malta,Malta,8,19454,0.04,8,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,72,nepal,Nepal,8,19454,0.04,5,62.5
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,73,ecuador,Ecuador,7,19454,0.04,7,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,74,ghana,Ghana,7,19454,0.04,6,85.71
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,75,macedonia (fyrom),Macedonia (FYROM),7,19454,0.04,7,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,76,slovenia,Slovenia,7,19454,0.04,7,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,77,albania,Albania,5,19454,0.03,5,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,78,belarus,Belarus,5,19454,0.03,5,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,79,namibia,Namibia,4,19454,0.02,4,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,80,cayman islands,Cayman Islands,3,19454,0.02,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,81,el salvador,El Salvador,3,19454,0.02,2,66.67
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,82,myanmar,Myanmar,3,19454,0.02,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,83,nicaragua,Nicaragua,3,19454,0.02,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,84,senegal,Senegal,3,19454,0.02,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,85,bahamas,Bahamas,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,86,cambodia,Cambodia,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,87,guam,Guam,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,88,honduras,Honduras,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,89,kyrgyzstan,Kyrgyzstan,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,90,rwanda,Rwanda,2,19454,0.01,1,50.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,91,u.s. virgin islands,U.S. Virgin Islands,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,92,uganda,Uganda,2,19454,0.01,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,93,benin,Benin,1,19454,0.01,0,0.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,94,bolivia,Bolivia,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,95,cameroon,Cameroon,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,96,"congo, democratic republic of the","Congo, Democratic Republic of the",1,19454,0.01,0,0.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,97,dominican republic,Dominican Republic,1,19454,0.01,0,0.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,98,haiti,Haiti,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,99,iceland,Iceland,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,100,jamaica,Jamaica,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,101,mauritius,Mauritius,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,international_jobs,19455,102,montenegro,Montenegro,1,19454,0.01,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,jooble_careerjet_jobs,37,1,canada,Canada,13,37,35.14,13,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,jooble_careerjet_jobs,37,2,australia,Australia,11,37,29.73,11,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,jooble_careerjet_jobs,37,3,india,India,10,37,27.03,10,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,jooble_careerjet_jobs,37,4,united states,United States,2,37,5.41,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,jooble_careerjet_jobs,37,5,united kingdom,United Kingdom,1,37,2.7,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,1,united states,United States,642,1013,63.38,642,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,2,egypt,Egypt,105,1013,10.37,105,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,3,united arab emirates,United Arab Emirates,104,1013,10.27,104,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,4,saudi arabia,Saudi Arabia,54,1013,5.33,54,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,5,morocco,Morocco,24,1013,2.37,24,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,6,tunisia,Tunisia,23,1013,2.27,23,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,7,jordan,Jordan,22,1013,2.17,22,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,8,lebanon,Lebanon,19,1013,1.88,19,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,9,qatar,Qatar,7,1013,0.69,7,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,10,sudan,Sudan,6,1013,0.59,6,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,11,bahrain,Bahrain,4,1013,0.39,4,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,merged_tech_jobs,1221,12,kuwait,Kuwait,3,1013,0.3,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,remote_tech_jobs,9,1,germany,Germany,5,7,71.43,5,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,remote_tech_jobs,9,2,united states,United States,2,7,28.57,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,1,united states,United States,17,37,45.95,17,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,2,india,India,6,37,16.22,6,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,3,canada,Canada,3,37,8.11,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,4,spain,Spain,3,37,8.11,3,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,5,germany,Germany,2,37,5.41,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,6,netherlands,Netherlands,2,37,5.41,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,7,united kingdom,United Kingdom,2,37,5.41,2,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,8,poland,Poland,1,37,2.7,1,100.0
+4,senior data engineer,SENIOR DATA ENGINEER,20759,19800,5,startup_jobs,37,9,singapore,Singapore,1,37,2.7,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,arab_tech_jobs,1,1,egypt,Egypt,1,1,100.0,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,1,united states,United States,4800,12770,37.59,4353,90.69
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,2,united kingdom,United Kingdom,1204,12770,9.43,1056,87.71
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,3,india,India,1147,12770,8.98,1029,89.71
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,4,spain,Spain,591,12770,4.63,553,93.57
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,5,germany,Germany,345,12770,2.7,308,89.28
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,6,netherlands,Netherlands,323,12770,2.53,287,88.85
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,7,singapore,Singapore,321,12770,2.51,292,90.97
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,8,france,France,277,12770,2.17,237,85.56
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,9,portugal,Portugal,272,12770,2.13,211,77.57
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,10,ireland,Ireland,248,12770,1.94,226,91.13
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,11,south africa,South Africa,244,12770,1.91,215,88.11
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,12,italy,Italy,242,12770,1.9,228,94.21
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,13,poland,Poland,220,12770,1.72,210,95.45
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,14,canada,Canada,195,12770,1.53,181,92.82
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,15,mexico,Mexico,163,12770,1.28,147,90.18
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,16,israel,Israel,146,12770,1.14,126,86.3
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,17,switzerland,Switzerland,127,12770,0.99,118,92.91
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,18,austria,Austria,121,12770,0.95,101,83.47
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,19,belgium,Belgium,106,12770,0.83,98,92.45
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,20,brazil,Brazil,103,12770,0.81,88,85.44
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,21,malaysia,Malaysia,100,12770,0.78,91,91.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,22,sweden,Sweden,99,12770,0.78,76,76.77
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,23,australia,Australia,89,12770,0.7,83,93.26
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,24,chile,Chile,81,12770,0.63,63,77.78
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,25,denmark,Denmark,77,12770,0.6,68,88.31
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,26,pakistan,Pakistan,73,12770,0.57,68,93.15
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,27,argentina,Argentina,71,12770,0.56,66,92.96
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,28,peru,Peru,68,12770,0.53,61,89.71
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,29,colombia,Colombia,61,12770,0.48,55,90.16
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,30,turkey,Turkey,59,12770,0.46,56,94.92
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,31,indonesia,Indonesia,56,12770,0.44,48,85.71
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,32,hong kong,Hong Kong,49,12770,0.38,41,83.67
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,33,russia,Russia,49,12770,0.38,47,95.92
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,34,czechia,Czechia,46,12770,0.36,45,97.83
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,35,philippines,Philippines,38,12770,0.3,33,86.84
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,36,new zealand,New Zealand,36,12770,0.28,28,77.78
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,37,romania,Romania,35,12770,0.27,34,97.14
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,38,hungary,Hungary,34,12770,0.27,33,97.06
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,39,vietnam,Vietnam,33,12770,0.26,27,81.82
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,40,finland,Finland,30,12770,0.23,30,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,41,luxembourg,Luxembourg,30,12770,0.23,30,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,42,greece,Greece,28,12770,0.22,27,96.43
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,43,norway,Norway,27,12770,0.21,25,92.59
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,44,china,China,26,12770,0.2,24,92.31
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,45,bulgaria,Bulgaria,21,12770,0.16,20,95.24
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,46,japan,Japan,21,12770,0.16,13,61.9
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,47,ukraine,Ukraine,21,12770,0.16,21,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,48,thailand,Thailand,20,12770,0.16,19,95.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,49,costa rica,Costa Rica,15,12770,0.12,15,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,50,kazakhstan,Kazakhstan,14,12770,0.11,14,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,51,lithuania,Lithuania,14,12770,0.11,14,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,52,cyprus,Cyprus,13,12770,0.1,13,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,53,armenia,Armenia,11,12770,0.09,11,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,54,nigeria,Nigeria,11,12770,0.09,11,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,55,sri lanka,Sri Lanka,11,12770,0.09,10,90.91
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,56,uzbekistan,Uzbekistan,11,12770,0.09,10,90.91
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,57,serbia,Serbia,10,12770,0.08,9,90.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,58,ecuador,Ecuador,9,12770,0.07,6,66.67
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,59,puerto rico,Puerto Rico,9,12770,0.07,7,77.78
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,60,estonia,Estonia,7,12770,0.05,6,85.71
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,61,kenya,Kenya,7,12770,0.05,7,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,62,slovakia,Slovakia,5,12770,0.04,5,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,63,south korea,South Korea,4,12770,0.03,4,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,64,taiwan,Taiwan,4,12770,0.03,4,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,65,guatemala,Guatemala,3,12770,0.02,2,66.67
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,66,malta,Malta,3,12770,0.02,3,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,67,senegal,Senegal,3,12770,0.02,3,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,68,slovenia,Slovenia,3,12770,0.02,3,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,69,ghana,Ghana,2,12770,0.02,1,50.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,70,latvia,Latvia,2,12770,0.02,2,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,71,namibia,Namibia,2,12770,0.02,2,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,72,nepal,Nepal,2,12770,0.02,0,0.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,73,tanzania,Tanzania,2,12770,0.02,2,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,74,venezuela,Venezuela,2,12770,0.02,2,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,75,azerbaijan,Azerbaijan,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,76,bahamas,Bahamas,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,77,bangladesh,Bangladesh,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,78,belarus,Belarus,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,79,bosnia and herzegovina,Bosnia and Herzegovina,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,80,cambodia,Cambodia,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,81,croatia,Croatia,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,82,côte d'ivoire,Côte d'Ivoire,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,83,el salvador,El Salvador,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,84,guam,Guam,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,85,honduras,Honduras,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,86,kyrgyzstan,Kyrgyzstan,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,87,macedonia (fyrom),Macedonia (FYROM),1,12770,0.01,0,0.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,88,nicaragua,Nicaragua,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,89,panama,Panama,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,90,rwanda,Rwanda,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,91,u.s. virgin islands,U.S. Virgin Islands,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,international_jobs,12770,92,uruguay,Uruguay,1,12770,0.01,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,jooble_careerjet_jobs,14,1,india,India,9,14,64.29,9,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,jooble_careerjet_jobs,14,2,united kingdom,United Kingdom,4,14,28.57,4,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,jooble_careerjet_jobs,14,3,canada,Canada,1,14,7.14,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,1,united states,United States,597,851,70.15,597,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,2,united arab emirates,United Arab Emirates,99,851,11.63,99,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,3,egypt,Egypt,58,851,6.82,58,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,4,saudi arabia,Saudi Arabia,38,851,4.47,38,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,5,morocco,Morocco,22,851,2.59,22,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,6,jordan,Jordan,16,851,1.88,16,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,7,qatar,Qatar,10,851,1.18,10,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,8,tunisia,Tunisia,5,851,0.59,5,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,9,kuwait,Kuwait,3,851,0.35,3,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,10,lebanon,Lebanon,2,851,0.24,2,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,merged_tech_jobs,1047,11,palestine,Palestine,1,851,0.12,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,remote_tech_jobs,4,1,germany,Germany,2,3,66.67,2,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,remote_tech_jobs,4,2,netherlands,Netherlands,1,3,33.33,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,1,united states,United States,9,23,39.13,9,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,2,united kingdom,United Kingdom,5,23,21.74,5,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,3,canada,Canada,3,23,13.04,3,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,4,india,India,3,23,13.04,3,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,5,brazil,Brazil,1,23,4.35,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,6,germany,Germany,1,23,4.35,1,100.0
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,12568,6,startup_jobs,23,7,spain,Spain,1,23,4.35,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,arab_tech_jobs,1,1,united arab emirates,United Arab Emirates,1,1,100.0,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,1,united states,United States,3323,8291,40.08,3050,91.78
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,2,united kingdom,United Kingdom,666,8291,8.03,565,84.83
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,3,singapore,Singapore,372,8291,4.49,349,93.82
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,4,india,India,260,8291,3.14,235,90.38
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,5,spain,Spain,232,8291,2.8,223,96.12
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,6,portugal,Portugal,230,8291,2.77,188,81.74
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,7,ireland,Ireland,225,8291,2.71,198,88.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,8,germany,Germany,207,8291,2.5,148,71.5
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,9,poland,Poland,189,8291,2.28,179,94.71
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,10,france,France,165,8291,1.99,141,85.45
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,11,netherlands,Netherlands,156,8291,1.88,141,90.38
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,12,philippines,Philippines,154,8291,1.86,146,94.81
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,13,malaysia,Malaysia,149,8291,1.8,130,87.25
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,14,israel,Israel,123,8291,1.48,112,91.06
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,15,south africa,South Africa,123,8291,1.48,102,82.93
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,16,australia,Australia,119,8291,1.44,99,83.19
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,17,canada,Canada,115,8291,1.39,107,93.04
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,18,hong kong,Hong Kong,109,8291,1.31,100,91.74
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,19,colombia,Colombia,107,8291,1.29,81,75.7
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,20,austria,Austria,93,8291,1.12,77,82.8
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,21,italy,Italy,79,8291,0.95,71,89.87
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,22,new zealand,New Zealand,65,8291,0.78,52,80.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,23,denmark,Denmark,61,8291,0.74,52,85.25
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,24,thailand,Thailand,59,8291,0.71,44,74.58
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,25,argentina,Argentina,55,8291,0.66,43,78.18
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,26,sweden,Sweden,53,8291,0.64,48,90.57
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,27,romania,Romania,52,8291,0.63,49,94.23
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,28,mexico,Mexico,49,8291,0.59,40,81.63
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,29,chile,Chile,46,8291,0.55,41,89.13
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,30,peru,Peru,43,8291,0.52,37,86.05
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,31,switzerland,Switzerland,43,8291,0.52,40,93.02
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,32,belgium,Belgium,41,8291,0.49,32,78.05
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,33,costa rica,Costa Rica,41,8291,0.49,27,65.85
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,34,brazil,Brazil,38,8291,0.46,36,94.74
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,35,czechia,Czechia,32,8291,0.39,29,90.63
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,36,finland,Finland,27,8291,0.33,27,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,37,puerto rico,Puerto Rico,24,8291,0.29,21,87.5
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,38,vietnam,Vietnam,23,8291,0.28,20,86.96
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,39,hungary,Hungary,22,8291,0.27,21,95.45
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,40,indonesia,Indonesia,20,8291,0.24,17,85.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,41,russia,Russia,19,8291,0.23,19,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,42,bulgaria,Bulgaria,18,8291,0.22,17,94.44
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,43,lithuania,Lithuania,17,8291,0.21,16,94.12
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,44,ukraine,Ukraine,17,8291,0.21,16,94.12
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,45,turkey,Turkey,15,8291,0.18,14,93.33
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,46,norway,Norway,14,8291,0.17,14,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,47,greece,Greece,13,8291,0.16,13,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,48,japan,Japan,13,8291,0.16,11,84.62
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,49,kenya,Kenya,13,8291,0.16,11,84.62
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,50,sri lanka,Sri Lanka,13,8291,0.16,13,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,51,armenia,Armenia,11,8291,0.13,11,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,52,taiwan,Taiwan,11,8291,0.13,8,72.73
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,53,malta,Malta,10,8291,0.12,10,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,54,kazakhstan,Kazakhstan,8,8291,0.1,8,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,55,pakistan,Pakistan,8,8291,0.1,6,75.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,56,uruguay,Uruguay,8,8291,0.1,6,75.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,57,moldova,Moldova,7,8291,0.08,5,71.43
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,58,nigeria,Nigeria,7,8291,0.08,4,57.14
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,59,slovakia,Slovakia,7,8291,0.08,7,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,60,south korea,South Korea,7,8291,0.08,5,71.43
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,61,uzbekistan,Uzbekistan,7,8291,0.08,7,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,62,china,China,5,8291,0.06,2,40.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,63,estonia,Estonia,4,8291,0.05,4,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,64,luxembourg,Luxembourg,4,8291,0.05,3,75.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,65,panama,Panama,4,8291,0.05,3,75.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,66,serbia,Serbia,4,8291,0.05,3,75.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,67,bangladesh,Bangladesh,3,8291,0.04,3,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,68,cyprus,Cyprus,3,8291,0.04,3,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,69,mauritius,Mauritius,3,8291,0.04,3,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,70,nepal,Nepal,3,8291,0.04,3,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,71,dominican republic,Dominican Republic,2,8291,0.02,1,50.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,72,ecuador,Ecuador,2,8291,0.02,2,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,73,ghana,Ghana,2,8291,0.02,2,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,74,guatemala,Guatemala,2,8291,0.02,2,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,75,afghanistan,Afghanistan,1,8291,0.01,0,0.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,76,albania,Albania,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,77,belarus,Belarus,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,78,bolivia,Bolivia,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,79,burkina faso,Burkina Faso,1,8291,0.01,0,0.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,80,el salvador,El Salvador,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,81,guam,Guam,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,82,kyrgyzstan,Kyrgyzstan,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,83,latvia,Latvia,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,84,mongolia,Mongolia,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,85,namibia,Namibia,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,86,réunion,Réunion,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,87,senegal,Senegal,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,88,u.s. virgin islands,U.S. Virgin Islands,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,89,venezuela,Venezuela,1,8291,0.01,0,0.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,90,zambia,Zambia,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,international_jobs,8291,91,zimbabwe,Zimbabwe,1,8291,0.01,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,1,united arab emirates,United Arab Emirates,86,268,32.09,86,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,2,united states,United States,62,268,23.13,62,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,3,egypt,Egypt,53,268,19.78,53,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,4,saudi arabia,Saudi Arabia,25,268,9.33,25,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,5,morocco,Morocco,18,268,6.72,18,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,6,qatar,Qatar,8,268,2.99,8,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,7,jordan,Jordan,7,268,2.61,7,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,8,tunisia,Tunisia,3,268,1.12,3,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,9,iraq,Iraq,2,268,0.75,2,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,10,lebanon,Lebanon,2,268,0.75,2,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,11,kuwait,Kuwait,1,268,0.37,1,100.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,7672,3,merged_tech_jobs,284,12,spain,Spain,1,268,0.37,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,1,united states,United States,1198,3792,31.59,1140,95.16
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,2,united kingdom,United Kingdom,656,3792,17.3,597,91.01
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,3,india,India,450,3792,11.87,437,97.11
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,4,australia,Australia,152,3792,4.01,142,93.42
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,5,canada,Canada,135,3792,3.56,127,94.07
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,6,france,France,123,3792,3.24,109,88.62
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,7,spain,Spain,101,3792,2.66,101,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,8,singapore,Singapore,98,3792,2.58,95,96.94
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,9,netherlands,Netherlands,96,3792,2.53,92,95.83
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,10,mexico,Mexico,87,3792,2.29,84,96.55
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,11,poland,Poland,54,3792,1.42,51,94.44
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,12,ireland,Ireland,53,3792,1.4,47,88.68
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,13,germany,Germany,47,3792,1.24,42,89.36
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,14,south africa,South Africa,39,3792,1.03,33,84.62
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,15,denmark,Denmark,34,3792,0.9,30,88.24
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,16,portugal,Portugal,26,3792,0.69,23,88.46
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,17,austria,Austria,25,3792,0.66,22,88.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,18,malaysia,Malaysia,25,3792,0.66,25,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,19,argentina,Argentina,24,3792,0.63,24,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,20,norway,Norway,22,3792,0.58,22,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,21,indonesia,Indonesia,20,3792,0.53,16,80.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,22,pakistan,Pakistan,20,3792,0.53,20,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,23,brazil,Brazil,19,3792,0.5,19,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,24,costa rica,Costa Rica,19,3792,0.5,19,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,25,romania,Romania,19,3792,0.5,17,89.47
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,26,colombia,Colombia,18,3792,0.47,18,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,27,russia,Russia,18,3792,0.47,18,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,28,philippines,Philippines,15,3792,0.4,15,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,29,switzerland,Switzerland,14,3792,0.37,10,71.43
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,30,sweden,Sweden,13,3792,0.34,11,84.62
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,31,finland,Finland,12,3792,0.32,12,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,32,czechia,Czechia,10,3792,0.26,9,90.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,33,italy,Italy,10,3792,0.26,10,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,34,new zealand,New Zealand,10,3792,0.26,9,90.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,35,belgium,Belgium,9,3792,0.24,9,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,36,greece,Greece,9,3792,0.24,8,88.89
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,37,chile,Chile,8,3792,0.21,8,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,38,ukraine,Ukraine,8,3792,0.21,8,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,39,vietnam,Vietnam,8,3792,0.21,8,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,40,hungary,Hungary,7,3792,0.18,7,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,41,peru,Peru,7,3792,0.18,7,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,42,thailand,Thailand,7,3792,0.18,7,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,43,serbia,Serbia,6,3792,0.16,6,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,44,sri lanka,Sri Lanka,6,3792,0.16,6,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,45,kazakhstan,Kazakhstan,5,3792,0.13,5,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,46,bulgaria,Bulgaria,4,3792,0.11,4,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,47,japan,Japan,4,3792,0.11,4,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,48,namibia,Namibia,4,3792,0.11,3,75.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,49,panama,Panama,4,3792,0.11,4,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,50,bahamas,Bahamas,3,3792,0.08,3,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,51,belarus,Belarus,3,3792,0.08,3,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,52,cyprus,Cyprus,3,3792,0.08,3,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,53,hong kong,Hong Kong,3,3792,0.08,3,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,54,israel,Israel,3,3792,0.08,2,66.67
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,55,puerto rico,Puerto Rico,3,3792,0.08,0,0.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,56,guam,Guam,2,3792,0.05,2,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,57,latvia,Latvia,2,3792,0.05,2,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,58,lithuania,Lithuania,2,3792,0.05,2,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,59,slovakia,Slovakia,2,3792,0.05,2,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,60,turkey,Turkey,2,3792,0.05,2,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,61,bangladesh,Bangladesh,1,3792,0.03,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,62,ghana,Ghana,1,3792,0.03,0,0.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,63,kenya,Kenya,1,3792,0.03,0,0.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,64,nigeria,Nigeria,1,3792,0.03,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,65,suriname,Suriname,1,3792,0.03,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,international_jobs,3792,66,u.s. virgin islands,U.S. Virgin Islands,1,3792,0.03,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,jooble_careerjet_jobs,63,1,united states,United States,43,63,68.25,43,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,jooble_careerjet_jobs,63,2,india,India,9,63,14.29,9,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,jooble_careerjet_jobs,63,3,australia,Australia,8,63,12.7,8,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,jooble_careerjet_jobs,63,4,canada,Canada,3,63,4.76,3,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,1,united states,United States,190,249,76.31,190,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,2,united arab emirates,United Arab Emirates,27,249,10.84,27,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,3,egypt,Egypt,15,249,6.02,15,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,4,morocco,Morocco,7,249,2.81,7,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,5,saudi arabia,Saudi Arabia,7,249,2.81,7,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,6,jordan,Jordan,1,249,0.4,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,7,qatar,Qatar,1,249,0.4,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,merged_tech_jobs,280,8,sudan,Sudan,1,249,0.4,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,startup_jobs,4,1,united kingdom,United Kingdom,2,4,50.0,2,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,startup_jobs,4,2,brazil,Brazil,1,4,25.0,1,100.0
+7,lead data engineer,LEAD DATA ENGINEER,4139,3915,4,startup_jobs,4,3,united states,United States,1,4,25.0,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,1,india,India,1166,3448,33.82,1154,98.97
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,2,united states,United States,580,3448,16.82,573,98.79
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,3,united kingdom,United Kingdom,327,3448,9.48,322,98.47
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,4,canada,Canada,211,3448,6.12,211,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,5,netherlands,Netherlands,189,3448,5.48,189,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,6,australia,Australia,111,3448,3.22,107,96.4
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,7,belgium,Belgium,76,3448,2.2,76,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,8,poland,Poland,76,3448,2.2,75,98.68
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,9,spain,Spain,69,3448,2.0,68,98.55
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,10,mexico,Mexico,68,3448,1.97,68,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,11,portugal,Portugal,58,3448,1.68,52,89.66
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,12,philippines,Philippines,49,3448,1.42,44,89.8
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,13,south africa,South Africa,46,3448,1.33,45,97.83
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,14,italy,Italy,33,3448,0.96,32,96.97
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,15,sweden,Sweden,33,3448,0.96,33,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,16,singapore,Singapore,31,3448,0.9,30,96.77
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,17,pakistan,Pakistan,26,3448,0.75,26,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,18,peru,Peru,25,3448,0.73,25,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,19,denmark,Denmark,24,3448,0.7,24,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,20,switzerland,Switzerland,23,3448,0.67,23,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,21,brazil,Brazil,21,3448,0.61,21,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,22,colombia,Colombia,18,3448,0.52,18,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,23,finland,Finland,18,3448,0.52,18,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,24,germany,Germany,18,3448,0.52,18,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,25,romania,Romania,16,3448,0.46,14,87.5
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,26,ireland,Ireland,14,3448,0.41,14,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,27,bulgaria,Bulgaria,13,3448,0.38,13,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,28,malaysia,Malaysia,12,3448,0.35,12,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,29,austria,Austria,11,3448,0.32,10,90.91
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,30,france,France,9,3448,0.26,8,88.89
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,31,argentina,Argentina,8,3448,0.23,7,87.5
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,32,turkey,Turkey,8,3448,0.23,8,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,33,czechia,Czechia,7,3448,0.2,7,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,34,hungary,Hungary,6,3448,0.17,6,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,35,norway,Norway,6,3448,0.17,4,66.67
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,36,chile,Chile,4,3448,0.12,4,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,37,costa rica,Costa Rica,4,3448,0.12,4,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,38,greece,Greece,4,3448,0.12,4,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,39,sri lanka,Sri Lanka,4,3448,0.12,4,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,40,china,China,3,3448,0.09,3,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,41,lithuania,Lithuania,3,3448,0.09,3,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,42,luxembourg,Luxembourg,3,3448,0.09,3,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,43,new zealand,New Zealand,3,3448,0.09,3,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,44,hong kong,Hong Kong,2,3448,0.06,2,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,45,mauritius,Mauritius,2,3448,0.06,2,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,46,serbia,Serbia,2,3448,0.06,2,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,47,ecuador,Ecuador,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,48,guatemala,Guatemala,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,49,honduras,Honduras,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,50,japan,Japan,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,51,macedonia (fyrom),Macedonia (FYROM),1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,52,nepal,Nepal,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,53,puerto rico,Puerto Rico,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,international_jobs,3448,54,slovakia,Slovakia,1,3448,0.03,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,jooble_careerjet_jobs,4,1,india,India,4,4,100.0,4,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,1,united states,United States,78,125,62.4,78,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,2,united arab emirates,United Arab Emirates,34,125,27.2,34,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,3,qatar,Qatar,7,125,5.6,7,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,4,morocco,Morocco,2,125,1.6,2,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,5,sudan,Sudan,2,125,1.6,2,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,6,kuwait,Kuwait,1,125,0.8,1,100.0
+8,azure data engineer,AZURE DATA ENGINEER,3599,3548,3,merged_tech_jobs,147,7,saudi arabia,Saudi Arabia,1,125,0.8,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,1,united states,United States,1230,3175,38.74,1091,88.7
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,2,united kingdom,United Kingdom,474,3175,14.93,406,85.65
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,3,india,India,426,3175,13.42,387,90.85
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,4,singapore,Singapore,109,3175,3.43,104,95.41
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,5,france,France,73,3175,2.3,55,75.34
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,6,spain,Spain,73,3175,2.3,65,89.04
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,7,netherlands,Netherlands,59,3175,1.86,47,79.66
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,8,south africa,South Africa,56,3175,1.76,33,58.93
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,9,germany,Germany,55,3175,1.73,47,85.45
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,10,poland,Poland,42,3175,1.32,41,97.62
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,11,ireland,Ireland,40,3175,1.26,32,80.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,12,argentina,Argentina,32,3175,1.01,32,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,13,italy,Italy,32,3175,1.01,28,87.5
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,14,denmark,Denmark,29,3175,0.91,24,82.76
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,15,peru,Peru,27,3175,0.85,24,88.89
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,16,canada,Canada,25,3175,0.79,23,92.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,17,malaysia,Malaysia,24,3175,0.76,18,75.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,18,philippines,Philippines,24,3175,0.76,21,87.5
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,19,austria,Austria,23,3175,0.72,19,82.61
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,20,switzerland,Switzerland,23,3175,0.72,20,86.96
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,21,colombia,Colombia,21,3175,0.66,19,90.48
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,22,portugal,Portugal,21,3175,0.66,19,90.48
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,23,australia,Australia,20,3175,0.63,17,85.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,24,mexico,Mexico,19,3175,0.6,15,78.95
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,25,hong kong,Hong Kong,17,3175,0.54,15,88.24
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,26,sweden,Sweden,16,3175,0.5,8,50.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,27,indonesia,Indonesia,14,3175,0.44,12,85.71
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,28,belgium,Belgium,13,3175,0.41,13,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,29,brazil,Brazil,13,3175,0.41,11,84.62
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,30,romania,Romania,12,3175,0.38,10,83.33
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,31,russia,Russia,12,3175,0.38,11,91.67
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,32,chile,Chile,9,3175,0.28,6,66.67
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,33,greece,Greece,9,3175,0.28,9,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,34,israel,Israel,9,3175,0.28,7,77.78
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,35,pakistan,Pakistan,9,3175,0.28,9,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,36,czechia,Czechia,8,3175,0.25,8,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,37,slovakia,Slovakia,8,3175,0.25,7,87.5
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,38,costa rica,Costa Rica,6,3175,0.19,6,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,39,puerto rico,Puerto Rico,6,3175,0.19,6,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,40,thailand,Thailand,6,3175,0.19,5,83.33
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,41,finland,Finland,5,3175,0.16,2,40.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,42,china,China,4,3175,0.13,4,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,43,hungary,Hungary,4,3175,0.13,4,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,44,new zealand,New Zealand,4,3175,0.13,4,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,45,slovenia,Slovenia,4,3175,0.13,4,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,46,bulgaria,Bulgaria,3,3175,0.09,3,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,47,uzbekistan,Uzbekistan,3,3175,0.09,3,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,48,armenia,Armenia,2,3175,0.06,2,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,49,cyprus,Cyprus,2,3175,0.06,1,50.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,50,norway,Norway,2,3175,0.06,2,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,51,ukraine,Ukraine,2,3175,0.06,2,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,52,uruguay,Uruguay,2,3175,0.06,0,0.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,53,vietnam,Vietnam,2,3175,0.06,2,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,54,estonia,Estonia,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,55,ethiopia,Ethiopia,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,56,guam,Guam,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,57,japan,Japan,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,58,kazakhstan,Kazakhstan,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,59,lithuania,Lithuania,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,60,nepal,Nepal,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,61,panama,Panama,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,62,serbia,Serbia,1,3175,0.03,0,0.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,63,tanzania,Tanzania,1,3175,0.03,0,0.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,64,turkey,Turkey,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,international_jobs,3175,65,uganda,Uganda,1,3175,0.03,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,jooble_careerjet_jobs,9,1,canada,Canada,6,9,66.67,6,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,jooble_careerjet_jobs,9,2,india,India,3,9,33.33,3,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,merged_tech_jobs,270,1,united states,United States,172,233,73.82,172,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,merged_tech_jobs,270,2,united arab emirates,United Arab Emirates,27,233,11.59,27,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,merged_tech_jobs,270,3,saudi arabia,Saudi Arabia,16,233,6.87,16,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,merged_tech_jobs,270,4,qatar,Qatar,12,233,5.15,12,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,merged_tech_jobs,270,5,egypt,Egypt,4,233,1.72,4,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,merged_tech_jobs,270,6,tunisia,Tunisia,2,233,0.86,2,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,remote_tech_jobs,1,1,germany,Germany,1,1,100.0,1,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,startup_jobs,4,1,india,India,2,4,50.0,2,100.0
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3057,5,startup_jobs,4,2,united states,United States,2,4,50.0,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,1,singapore,Singapore,164,3054,5.37,150,91.46
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,2,canada,Canada,137,3054,4.49,127,92.7
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,3,australia,Australia,135,3054,4.42,122,90.37
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,4,india,India,133,3054,4.35,132,99.25
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,5,spain,Spain,124,3054,4.06,119,95.97
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,6,portugal,Portugal,116,3054,3.8,110,94.83
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,7,netherlands,Netherlands,113,3054,3.7,106,93.81
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,8,poland,Poland,110,3054,3.6,105,95.45
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,9,mexico,Mexico,109,3054,3.57,104,95.41
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,10,united states,United States,91,3054,2.98,86,94.51
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,11,italy,Italy,87,3054,2.85,82,94.25
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,12,pakistan,Pakistan,80,3054,2.62,78,97.5
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,13,argentina,Argentina,75,3054,2.46,71,94.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,14,chile,Chile,75,3054,2.46,61,81.33
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,15,south africa,South Africa,70,3054,2.29,57,81.43
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,16,united kingdom,United Kingdom,70,3054,2.29,69,98.57
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,17,colombia,Colombia,66,3054,2.16,60,90.91
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,18,israel,Israel,66,3054,2.16,60,90.91
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,19,ireland,Ireland,64,3054,2.1,61,95.31
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,20,sweden,Sweden,60,3054,1.96,57,95.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,21,austria,Austria,56,3054,1.83,55,98.21
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,22,hong kong,Hong Kong,55,3054,1.8,50,90.91
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,23,belgium,Belgium,53,3054,1.74,48,90.57
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,24,brazil,Brazil,51,3054,1.67,49,96.08
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,25,greece,Greece,45,3054,1.47,45,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,26,romania,Romania,45,3054,1.47,45,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,27,malaysia,Malaysia,44,3054,1.44,42,95.45
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,28,denmark,Denmark,42,3054,1.38,42,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,29,france,France,37,3054,1.21,32,86.49
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,30,peru,Peru,37,3054,1.21,34,91.89
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,31,philippines,Philippines,35,3054,1.15,33,94.29
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,32,vietnam,Vietnam,35,3054,1.15,31,88.57
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,33,costa rica,Costa Rica,32,3054,1.05,28,87.5
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,34,japan,Japan,32,3054,1.05,31,96.88
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,35,indonesia,Indonesia,31,3054,1.02,30,96.77
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,36,czechia,Czechia,30,3054,0.98,26,86.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,37,turkey,Turkey,30,3054,0.98,30,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,38,finland,Finland,26,3054,0.85,24,92.31
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,39,switzerland,Switzerland,24,3054,0.79,23,95.83
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,40,china,China,23,3054,0.75,18,78.26
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,41,russia,Russia,22,3054,0.72,20,90.91
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,42,hungary,Hungary,21,3054,0.69,21,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,43,nepal,Nepal,21,3054,0.69,18,85.71
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,44,germany,Germany,19,3054,0.62,18,94.74
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,45,nigeria,Nigeria,19,3054,0.62,18,94.74
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,46,thailand,Thailand,18,3054,0.59,18,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,47,ukraine,Ukraine,18,3054,0.59,15,83.33
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,48,bulgaria,Bulgaria,14,3054,0.46,13,92.86
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,49,new zealand,New Zealand,14,3054,0.46,13,92.86
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,50,bangladesh,Bangladesh,12,3054,0.39,11,91.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,51,south korea,South Korea,12,3054,0.39,11,91.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,52,cyprus,Cyprus,11,3054,0.36,11,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,53,lithuania,Lithuania,11,3054,0.36,11,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,54,luxembourg,Luxembourg,11,3054,0.36,8,72.73
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,55,sri lanka,Sri Lanka,11,3054,0.36,11,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,56,serbia,Serbia,10,3054,0.33,9,90.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,57,estonia,Estonia,9,3054,0.29,9,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,58,uruguay,Uruguay,9,3054,0.29,6,66.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,59,armenia,Armenia,8,3054,0.26,8,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,60,belarus,Belarus,7,3054,0.23,7,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,61,taiwan,Taiwan,7,3054,0.23,6,85.71
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,62,croatia,Croatia,6,3054,0.2,5,83.33
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,63,norway,Norway,6,3054,0.2,6,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,64,kenya,Kenya,5,3054,0.16,5,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,65,uzbekistan,Uzbekistan,5,3054,0.16,5,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,66,ghana,Ghana,4,3054,0.13,2,50.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,67,slovakia,Slovakia,4,3054,0.13,4,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,68,latvia,Latvia,3,3054,0.1,3,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,69,malta,Malta,3,3054,0.1,3,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,70,albania,Albania,2,3054,0.07,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,71,kazakhstan,Kazakhstan,2,3054,0.07,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,72,macedonia (fyrom),Macedonia (FYROM),2,3054,0.07,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,73,moldova,Moldova,2,3054,0.07,0,0.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,74,namibia,Namibia,2,3054,0.07,1,50.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,75,nicaragua,Nicaragua,2,3054,0.07,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,76,puerto rico,Puerto Rico,2,3054,0.07,1,50.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,77,u.s. virgin islands,U.S. Virgin Islands,2,3054,0.07,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,78,venezuela,Venezuela,2,3054,0.07,2,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,79,bosnia and herzegovina,Bosnia and Herzegovina,1,3054,0.03,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,80,cameroon,Cameroon,1,3054,0.03,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,81,dominican republic,Dominican Republic,1,3054,0.03,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,82,ethiopia,Ethiopia,1,3054,0.03,0,0.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,83,honduras,Honduras,1,3054,0.03,0,0.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,84,jamaica,Jamaica,1,3054,0.03,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,85,mongolia,Mongolia,1,3054,0.03,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,international_jobs,3054,86,slovenia,Slovenia,1,3054,0.03,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,jooble_careerjet_jobs,8,1,canada,Canada,4,8,50.0,4,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,jooble_careerjet_jobs,8,2,united states,United States,4,8,50.0,4,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,1,egypt,Egypt,36,107,33.64,36,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,2,united arab emirates,United Arab Emirates,32,107,29.91,32,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,3,saudi arabia,Saudi Arabia,13,107,12.15,13,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,4,lebanon,Lebanon,7,107,6.54,7,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,5,morocco,Morocco,7,107,6.54,7,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,6,united states,United States,7,107,6.54,7,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,7,jordan,Jordan,3,107,2.8,3,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,8,bahrain,Bahrain,1,107,0.93,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,merged_tech_jobs,131,9,qatar,Qatar,1,107,0.93,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,remote_tech_jobs,2,1,netherlands,Netherlands,1,1,100.0,1,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,startup_jobs,6,1,united states,United States,4,6,66.67,4,100.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2995,5,startup_jobs,6,2,germany,Germany,2,6,33.33,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,1,india,India,445,2368,18.79,433,97.3
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,2,united states,United States,445,2368,18.79,430,96.63
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,3,spain,Spain,197,2368,8.32,186,94.42
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,4,italy,Italy,157,2368,6.63,151,96.18
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,5,singapore,Singapore,100,2368,4.22,95,95.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,6,poland,Poland,99,2368,4.18,98,98.99
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,7,canada,Canada,86,2368,3.63,83,96.51
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,8,australia,Australia,78,2368,3.29,75,96.15
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,9,mexico,Mexico,70,2368,2.96,66,94.29
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,10,portugal,Portugal,68,2368,2.87,61,89.71
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,11,switzerland,Switzerland,56,2368,2.36,53,94.64
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,12,peru,Peru,38,2368,1.6,36,94.74
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,13,united kingdom,United Kingdom,36,2368,1.52,35,97.22
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,14,israel,Israel,33,2368,1.39,32,96.97
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,15,czechia,Czechia,30,2368,1.27,29,96.67
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,16,philippines,Philippines,30,2368,1.27,30,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,17,ireland,Ireland,28,2368,1.18,27,96.43
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,18,germany,Germany,27,2368,1.14,24,88.89
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,19,greece,Greece,26,2368,1.1,25,96.15
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,20,netherlands,Netherlands,22,2368,0.93,18,81.82
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,21,brazil,Brazil,20,2368,0.84,17,85.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,22,romania,Romania,19,2368,0.8,18,94.74
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,23,argentina,Argentina,17,2368,0.72,17,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,24,south africa,South Africa,17,2368,0.72,15,88.24
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,25,turkey,Turkey,17,2368,0.72,17,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,26,belgium,Belgium,16,2368,0.68,15,93.75
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,27,france,France,15,2368,0.63,14,93.33
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,28,austria,Austria,14,2368,0.59,13,92.86
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,29,indonesia,Indonesia,12,2368,0.51,10,83.33
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,30,ukraine,Ukraine,12,2368,0.51,8,66.67
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,31,pakistan,Pakistan,11,2368,0.46,11,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,32,vietnam,Vietnam,11,2368,0.46,11,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,33,chile,Chile,10,2368,0.42,7,70.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,34,hungary,Hungary,9,2368,0.38,8,88.89
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,35,malaysia,Malaysia,8,2368,0.34,8,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,36,hong kong,Hong Kong,7,2368,0.3,7,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,37,bulgaria,Bulgaria,6,2368,0.25,6,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,38,lithuania,Lithuania,6,2368,0.25,6,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,39,russia,Russia,6,2368,0.25,6,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,40,sweden,Sweden,6,2368,0.25,6,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,41,colombia,Colombia,5,2368,0.21,3,60.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,42,malta,Malta,5,2368,0.21,5,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,43,china,China,4,2368,0.17,4,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,44,costa rica,Costa Rica,3,2368,0.13,3,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,45,ecuador,Ecuador,3,2368,0.13,2,66.67
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,46,japan,Japan,3,2368,0.13,3,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,47,kenya,Kenya,3,2368,0.13,3,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,48,latvia,Latvia,3,2368,0.13,3,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,49,moldova,Moldova,3,2368,0.13,1,33.33
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,50,slovakia,Slovakia,3,2368,0.13,2,66.67
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,51,azerbaijan,Azerbaijan,2,2368,0.08,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,52,cyprus,Cyprus,2,2368,0.08,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,53,denmark,Denmark,2,2368,0.08,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,54,nigeria,Nigeria,2,2368,0.08,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,55,serbia,Serbia,2,2368,0.08,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,56,uganda,Uganda,2,2368,0.08,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,57,armenia,Armenia,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,58,belarus,Belarus,1,2368,0.04,0,0.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,59,dominican republic,Dominican Republic,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,60,finland,Finland,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,61,kazakhstan,Kazakhstan,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,62,luxembourg,Luxembourg,1,2368,0.04,0,0.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,63,puerto rico,Puerto Rico,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,64,senegal,Senegal,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,65,south korea,South Korea,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,66,taiwan,Taiwan,1,2368,0.04,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,international_jobs,2368,67,uruguay,Uruguay,1,2368,0.04,0,0.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,1,united states,United States,87,190,45.79,87,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,2,united arab emirates,United Arab Emirates,46,190,24.21,46,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,3,egypt,Egypt,31,190,16.32,31,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,4,saudi arabia,Saudi Arabia,7,190,3.68,7,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,5,morocco,Morocco,6,190,3.16,6,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,6,lebanon,Lebanon,3,190,1.58,3,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,7,qatar,Qatar,3,190,1.58,3,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,8,kuwait,Kuwait,2,190,1.05,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,9,tunisia,Tunisia,2,190,1.05,2,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,10,bahrain,Bahrain,1,190,0.53,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,11,jordan,Jordan,1,190,0.53,1,100.0
+11,big data engineer,BIG DATA ENGINEER,2569,2457,2,merged_tech_jobs,201,12,sudan,Sudan,1,190,0.53,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,1,united states,United States,538,2433,22.11,489,90.89
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,2,philippines,Philippines,115,2433,4.73,103,89.57
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,3,belgium,Belgium,111,2433,4.56,104,93.69
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,4,portugal,Portugal,95,2433,3.9,90,94.74
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,5,singapore,Singapore,89,2433,3.66,79,88.76
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,6,italy,Italy,84,2433,3.45,69,82.14
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,7,mexico,Mexico,83,2433,3.41,77,92.77
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,8,united kingdom,United Kingdom,71,2433,2.92,63,88.73
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,9,colombia,Colombia,63,2433,2.59,44,69.84
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,10,canada,Canada,62,2433,2.55,57,91.94
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,11,ireland,Ireland,60,2433,2.47,56,93.33
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,12,malaysia,Malaysia,51,2433,2.1,39,76.47
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,13,south africa,South Africa,51,2433,2.1,44,86.27
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,14,poland,Poland,50,2433,2.06,48,96.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,15,chile,Chile,49,2433,2.01,46,93.88
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,16,netherlands,Netherlands,47,2433,1.93,36,76.6
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,17,spain,Spain,47,2433,1.93,39,82.98
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,18,india,India,45,2433,1.85,39,86.67
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,19,austria,Austria,42,2433,1.73,30,71.43
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,20,hong kong,Hong Kong,42,2433,1.73,41,97.62
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,21,peru,Peru,41,2433,1.69,31,75.61
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,22,australia,Australia,38,2433,1.56,34,89.47
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,23,costa rica,Costa Rica,37,2433,1.52,37,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,24,denmark,Denmark,35,2433,1.44,32,91.43
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,25,germany,Germany,33,2433,1.36,30,90.91
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,26,czechia,Czechia,29,2433,1.19,27,93.1
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,27,argentina,Argentina,27,2433,1.11,25,92.59
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,28,sweden,Sweden,27,2433,1.11,22,81.48
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,29,thailand,Thailand,26,2433,1.07,23,88.46
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,30,switzerland,Switzerland,22,2433,0.9,20,90.91
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,31,serbia,Serbia,20,2433,0.82,17,85.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,32,romania,Romania,19,2433,0.78,18,94.74
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,33,israel,Israel,18,2433,0.74,14,77.78
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,34,bulgaria,Bulgaria,17,2433,0.7,17,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,35,brazil,Brazil,15,2433,0.62,15,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,36,cyprus,Cyprus,15,2433,0.62,13,86.67
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,37,uruguay,Uruguay,15,2433,0.62,9,60.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,38,greece,Greece,14,2433,0.58,12,85.71
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,39,malta,Malta,12,2433,0.49,12,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,40,france,France,11,2433,0.45,11,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,41,lithuania,Lithuania,10,2433,0.41,10,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,42,puerto rico,Puerto Rico,10,2433,0.41,8,80.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,43,finland,Finland,9,2433,0.37,8,88.89
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,44,kenya,Kenya,9,2433,0.37,9,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,45,hungary,Hungary,8,2433,0.33,7,87.5
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,46,luxembourg,Luxembourg,8,2433,0.33,5,62.5
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,47,norway,Norway,8,2433,0.33,8,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,48,ecuador,Ecuador,7,2433,0.29,3,42.86
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,49,nepal,Nepal,7,2433,0.29,2,28.57
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,50,new zealand,New Zealand,7,2433,0.29,6,85.71
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,51,ghana,Ghana,6,2433,0.25,5,83.33
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,52,jamaica,Jamaica,6,2433,0.25,5,83.33
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,53,latvia,Latvia,6,2433,0.25,6,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,54,indonesia,Indonesia,5,2433,0.21,5,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,55,pakistan,Pakistan,5,2433,0.21,5,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,56,ukraine,Ukraine,5,2433,0.21,4,80.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,57,guatemala,Guatemala,4,2433,0.16,2,50.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,58,mauritius,Mauritius,4,2433,0.16,4,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,59,panama,Panama,4,2433,0.16,3,75.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,60,slovakia,Slovakia,4,2433,0.16,4,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,61,trinidad and tobago,Trinidad and Tobago,4,2433,0.16,3,75.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,62,albania,Albania,3,2433,0.12,3,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,63,sri lanka,Sri Lanka,3,2433,0.12,3,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,64,turkey,Turkey,3,2433,0.12,3,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,65,armenia,Armenia,2,2433,0.08,2,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,66,moldova,Moldova,2,2433,0.08,1,50.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,67,nicaragua,Nicaragua,2,2433,0.08,2,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,68,azerbaijan,Azerbaijan,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,69,bangladesh,Bangladesh,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,70,dominican republic,Dominican Republic,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,71,el salvador,El Salvador,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,72,estonia,Estonia,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,73,guam,Guam,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,74,honduras,Honduras,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,75,iceland,Iceland,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,76,japan,Japan,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,77,macedonia (fyrom),Macedonia (FYROM),1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,78,nigeria,Nigeria,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,79,rwanda,Rwanda,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,80,suriname,Suriname,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,81,u.s. virgin islands,U.S. Virgin Islands,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,82,uganda,Uganda,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,international_jobs,2433,83,zambia,Zambia,1,2433,0.04,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,1,united arab emirates,United Arab Emirates,52,120,43.33,52,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,2,united states,United States,32,120,26.67,32,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,3,saudi arabia,Saudi Arabia,13,120,10.83,13,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,4,egypt,Egypt,11,120,9.17,11,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,5,qatar,Qatar,5,120,4.17,5,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,6,jordan,Jordan,3,120,2.5,3,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,7,kuwait,Kuwait,2,120,1.67,2,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,8,bahrain,Bahrain,1,120,0.83,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,merged_tech_jobs,124,9,morocco,Morocco,1,120,0.83,1,100.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2279,3,remote_tech_jobs,1,1,germany,Germany,1,1,100.0,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,1,united states,United States,1222,2438,50.12,1037,84.86
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,2,united kingdom,United Kingdom,145,2438,5.95,112,77.24
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,3,italy,Italy,91,2438,3.73,68,74.73
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,4,singapore,Singapore,72,2438,2.95,64,88.89
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,5,spain,Spain,61,2438,2.5,54,88.52
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,6,portugal,Portugal,59,2438,2.42,49,83.05
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,7,belgium,Belgium,57,2438,2.34,44,77.19
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,8,france,France,57,2438,2.34,43,75.44
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,9,canada,Canada,56,2438,2.3,43,76.79
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,10,ireland,Ireland,55,2438,2.26,46,83.64
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,11,netherlands,Netherlands,53,2438,2.17,39,73.58
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,12,india,India,41,2438,1.68,33,80.49
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,13,poland,Poland,40,2438,1.64,35,87.5
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,14,mexico,Mexico,29,2438,1.19,26,89.66
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,15,switzerland,Switzerland,28,2438,1.15,21,75.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,16,philippines,Philippines,27,2438,1.11,25,92.59
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,17,hong kong,Hong Kong,26,2438,1.07,9,34.62
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,18,south africa,South Africa,23,2438,0.94,17,73.91
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,19,thailand,Thailand,21,2438,0.86,15,71.43
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,20,germany,Germany,19,2438,0.78,13,68.42
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,21,lithuania,Lithuania,19,2438,0.78,16,84.21
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,22,sweden,Sweden,19,2438,0.78,14,73.68
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,23,israel,Israel,17,2438,0.7,15,88.24
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,24,malaysia,Malaysia,16,2438,0.66,13,81.25
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,25,peru,Peru,15,2438,0.62,15,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,26,romania,Romania,14,2438,0.57,9,64.29
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,27,colombia,Colombia,12,2438,0.49,10,83.33
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,28,czechia,Czechia,12,2438,0.49,10,83.33
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,29,finland,Finland,12,2438,0.49,12,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,30,hungary,Hungary,12,2438,0.49,7,58.33
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,31,austria,Austria,10,2438,0.41,8,80.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,32,greece,Greece,10,2438,0.41,8,80.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,33,south korea,South Korea,9,2438,0.37,6,66.67
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,34,costa rica,Costa Rica,8,2438,0.33,6,75.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,35,australia,Australia,7,2438,0.29,6,85.71
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,36,brazil,Brazil,7,2438,0.29,7,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,37,argentina,Argentina,6,2438,0.25,4,66.67
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,38,estonia,Estonia,6,2438,0.25,6,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,39,slovakia,Slovakia,4,2438,0.16,4,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,40,bangladesh,Bangladesh,3,2438,0.12,1,33.33
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,41,bulgaria,Bulgaria,3,2438,0.12,3,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,42,indonesia,Indonesia,3,2438,0.12,3,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,43,latvia,Latvia,3,2438,0.12,3,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,44,chile,Chile,2,2438,0.08,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,45,kenya,Kenya,2,2438,0.08,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,46,luxembourg,Luxembourg,2,2438,0.08,0,0.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,47,macedonia (fyrom),Macedonia (FYROM),2,2438,0.08,1,50.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,48,malta,Malta,2,2438,0.08,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,49,new zealand,New Zealand,2,2438,0.08,0,0.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,50,nigeria,Nigeria,2,2438,0.08,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,51,puerto rico,Puerto Rico,2,2438,0.08,1,50.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,52,ukraine,Ukraine,2,2438,0.08,1,50.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,53,uzbekistan,Uzbekistan,2,2438,0.08,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,54,china,China,1,2438,0.04,0,0.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,55,croatia,Croatia,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,56,cyprus,Cyprus,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,57,jamaica,Jamaica,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,58,japan,Japan,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,59,norway,Norway,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,60,rwanda,Rwanda,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,61,tanzania,Tanzania,1,2438,0.04,0,0.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,international_jobs,2438,62,vietnam,Vietnam,1,2438,0.04,1,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,1,united states,United States,11,48,22.92,11,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,2,saudi arabia,Saudi Arabia,10,48,20.83,10,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,3,qatar,Qatar,7,48,14.58,7,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,4,lebanon,Lebanon,6,48,12.5,6,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,5,united arab emirates,United Arab Emirates,6,48,12.5,6,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,6,morocco,Morocco,3,48,6.25,3,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,7,jordan,Jordan,2,48,4.17,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,8,tunisia,Tunisia,2,48,4.17,2,100.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,2049,2,merged_tech_jobs,50,9,egypt,Egypt,1,48,2.08,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,1,singapore,Singapore,111,2212,5.02,102,91.89
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,2,sweden,Sweden,103,2212,4.66,94,91.26
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,3,poland,Poland,102,2212,4.61,98,96.08
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,4,malaysia,Malaysia,96,2212,4.34,86,89.58
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,5,australia,Australia,90,2212,4.07,84,93.33
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,6,ireland,Ireland,80,2212,3.62,75,93.75
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,7,italy,Italy,76,2212,3.44,66,86.84
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,8,portugal,Portugal,68,2212,3.07,61,89.71
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,9,costa rica,Costa Rica,66,2212,2.98,62,93.94
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,10,france,France,64,2212,2.89,50,78.13
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,11,hong kong,Hong Kong,64,2212,2.89,58,90.63
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,12,brazil,Brazil,62,2212,2.8,56,90.32
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,13,denmark,Denmark,62,2212,2.8,59,95.16
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,14,israel,Israel,58,2212,2.62,54,93.1
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,15,argentina,Argentina,56,2212,2.53,46,82.14
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,16,india,India,56,2212,2.53,54,96.43
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,17,peru,Peru,53,2212,2.4,50,94.34
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,18,canada,Canada,50,2212,2.26,45,90.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,19,mexico,Mexico,50,2212,2.26,45,90.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,20,czechia,Czechia,46,2212,2.08,39,84.78
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,21,netherlands,Netherlands,46,2212,2.08,42,91.3
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,22,spain,Spain,44,2212,1.99,41,93.18
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,23,china,China,42,2212,1.9,36,85.71
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,24,colombia,Colombia,41,2212,1.85,41,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,25,austria,Austria,33,2212,1.49,28,84.85
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,26,chile,Chile,33,2212,1.49,27,81.82
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,27,belgium,Belgium,32,2212,1.45,30,93.75
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,28,switzerland,Switzerland,32,2212,1.45,31,96.88
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,29,finland,Finland,30,2212,1.36,28,93.33
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,30,philippines,Philippines,30,2212,1.36,28,93.33
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,31,south africa,South Africa,28,2212,1.27,24,85.71
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,32,norway,Norway,24,2212,1.08,21,87.5
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,33,indonesia,Indonesia,22,2212,0.99,19,86.36
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,34,panama,Panama,22,2212,0.99,21,95.45
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,35,luxembourg,Luxembourg,21,2212,0.95,19,90.48
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,36,new zealand,New Zealand,18,2212,0.81,16,88.89
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,37,greece,Greece,17,2212,0.77,17,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,38,hungary,Hungary,17,2212,0.77,17,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,39,thailand,Thailand,17,2212,0.77,11,64.71
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,40,turkey,Turkey,17,2212,0.77,17,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,41,united kingdom,United Kingdom,17,2212,0.77,16,94.12
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,42,estonia,Estonia,15,2212,0.68,14,93.33
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,43,kenya,Kenya,15,2212,0.68,13,86.67
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,44,pakistan,Pakistan,15,2212,0.68,12,80.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,45,germany,Germany,13,2212,0.59,12,92.31
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,46,lithuania,Lithuania,12,2212,0.54,10,83.33
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,47,sri lanka,Sri Lanka,12,2212,0.54,12,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,48,namibia,Namibia,11,2212,0.5,11,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,49,romania,Romania,11,2212,0.5,10,90.91
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,50,ukraine,Ukraine,11,2212,0.5,11,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,51,japan,Japan,10,2212,0.45,10,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,52,uruguay,Uruguay,10,2212,0.45,8,80.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,53,nigeria,Nigeria,9,2212,0.41,8,88.89
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,54,vietnam,Vietnam,9,2212,0.41,7,77.78
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,55,croatia,Croatia,6,2212,0.27,6,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,56,serbia,Serbia,6,2212,0.27,4,66.67
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,57,south korea,South Korea,6,2212,0.27,6,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,58,bulgaria,Bulgaria,5,2212,0.23,5,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,59,united states,United States,5,2212,0.23,4,80.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,60,puerto rico,Puerto Rico,4,2212,0.18,4,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,61,cyprus,Cyprus,3,2212,0.14,2,66.67
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,62,ecuador,Ecuador,3,2212,0.14,3,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,63,nepal,Nepal,3,2212,0.14,3,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,64,slovakia,Slovakia,3,2212,0.14,3,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,65,taiwan,Taiwan,3,2212,0.14,3,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,66,bangladesh,Bangladesh,2,2212,0.09,1,50.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,67,iceland,Iceland,2,2212,0.09,2,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,68,russia,Russia,2,2212,0.09,2,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,69,azerbaijan,Azerbaijan,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,70,belarus,Belarus,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,71,burkina faso,Burkina Faso,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,72,cayman islands,Cayman Islands,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,73,dominican republic,Dominican Republic,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,74,guinea,Guinea,1,2212,0.05,0,0.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,75,kazakhstan,Kazakhstan,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,76,malta,Malta,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,77,moldova,Moldova,1,2212,0.05,0,0.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,international_jobs,2212,78,uganda,Uganda,1,2212,0.05,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,jooble_careerjet_jobs,106,1,australia,Australia,37,106,34.91,37,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,jooble_careerjet_jobs,106,2,canada,Canada,25,106,23.58,25,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,jooble_careerjet_jobs,106,3,united kingdom,United Kingdom,17,106,16.04,17,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,jooble_careerjet_jobs,106,4,india,India,16,106,15.09,16,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,jooble_careerjet_jobs,106,5,united states,United States,11,106,10.38,11,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,1,egypt,Egypt,40,122,32.79,40,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,2,saudi arabia,Saudi Arabia,17,122,13.93,17,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,3,qatar,Qatar,16,122,13.11,16,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,4,jordan,Jordan,14,122,11.48,14,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,5,united arab emirates,United Arab Emirates,14,122,11.48,14,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,6,tunisia,Tunisia,8,122,6.56,8,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,7,lebanon,Lebanon,6,122,4.92,6,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,8,morocco,Morocco,5,122,4.1,5,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,9,kuwait,Kuwait,1,122,0.82,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,merged_tech_jobs,134,10,oman,Oman,1,122,0.82,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,remote_tech_jobs,6,1,germany,Germany,1,2,50.0,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,remote_tech_jobs,6,2,poland,Poland,1,2,50.0,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,1,united kingdom,United Kingdom,6,27,22.22,6,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,2,united states,United States,6,27,22.22,6,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,3,india,India,4,27,14.81,4,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,4,australia,Australia,2,27,7.41,2,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,5,poland,Poland,2,27,7.41,2,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,6,ireland,Ireland,1,27,3.7,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,7,mexico,Mexico,1,27,3.7,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,8,netherlands,Netherlands,1,27,3.7,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,9,portugal,Portugal,1,27,3.7,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,10,singapore,Singapore,1,27,3.7,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,11,spain,Spain,1,27,3.7,1,100.0
+14,software engineer,SOFTWARE ENGINEER,2485,2281,5,startup_jobs,27,12,switzerland,Switzerland,1,27,3.7,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,arab_tech_jobs,1,1,saudi arabia,Saudi Arabia,1,1,100.0,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,1,australia,Australia,149,1902,7.83,138,92.62
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,2,ireland,Ireland,123,1902,6.47,116,94.31
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,3,poland,Poland,116,1902,6.1,111,95.69
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,4,israel,Israel,86,1902,4.52,81,94.19
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,5,colombia,Colombia,81,1902,4.26,78,96.3
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,6,denmark,Denmark,68,1902,3.58,65,95.59
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,7,sweden,Sweden,64,1902,3.36,62,96.88
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,8,india,India,58,1902,3.05,56,96.55
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,9,china,China,57,1902,3.0,53,92.98
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,10,south africa,South Africa,56,1902,2.94,54,96.43
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,11,argentina,Argentina,53,1902,2.79,50,94.34
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,12,canada,Canada,52,1902,2.73,47,90.38
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,13,portugal,Portugal,51,1902,2.68,49,96.08
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,14,singapore,Singapore,51,1902,2.68,47,92.16
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,15,spain,Spain,50,1902,2.63,49,98.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,16,brazil,Brazil,49,1902,2.58,44,89.8
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,17,czechia,Czechia,47,1902,2.47,44,93.62
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,18,finland,Finland,46,1902,2.42,42,91.3
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,19,mexico,Mexico,43,1902,2.26,43,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,20,costa rica,Costa Rica,35,1902,1.84,34,97.14
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,21,france,France,34,1902,1.79,32,94.12
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,22,kenya,Kenya,32,1902,1.68,30,93.75
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,23,austria,Austria,29,1902,1.52,25,86.21
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,24,netherlands,Netherlands,29,1902,1.52,26,89.66
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,25,malaysia,Malaysia,28,1902,1.47,27,96.43
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,26,italy,Italy,26,1902,1.37,24,92.31
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,27,peru,Peru,25,1902,1.31,24,96.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,28,lithuania,Lithuania,21,1902,1.1,13,61.9
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,29,chile,Chile,19,1902,1.0,19,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,30,pakistan,Pakistan,19,1902,1.0,18,94.74
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,31,new zealand,New Zealand,18,1902,0.95,18,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,32,philippines,Philippines,18,1902,0.95,15,83.33
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,33,uruguay,Uruguay,17,1902,0.89,15,88.24
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,34,greece,Greece,15,1902,0.79,15,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,35,panama,Panama,15,1902,0.79,15,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,36,hong kong,Hong Kong,14,1902,0.74,14,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,37,switzerland,Switzerland,14,1902,0.74,13,92.86
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,38,serbia,Serbia,13,1902,0.68,13,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,39,hungary,Hungary,12,1902,0.63,11,91.67
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,40,belgium,Belgium,10,1902,0.53,9,90.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,41,estonia,Estonia,10,1902,0.53,9,90.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,42,indonesia,Indonesia,10,1902,0.53,8,80.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,43,norway,Norway,10,1902,0.53,9,90.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,44,germany,Germany,8,1902,0.42,7,87.5
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,45,united kingdom,United Kingdom,8,1902,0.42,8,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,46,namibia,Namibia,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,47,nigeria,Nigeria,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,48,romania,Romania,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,49,thailand,Thailand,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,50,ukraine,Ukraine,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,51,united states,United States,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,52,vietnam,Vietnam,7,1902,0.37,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,53,slovakia,Slovakia,6,1902,0.32,6,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,54,turkey,Turkey,6,1902,0.32,6,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,55,puerto rico,Puerto Rico,5,1902,0.26,4,80.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,56,taiwan,Taiwan,5,1902,0.26,5,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,57,armenia,Armenia,4,1902,0.21,3,75.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,58,bulgaria,Bulgaria,4,1902,0.21,3,75.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,59,uganda,Uganda,4,1902,0.21,4,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,60,ghana,Ghana,3,1902,0.16,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,61,luxembourg,Luxembourg,3,1902,0.16,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,62,macedonia (fyrom),Macedonia (FYROM),3,1902,0.16,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,63,japan,Japan,2,1902,0.11,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,64,south korea,South Korea,2,1902,0.11,1,50.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,65,sri lanka,Sri Lanka,2,1902,0.11,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,66,bangladesh,Bangladesh,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,67,belarus,Belarus,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,68,bosnia and herzegovina,Bosnia and Herzegovina,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,69,croatia,Croatia,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,70,cyprus,Cyprus,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,71,dominican republic,Dominican Republic,1,1902,0.05,0,0.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,72,guam,Guam,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,73,honduras,Honduras,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,74,jamaica,Jamaica,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,75,latvia,Latvia,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,76,liberia,Liberia,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,77,mali,Mali,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,78,malta,Malta,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,79,montenegro,Montenegro,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,international_jobs,1904,80,slovenia,Slovenia,1,1902,0.05,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,jooble_careerjet_jobs,370,1,india,India,302,370,81.62,302,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,jooble_careerjet_jobs,370,2,canada,Canada,29,370,7.84,29,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,jooble_careerjet_jobs,370,3,united kingdom,United Kingdom,24,370,6.49,24,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,jooble_careerjet_jobs,370,4,australia,Australia,11,370,2.97,11,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,jooble_careerjet_jobs,370,5,united states,United States,4,370,1.08,4,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,1,saudi arabia,Saudi Arabia,20,81,24.69,20,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,2,egypt,Egypt,18,81,22.22,18,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,3,jordan,Jordan,9,81,11.11,9,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,4,qatar,Qatar,9,81,11.11,9,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,5,tunisia,Tunisia,7,81,8.64,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,6,united arab emirates,United Arab Emirates,7,81,8.64,7,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,7,algeria,Algeria,3,81,3.7,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,8,united states,United States,3,81,3.7,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,9,morocco,Morocco,2,81,2.47,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,10,canada,Canada,1,81,1.23,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,11,kuwait,Kuwait,1,81,1.23,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,merged_tech_jobs,97,12,palestine,Palestine,1,81,1.23,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,remote_tech_jobs,6,1,united states,United States,4,6,66.67,4,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,remote_tech_jobs,6,2,germany,Germany,2,6,33.33,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,1,india,India,15,58,25.86,15,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,2,united states,United States,10,58,17.24,10,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,3,united kingdom,United Kingdom,6,58,10.34,6,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,4,canada,Canada,5,58,8.62,5,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,5,australia,Australia,3,58,5.17,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,6,spain,Spain,3,58,5.17,3,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,7,ireland,Ireland,2,58,3.45,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,8,netherlands,Netherlands,2,58,3.45,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,9,new zealand,New Zealand,2,58,3.45,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,10,singapore,Singapore,2,58,3.45,2,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,11,brazil,Brazil,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,12,france,France,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,13,germany,Germany,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,14,italy,Italy,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,15,japan,Japan,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,16,mexico,Mexico,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,17,poland,Poland,1,58,1.72,1,100.0
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2322,6,startup_jobs,58,18,portugal,Portugal,1,58,1.72,1,100.0

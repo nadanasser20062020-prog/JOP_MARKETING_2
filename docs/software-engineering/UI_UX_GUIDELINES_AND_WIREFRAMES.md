@@ -1,6 +1,6 @@
 # UI/UX Guidelines and Low-Fidelity Wireframes
 
-**Status:** Proposed design baseline for team review. The wireframes describe layout and information hierarchy, not final visual mockups. Review them after the data audit and before frontend implementation.
+**Status:** Proposed design baseline for team review. The wireframes describe layout and information hierarchy, not final visual mockups or an implemented frontend; no frontend entry point is present in this checkout. Review them after the data audit and before frontend implementation.
 
 ## 1. Design Principles
 
@@ -42,62 +42,85 @@ Do not use color as the only way to communicate categories, salary status, model
 
 ## 4. Navigation and Page Structure
 
-Primary navigation:
+Primary navigation, in priority order:
 
-- Home / Market Overview
-- Explore Jobs
+- Overview
+- Analyze Roles
 - Compare Markets
-- Explore Skills
 - Skill Matcher
+- Related Job Advertisements (secondary)
 - Methodology
 - Language switch: English / Arabic
 
-Do not add saved jobs, saved searches, notifications, or user accounts to the initial interface.
+Role analysis is the primary job-discovery flow; individual advertisements are an optional supporting view. Do not add saved jobs, saved searches, notifications, or user accounts to the initial interface.
 
 ## 5. Low-Fidelity Wireframes
 
 The sketches below show content hierarchy only. They are not pixel-perfect mockups and must be revised to match the verified dataset fields.
 
-### 5.1 Market Overview — Desktop
+### 5.1 Overview — Default Landing Page
 
 ```text
 +--------------------------------------------------------------------------------+
-| JOP Marketing Intelligence | Explore Jobs | Compare | Skills | Method | EN / AR |
+| JOP | Overview | Analyze Roles | Compare | Match Skills | Related Ads | EN / AR |
 +--------------------------------------------------------------------------------+
-| Understand the job market from collected advertisements                       |
-| [ Search role, skill, or company                         ] [ Explore Jobs ]      |
-| Coverage: N advertisements | Countries: N | Collected: date range              |
+| [ Search a job title to analyze it                         ] [ Analyze role ]   |
 +--------------------------------------------------------------------------------+
-| [ KPI: top role ] [ KPI: top skill ] [ KPI: remote share ] [ KPI: salary data ]|
-+-------------------------------------+------------------------------------------+
-| Most requested skills               | Job advertisements by market / role     |
-| [accessible chart + summary]        | [accessible chart + filters]             |
-+-------------------------------------+------------------------------------------+
-| Data coverage and interpretation note                                           |
-| These results describe the collected sample; salary/date coverage varies.       |
+| [ Total Jobs ]          [ Total Skills ]          [ Total Countries ]           |
++--------------------------------------+-----------------------------------------+
+| Country distribution: label and count | Top 10 reviewed skills                 |
+| Accessible table; map only after       | Horizontal bars: count, denominator     |
+| reviewed name-to-geometry mapping      | and share, with sample caveat           |
+| Select a country to filter if supported| Select a skill to filter if supported   |
++--------------------------------------+-----------------------------------------+
+| Arab vs other represented markets: `merged_tech_jobs` only                     |
+| Within-group counts/shares; not a global-market comparison                    |
 +--------------------------------------------------------------------------------+
 ```
 
-### 5.2 Job Explorer — Desktop
+Keep the four overview elements visually distinct and spacious. KPI definitions, denominators, and supporting sample counts are available on hover/tap or in an accessible details view rather than as dense page text.
+
+### 5.2 Role Analysis — Desktop
 
 ```text
 +--------------------------------------------------------------------------------+
-| Header and primary navigation                                                  |
+| Analyze a role: [ Search/select normalized job title                 ]         |
+| Selected role: Data Analyst                         [Market: All / Select]     |
++--------------------------------------------------------------------------------+
+| [ Countries ]          [ Skills by country ]          [ Salary coverage ]      |
++--------------------------------------------------------------------------------+
+| One focused accessible table/chart for the selected tab                       |
+| Countries: job counts and share with denominator                              |
+| Skills: most common reviewed skills for this role and selected market         |
+| Salaries: coverage/provenance counts; no mean/median currently                 |
+| Show an average only after a currency, period, provenance, and sample gate     |
++--------------------------------------------------------------------------------+
+| [ Related advertisements for this role ]  (secondary action)                   |
++--------------------------------------------------------------------------------+
+```
+
+Selecting a role opens this analysis view first, not an advertisement list. Tabs and on-demand chart details keep the page useful without crowding it.
+
+### 5.3 Related Job Advertisements — Desktop
+
+```text
++--------------------------------------------------------------------------------+
+| Related advertisements for: Data Analyst                       [Back to role]  |
 +--------------------------------------------------------------------------------+
 | Search: [ role, skill, company, or keyword                       ] [ Search ]   |
 +--------------------------+-----------------------------------------------------+
-| Filters                  | N results | Sort: [ Relevance / Newest ]                  |
+| Filters                  | N results | Sort: [ Title / Company / Country / Source ] |
 | Country                  | [Job card: title, employer, country, work mode]      |
-| Role family              | [Skills] [Salary if disclosed] [View details]        |
-| Skill                    |-----------------------------------------------------|
-| Work arrangement         | [Job card: title, employer, country, work mode]      |
-| Experience               | [Skills] [Salary if disclosed] [View details]        |
-| Salary, if comparable    |-----------------------------------------------------|
-| [Clear filters]          | Page controls and sample-coverage note               |
+| Exact role / skill       | [Open details for reviewed skills + salary fields]  |
+| Work mode (raw)          |-----------------------------------------------------|
+| Experience (raw)         | [Job card: title, employer, country, work mode]      |
+| Salary filter: disabled  | [Open details for reviewed skills + salary fields]  |
+| (not comparable)         |-----------------------------------------------------|
+| [Clear filters]          | Page controls                                        |
 +--------------------------+-----------------------------------------------------+
 ```
 
-### 5.3 Job Detail — Desktop
+### 5.4 Job Detail — Desktop
 
 ```text
 +--------------------------------------------------------------------------------+
@@ -116,7 +139,7 @@ The sketches below show content hierarchy only. They are not pixel-perfect mocku
 +--------------------------------------------------------------------------------+
 ```
 
-### 5.4 Skill Matcher — Desktop
+### 5.5 Skill Matcher — Desktop
 
 ```text
 +--------------------------------------------------------------------------------+
@@ -127,27 +150,29 @@ The sketches below show content hierarchy only. They are not pixel-perfect mocku
 | Market: [ optional ]   Work arrangement: [ optional ]   [ Find matches ]       |
 | Privacy note: submitted skills are not saved under the proposed D-015 policy.  |
 +--------------------------------------------------------------------------------+
-| Ranked matches                    | Why this matches                            |
-| 1. Role / job title               | Skill coverage: N of M observed skills     |
-|    [View details]                 | Matched: [skill] [skill]                   |
-|                                   | Missing: [skill] [View free resources]      |
-| 2. Role / job title               | Sample and method explanation              |
+| Ranked role profiles (Jaccard)    | Why this matches                            |
+| 1. Exact observed title           | Overlap: matched / union; not hiring odds  |
+|    [View role analysis]           | Matched: [skill] [skill]                   |
+|                                   | Missing: [skill] [View resources]           |
+| 2. Exact observed title           | Sample count + scope + limitation           |
 +--------------------------------------------------------------------------------+
 | Match coverage is not a probability of being hired.                            |
 +--------------------------------------------------------------------------------+
 ```
 
-### 5.5 Mobile Behavior
+### 5.6 Mobile Behavior
 
-On narrow screens, the navigation collapses into an accessible menu, filters open in a clearly labelled panel, result cards stack vertically, charts may switch to a summary/table view, and primary actions remain reachable without horizontal scrolling. RTL behavior must be tested independently from LTR behavior.
+On narrow screens, the navigation collapses into an accessible menu, filters open in a clearly labelled panel, result cards stack vertically, and charts stack without horizontal scrolling. Tap replaces hover for chart details; keyboard and screen-reader alternatives remain available. The map may switch to a searchable country list or table while preserving the same counts and filters. RTL behavior must be tested independently from LTR behavior.
 
 ## 6. Interaction and Content Rules
 
 - Keep filters visible or one action away, and provide a clear reset action.
 - Show active filters and result counts.
-- Use explicit labels such as “Advertised salary” and “Model estimate”; never combine them.
+- Make charts interactive: hover or tap reveals values and definitions; clicking a country, bar, or comparison item filters related views. Keyboard focus must expose the same detail so essential information is never hover-only.
+- Open role analysis as the primary response to role search; keep related advertisements as an optional secondary action.
+- Show salary averages only with compatible currency and pay period, and include the supporting record count and median. Keep advertised values distinct from any separately evaluated model estimate.
 - Show “Not provided” or “Unavailable in this sample” rather than zero for missing values.
-- Link each result to its source when available and identify external destinations.
+- Link each displayed advertisement or resource to its source when available and identify external destinations.
 - Explain a matching score in plain language and list matched and missing skills.
 - Provide informative loading, empty, no-resource, validation, and service-error states.
 

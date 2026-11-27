@@ -25,13 +25,6 @@ The normalizer preserves punctuation. It does not equate similar-but-distinct te
 
 Each resource records skill links, language confidence, access/cost caveats, account and credential notes, official URL, verification status, and verification date. `cost_status` is one of `free_verified`, `some_free_options`, `conditional_or_mixed`, or `cost_unverified`. Only `free_verified` may be labelled free in recommendations; catalog-level statements do not prove that every course or lab is free. Course-specific language and enrollment conditions are marked unknown when not confirmed.
 
-## Salary normalization reference rates
-
-- `fx_rates_2026-10-28.json` freezes the reporting FX date at 2026-10-28. It records USD per source-currency unit, the USD-to-EGP/SAR output rates, source references, and explicit annualization assumptions.
-- ECB daily reference rates are used for same-date EUR cross-rates; central-bank reference/weighted-average rates or documented fixed pegs are used for other currencies. Each rate must be reviewed against its own provenance before reuse; do not silently substitute a latest rate for the audit date.
-- The CBK KWD series is labelled `Fils` on its official chart: `308.350` on the audit date means fils per USD (`1 USD = 0.308350 KWD`), not 308.350 KWD per USD.
-- A source salary is annualized only when its currency and pay period are explicit. Hourly and daily factors are assumptions (2,080 hours and 260 workdays per year), not observed source facts.
-
 ## Rebuild
 
 ```bash

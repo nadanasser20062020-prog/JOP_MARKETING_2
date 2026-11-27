@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/[...path].js": {
+      "includeFiles": "data/processed/job_market.sqlite3"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "/api/health"
+    }
+  ]
+}

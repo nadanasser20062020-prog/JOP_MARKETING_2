@@ -6,7 +6,7 @@ This matrix connects SRS requirements to user stories, project tasks, and planne
 
 | Requirement | User story or process | Project task(s) | Planned verification |
 |---|---|---|---|
-| FR-001 Market overview | US-001 | T06, T07, T08, T16 | TC-001: Reconcile overview metrics and sample sizes |
+| FR-001 Interactive Overview dashboard | US-001, US-015 | T06, T07, T08, T16 | TC-001: Reconcile archive-scope KPIs, country-label table, Top 10, Arab-vs-other-represented metrics and sample sizes; map is conditional on reviewed geometry |
 | FR-002 Search advertisements | US-002 | T14, T15 | TC-002: Search by supported fields |
 | FR-003 Filter advertisements | US-002 | T01, T02, T14, T15 | TC-003: Validate filters against the data dictionary |
 | FR-004 View advertisement details | US-003 | T14, T15 | TC-004: Render available and missing fields |
@@ -15,8 +15,8 @@ This matrix connects SRS requirements to user stories, project tasks, and planne
 | FR-007 Compare markets | US-005 | T06, T08, T16 | TC-007: Verify units, filters, and sample-size context |
 | FR-008 Show time trends conditionally | US-006 | T01, T06, T07, T16 | TC-008: Confirm date-quality gate and period labels |
 | FR-009 Accept skill input | US-008 | T10, T17 | TC-009: Validate valid, empty, unknown, and oversized inputs |
-| FR-010 Rank and explain matches | US-009 | T10, T17 | TC-010: Review ranking and explanations against test cases |
-| FR-011 Identify skill gaps | US-010 | T09, T10, T17 | TC-011: Verify evidence and gap ordering |
+| FR-010 Rank and explain matches | US-009 | T10, T17 | TC-010: Node/Python tests and selected full-data smoke cover aggregate role-profile Jaccard; per-ad ranking and human relevance review remain pending |
+| FR-011 Identify skill gaps | US-010 | T09, T10, T17 | TC-011: Fixture tests verify matched/missing/user-only fields; validate gap quality against reviewed relevance judgments before stronger claims |
 | FR-012 Provide reviewed resources | US-011 | T09, T17 | TC-012: Audit links and free-access verification dates |
 | FR-013 Support English and Arabic | US-012 | T17, T18 | TC-013: Review translations and RTL behavior |
 | FR-014 Explain methodology and limitations | US-013 | T08, T19 | TC-014: Review documentation completeness |
@@ -34,6 +34,9 @@ This matrix connects SRS requirements to user stories, project tasks, and planne
 | FR-026 Block models that fail quality gates | US-009, US-013 | T11–T13, T18 | TC-026: Confirm rejected models are not exposed through API/UI |
 | FR-027 Show unsupported data as unavailable | US-001, US-002, US-005 | T02, T15, T16, T18 | TC-027: Test missing and unsupported fields |
 | FR-028 Provide documented backend operations | US-001–US-013 | T14 | TC-028: Verify API contract and integration behavior |
+| FR-029 Role analysis by country and skill | US-014 | T06, T08, T15, T16 | TC-029: Reconcile selected-role country counts/shares and skill charts |
+| FR-030 Comparable mean salary by country | US-014 | T06, T08, T13, T15 | TC-030: Check salary comparability, median, units, and supporting record counts |
+| FR-031 Interactive analytical charts | US-015 | T16–T18 | TC-031: Test hover/tap details, cross-filters, keyboard interaction, and chart summaries |
 
 ## Non-Functional Requirements
 
@@ -54,6 +57,7 @@ This matrix connects SRS requirements to user stories, project tasks, and planne
 | NFR-013 Recoverability | T18, T19 | NTC-013: Review and exercise rollback/recovery steps |
 | NFR-014 Portability and reproducibility | T03, T05, T07, T19 | NTC-014: Re-run workflows in a clean environment |
 | NFR-015 Legal and ethical use | T01, T19 | NTC-015: Review attribution, source terms, and data-use approval |
+| NFR-016 Usability and visual density | T16–T18 | NTC-016: Review overview/role pages for clarity, responsive density, and accessible chart interactions |
 
 ## Maintenance Rule
 

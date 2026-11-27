@@ -179,7 +179,7 @@ class LossPreservingPipelineTests(unittest.TestCase):
                 report_dir,
                 source_ref="unit-test",
                 as_of_date=date(2026, 10, 28),
-                notebook_path=report_dir / "cleaning_data_audit.ipynb",
+                notebook_path=None,
             )
 
             self.assertEqual(summary["input_rows"], 3)

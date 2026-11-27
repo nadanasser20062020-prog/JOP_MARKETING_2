@@ -9,7 +9,7 @@ sequenceDiagram
     participant Validator as Query Validator
     participant JobService as Job Search Service
     participant Repository as Data Repository
-    participant DB as Relational Database
+    participant DB as Local SQLite file
 
     Visitor->>UI: Enter search text and select supported filters
     UI->>API: Request a job page

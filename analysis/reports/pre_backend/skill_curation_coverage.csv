@@ -1,0 +1,5 @@
+skill_match_policy,skill_review_status,catalog_match_policy,catalog_review_status,analysis_decision,job_skill_assignment_count,distinct_job_record_count,distinct_skill_count,source_dataset_count
+exact_only,needs_review,exact_only,needs_review,excluded_needs_review,265954,188297,1320,7
+exclude_pending_review,needs_owner_review,exclude_pending_review,needs_owner_review,excluded_owner_review,59980,58601,3,4
+approved_aliases,curated,approved_aliases,curated,included_reviewed,3514220,658926,169,7
+exact_only,curated_exact_only,exact_only,curated_exact_only,included_reviewed,186799,174509,4,7

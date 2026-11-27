@@ -1,5 +1,5 @@
-# Deployment and Operations
+# Local Operation and Delivery
 
-This directory is reserved for platform-specific configuration and runbooks after the hosting provider is selected.
+The initial demonstration is configured to run locally with a SQLite file on the same machine as the trusted backend. No hosted database or remote database connection is used. Application hosting remains undecided.
 
-Document environment setup, secret handling, database migrations, data loading, health checks, release procedures, rollback, and recovery. Do not commit real credentials or private data.
+See [`docs/software-engineering/DEPLOYMENT_OPERATIONS.md`](../docs/software-engineering/DEPLOYMENT_OPERATIONS.md) for local database setup, migrations, backups, testing, and recovery. Do not commit the generated SQLite file, raw data, credentials, or private backups.

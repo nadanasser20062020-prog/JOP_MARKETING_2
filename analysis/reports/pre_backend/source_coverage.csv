@@ -1,0 +1,8 @@
+source_dataset,snapshot_type,job_records,title_present,company_present,country_label_present,description_present,source_url_present,posted_at_present,source_updated_at_present,salary_text_present,annual_salary_value_present,hourly_salary_value_present,source_skills_text_present
+international_jobs,historical_2023_sample,705866,705866,705846,705823,0,0,705866,0,0,19921,9336,607812
+merged_tech_jobs,merged_source_snapshot_date_semantics_unverified,45591,45591,45557,45531,6693,6693,38898,4922,23127,1664,1001,45591
+jooble_careerjet_jobs,latest_export_listing_status_unverified,18583,18579,18461,18583,18583,18583,0,18583,5243,0,0,18583
+startup_jobs,latest_export_listing_status_unverified,3543,3543,3543,3543,0,3543,0,3543,1591,0,0,3543
+remote_tech_jobs,latest_export_listing_status_unverified,1075,1075,1075,1075,1075,1075,0,1075,50,0,0,1075
+arab_tech_jobs,regional_snapshot_date_coverage_partial,439,439,296,438,143,88,79,0,52,0,0,439
+cybersecurity_jobs,regional_snapshot_date_unavailable,58,58,58,58,0,0,0,0,58,0,0,58

@@ -1,0 +1,13 @@
+field_name,present_count,job_record_count,present_percent
+company,774836,775155,99.96
+country_or_market_label,775051,775155,99.99
+description,26494,775155,3.42
+posted_at,744843,775155,96.09
+salary_hour_avg_field,10337,775155,1.33
+salary_raw_text,30121,775155,3.89
+salary_year_avg_field,21585,775155,2.78
+source_skills_text,677101,775155,87.35
+source_updated_at_semantics_unverified,28123,775155,3.63
+source_url,29982,775155,3.87
+title,775151,775155,100.0
+usable_skill_associations,664989,775155,85.79

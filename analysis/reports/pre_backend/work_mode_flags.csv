@@ -1,0 +1,11 @@
+source_dataset,remote_flag_source_value,job_record_count
+arab_tech_jobs,not_supplied,439
+cybersecurity_jobs,not_supplied,58
+international_jobs,false,642995
+international_jobs,true,62871
+jooble_careerjet_jobs,not_supplied,18583
+merged_tech_jobs,0,34477
+merged_tech_jobs,not_supplied,6693
+merged_tech_jobs,1,4421
+remote_tech_jobs,not_supplied,1075
+startup_jobs,not_supplied,3543

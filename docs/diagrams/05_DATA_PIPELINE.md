@@ -15,7 +15,7 @@ flowchart TD
     Validate --> Quality{Quality checks pass?}
     Quality -->|No| Review[Review failures and update cleaning rules]
     Review --> Normalize
-    Quality -->|Yes| Load[Load approved records into relational database]
+    Quality -->|Yes| Load[Load approved records into local SQLite file]
     Load --> Verify[Verify counts, keys, and relationships]
     Verify --> Downstream[SQL analysis, Python analysis, ML experiments, and website]
 ```

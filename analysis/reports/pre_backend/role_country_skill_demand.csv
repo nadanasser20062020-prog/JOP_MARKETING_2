@@ -1,0 +1,376 @@
+role_rank,role_id,display_title,role_record_count,country_rank,country_key,country_or_territory_label,role_country_job_record_count,country_mapped_role_records,share_of_country_mapped_role_records_percent,denominator_role_country_records_with_eligible_skills,role_country_source_dataset_count,skill_rank,skill_id,skill_name,skill_category,skill_job_record_count,share_of_role_country_records_with_eligible_skills_percent
+1,data engineer,DATA ENGINEER,56513,1,united states,United States,11265,56169,20.06,10806,5,1,skill:sql,SQL,query_language,8575,79.35
+1,data engineer,DATA ENGINEER,56513,1,united states,United States,11265,56169,20.06,10806,5,2,skill:python,Python,programming_language,8025,74.26
+1,data engineer,DATA ENGINEER,56513,1,united states,United States,11265,56169,20.06,10806,5,3,skill:aws,Amazon Web Services (AWS),cloud_platform,4825,44.65
+1,data engineer,DATA ENGINEER,56513,1,united states,United States,11265,56169,20.06,10806,5,4,skill:spark,Apache Spark,data_engineering,4400,40.72
+1,data engineer,DATA ENGINEER,56513,1,united states,United States,11265,56169,20.06,10806,5,5,skill:azure,Microsoft Azure,cloud_platform,3648,33.76
+1,data engineer,DATA ENGINEER,56513,2,india,India,5113,56169,9.1,4818,3,1,skill:sql,SQL,query_language,3690,76.59
+1,data engineer,DATA ENGINEER,56513,2,india,India,5113,56169,9.1,4818,3,2,skill:python,Python,programming_language,3375,70.05
+1,data engineer,DATA ENGINEER,56513,2,india,India,5113,56169,9.1,4818,3,3,skill:aws,Amazon Web Services (AWS),cloud_platform,2123,44.06
+1,data engineer,DATA ENGINEER,56513,2,india,India,5113,56169,9.1,4818,3,4,skill:spark,Apache Spark,data_engineering,1982,41.14
+1,data engineer,DATA ENGINEER,56513,2,india,India,5113,56169,9.1,4818,3,5,skill:azure,Microsoft Azure,cloud_platform,1705,35.39
+1,data engineer,DATA ENGINEER,56513,3,united kingdom,United Kingdom,4327,56169,7.7,3849,3,1,skill:sql,SQL,query_language,2790,72.49
+1,data engineer,DATA ENGINEER,56513,3,united kingdom,United Kingdom,4327,56169,7.7,3849,3,2,skill:python,Python,programming_language,2455,63.78
+1,data engineer,DATA ENGINEER,56513,3,united kingdom,United Kingdom,4327,56169,7.7,3849,3,3,skill:azure,Microsoft Azure,cloud_platform,1901,49.39
+1,data engineer,DATA ENGINEER,56513,3,united kingdom,United Kingdom,4327,56169,7.7,3849,3,4,skill:aws,Amazon Web Services (AWS),cloud_platform,1479,38.43
+1,data engineer,DATA ENGINEER,56513,3,united kingdom,United Kingdom,4327,56169,7.7,3849,3,5,skill:spark,Apache Spark,data_engineering,729,18.94
+1,data engineer,DATA ENGINEER,56513,4,netherlands,Netherlands,2618,56169,4.66,2388,3,1,skill:sql,SQL,query_language,1700,71.19
+1,data engineer,DATA ENGINEER,56513,4,netherlands,Netherlands,2618,56169,4.66,2388,3,2,skill:python,Python,programming_language,1624,68.01
+1,data engineer,DATA ENGINEER,56513,4,netherlands,Netherlands,2618,56169,4.66,2388,3,3,skill:azure,Microsoft Azure,cloud_platform,1361,56.99
+1,data engineer,DATA ENGINEER,56513,4,netherlands,Netherlands,2618,56169,4.66,2388,3,4,skill:spark,Apache Spark,data_engineering,615,25.75
+1,data engineer,DATA ENGINEER,56513,4,netherlands,Netherlands,2618,56169,4.66,2388,3,5,skill:aws,Amazon Web Services (AWS),cloud_platform,602,25.21
+1,data engineer,DATA ENGINEER,56513,5,spain,Spain,2426,56169,4.32,2282,1,1,skill:python,Python,programming_language,1511,66.21
+1,data engineer,DATA ENGINEER,56513,5,spain,Spain,2426,56169,4.32,2282,1,2,skill:sql,SQL,query_language,1498,65.64
+1,data engineer,DATA ENGINEER,56513,5,spain,Spain,2426,56169,4.32,2282,1,3,skill:aws,Amazon Web Services (AWS),cloud_platform,896,39.26
+1,data engineer,DATA ENGINEER,56513,5,spain,Spain,2426,56169,4.32,2282,1,4,skill:azure,Microsoft Azure,cloud_platform,885,38.78
+1,data engineer,DATA ENGINEER,56513,5,spain,Spain,2426,56169,4.32,2282,1,5,skill:spark,Apache Spark,data_engineering,857,37.55
+2,data scientist,DATA SCIENTIST,44977,1,united states,United States,17428,44586,39.09,15690,5,1,skill:python,Python,programming_language,13706,87.36
+2,data scientist,DATA SCIENTIST,44977,1,united states,United States,17428,44586,39.09,15690,5,2,skill:sql,SQL,query_language,9961,63.49
+2,data scientist,DATA SCIENTIST,44977,1,united states,United States,17428,44586,39.09,15690,5,3,skill:r,R,programming_language,8293,52.86
+2,data scientist,DATA SCIENTIST,44977,1,united states,United States,17428,44586,39.09,15690,5,4,skill:tableau,Tableau,data_analytics,4309,27.46
+2,data scientist,DATA SCIENTIST,44977,1,united states,United States,17428,44586,39.09,15690,5,5,skill:tensorflow,TensorFlow,ai_ml,3935,25.08
+2,data scientist,DATA SCIENTIST,44977,2,india,India,4216,44586,9.46,3774,2,1,skill:python,Python,programming_language,3258,86.33
+2,data scientist,DATA SCIENTIST,44977,2,india,India,4216,44586,9.46,3774,2,2,skill:sql,SQL,query_language,2139,56.68
+2,data scientist,DATA SCIENTIST,44977,2,india,India,4216,44586,9.46,3774,2,3,skill:r,R,programming_language,1572,41.65
+2,data scientist,DATA SCIENTIST,44977,2,india,India,4216,44586,9.46,3774,2,4,skill:tableau,Tableau,data_analytics,925,24.51
+2,data scientist,DATA SCIENTIST,44977,2,india,India,4216,44586,9.46,3774,2,5,skill:aws,Amazon Web Services (AWS),cloud_platform,914,24.22
+2,data scientist,DATA SCIENTIST,44977,3,united kingdom,United Kingdom,2966,44586,6.65,2596,3,1,skill:python,Python,programming_language,2297,88.48
+2,data scientist,DATA SCIENTIST,44977,3,united kingdom,United Kingdom,2966,44586,6.65,2596,3,2,skill:sql,SQL,query_language,1473,56.74
+2,data scientist,DATA SCIENTIST,44977,3,united kingdom,United Kingdom,2966,44586,6.65,2596,3,3,skill:r,R,programming_language,934,35.98
+2,data scientist,DATA SCIENTIST,44977,3,united kingdom,United Kingdom,2966,44586,6.65,2596,3,4,skill:aws,Amazon Web Services (AWS),cloud_platform,594,22.88
+2,data scientist,DATA SCIENTIST,44977,3,united kingdom,United Kingdom,2966,44586,6.65,2596,3,5,skill:azure,Microsoft Azure,cloud_platform,515,19.84
+2,data scientist,DATA SCIENTIST,44977,4,spain,Spain,1705,44586,3.82,1560,2,1,skill:python,Python,programming_language,1381,88.53
+2,data scientist,DATA SCIENTIST,44977,4,spain,Spain,1705,44586,3.82,1560,2,2,skill:sql,SQL,query_language,855,54.81
+2,data scientist,DATA SCIENTIST,44977,4,spain,Spain,1705,44586,3.82,1560,2,3,skill:r,R,programming_language,616,39.49
+2,data scientist,DATA SCIENTIST,44977,4,spain,Spain,1705,44586,3.82,1560,2,4,skill:aws,Amazon Web Services (AWS),cloud_platform,333,21.35
+2,data scientist,DATA SCIENTIST,44977,4,spain,Spain,1705,44586,3.82,1560,2,5,skill:azure,Microsoft Azure,cloud_platform,312,20.0
+2,data scientist,DATA SCIENTIST,44977,5,italy,Italy,1579,44586,3.54,1386,1,1,skill:python,Python,programming_language,1203,86.8
+2,data scientist,DATA SCIENTIST,44977,5,italy,Italy,1579,44586,3.54,1386,1,2,skill:sql,SQL,query_language,594,42.86
+2,data scientist,DATA SCIENTIST,44977,5,italy,Italy,1579,44586,3.54,1386,1,3,skill:r,R,programming_language,559,40.33
+2,data scientist,DATA SCIENTIST,44977,5,italy,Italy,1579,44586,3.54,1386,1,4,skill:tensorflow,TensorFlow,ai_ml,296,21.36
+2,data scientist,DATA SCIENTIST,44977,5,italy,Italy,1579,44586,3.54,1386,1,5,skill:pandas,pandas,data_analytics,262,18.9
+3,data analyst,DATA ANALYST,44597,1,united states,United States,15359,44470,34.54,13033,2,1,skill:sql,SQL,query_language,9122,69.99
+3,data analyst,DATA ANALYST,44597,1,united states,United States,15359,44470,34.54,13033,2,2,skill:excel,Microsoft Excel,office_productivity,6481,49.73
+3,data analyst,DATA ANALYST,44597,1,united states,United States,15359,44470,34.54,13033,2,3,skill:tableau,Tableau,data_analytics,5122,39.3
+3,data analyst,DATA ANALYST,44597,1,united states,United States,15359,44470,34.54,13033,2,4,skill:python,Python,programming_language,4782,36.69
+3,data analyst,DATA ANALYST,44597,1,united states,United States,15359,44470,34.54,13033,2,5,skill:power-bi,Power BI,data_analytics,3368,25.84
+3,data analyst,DATA ANALYST,44597,2,united kingdom,United Kingdom,3440,44470,7.74,2804,2,1,skill:sql,SQL,query_language,1753,62.52
+3,data analyst,DATA ANALYST,44597,2,united kingdom,United Kingdom,3440,44470,7.74,2804,2,2,skill:excel,Microsoft Excel,office_productivity,1472,52.5
+3,data analyst,DATA ANALYST,44597,2,united kingdom,United Kingdom,3440,44470,7.74,2804,2,3,skill:power-bi,Power BI,data_analytics,1075,38.34
+3,data analyst,DATA ANALYST,44597,2,united kingdom,United Kingdom,3440,44470,7.74,2804,2,4,skill:python,Python,programming_language,742,26.46
+3,data analyst,DATA ANALYST,44597,2,united kingdom,United Kingdom,3440,44470,7.74,2804,2,5,skill:tableau,Tableau,data_analytics,653,23.29
+3,data analyst,DATA ANALYST,44597,3,singapore,Singapore,1764,44470,3.97,1611,1,1,skill:sql,SQL,query_language,1184,73.49
+3,data analyst,DATA ANALYST,44597,3,singapore,Singapore,1764,44470,3.97,1611,1,2,skill:python,Python,programming_language,1034,64.18
+3,data analyst,DATA ANALYST,44597,3,singapore,Singapore,1764,44470,3.97,1611,1,3,skill:tableau,Tableau,data_analytics,795,49.35
+3,data analyst,DATA ANALYST,44597,3,singapore,Singapore,1764,44470,3.97,1611,1,4,skill:excel,Microsoft Excel,office_productivity,671,41.65
+3,data analyst,DATA ANALYST,44597,3,singapore,Singapore,1764,44470,3.97,1611,1,5,skill:r,R,programming_language,460,28.55
+3,data analyst,DATA ANALYST,44597,4,france,France,1590,44470,3.58,1280,1,1,skill:sql,SQL,query_language,858,67.03
+3,data analyst,DATA ANALYST,44597,4,france,France,1590,44470,3.58,1280,1,2,skill:python,Python,programming_language,621,48.52
+3,data analyst,DATA ANALYST,44597,4,france,France,1590,44470,3.58,1280,1,3,skill:tableau,Tableau,data_analytics,424,33.13
+3,data analyst,DATA ANALYST,44597,4,france,France,1590,44470,3.58,1280,1,4,skill:power-bi,Power BI,data_analytics,417,32.58
+3,data analyst,DATA ANALYST,44597,4,france,France,1590,44470,3.58,1280,1,5,skill:excel,Microsoft Excel,office_productivity,312,24.38
+3,data analyst,DATA ANALYST,44597,5,india,India,1574,44470,3.54,1294,2,1,skill:sql,SQL,query_language,916,70.79
+3,data analyst,DATA ANALYST,44597,5,india,India,1574,44470,3.54,1294,2,2,skill:excel,Microsoft Excel,office_productivity,613,47.37
+3,data analyst,DATA ANALYST,44597,5,india,India,1574,44470,3.54,1294,2,3,skill:python,Python,programming_language,612,47.3
+3,data analyst,DATA ANALYST,44597,5,india,India,1574,44470,3.54,1294,2,4,skill:tableau,Tableau,data_analytics,513,39.64
+3,data analyst,DATA ANALYST,44597,5,india,India,1574,44470,3.54,1294,2,5,skill:power-bi,Power BI,data_analytics,395,30.53
+4,senior data engineer,SENIOR DATA ENGINEER,20759,1,united states,United States,5008,20548,24.37,4862,5,1,skill:sql,SQL,query_language,3941,81.06
+4,senior data engineer,SENIOR DATA ENGINEER,20759,1,united states,United States,5008,20548,24.37,4862,5,2,skill:python,Python,programming_language,3856,79.31
+4,senior data engineer,SENIOR DATA ENGINEER,20759,1,united states,United States,5008,20548,24.37,4862,5,3,skill:aws,Amazon Web Services (AWS),cloud_platform,2615,53.78
+4,senior data engineer,SENIOR DATA ENGINEER,20759,1,united states,United States,5008,20548,24.37,4862,5,4,skill:spark,Apache Spark,data_engineering,2461,50.62
+4,senior data engineer,SENIOR DATA ENGINEER,20759,1,united states,United States,5008,20548,24.37,4862,5,5,skill:azure,Microsoft Azure,cloud_platform,1867,38.4
+4,senior data engineer,SENIOR DATA ENGINEER,20759,2,india,India,2245,20548,10.93,2156,3,1,skill:sql,SQL,query_language,1680,77.92
+4,senior data engineer,SENIOR DATA ENGINEER,20759,2,india,India,2245,20548,10.93,2156,3,2,skill:python,Python,programming_language,1555,72.12
+4,senior data engineer,SENIOR DATA ENGINEER,20759,2,india,India,2245,20548,10.93,2156,3,3,skill:aws,Amazon Web Services (AWS),cloud_platform,1144,53.06
+4,senior data engineer,SENIOR DATA ENGINEER,20759,2,india,India,2245,20548,10.93,2156,3,4,skill:spark,Apache Spark,data_engineering,1082,50.19
+4,senior data engineer,SENIOR DATA ENGINEER,20759,2,india,India,2245,20548,10.93,2156,3,5,skill:azure,Microsoft Azure,cloud_platform,835,38.73
+4,senior data engineer,SENIOR DATA ENGINEER,20759,3,united kingdom,United Kingdom,1921,20548,9.35,1755,3,1,skill:python,Python,programming_language,1264,72.02
+4,senior data engineer,SENIOR DATA ENGINEER,20759,3,united kingdom,United Kingdom,1921,20548,9.35,1755,3,2,skill:sql,SQL,query_language,1207,68.77
+4,senior data engineer,SENIOR DATA ENGINEER,20759,3,united kingdom,United Kingdom,1921,20548,9.35,1755,3,3,skill:azure,Microsoft Azure,cloud_platform,818,46.61
+4,senior data engineer,SENIOR DATA ENGINEER,20759,3,united kingdom,United Kingdom,1921,20548,9.35,1755,3,4,skill:aws,Amazon Web Services (AWS),cloud_platform,792,45.13
+4,senior data engineer,SENIOR DATA ENGINEER,20759,3,united kingdom,United Kingdom,1921,20548,9.35,1755,3,5,skill:spark,Apache Spark,data_engineering,421,23.99
+4,senior data engineer,SENIOR DATA ENGINEER,20759,4,australia,Australia,912,20548,4.44,861,2,1,skill:sql,SQL,query_language,619,71.89
+4,senior data engineer,SENIOR DATA ENGINEER,20759,4,australia,Australia,912,20548,4.44,861,2,2,skill:python,Python,programming_language,584,67.83
+4,senior data engineer,SENIOR DATA ENGINEER,20759,4,australia,Australia,912,20548,4.44,861,2,3,skill:aws,Amazon Web Services (AWS),cloud_platform,422,49.01
+4,senior data engineer,SENIOR DATA ENGINEER,20759,4,australia,Australia,912,20548,4.44,861,2,4,skill:azure,Microsoft Azure,cloud_platform,371,43.09
+4,senior data engineer,SENIOR DATA ENGINEER,20759,4,australia,Australia,912,20548,4.44,861,2,5,skill:spark,Apache Spark,data_engineering,259,30.08
+4,senior data engineer,SENIOR DATA ENGINEER,20759,5,canada,Canada,881,20548,4.29,856,3,1,skill:sql,SQL,query_language,625,73.01
+4,senior data engineer,SENIOR DATA ENGINEER,20759,5,canada,Canada,881,20548,4.29,856,3,2,skill:python,Python,programming_language,620,72.43
+4,senior data engineer,SENIOR DATA ENGINEER,20759,5,canada,Canada,881,20548,4.29,856,3,3,skill:aws,Amazon Web Services (AWS),cloud_platform,443,51.75
+4,senior data engineer,SENIOR DATA ENGINEER,20759,5,canada,Canada,881,20548,4.29,856,3,4,skill:spark,Apache Spark,data_engineering,396,46.26
+4,senior data engineer,SENIOR DATA ENGINEER,20759,5,canada,Canada,881,20548,4.29,856,3,5,skill:azure,Microsoft Azure,cloud_platform,357,41.71
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,1,united states,United States,5406,13662,39.57,4959,3,1,skill:python,Python,programming_language,4464,90.02
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,1,united states,United States,5406,13662,39.57,4959,3,2,skill:sql,SQL,query_language,3281,66.16
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,1,united states,United States,5406,13662,39.57,4959,3,3,skill:r,R,programming_language,2546,51.34
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,1,united states,United States,5406,13662,39.57,4959,3,4,skill:tensorflow,TensorFlow,ai_ml,1459,29.42
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,1,united states,United States,5406,13662,39.57,4959,3,5,skill:aws,Amazon Web Services (AWS),cloud_platform,1407,28.37
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,2,united kingdom,United Kingdom,1213,13662,8.88,1065,3,1,skill:python,Python,programming_language,957,89.86
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,2,united kingdom,United Kingdom,1213,13662,8.88,1065,3,2,skill:sql,SQL,query_language,622,58.4
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,2,united kingdom,United Kingdom,1213,13662,8.88,1065,3,3,skill:r,R,programming_language,346,32.49
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,2,united kingdom,United Kingdom,1213,13662,8.88,1065,3,4,skill:aws,Amazon Web Services (AWS),cloud_platform,301,28.26
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,2,united kingdom,United Kingdom,1213,13662,8.88,1065,3,5,skill:azure,Microsoft Azure,cloud_platform,253,23.76
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,3,india,India,1159,13662,8.48,1041,3,1,skill:python,Python,programming_language,913,87.7
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,3,india,India,1159,13662,8.48,1041,3,2,skill:sql,SQL,query_language,623,59.85
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,3,india,India,1159,13662,8.48,1041,3,3,skill:r,R,programming_language,367,35.25
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,3,india,India,1159,13662,8.48,1041,3,4,skill:aws,Amazon Web Services (AWS),cloud_platform,328,31.51
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,3,india,India,1159,13662,8.48,1041,3,5,skill:tensorflow,TensorFlow,ai_ml,290,27.86
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,4,spain,Spain,592,13662,4.33,554,2,1,skill:python,Python,programming_language,491,88.63
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,4,spain,Spain,592,13662,4.33,554,2,2,skill:sql,SQL,query_language,293,52.89
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,4,spain,Spain,592,13662,4.33,554,2,3,skill:r,R,programming_language,213,38.45
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,4,spain,Spain,592,13662,4.33,554,2,4,skill:aws,Amazon Web Services (AWS),cloud_platform,146,26.35
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,4,spain,Spain,592,13662,4.33,554,2,5,skill:spark,Apache Spark,data_engineering,130,23.47
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,5,germany,Germany,348,13662,2.55,311,3,1,skill:python,Python,programming_language,285,91.64
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,5,germany,Germany,348,13662,2.55,311,3,2,skill:sql,SQL,query_language,149,47.91
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,5,germany,Germany,348,13662,2.55,311,3,3,skill:aws,Amazon Web Services (AWS),cloud_platform,98,31.51
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,5,germany,Germany,348,13662,2.55,311,3,4,skill:r,R,programming_language,90,28.94
+5,senior data scientist,SENIOR DATA SCIENTIST,13859,5,germany,Germany,348,13662,2.55,311,3,5,skill:azure,Microsoft Azure,cloud_platform,68,21.86
+6,senior data analyst,SENIOR DATA ANALYST,8576,1,united states,United States,3385,8560,39.54,3112,2,1,skill:sql,SQL,query_language,2557,82.17
+6,senior data analyst,SENIOR DATA ANALYST,8576,1,united states,United States,3385,8560,39.54,3112,2,2,skill:tableau,Tableau,data_analytics,1566,50.32
+6,senior data analyst,SENIOR DATA ANALYST,8576,1,united states,United States,3385,8560,39.54,3112,2,3,skill:python,Python,programming_language,1549,49.78
+6,senior data analyst,SENIOR DATA ANALYST,8576,1,united states,United States,3385,8560,39.54,3112,2,4,skill:excel,Microsoft Excel,office_productivity,1211,38.91
+6,senior data analyst,SENIOR DATA ANALYST,8576,1,united states,United States,3385,8560,39.54,3112,2,5,skill:r,R,programming_language,929,29.85
+6,senior data analyst,SENIOR DATA ANALYST,8576,2,united kingdom,United Kingdom,666,8560,7.78,565,1,1,skill:sql,SQL,query_language,433,76.64
+6,senior data analyst,SENIOR DATA ANALYST,8576,2,united kingdom,United Kingdom,666,8560,7.78,565,1,2,skill:python,Python,programming_language,270,47.79
+6,senior data analyst,SENIOR DATA ANALYST,8576,2,united kingdom,United Kingdom,666,8560,7.78,565,1,3,skill:power-bi,Power BI,data_analytics,207,36.64
+6,senior data analyst,SENIOR DATA ANALYST,8576,2,united kingdom,United Kingdom,666,8560,7.78,565,1,4,skill:excel,Microsoft Excel,office_productivity,199,35.22
+6,senior data analyst,SENIOR DATA ANALYST,8576,2,united kingdom,United Kingdom,666,8560,7.78,565,1,5,skill:tableau,Tableau,data_analytics,191,33.81
+6,senior data analyst,SENIOR DATA ANALYST,8576,3,singapore,Singapore,372,8560,4.35,349,1,1,skill:sql,SQL,query_language,282,80.8
+6,senior data analyst,SENIOR DATA ANALYST,8576,3,singapore,Singapore,372,8560,4.35,349,1,2,skill:python,Python,programming_language,262,75.07
+6,senior data analyst,SENIOR DATA ANALYST,8576,3,singapore,Singapore,372,8560,4.35,349,1,3,skill:tableau,Tableau,data_analytics,200,57.31
+6,senior data analyst,SENIOR DATA ANALYST,8576,3,singapore,Singapore,372,8560,4.35,349,1,4,skill:r,R,programming_language,123,35.24
+6,senior data analyst,SENIOR DATA ANALYST,8576,3,singapore,Singapore,372,8560,4.35,349,1,5,skill:power-bi,Power BI,data_analytics,103,29.51
+6,senior data analyst,SENIOR DATA ANALYST,8576,4,india,India,260,8560,3.04,235,1,1,skill:sql,SQL,query_language,194,82.55
+6,senior data analyst,SENIOR DATA ANALYST,8576,4,india,India,260,8560,3.04,235,1,2,skill:python,Python,programming_language,133,56.6
+6,senior data analyst,SENIOR DATA ANALYST,8576,4,india,India,260,8560,3.04,235,1,3,skill:tableau,Tableau,data_analytics,117,49.79
+6,senior data analyst,SENIOR DATA ANALYST,8576,4,india,India,260,8560,3.04,235,1,4,skill:excel,Microsoft Excel,office_productivity,73,31.06
+6,senior data analyst,SENIOR DATA ANALYST,8576,4,india,India,260,8560,3.04,235,1,5,skill:power-bi,Power BI,data_analytics,66,28.09
+6,senior data analyst,SENIOR DATA ANALYST,8576,5,spain,Spain,233,8560,2.72,224,2,1,skill:sql,SQL,query_language,172,76.79
+6,senior data analyst,SENIOR DATA ANALYST,8576,5,spain,Spain,233,8560,2.72,224,2,2,skill:python,Python,programming_language,112,50.0
+6,senior data analyst,SENIOR DATA ANALYST,8576,5,spain,Spain,233,8560,2.72,224,2,3,skill:tableau,Tableau,data_analytics,101,45.09
+6,senior data analyst,SENIOR DATA ANALYST,8576,5,spain,Spain,233,8560,2.72,224,2,4,skill:power-bi,Power BI,data_analytics,70,31.25
+6,senior data analyst,SENIOR DATA ANALYST,8576,5,spain,Spain,233,8560,2.72,224,2,5,skill:looker,Looker,data_analytics,59,26.34
+7,lead data engineer,LEAD DATA ENGINEER,4139,1,united states,United States,1432,4108,34.86,1374,4,1,skill:sql,SQL,query_language,1121,81.59
+7,lead data engineer,LEAD DATA ENGINEER,4139,1,united states,United States,1432,4108,34.86,1374,4,2,skill:python,Python,programming_language,1109,80.71
+7,lead data engineer,LEAD DATA ENGINEER,4139,1,united states,United States,1432,4108,34.86,1374,4,3,skill:aws,Amazon Web Services (AWS),cloud_platform,875,63.68
+7,lead data engineer,LEAD DATA ENGINEER,4139,1,united states,United States,1432,4108,34.86,1374,4,4,skill:spark,Apache Spark,data_engineering,818,59.53
+7,lead data engineer,LEAD DATA ENGINEER,4139,1,united states,United States,1432,4108,34.86,1374,4,5,skill:kafka,Apache Kafka,data_engineering,673,48.98
+7,lead data engineer,LEAD DATA ENGINEER,4139,2,united kingdom,United Kingdom,658,4108,16.02,599,2,1,skill:python,Python,programming_language,381,63.61
+7,lead data engineer,LEAD DATA ENGINEER,4139,2,united kingdom,United Kingdom,658,4108,16.02,599,2,2,skill:sql,SQL,query_language,378,63.11
+7,lead data engineer,LEAD DATA ENGINEER,4139,2,united kingdom,United Kingdom,658,4108,16.02,599,2,3,skill:azure,Microsoft Azure,cloud_platform,308,51.42
+7,lead data engineer,LEAD DATA ENGINEER,4139,2,united kingdom,United Kingdom,658,4108,16.02,599,2,4,skill:aws,Amazon Web Services (AWS),cloud_platform,270,45.08
+7,lead data engineer,LEAD DATA ENGINEER,4139,2,united kingdom,United Kingdom,658,4108,16.02,599,2,5,skill:spark,Apache Spark,data_engineering,152,25.38
+7,lead data engineer,LEAD DATA ENGINEER,4139,3,india,India,459,4108,11.17,446,2,1,skill:sql,SQL,query_language,332,74.44
+7,lead data engineer,LEAD DATA ENGINEER,4139,3,india,India,459,4108,11.17,446,2,2,skill:python,Python,programming_language,295,66.14
+7,lead data engineer,LEAD DATA ENGINEER,4139,3,india,India,459,4108,11.17,446,2,3,skill:aws,Amazon Web Services (AWS),cloud_platform,219,49.1
+7,lead data engineer,LEAD DATA ENGINEER,4139,3,india,India,459,4108,11.17,446,2,4,skill:spark,Apache Spark,data_engineering,214,47.98
+7,lead data engineer,LEAD DATA ENGINEER,4139,3,india,India,459,4108,11.17,446,2,5,skill:azure,Microsoft Azure,cloud_platform,184,41.26
+7,lead data engineer,LEAD DATA ENGINEER,4139,4,australia,Australia,160,4108,3.89,150,2,1,skill:python,Python,programming_language,101,67.33
+7,lead data engineer,LEAD DATA ENGINEER,4139,4,australia,Australia,160,4108,3.89,150,2,2,skill:aws,Amazon Web Services (AWS),cloud_platform,100,66.67
+7,lead data engineer,LEAD DATA ENGINEER,4139,4,australia,Australia,160,4108,3.89,150,2,3,skill:sql,SQL,query_language,100,66.67
+7,lead data engineer,LEAD DATA ENGINEER,4139,4,australia,Australia,160,4108,3.89,150,2,4,skill:spark,Apache Spark,data_engineering,64,42.67
+7,lead data engineer,LEAD DATA ENGINEER,4139,4,australia,Australia,160,4108,3.89,150,2,5,skill:azure,Microsoft Azure,cloud_platform,49,32.67
+7,lead data engineer,LEAD DATA ENGINEER,4139,5,canada,Canada,138,4108,3.36,130,2,1,skill:python,Python,programming_language,89,68.46
+7,lead data engineer,LEAD DATA ENGINEER,4139,5,canada,Canada,138,4108,3.36,130,2,2,skill:sql,SQL,query_language,85,65.38
+7,lead data engineer,LEAD DATA ENGINEER,4139,5,canada,Canada,138,4108,3.36,130,2,3,skill:aws,Amazon Web Services (AWS),cloud_platform,64,49.23
+7,lead data engineer,LEAD DATA ENGINEER,4139,5,canada,Canada,138,4108,3.36,130,2,4,skill:spark,Apache Spark,data_engineering,47,36.15
+7,lead data engineer,LEAD DATA ENGINEER,4139,5,canada,Canada,138,4108,3.36,130,2,5,skill:azure,Microsoft Azure,cloud_platform,47,36.15
+8,azure data engineer,AZURE DATA ENGINEER,3599,1,india,India,1170,3577,32.71,1158,2,1,skill:azure,Microsoft Azure,cloud_platform,1138,98.27
+8,azure data engineer,AZURE DATA ENGINEER,3599,1,india,India,1170,3577,32.71,1158,2,2,skill:sql,SQL,query_language,935,80.74
+8,azure data engineer,AZURE DATA ENGINEER,3599,1,india,India,1170,3577,32.71,1158,2,3,skill:databricks,Databricks,data_platform,631,54.49
+8,azure data engineer,AZURE DATA ENGINEER,3599,1,india,India,1170,3577,32.71,1158,2,4,skill:python,Python,programming_language,619,53.45
+8,azure data engineer,AZURE DATA ENGINEER,3599,1,india,India,1170,3577,32.71,1158,2,5,skill:pyspark,PySpark,data_engineering,421,36.36
+8,azure data engineer,AZURE DATA ENGINEER,3599,2,united states,United States,658,3577,18.4,651,2,1,skill:azure,Microsoft Azure,cloud_platform,637,97.85
+8,azure data engineer,AZURE DATA ENGINEER,3599,2,united states,United States,658,3577,18.4,651,2,2,skill:sql,SQL,query_language,522,80.18
+8,azure data engineer,AZURE DATA ENGINEER,3599,2,united states,United States,658,3577,18.4,651,2,3,skill:python,Python,programming_language,405,62.21
+8,azure data engineer,AZURE DATA ENGINEER,3599,2,united states,United States,658,3577,18.4,651,2,4,skill:databricks,Databricks,data_platform,364,55.91
+8,azure data engineer,AZURE DATA ENGINEER,3599,2,united states,United States,658,3577,18.4,651,2,5,skill:spark,Apache Spark,data_engineering,266,40.86
+8,azure data engineer,AZURE DATA ENGINEER,3599,3,united kingdom,United Kingdom,327,3577,9.14,322,1,1,skill:azure,Microsoft Azure,cloud_platform,320,99.38
+8,azure data engineer,AZURE DATA ENGINEER,3599,3,united kingdom,United Kingdom,327,3577,9.14,322,1,2,skill:sql,SQL,query_language,257,79.81
+8,azure data engineer,AZURE DATA ENGINEER,3599,3,united kingdom,United Kingdom,327,3577,9.14,322,1,3,skill:python,Python,programming_language,156,48.45
+8,azure data engineer,AZURE DATA ENGINEER,3599,3,united kingdom,United Kingdom,327,3577,9.14,322,1,4,skill:databricks,Databricks,data_platform,146,45.34
+8,azure data engineer,AZURE DATA ENGINEER,3599,3,united kingdom,United Kingdom,327,3577,9.14,322,1,5,skill:power-bi,Power BI,data_analytics,111,34.47
+8,azure data engineer,AZURE DATA ENGINEER,3599,4,canada,Canada,211,3577,5.9,211,1,1,skill:azure,Microsoft Azure,cloud_platform,205,97.16
+8,azure data engineer,AZURE DATA ENGINEER,3599,4,canada,Canada,211,3577,5.9,211,1,2,skill:sql,SQL,query_language,156,73.93
+8,azure data engineer,AZURE DATA ENGINEER,3599,4,canada,Canada,211,3577,5.9,211,1,3,skill:databricks,Databricks,data_platform,116,54.98
+8,azure data engineer,AZURE DATA ENGINEER,3599,4,canada,Canada,211,3577,5.9,211,1,4,skill:python,Python,programming_language,107,50.71
+8,azure data engineer,AZURE DATA ENGINEER,3599,4,canada,Canada,211,3577,5.9,211,1,5,skill:spark,Apache Spark,data_engineering,72,34.12
+8,azure data engineer,AZURE DATA ENGINEER,3599,5,netherlands,Netherlands,189,3577,5.28,189,1,1,skill:azure,Microsoft Azure,cloud_platform,187,98.94
+8,azure data engineer,AZURE DATA ENGINEER,3599,5,netherlands,Netherlands,189,3577,5.28,189,1,2,skill:databricks,Databricks,data_platform,125,66.14
+8,azure data engineer,AZURE DATA ENGINEER,3599,5,netherlands,Netherlands,189,3577,5.28,189,1,3,skill:python,Python,programming_language,125,66.14
+8,azure data engineer,AZURE DATA ENGINEER,3599,5,netherlands,Netherlands,189,3577,5.28,189,1,4,skill:sql,SQL,query_language,116,61.38
+8,azure data engineer,AZURE DATA ENGINEER,3599,5,netherlands,Netherlands,189,3577,5.28,189,1,5,skill:spark,Apache Spark,data_engineering,49,25.93
+9,lead data scientist,LEAD DATA SCIENTIST,3459,1,united states,United States,1404,3422,41.03,1265,3,1,skill:python,Python,programming_language,1149,90.83
+9,lead data scientist,LEAD DATA SCIENTIST,3459,1,united states,United States,1404,3422,41.03,1265,3,2,skill:sql,SQL,query_language,875,69.17
+9,lead data scientist,LEAD DATA SCIENTIST,3459,1,united states,United States,1404,3422,41.03,1265,3,3,skill:r,R,programming_language,738,58.34
+9,lead data scientist,LEAD DATA SCIENTIST,3459,1,united states,United States,1404,3422,41.03,1265,3,4,skill:spark,Apache Spark,data_engineering,395,31.23
+9,lead data scientist,LEAD DATA SCIENTIST,3459,1,united states,United States,1404,3422,41.03,1265,3,5,skill:tensorflow,TensorFlow,ai_ml,352,27.83
+9,lead data scientist,LEAD DATA SCIENTIST,3459,2,united kingdom,United Kingdom,474,3422,13.85,406,1,1,skill:python,Python,programming_language,349,85.96
+9,lead data scientist,LEAD DATA SCIENTIST,3459,2,united kingdom,United Kingdom,474,3422,13.85,406,1,2,skill:sql,SQL,query_language,209,51.48
+9,lead data scientist,LEAD DATA SCIENTIST,3459,2,united kingdom,United Kingdom,474,3422,13.85,406,1,3,skill:r,R,programming_language,157,38.67
+9,lead data scientist,LEAD DATA SCIENTIST,3459,2,united kingdom,United Kingdom,474,3422,13.85,406,1,4,skill:aws,Amazon Web Services (AWS),cloud_platform,97,23.89
+9,lead data scientist,LEAD DATA SCIENTIST,3459,2,united kingdom,United Kingdom,474,3422,13.85,406,1,5,skill:azure,Microsoft Azure,cloud_platform,76,18.72
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3,india,India,431,3422,12.59,392,3,1,skill:python,Python,programming_language,327,83.42
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3,india,India,431,3422,12.59,392,3,2,skill:sql,SQL,query_language,220,56.12
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3,india,India,431,3422,12.59,392,3,3,skill:r,R,programming_language,168,42.86
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3,india,India,431,3422,12.59,392,3,4,skill:tensorflow,TensorFlow,ai_ml,140,35.71
+9,lead data scientist,LEAD DATA SCIENTIST,3459,3,india,India,431,3422,12.59,392,3,5,skill:spark,Apache Spark,data_engineering,126,32.14
+9,lead data scientist,LEAD DATA SCIENTIST,3459,4,singapore,Singapore,109,3422,3.19,104,1,1,skill:python,Python,programming_language,91,87.5
+9,lead data scientist,LEAD DATA SCIENTIST,3459,4,singapore,Singapore,109,3422,3.19,104,1,2,skill:sql,SQL,query_language,58,55.77
+9,lead data scientist,LEAD DATA SCIENTIST,3459,4,singapore,Singapore,109,3422,3.19,104,1,3,skill:r,R,programming_language,45,43.27
+9,lead data scientist,LEAD DATA SCIENTIST,3459,4,singapore,Singapore,109,3422,3.19,104,1,4,skill:tensorflow,TensorFlow,ai_ml,36,34.62
+9,lead data scientist,LEAD DATA SCIENTIST,3459,4,singapore,Singapore,109,3422,3.19,104,1,5,skill:tableau,Tableau,data_analytics,33,31.73
+9,lead data scientist,LEAD DATA SCIENTIST,3459,5,france,France,73,3422,2.13,55,1,1,skill:python,Python,programming_language,49,89.09
+9,lead data scientist,LEAD DATA SCIENTIST,3459,5,france,France,73,3422,2.13,55,1,2,skill:sql,SQL,query_language,26,47.27
+9,lead data scientist,LEAD DATA SCIENTIST,3459,5,france,France,73,3422,2.13,55,1,3,skill:aws,Amazon Web Services (AWS),cloud_platform,20,36.36
+9,lead data scientist,LEAD DATA SCIENTIST,3459,5,france,France,73,3422,2.13,55,1,4,skill:spark,Apache Spark,data_engineering,19,34.55
+9,lead data scientist,LEAD DATA SCIENTIST,3459,5,france,France,73,3422,2.13,55,1,5,skill:gcp,Google Cloud Platform (GCP),cloud_platform,18,32.73
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,1,singapore,Singapore,164,3176,5.16,150,1,1,skill:python,Python,programming_language,127,84.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,1,singapore,Singapore,164,3176,5.16,150,1,2,skill:tensorflow,TensorFlow,ai_ml,73,48.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,1,singapore,Singapore,164,3176,5.16,150,1,3,skill:pytorch,PyTorch,ai_ml,58,38.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,1,singapore,Singapore,164,3176,5.16,150,1,4,skill:spark,Apache Spark,data_engineering,48,32.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,1,singapore,Singapore,164,3176,5.16,150,1,5,skill:sql,SQL,query_language,48,32.0
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2,canada,Canada,141,3176,4.44,131,2,1,skill:python,Python,programming_language,114,87.02
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2,canada,Canada,141,3176,4.44,131,2,2,skill:pytorch,PyTorch,ai_ml,75,57.25
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2,canada,Canada,141,3176,4.44,131,2,3,skill:tensorflow,TensorFlow,ai_ml,74,56.49
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2,canada,Canada,141,3176,4.44,131,2,4,skill:aws,Amazon Web Services (AWS),cloud_platform,68,51.91
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,2,canada,Canada,141,3176,4.44,131,2,5,skill:sql,SQL,query_language,55,41.98
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,3,australia,Australia,135,3176,4.25,122,1,1,skill:python,Python,programming_language,108,88.52
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,3,australia,Australia,135,3176,4.25,122,1,2,skill:pytorch,PyTorch,ai_ml,54,44.26
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,3,australia,Australia,135,3176,4.25,122,1,3,skill:aws,Amazon Web Services (AWS),cloud_platform,38,31.15
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,3,australia,Australia,135,3176,4.25,122,1,4,skill:tensorflow,TensorFlow,ai_ml,37,30.33
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,3,australia,Australia,135,3176,4.25,122,1,5,skill:sql,SQL,query_language,35,28.69
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,4,india,India,133,3176,4.19,132,1,1,skill:python,Python,programming_language,111,84.09
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,4,india,India,133,3176,4.19,132,1,2,skill:pytorch,PyTorch,ai_ml,75,56.82
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,4,india,India,133,3176,4.19,132,1,3,skill:tensorflow,TensorFlow,ai_ml,74,56.06
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,4,india,India,133,3176,4.19,132,1,4,skill:aws,Amazon Web Services (AWS),cloud_platform,55,41.67
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,4,india,India,133,3176,4.19,132,1,5,skill:scikit-learn,scikit-learn,ai_ml,41,31.06
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,5,spain,Spain,124,3176,3.9,119,1,1,skill:python,Python,programming_language,115,96.64
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,5,spain,Spain,124,3176,3.9,119,1,2,skill:aws,Amazon Web Services (AWS),cloud_platform,60,50.42
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,5,spain,Spain,124,3176,3.9,119,1,3,skill:tensorflow,TensorFlow,ai_ml,60,50.42
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,5,spain,Spain,124,3176,3.9,119,1,4,skill:pytorch,PyTorch,ai_ml,41,34.45
+10,machine learning engineer,MACHINE LEARNING ENGINEER,3201,5,spain,Spain,124,3176,3.9,119,1,5,skill:spark,Apache Spark,data_engineering,40,33.61
+11,big data engineer,BIG DATA ENGINEER,2569,1,united states,United States,532,2558,20.8,517,2,1,skill:spark,Apache Spark,data_engineering,405,78.34
+11,big data engineer,BIG DATA ENGINEER,2569,1,united states,United States,532,2558,20.8,517,2,2,skill:python,Python,programming_language,366,70.79
+11,big data engineer,BIG DATA ENGINEER,2569,1,united states,United States,532,2558,20.8,517,2,3,skill:sql,SQL,query_language,346,66.92
+11,big data engineer,BIG DATA ENGINEER,2569,1,united states,United States,532,2558,20.8,517,2,4,skill:hadoop,Apache Hadoop,data_engineering,274,53.0
+11,big data engineer,BIG DATA ENGINEER,2569,1,united states,United States,532,2558,20.8,517,2,5,skill:aws,Amazon Web Services (AWS),cloud_platform,261,50.48
+11,big data engineer,BIG DATA ENGINEER,2569,2,india,India,445,2558,17.4,433,1,1,skill:spark,Apache Spark,data_engineering,325,75.06
+11,big data engineer,BIG DATA ENGINEER,2569,2,india,India,445,2558,17.4,433,1,2,skill:sql,SQL,query_language,295,68.13
+11,big data engineer,BIG DATA ENGINEER,2569,2,india,India,445,2558,17.4,433,1,3,skill:python,Python,programming_language,273,63.05
+11,big data engineer,BIG DATA ENGINEER,2569,2,india,India,445,2558,17.4,433,1,4,skill:hadoop,Apache Hadoop,data_engineering,261,60.28
+11,big data engineer,BIG DATA ENGINEER,2569,2,india,India,445,2558,17.4,433,1,5,skill:scala,Scala,programming_language,201,46.42
+11,big data engineer,BIG DATA ENGINEER,2569,3,spain,Spain,197,2558,7.7,186,1,1,skill:spark,Apache Spark,data_engineering,144,77.42
+11,big data engineer,BIG DATA ENGINEER,2569,3,spain,Spain,197,2558,7.7,186,1,2,skill:scala,Scala,programming_language,106,56.99
+11,big data engineer,BIG DATA ENGINEER,2569,3,spain,Spain,197,2558,7.7,186,1,3,skill:python,Python,programming_language,105,56.45
+11,big data engineer,BIG DATA ENGINEER,2569,3,spain,Spain,197,2558,7.7,186,1,4,skill:azure,Microsoft Azure,cloud_platform,103,55.38
+11,big data engineer,BIG DATA ENGINEER,2569,3,spain,Spain,197,2558,7.7,186,1,5,skill:aws,Amazon Web Services (AWS),cloud_platform,101,54.3
+11,big data engineer,BIG DATA ENGINEER,2569,4,italy,Italy,157,2558,6.14,151,1,1,skill:spark,Apache Spark,data_engineering,121,80.13
+11,big data engineer,BIG DATA ENGINEER,2569,4,italy,Italy,157,2558,6.14,151,1,2,skill:python,Python,programming_language,116,76.82
+11,big data engineer,BIG DATA ENGINEER,2569,4,italy,Italy,157,2558,6.14,151,1,3,skill:java,Java,programming_language,114,75.5
+11,big data engineer,BIG DATA ENGINEER,2569,4,italy,Italy,157,2558,6.14,151,1,4,skill:scala,Scala,programming_language,102,67.55
+11,big data engineer,BIG DATA ENGINEER,2569,4,italy,Italy,157,2558,6.14,151,1,5,skill:hadoop,Apache Hadoop,data_engineering,90,59.6
+11,big data engineer,BIG DATA ENGINEER,2569,5,singapore,Singapore,100,2558,3.91,95,1,1,skill:hadoop,Apache Hadoop,data_engineering,75,78.95
+11,big data engineer,BIG DATA ENGINEER,2569,5,singapore,Singapore,100,2558,3.91,95,1,2,skill:sql,SQL,query_language,57,60.0
+11,big data engineer,BIG DATA ENGINEER,2569,5,singapore,Singapore,100,2558,3.91,95,1,3,skill:spark,Apache Spark,data_engineering,56,58.95
+11,big data engineer,BIG DATA ENGINEER,2569,5,singapore,Singapore,100,2558,3.91,95,1,4,skill:java,Java,programming_language,47,49.47
+11,big data engineer,BIG DATA ENGINEER,2569,5,singapore,Singapore,100,2558,3.91,95,1,5,skill:python,Python,programming_language,45,47.37
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,1,united states,United States,570,2554,22.32,521,2,1,skill:sql,SQL,query_language,422,81.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,1,united states,United States,570,2554,22.32,521,2,2,skill:tableau,Tableau,data_analytics,294,56.43
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,1,united states,United States,570,2554,22.32,521,2,3,skill:power-bi,Power BI,data_analytics,246,47.22
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,1,united states,United States,570,2554,22.32,521,2,4,skill:excel,Microsoft Excel,office_productivity,243,46.64
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,1,united states,United States,570,2554,22.32,521,2,5,skill:python,Python,programming_language,187,35.89
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2,philippines,Philippines,115,2554,4.5,103,1,1,skill:sql,SQL,query_language,84,81.55
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2,philippines,Philippines,115,2554,4.5,103,1,2,skill:tableau,Tableau,data_analytics,65,63.11
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2,philippines,Philippines,115,2554,4.5,103,1,3,skill:excel,Microsoft Excel,office_productivity,58,56.31
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2,philippines,Philippines,115,2554,4.5,103,1,4,skill:power-bi,Power BI,data_analytics,54,52.43
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,2,philippines,Philippines,115,2554,4.5,103,1,5,skill:python,Python,programming_language,33,32.04
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,3,belgium,Belgium,111,2554,4.35,104,1,1,skill:sql,SQL,query_language,67,64.42
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,3,belgium,Belgium,111,2554,4.35,104,1,2,skill:power-bi,Power BI,data_analytics,64,61.54
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,3,belgium,Belgium,111,2554,4.35,104,1,3,skill:excel,Microsoft Excel,office_productivity,41,39.42
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,3,belgium,Belgium,111,2554,4.35,104,1,4,skill:azure,Microsoft Azure,cloud_platform,24,23.08
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,3,belgium,Belgium,111,2554,4.35,104,1,5,skill:tableau,Tableau,data_analytics,22,21.15
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,4,portugal,Portugal,95,2554,3.72,90,1,1,skill:sql,SQL,query_language,78,86.67
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,4,portugal,Portugal,95,2554,3.72,90,1,2,skill:power-bi,Power BI,data_analytics,54,60.0
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,4,portugal,Portugal,95,2554,3.72,90,1,3,skill:tableau,Tableau,data_analytics,31,34.44
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,4,portugal,Portugal,95,2554,3.72,90,1,4,skill:excel,Microsoft Excel,office_productivity,24,26.67
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,4,portugal,Portugal,95,2554,3.72,90,1,5,skill:sql-server,Microsoft SQL Server,database,19,21.11
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,5,singapore,Singapore,89,2554,3.48,79,1,1,skill:sql,SQL,query_language,56,70.89
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,5,singapore,Singapore,89,2554,3.48,79,1,2,skill:tableau,Tableau,data_analytics,45,56.96
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,5,singapore,Singapore,89,2554,3.48,79,1,3,skill:excel,Microsoft Excel,office_productivity,41,51.9
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,5,singapore,Singapore,89,2554,3.48,79,1,4,skill:power-bi,Power BI,data_analytics,35,44.3
+12,business intelligence analyst,BUSINESS INTELLIGENCE ANALYST,2558,5,singapore,Singapore,89,2554,3.48,79,1,5,skill:python,Python,programming_language,35,44.3
+13,business data analyst,BUSINESS DATA ANALYST,2488,1,united states,United States,1233,2486,49.6,1048,2,1,skill:sql,SQL,query_language,762,72.71
+13,business data analyst,BUSINESS DATA ANALYST,2488,1,united states,United States,1233,2486,49.6,1048,2,2,skill:excel,Microsoft Excel,office_productivity,548,52.29
+13,business data analyst,BUSINESS DATA ANALYST,2488,1,united states,United States,1233,2486,49.6,1048,2,3,skill:tableau,Tableau,data_analytics,363,34.64
+13,business data analyst,BUSINESS DATA ANALYST,2488,1,united states,United States,1233,2486,49.6,1048,2,4,skill:power-bi,Power BI,data_analytics,287,27.39
+13,business data analyst,BUSINESS DATA ANALYST,2488,1,united states,United States,1233,2486,49.6,1048,2,5,skill:python,Python,programming_language,260,24.81
+13,business data analyst,BUSINESS DATA ANALYST,2488,2,united kingdom,United Kingdom,145,2486,5.83,112,1,1,skill:sql,SQL,query_language,62,55.36
+13,business data analyst,BUSINESS DATA ANALYST,2488,2,united kingdom,United Kingdom,145,2486,5.83,112,1,2,skill:excel,Microsoft Excel,office_productivity,54,48.21
+13,business data analyst,BUSINESS DATA ANALYST,2488,2,united kingdom,United Kingdom,145,2486,5.83,112,1,3,skill:power-bi,Power BI,data_analytics,36,32.14
+13,business data analyst,BUSINESS DATA ANALYST,2488,2,united kingdom,United Kingdom,145,2486,5.83,112,1,4,skill:python,Python,programming_language,22,19.64
+13,business data analyst,BUSINESS DATA ANALYST,2488,2,united kingdom,United Kingdom,145,2486,5.83,112,1,5,skill:tableau,Tableau,data_analytics,19,16.96
+13,business data analyst,BUSINESS DATA ANALYST,2488,3,italy,Italy,91,2486,3.66,68,1,1,skill:excel,Microsoft Excel,office_productivity,35,51.47
+13,business data analyst,BUSINESS DATA ANALYST,2488,3,italy,Italy,91,2486,3.66,68,1,2,skill:python,Python,programming_language,32,47.06
+13,business data analyst,BUSINESS DATA ANALYST,2488,3,italy,Italy,91,2486,3.66,68,1,3,skill:r,R,programming_language,29,42.65
+13,business data analyst,BUSINESS DATA ANALYST,2488,3,italy,Italy,91,2486,3.66,68,1,4,skill:vba,VBA,programming_language,22,32.35
+13,business data analyst,BUSINESS DATA ANALYST,2488,3,italy,Italy,91,2486,3.66,68,1,5,skill:sas,SAS,data_analytics,21,30.88
+13,business data analyst,BUSINESS DATA ANALYST,2488,4,singapore,Singapore,72,2486,2.9,64,1,1,skill:sql,SQL,query_language,48,75.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,4,singapore,Singapore,72,2486,2.9,64,1,2,skill:tableau,Tableau,data_analytics,35,54.69
+13,business data analyst,BUSINESS DATA ANALYST,2488,4,singapore,Singapore,72,2486,2.9,64,1,3,skill:python,Python,programming_language,32,50.0
+13,business data analyst,BUSINESS DATA ANALYST,2488,4,singapore,Singapore,72,2486,2.9,64,1,4,skill:power-bi,Power BI,data_analytics,30,46.88
+13,business data analyst,BUSINESS DATA ANALYST,2488,4,singapore,Singapore,72,2486,2.9,64,1,5,skill:excel,Microsoft Excel,office_productivity,26,40.63
+13,business data analyst,BUSINESS DATA ANALYST,2488,5,spain,Spain,61,2486,2.45,54,1,1,skill:sql,SQL,query_language,37,68.52
+13,business data analyst,BUSINESS DATA ANALYST,2488,5,spain,Spain,61,2486,2.45,54,1,2,skill:power-bi,Power BI,data_analytics,21,38.89
+13,business data analyst,BUSINESS DATA ANALYST,2488,5,spain,Spain,61,2486,2.45,54,1,3,skill:python,Python,programming_language,18,33.33
+13,business data analyst,BUSINESS DATA ANALYST,2488,5,spain,Spain,61,2486,2.45,54,1,4,skill:tableau,Tableau,data_analytics,15,27.78
+13,business data analyst,BUSINESS DATA ANALYST,2488,5,spain,Spain,61,2486,2.45,54,1,5,skill:excel,Microsoft Excel,office_productivity,12,22.22
+14,software engineer,SOFTWARE ENGINEER,2485,1,australia,Australia,129,2469,5.22,123,3,1,skill:java,Java,programming_language,82,66.67
+14,software engineer,SOFTWARE ENGINEER,2485,1,australia,Australia,129,2469,5.22,123,3,2,skill:aws,Amazon Web Services (AWS),cloud_platform,81,65.85
+14,software engineer,SOFTWARE ENGINEER,2485,1,australia,Australia,129,2469,5.22,123,3,3,skill:python,Python,programming_language,79,64.23
+14,software engineer,SOFTWARE ENGINEER,2485,1,australia,Australia,129,2469,5.22,123,3,4,skill:sql,SQL,query_language,59,47.97
+14,software engineer,SOFTWARE ENGINEER,2485,1,australia,Australia,129,2469,5.22,123,3,5,skill:javascript,JavaScript,programming_language,58,47.15
+14,software engineer,SOFTWARE ENGINEER,2485,2,singapore,Singapore,112,2469,4.54,103,2,1,skill:java,Java,programming_language,52,50.49
+14,software engineer,SOFTWARE ENGINEER,2485,2,singapore,Singapore,112,2469,4.54,103,2,2,skill:sql,SQL,query_language,52,50.49
+14,software engineer,SOFTWARE ENGINEER,2485,2,singapore,Singapore,112,2469,4.54,103,2,3,skill:python,Python,programming_language,51,49.51
+14,software engineer,SOFTWARE ENGINEER,2485,2,singapore,Singapore,112,2469,4.54,103,2,4,skill:javascript,JavaScript,programming_language,42,40.78
+14,software engineer,SOFTWARE ENGINEER,2485,2,singapore,Singapore,112,2469,4.54,103,2,5,skill:aws,Amazon Web Services (AWS),cloud_platform,34,33.01
+14,software engineer,SOFTWARE ENGINEER,2485,3,poland,Poland,105,2469,4.25,101,3,1,skill:python,Python,programming_language,45,44.55
+14,software engineer,SOFTWARE ENGINEER,2485,3,poland,Poland,105,2469,4.25,101,3,2,skill:docker,Docker,devops,37,36.63
+14,software engineer,SOFTWARE ENGINEER,2485,3,poland,Poland,105,2469,4.25,101,3,3,skill:java,Java,programming_language,36,35.64
+14,software engineer,SOFTWARE ENGINEER,2485,3,poland,Poland,105,2469,4.25,101,3,4,skill:sql,SQL,query_language,31,30.69
+14,software engineer,SOFTWARE ENGINEER,2485,3,poland,Poland,105,2469,4.25,101,3,5,skill:aws,Amazon Web Services (AWS),cloud_platform,29,28.71
+14,software engineer,SOFTWARE ENGINEER,2485,4,sweden,Sweden,103,2469,4.17,94,1,1,skill:python,Python,programming_language,33,35.11
+14,software engineer,SOFTWARE ENGINEER,2485,4,sweden,Sweden,103,2469,4.17,94,1,2,skill:java,Java,programming_language,31,32.98
+14,software engineer,SOFTWARE ENGINEER,2485,4,sweden,Sweden,103,2469,4.17,94,1,3,skill:sql,SQL,query_language,24,25.53
+14,software engineer,SOFTWARE ENGINEER,2485,4,sweden,Sweden,103,2469,4.17,94,1,4,skill:docker,Docker,devops,22,23.4
+14,software engineer,SOFTWARE ENGINEER,2485,4,sweden,Sweden,103,2469,4.17,94,1,5,skill:aws,Amazon Web Services (AWS),cloud_platform,20,21.28
+14,software engineer,SOFTWARE ENGINEER,2485,5,malaysia,Malaysia,96,2469,3.89,86,1,1,skill:java,Java,programming_language,41,47.67
+14,software engineer,SOFTWARE ENGINEER,2485,5,malaysia,Malaysia,96,2469,3.89,86,1,2,skill:sql,SQL,query_language,36,41.86
+14,software engineer,SOFTWARE ENGINEER,2485,5,malaysia,Malaysia,96,2469,3.89,86,1,3,skill:javascript,JavaScript,programming_language,26,30.23
+14,software engineer,SOFTWARE ENGINEER,2485,5,malaysia,Malaysia,96,2469,3.89,86,1,4,skill:docker,Docker,devops,17,19.77
+14,software engineer,SOFTWARE ENGINEER,2485,5,malaysia,Malaysia,96,2469,3.89,86,1,5,skill:html,HTML,web_development,17,19.77
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,1,india,India,375,2418,15.51,373,3,1,skill:sql,SQL,query_language,354,94.91
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,1,india,India,375,2418,15.51,373,3,2,skill:python,Python,programming_language,344,92.23
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,1,india,India,375,2418,15.51,373,3,3,skill:java,Java,programming_language,335,89.81
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,1,india,India,375,2418,15.51,373,3,4,skill:aws,Amazon Web Services (AWS),cloud_platform,330,88.47
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,1,india,India,375,2418,15.51,373,3,5,skill:linux,Linux,operating_system,326,87.4
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2,australia,Australia,163,2418,6.74,152,3,1,skill:java,Java,programming_language,75,49.34
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2,australia,Australia,163,2418,6.74,152,3,2,skill:aws,Amazon Web Services (AWS),cloud_platform,72,47.37
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2,australia,Australia,163,2418,6.74,152,3,3,skill:python,Python,programming_language,53,34.87
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2,australia,Australia,163,2418,6.74,152,3,4,skill:sql,SQL,query_language,49,32.24
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,2,australia,Australia,163,2418,6.74,152,3,5,skill:javascript,JavaScript,programming_language,46,30.26
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,3,ireland,Ireland,125,2418,5.17,118,2,1,skill:java,Java,programming_language,66,55.93
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,3,ireland,Ireland,125,2418,5.17,118,2,2,skill:aws,Amazon Web Services (AWS),cloud_platform,51,43.22
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,3,ireland,Ireland,125,2418,5.17,118,2,3,skill:python,Python,programming_language,47,39.83
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,3,ireland,Ireland,125,2418,5.17,118,2,4,skill:sql,SQL,query_language,40,33.9
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,3,ireland,Ireland,125,2418,5.17,118,2,5,skill:azure,Microsoft Azure,cloud_platform,29,24.58
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,4,poland,Poland,117,2418,4.84,112,2,1,skill:java,Java,programming_language,57,50.89
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,4,poland,Poland,117,2418,4.84,112,2,2,skill:kubernetes,Kubernetes,devops,54,48.21
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,4,poland,Poland,117,2418,4.84,112,2,3,skill:aws,Amazon Web Services (AWS),cloud_platform,49,43.75
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,4,poland,Poland,117,2418,4.84,112,2,4,skill:python,Python,programming_language,44,39.29
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,4,poland,Poland,117,2418,4.84,112,2,5,skill:docker,Docker,devops,39,34.82
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,5,canada,Canada,87,2418,3.6,82,4,1,skill:python,Python,programming_language,59,71.95
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,5,canada,Canada,87,2418,3.6,82,4,2,skill:aws,Amazon Web Services (AWS),cloud_platform,53,64.63
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,5,canada,Canada,87,2418,3.6,82,4,3,skill:java,Java,programming_language,51,62.2
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,5,canada,Canada,87,2418,3.6,82,4,4,skill:sql,SQL,query_language,47,57.32
+15,senior software engineer,SENIOR SOFTWARE ENGINEER,2436,5,canada,Canada,87,2418,3.6,82,4,5,skill:docker,Docker,devops,46,56.1

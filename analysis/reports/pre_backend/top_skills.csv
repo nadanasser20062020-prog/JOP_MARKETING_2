@@ -1,0 +1,31 @@
+skill_id,canonical_name,category,review_status,skill_match_policy,job_record_count,denominator_job_records,share_of_jobs_with_eligible_skills_percent
+skill:python,Python,programming_language,curated,approved_aliases,419133,664989,63.03
+skill:sql,SQL,query_language,curated,approved_aliases,409656,664989,61.6
+skill:aws,Amazon Web Services (AWS),cloud_platform,curated,approved_aliases,166458,664989,25.03
+skill:azure,Microsoft Azure,cloud_platform,curated,approved_aliases,135748,664989,20.41
+skill:r,R,programming_language,curated_exact_only,exact_only,131089,664989,19.71
+skill:tableau,Tableau,data_analytics,curated,approved_aliases,126851,664989,19.08
+skill:spark,Apache Spark,data_engineering,curated,approved_aliases,124759,664989,18.76
+skill:excel,Microsoft Excel,office_productivity,curated,approved_aliases,120615,664989,18.14
+skill:java,Java,programming_language,curated,approved_aliases,105194,664989,15.82
+skill:power-bi,Power BI,data_analytics,curated,approved_aliases,97355,664989,14.64
+skill:git,Git,version_control,curated,approved_aliases,72661,664989,10.93
+skill:hadoop,Apache Hadoop,data_engineering,curated,approved_aliases,64812,664989,9.75
+skill:docker,Docker,devops,curated,approved_aliases,61584,664989,9.26
+skill:kafka,Apache Kafka,data_engineering,curated,approved_aliases,59731,664989,8.98
+skill:scala,Scala,programming_language,curated,approved_aliases,56813,664989,8.54
+skill:airflow,Apache Airflow,data_engineering,curated,approved_aliases,55411,664989,8.33
+skill:snowflake,Snowflake,data_platform,curated,approved_aliases,54967,664989,8.27
+skill:gcp,Google Cloud Platform (GCP),cloud_platform,curated,approved_aliases,53498,664989,8.04
+skill:databricks,Databricks,data_platform,curated,approved_aliases,53473,664989,8.04
+skill:linux,Linux,operating_system,curated,approved_aliases,48194,664989,7.25
+skill:tensorflow,TensorFlow,ai_ml,curated,approved_aliases,45781,664989,6.88
+skill:nosql,NoSQL,database,curated,approved_aliases,45415,664989,6.83
+skill:javascript,JavaScript,programming_language,curated,approved_aliases,43946,664989,6.61
+skill:oracle-database,Oracle Database,database,curated,approved_aliases,43625,664989,6.56
+skill:kubernetes,Kubernetes,devops,curated,approved_aliases,42970,664989,6.46
+skill:sas,SAS,data_analytics,curated,approved_aliases,40403,664989,6.08
+skill:pytorch,PyTorch,ai_ml,curated,approved_aliases,40385,664989,6.07
+skill:go,Go,programming_language,curated_exact_only,exact_only,39495,664989,5.94
+skill:sql-server,Microsoft SQL Server,database,curated,approved_aliases,39166,664989,5.89
+skill:redshift,Amazon Redshift,data_platform,curated,approved_aliases,33068,664989,4.97

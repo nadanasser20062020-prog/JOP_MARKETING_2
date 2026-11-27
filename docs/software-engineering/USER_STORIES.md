@@ -70,16 +70,18 @@ Stories are grouped by product capability. Market fields and filters remain cond
 
 **Acceptance criteria**
 - Inputs are validated and normalized to the skill catalogue where possible.
-- If the team approves the D-015 privacy baseline, the interface explains that submitted skills are used only for the current request and are not saved in the initial release.
+- The interface explains that submitted skills are used only for the current request and are not saved or logged by the API, consistent with the resolved D-015 privacy baseline.
 - The user can remove or edit selected skills before requesting matches.
 
 ### US-009 — Review role matches
-**As a** job seeker, **I want** to see roles and advertisements ranked against my skills, **so that** I can explore relevant options.
+**As a** job seeker, **I want** to see relevant role profiles and, eventually, individual advertisements ranked against my skills, **so that** I can explore relevant options.
 
 **Acceptance criteria**
 - Results are ranked using a documented method.
 - Each result explains matched skills and the basis of its score.
-- The score is described as skill coverage, not a hiring probability.
+- The score is described as skill overlap, not a hiring probability.
+
+**Current implementation status:** `/api/v1/matches` ranks aggregate exact-title role profiles with Jaccard; it does not score individual advertisements. Individual-ad ranking and the user interface remain unimplemented.
 
 ### US-010 — Identify skill gaps
 **As a** job seeker, **I want** to see skills that are common in relevant advertisements but absent from my input, **so that** I can plan what to learn.
@@ -116,3 +118,26 @@ Stories are grouped by product capability. Market fields and filters remain cond
 - A methodology page describes sources, cleaning, metric definitions, and model methods.
 - Market results identify available sample size, date coverage, and missing fields.
 - The product distinguishes observed advertisement information from model output.
+
+## Epic E6 — Analyze Roles and Explore Interactive Markets
+
+### US-014 — Analyze a role across countries
+**As a** job seeker, **I want** to search for a job title and see its country distribution, skills, and comparable salaries, **so that** I can understand the role before opening individual advertisements.
+
+**Acceptance criteria**
+- Selecting a normalized role opens its analysis view first, not an advertisement list.
+- The country view shows record counts and shares with the denominator defined.
+- Skills are shown for the role overall and by country where data supports the comparison.
+- Average salary appears only for comparable disclosed values and is accompanied by median, sample count, currency, and pay period.
+- Related advertisements are available through a secondary link or tab.
+
+### US-015 — Explore the interactive market Overview
+**As a** job seeker, **I want** a simple visual overview of countries, jobs, and skills, **so that** I can understand the collected market at a glance.
+
+**Acceptance criteria**
+- The intended Overview contains archive-scope KPI cards, a Top 10 reviewed-skill chart, and an Arab-versus-other-represented-markets comparison restricted to `merged_tech_jobs`.
+- Show represented country labels and counts in an accessible table; a map is conditional on a reviewed country-to-geometry mapping and must not imply global coverage.
+- The current backend supports the underlying aggregates; the frontend and chart interactions are not implemented.
+- Hover/tap exposes chart details; selecting a country or chart value filters related visualizations where appropriate.
+- Important chart details are also available by keyboard and in an accessible text/table form.
+- The page uses progressive disclosure and does not become crowded with repeated numbers or text.

@@ -1,0 +1,79 @@
+{
+  "runtime": {
+    "id": "single-process-node-backend",
+    "serving_boundary": "one Node.js process for HTTP, SQLite queries, analytics, and deterministic matching; Python is offline-only; do not deploy a separate ML service",
+    "status": "node_api_implemented_full_database_pending"
+  },
+  "features": [
+    {
+      "feature_id": "skill-demand-aggregation",
+      "readiness": "pre_backend_approved",
+      "inputs": ["jobs.record_id", "jobs.source_dataset", "jobs.country", "job_skills.skill_id", "job_skills.skill_match_policy"],
+      "outputs": ["distinct_job_count_per_skill", "eligible_skill_denominator", "share_percent"],
+      "policy": "Include only the consistent (approved_aliases, curated) and (exact_only, curated_exact_only) policy/status pairs from both job_skills and skills; exclude needs_review, needs_owner_review and all policy/status mismatches; show counts and denominator; never call observed prevalence hiring probability."
+    },
+    {
+      "feature_id": "exact-normalized-role-search",
+      "readiness": "pre_backend_approved_with_limits",
+      "inputs": ["jobs.title"],
+      "outputs": ["exact_normalized_title_matches", "distinct_source_record_count"],
+      "policy": "Normalize case and outer whitespace only; keep punctuation and semantic variants distinct until reviewed taxonomy exists."
+    },
+    {
+      "feature_id": "personal_skill_profile_overlap",
+      "readiness": "implemented_in_node_api_fixture_tested_full_archive_reconciliation_pending",
+      "inputs": ["temporary_user_skill_labels", "reviewed_skill_aliases", "candidate_role_skill_profiles", "optional_country_work_mode_source_filters"],
+      "outputs": ["jaccard_overlap_score", "matched_skill_ids", "missing_skill_ids", "user_only_skill_ids", "directional_coverage", "evidence_counts"],
+      "policy": "Deterministic, explainable Node.js baseline; no trained model or external inference; label as skill overlap, not suitability or hiring probability; show evidence counts, return an empty result when no candidate profiles match, and never persist or log user input."
+    },
+    {
+      "feature_id": "arab_other_market_skill_comparison",
+      "readiness": "descriptive_only",
+      "inputs": ["jobs.source_dataset", "jobs.country", "job_skills.skill_id"],
+      "outputs": ["within_cohort_skill_shares", "cohort_counts", "denominators"],
+      "policy": "Use merged_tech_jobs for both cohorts; list missing country labels; disclose unverified source date semantics; do not imply representativeness."
+    },
+    {
+      "feature_id": "historical_monthly_postings",
+      "readiness": "source_specific_historical_only",
+      "inputs": ["jobs.posted_at", "jobs.source_dataset"],
+      "outputs": ["international_jobs_monthly_2023_record_counts"],
+      "policy": "Only explicit 2023 posted_at from international_jobs; never treat mixed updated fields as posted dates or current trends."
+    },
+    {
+      "feature_id": "salary_comparison_or_regression",
+      "readiness": "not_approved",
+      "inputs": ["jobs.salary_year_avg", "jobs.salary_hour_avg", "jobs.salary_currency", "jobs.salary_basis", "jobs.salary_provenance_status"],
+      "outputs": [],
+      "policy": "Keep disabled until comparable target, currency, period, provenance, sample size, validation and uncertainty reporting are approved."
+    },
+    {
+      "feature_id": "supervised_job_family_classification",
+      "readiness": "not_approved",
+      "inputs": ["jobs.category_raw", "jobs.title", "jobs.description", "jobs.source_dataset"],
+      "outputs": [],
+      "policy": "Do not train or serve against incompatible and unreviewed source labels; first define and annotate a defensible taxonomy."
+    },
+    {
+      "feature_id": "skill_profile_clustering",
+      "readiness": "exploratory_report_only",
+      "inputs": ["jobs.source_dataset", "jobs.exact_duplicate_within_source", "job_skills.skill_id", "job_skills.skill_match_policy"],
+      "outputs": ["experimental_cluster_ids", "experimental_cluster_skill_profiles"],
+      "policy": "No model artifact or user-facing labels; remains offline/report-only. Any future Node.js-serving model requires a new approved decision, task-specific evaluation, and human review; no separate ML service is in scope."
+    },
+    {
+      "feature_id": "active_advertisement_status",
+      "readiness": "not_approved",
+      "inputs": ["jobs.listing_status"],
+      "outputs": [],
+      "policy": "All imported listing statuses are unknown_not_verified; never claim a listing is active or open."
+    },
+    {
+      "feature_id": "learning_resource_catalogue",
+      "readiness": "content_exists_access_unverified",
+      "inputs": ["learning_resources", "learning_resource_skills", "learning_resource_languages"],
+      "outputs": ["catalogue_metadata"],
+      "policy": "Resource links and cost/access must be rechecked per item before publication; do not trust verification dates beyond the archive build date."
+    }
+  ]
+}

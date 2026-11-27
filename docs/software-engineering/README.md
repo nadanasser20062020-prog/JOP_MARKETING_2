@@ -4,7 +4,7 @@ This section defines the product and engineering baseline for JOP Marketing Inte
 
 ## Document Status
 
-Most documents remain design specifications rather than implementation. The initial data audit is complete, and Neon/PostgreSQL has been selected for the database. An initial executable DDL file is available at `../../scripts/database_loading/neon_schema.sql`, but it has not been applied to Neon and does not include a data loader. Frontend/backend frameworks, deployment hosting, and operational targets remain open; dependent requirements are provisional or conditional.
+These documents combine implementation artifacts and design specifications. The local SQLite schema, provenance migrations, checksum-verified full-archive loader, 19-query analysis, and Node.js 22 read-only API are implemented. In the last full-data run, the Git-ignored SQLite file held 775,155 job rows, 4,026,953 stored job-skill links, and 3,701,019 eligible links across 173 reviewed skill IDs; `check` found zero foreign-key violations. Sixteen Node tests, 26 Python `unittest` tests, six matching-baseline tests, syntax checks, and selected full-data HTTP smoke routes passed. The ignored archive and database are absent from the current snapshot and must be restored to repeat full-data checks. Online Jaccard is a deterministic role-profile baseline; separately, a Naive Bayes exact-title ranker runs in Node for limited-scope review only, with training/evaluation in offline Python. Clustering remains report-only, and no separate ML server is used. There is no frontend entry point in this checkout; browser/UI work, concurrency/performance testing, and Vercel packaging remain open. The loader has no partial-sample source or fallback.
 
 ## Product Definition
 
@@ -13,17 +13,23 @@ Most documents remain design specifications rather than implementation. The init
 - [Documentation Status and Roadmap](DOCUMENTATION_ROADMAP.md)
 - [User Stories and Acceptance Criteria](USER_STORIES.md)
 - [Use Cases and User Flows](USE_CASES.md)
+- [Pre-Backend Product Scope and Acceptance Criteria](PRODUCT_SCOPE_AND_ACCEPTANCE.md)
+- [Pre-Backend Data Readiness Gate](PRE_BACKEND_READINESS.md)
+- [Feature-to-Data Field Mapping](FEATURE_DATA_FIELD_MAPPING.md)
+- [Arabic Graduation Defense Guide](PROJECT_DEFENSE_GUIDE_AR.md)
 - [Requirements Traceability Matrix](TRACEABILITY_MATRIX.md)
 
 ## System Design
 
 - [System Architecture](ARCHITECTURE.md)
+- [Pre-Backend Single-Process Architecture](SYSTEM_ARCHITECTURE_PRE_BACKEND.md)
+- [Pre-Backend Metrics and Model Method](METRICS_AND_MODEL_METHOD.md)
 - [API Specification](API_SPECIFICATION.md)
 - [Logical Database Specification](DATABASE_SPECIFICATION.md)
-- [Proposed PostgreSQL Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md)
-- [Initial Neon PostgreSQL DDL](../../scripts/database_loading/neon_schema.sql)
+- [SQLite Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md)
 - [UX, Accessibility, and Localization](UX_ACCESSIBILITY_I18N.md)
 - [UI/UX Guidelines and Low-Fidelity Wireframes](UI_UX_GUIDELINES_AND_WIREFRAMES.md)
+- [Evidence-Aware User Journeys and Wireframes](USER_JOURNEYS_AND_WIREFRAMES.md)
 - [Complete Diagram Pack](../diagrams/README.md)
 
 ## Quality and Operations

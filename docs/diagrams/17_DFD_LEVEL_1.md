@@ -1,6 +1,6 @@
 # Data Flow Diagram — Level 1
 
-This DFD decomposes the product into major processes and logical data stores. It is a logical view; the final database schema and deployment boundaries remain subject to review.
+This DFD decomposes the product into major processes and logical data stores. The stores map to the implemented local SQLite schema; application deployment boundaries remain subject to review.
 
 ```mermaid
 flowchart LR
@@ -13,10 +13,10 @@ flowchart LR
     P3((P3: Normalize skills and match))
     P4((P4: Validate and return API results))
 
-    D1[(D1: Job, company, location, and source records)]
-    D2[(D2: Skill taxonomy and job-skill links)]
-    D3[(D3: Reviewed learning resources)]
-    D4[(D4: Approved aggregates and model artifacts)]
+    D1[(D1: Local SQLite job, source, and import records)]
+    D2[(D2: Local SQLite skill taxonomy and job-skill links)]
+    D3[(D3: Local SQLite reviewed learning resources)]
+    D4[(D4: Local analytical outputs and approved model artifacts)]
 
     Drive -->|Collected records| P1
     Team -->|Cleaning rules and reviewed definitions| P1

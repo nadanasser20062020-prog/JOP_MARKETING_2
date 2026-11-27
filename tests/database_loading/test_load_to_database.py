@@ -1,136 +1,64 @@
-from __future__ import annotations
-
+import io
 import json
-import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
-PROJECT_ROOT_DIRECTORY = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(PROJECT_ROOT_DIRECTORY / "scripts" / "database_loading"))
-
-import load_to_database as loader
+from backend.database import PROJECT_ROOT_DIRECTORY
+from scripts.database_loading import load_to_database
 
 
-class LoadPlanTests(unittest.TestCase):
-    def test_neon_free_profile_is_the_default_and_uses_the_reduced_files(self) -> None:
-        processed_data_directory = PROJECT_ROOT_DIRECTORY / "data" / "processed"
-        reference_data_directory = PROJECT_ROOT_DIRECTORY / "data" / "reference"
-        file_plan = loader.build_load_file_plan(
-            processed_data_directory,
-            reference_data_directory,
+class SQLiteLoaderCommandTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary_directory = tempfile.TemporaryDirectory(
+            dir=PROJECT_ROOT_DIRECTORY,
+            prefix=".sqlite-loader-test-",
         )
-        job_files = [
-            file_specification.file_path.name
-            for file_specification in file_plan
-            if file_specification.table_name == "jobs"
-        ]
-        self.assertEqual(job_files, ["jobs_neon_free.csv.gz"])
-        self.assertIn("job_skills_neon_free.csv.gz", [item.file_path.name for item in file_plan])
-        self.assertIn("skill_observations_neon_free.csv.gz", [item.file_path.name for item in file_plan])
-        self.assertEqual(len(file_plan), 6)
-
-    def test_full_profile_keeps_the_original_snapshot_files_separate(self) -> None:
-        file_plan = loader.build_load_file_plan(
-            PROJECT_ROOT_DIRECTORY / "data" / "processed",
-            PROJECT_ROOT_DIRECTORY / "data" / "reference",
-            "full",
-        )
-        job_files = [
-            file_specification.file_path.name
-            for file_specification in file_plan
-            if file_specification.table_name == "jobs"
-        ]
-        self.assertEqual(
-            job_files,
-            [
-                "jobs_historical_2023_sample.csv.gz",
-                "jobs_latest_export_unverified.csv.gz",
-                "jobs_other_snapshots_unverified.csv.gz",
-            ],
-        )
-        self.assertNotIn("jobs_archive.csv.gz", job_files)
-        self.assertEqual(len(file_plan), 8)
-
-    def test_repository_inputs_pass_local_preflight(self) -> None:
-        processed_data_directory = PROJECT_ROOT_DIRECTORY / "data" / "processed"
-        reference_data_directory = PROJECT_ROOT_DIRECTORY / "data" / "reference"
-        file_plan = loader.build_load_file_plan(
-            processed_data_directory,
-            reference_data_directory,
-        )
-        quality_report_path = (
-            processed_data_directory / loader.QUALITY_REPORT_FILE_NAMES[loader.DEFAULT_DATASET_PROFILE]
-        )
-        quality_report = loader.validate_local_files(file_plan, quality_report_path)
-        self.assertIsInstance(quality_report, dict)
-        self.assertEqual(quality_report["profile"], "neon_free_arab_complete_non_arab_stratified_v1")
-
-
-class StorageReportTests(unittest.TestCase):
-    def test_storage_report_includes_heap_indexes_toast_and_database_size(self) -> None:
-        class StorageCursor:
-            def __init__(self) -> None:
-                self.result = None
-
-            def execute(self, statement, parameters=None) -> None:
-                if "pg_database_size" in statement:
-                    self.result = (1000,)
-                else:
-                    self.result = (10, 20, 35)
-
-            def fetchone(self):
-                return self.result
-
-        storage_report = loader.get_database_storage_report(StorageCursor())
-        self.assertEqual(storage_report["current_database_bytes"], 1000)
-        self.assertEqual(storage_report["managed_tables_total_bytes"], len(loader.MANAGED_TABLE_NAMES) * 35)
-        self.assertEqual(
-            storage_report["managed_tables"]["jobs"],
-            {
-                "heap_bytes": 10,
-                "index_bytes": 20,
-                "total_bytes_including_toast": 35,
-            },
-        )
-        self.assertIn("not the entire Neon project", storage_report["measurement_scope"])
-
-
-class LocalValidationTests(unittest.TestCase):
-    def setUp(self) -> None:
-        self.temporary_directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary_directory.cleanup)
-        self.temporary_path = Path(self.temporary_directory.name)
-        self.quality_report_path = self.temporary_path / "data_quality_report.json"
-        self.quality_report_path.write_text(json.dumps({"status": "passed"}), encoding="utf-8")
+        self.database_path = Path(self.temporary_directory.name) / "test.sqlite3"
 
-    def test_missing_input_file_is_rejected(self) -> None:
-        missing_file = self.temporary_path / "missing.csv"
-        file_plan = (loader.LoadFileSpecification("skills", missing_file),)
-        with self.assertRaisesRegex(FileNotFoundError, "missing.csv"):
-            loader.validate_local_files(file_plan, self.quality_report_path)
+    def run_cli(self, arguments):
+        stdout = io.StringIO()
+        stderr = io.StringIO()
+        with redirect_stdout(stdout), redirect_stderr(stderr):
+            exit_code = load_to_database.main(arguments)
+        return exit_code, stdout.getvalue(), stderr.getvalue()
 
-    def test_missing_primary_key_column_is_rejected(self) -> None:
-        input_file = self.temporary_path / "skills.csv"
-        input_file.write_text("canonical_name\nPython\n", encoding="utf-8")
-        file_plan = (loader.LoadFileSpecification("skills", input_file),)
-        with self.assertRaisesRegex(ValueError, "skill_id"):
-            loader.validate_local_files(file_plan, self.quality_report_path)
+    def test_default_command_and_source_are_local_auto_load(self):
+        args = load_to_database.build_argument_parser().parse_args([])
+        self.assertEqual(args.command, "load")
+        self.assertEqual(args.source, "auto")
 
-    def test_duplicate_header_column_is_rejected(self) -> None:
-        input_file = self.temporary_path / "skills.csv"
-        input_file.write_text("skill_id,skill_id\npython,python\n", encoding="utf-8")
-        file_plan = (loader.LoadFileSpecification("skills", input_file),)
-        with self.assertRaisesRegex(ValueError, "duplicate column names"):
-            loader.validate_local_files(file_plan, self.quality_report_path)
+    def test_init_then_check_reports_migrations_and_empty_tables(self):
+        exit_code, stdout, stderr = self.run_cli(
+            ["init", "--database", str(self.database_path)]
+        )
+        self.assertEqual(exit_code, 0, stderr)
+        initialized = json.loads(stdout)
+        self.assertEqual(initialized["engine"], "SQLite")
+        self.assertEqual(initialized["status"], "schema_ready")
+        self.assertTrue(self.database_path.is_file())
 
-    def test_quality_report_must_be_a_json_object(self) -> None:
-        input_file = self.temporary_path / "skills.csv"
-        input_file.write_text("skill_id\npython\n", encoding="utf-8")
-        self.quality_report_path.write_text("[]", encoding="utf-8")
-        file_plan = (loader.LoadFileSpecification("skills", input_file),)
-        with self.assertRaisesRegex(ValueError, "JSON object"):
-            loader.validate_local_files(file_plan, self.quality_report_path)
+        exit_code, stdout, stderr = self.run_cli(
+            ["check", "--database", str(self.database_path)]
+        )
+        self.assertEqual(exit_code, 0, stderr)
+        checked = json.loads(stdout)
+        self.assertEqual(checked["foreign_key_violations"], 0)
+        self.assertEqual(len(checked["migrations"]), 6)
+        self.assertEqual(checked["row_counts"]["jobs"], 0)
+        self.assertEqual(checked["row_counts"]["job_cleaning_audit"], 0)
+
+    def test_database_paths_outside_the_project_are_rejected(self):
+        outside_path = PROJECT_ROOT_DIRECTORY.parent / "outside-jop-test.sqlite3"
+        exit_code, stdout, stderr = self.run_cli(
+            ["init", "--database", str(outside_path)]
+        )
+        self.assertEqual(exit_code, 1)
+        self.assertEqual(stdout, "")
+        self.assertIn("inside the project root", stderr)
+        self.assertFalse(outside_path.exists())
 
 
 if __name__ == "__main__":

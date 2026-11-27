@@ -1,0 +1,8 @@
+source_dataset,total_job_records,exact_duplicate_rows_retained,rows_not_flagged_as_exact_duplicates
+international_jobs,705866,80,705786
+merged_tech_jobs,45591,11,45580
+jooble_careerjet_jobs,18583,0,18583
+startup_jobs,3543,0,3543
+remote_tech_jobs,1075,0,1075
+arab_tech_jobs,439,0,439
+cybersecurity_jobs,58,0,58

@@ -34,4 +34,5 @@ flowchart TD
 - Classification requires reliable labels and per-class evaluation.
 - Regression requires enough disclosed salaries with compatible units and periods.
 - A model that fails its gate may still be documented as an experiment, but its outputs must not be presented as validated product advice.
-- The explainable skill-coverage baseline is evaluated separately and remains distinct from a hiring-probability claim.
+- The explainable skill-overlap baseline is evaluated separately and remains distinct from a hiring-probability claim.
+- Any future approved inference runs within the one backend process; no separate ML server is part of the deployment boundary. Current experiments remain offline/report-only.

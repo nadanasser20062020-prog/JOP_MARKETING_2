@@ -33,7 +33,7 @@ The project also demonstrates a complete data-science workflow: data auditing an
 - [Use Cases and User Flows](USE_CASES.md)
 - [Architecture](ARCHITECTURE.md)
 - [Database Specification](DATABASE_SPECIFICATION.md)
-- [Proposed PostgreSQL Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md)
+- [SQLite Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md)
 - [API Specification](API_SPECIFICATION.md)
 - [Test Strategy](TEST_STRATEGY.md)
 - [Diagram Pack](../diagrams/README.md)
@@ -74,7 +74,7 @@ The project is acceptable when:
 ### 3.1 In Scope
 
 - Data audit, data dictionary, cleaning and standardization, deduplication, and provenance.
-- A relational schema and ERD, with a Python data-loading process for a PostgreSQL-compatible database selected by the team.
+- An implemented local SQLite schema and ERD, with ordered migrations and a Python loader for the complete checksum-verified archive or other complete local normalized files.
 - SQL analyses and Python exploratory analysis using NumPy, Pandas, Matplotlib, and Seaborn.
 - A market overview, job search and filtering, advertisement details, and source links where available.
 - Skill-demand views, market comparison, supported trends, and skill co-occurrence.
@@ -109,14 +109,14 @@ The initial release is public and read-oriented. No authenticated administrator 
 
 ## 5. Product Perspective and Architecture
 
-### 5.1 Proposed Architecture Style
+### 5.1 Implemented Architecture Baseline
 
-The proposed style is a **layered three-tier web application**: presentation layer, backend/API and application services, and relational data layer. Data preparation and analysis remain separate, reproducible workflows. This is preferred over a microservices design for the current project scale because it keeps service boundaries understandable while protecting database access. Final approval is recorded through an Architecture Decision Record before implementation.
+The selected style is a **layered three-tier web application**: presentation layer, a Node.js 22 API/application process, and a local SQLite data file opened read-only by the API. Data preparation, migrations/loading, and Python analysis remain separate reproducible workflows; the Node API does not invoke Python. This single-process design keeps service boundaries understandable and protects local-file access. A Vercel function adapter is configured, but full-data hosted deployment is conditional on packaging the ignored local SQLite file within platform limits.
 
 ### 5.2 Major System Components
 
 - Data-preparation scripts read source files, validate and transform records, and produce separate processed outputs.
-- A relational database stores approved job, source, company, location, skill, and learning-resource records.
+- A local SQLite file stores job/source provenance, skills, aliases, observations, job-skill links, and learning-resource records using the implemented schema.
 - SQL and Python workflows produce analysis, charts, and evaluated model outputs.
 - A backend API validates requests and serves data and approved application operations.
 - A frontend provides the bilingual market-exploration and skill-matching experience.
@@ -126,35 +126,35 @@ See the [system context](../diagrams/01_SYSTEM_CONTEXT.md), [container architect
 
 ## 6. Operating Environment and Technology Stack
 
-The website is intended to run in current desktop and mobile browsers selected for the project demonstration. Data preparation and analysis run in a Python environment. The production hosting provider and exact application frameworks have not been selected.
+The website targets current desktop and mobile browsers selected for the project demonstration. Data preparation, migrations/loading, and offline analysis run in Python. The implemented Node.js API opens the local SQLite file read-only; no external database service or connection URL is used. A Vercel function adapter is configured, but a full-data deployment requires a private/packageable SQLite file and has not been verified.
 
 | Area | Status | Requirement or current direction |
 |---|---|---|
 | Data analysis | Required by course | Python, SQL, NumPy, Pandas, Matplotlib, and Seaborn |
-| Data-loading utility | Implemented prototype | Python loader with a reduced Neon Free profile by default, preflight validation, transactional loading, and a current-database storage guard |
-| Relational database | Schema implemented; live use unverified | PostgreSQL-compatible schema and loader are included; verify the active Neon plan/quota and live import before relying on it |
-| Backend framework | TBD | Select based on team experience, security, API needs, and hosting support |
+| Data-loading utility | Implemented | Python loader writes to local SQLite with `sqlite3`; DuckDB reads the verified full Parquet archive locally; complete normalized files are also supported |
+| Relational database | Resolved and implemented | Local SQLite file only; default `data/processed/job_market.sqlite3`; Node API access is read-only; no external database service or connection URL |
+| Backend runtime | Implemented | Node.js `>=22.13 <23`, built-in `node:sqlite`, one process for HTTP, SQL analytics, and deterministic skill matching; no runtime npm dependencies |
 | Frontend framework | TBD | Select after UX and team-capability review |
 | Web charting library | TBD | Select after chart requirements and accessibility review |
-| Deployment provider | TBD | Define after hosting, cost, and demonstration requirements are reviewed |
-| API format | Proposed | Versioned HTTP API as described in the API Specification |
+| Hosting | Conditional | Local full-data demonstration is supported; Vercel function code is configured but requires the SQLite file to be included and fit platform limits |
+| API format | Implemented | Versioned JSON HTTP API at `/api/v1`; exact contract in API Specification |
 
 ## 7. Assumptions, Dependencies, and Constraints
 
-- The initial raw-data audit and reproducible preparation pass are complete for the sources currently available. Revalidate fields, coverage, and quality for every source refresh.
+- The complete local SQLite dataset is loaded from the checksum-verified archive: 775,155 jobs and 4,026,953 job-skill links. Re-audit any changed source refresh before importing it or enabling dependent product features; the legacy small seed is reserved for tests only.
 - The dataset consists of collected job advertisements and may contain duplicates, expired listings, inconsistent terms, missing values, and market-coverage bias.
 - A feature may be enabled only when its required fields and sample size pass a documented gate.
 - Salary comparisons require compatible currency and pay-period definitions. Salary regression requires enough disclosed, comparable salary records.
 - Classification requires reliable labels or a reviewed labelled sample. Clustering does not require labels but requires human interpretation.
 - Source terms, redistribution rights, attribution, and any personal information must be reviewed before public release.
-- Original Drive data remains unchanged. Raw data and existing full processed exports remain excluded from new changes. A reduced `data/processed/neon_free/` profile is included in this PR only under explicit user approval; this exception does not establish general redistribution rights.
+- Original Drive data remains unchanged. Raw and processed data files must not be committed to GitHub.
 - Skill-input retention is a proposed privacy decision under D-015 and must be confirmed before implementation.
 
 ## 8. Data Requirements and Business Rules
 
 ### 8.1 Candidate Data Entities
 
-The initial Neon DDL models jobs, source datasets/files, skills and aliases, job-skill links, skill observations, learning resources and their skill/language links, and import runs. Company and location dimensions remain optional future normalization candidates. See the [logical ERD](../diagrams/04_LOGICAL_ERD.md), [initial DDL](../../scripts/database_loading/neon_schema.sql), and [physical schema proposal](PHYSICAL_SCHEMA_PROPOSAL.md).
+The implemented local model includes sources, source files, import runs, jobs, skills, aliases, job-skill associations, source-specific skill observations, learning resources, resource-skill links, and resource language labels. Company and location values remain on job rows rather than being normalized into separate tables. See the [logical ERD](../diagrams/04_LOGICAL_ERD.md) and [SQLite physical schema](PHYSICAL_SCHEMA_PROPOSAL.md).
 
 ### 8.2 Business Rules
 
@@ -170,11 +170,11 @@ The initial Neon DDL models jobs, source datasets/files, skills and aliases, job
 
 ## 9. Functional Requirements
 
-Priority definitions are specified in Section 1.3. Requirements marked Conditional must pass their stated data-quality gate before being exposed to visitors.
+Priority definitions are specified in Section 1.3. Requirements marked Conditional must pass their stated data-quality gate before being exposed to visitors. These are target-system requirements, not proof of completed UI behavior: the current checkout has no frontend entry point, the API supports aggregate role-profile matching but not individual-ad scoring, and browser/localization/accessibility acceptance remains pending.
 
 | ID | Requirement | Priority | Verification |
 |---|---|---|---|
-| FR-001 | The system shall show a market overview based on the available advertisement sample, including sample size and covered markets where known. | Must | Functional test and metric reconciliation |
+| FR-001 | The default landing page shall show archive-scope KPI cards, a Top 10 reviewed-skill chart, a country-label/count table, and an Arab-versus-other-represented-markets skill comparison restricted to `merged_tech_jobs`; a map is conditional on a reviewed country-to-geometry mapping. | Must | Functional test, metric-definition review, and reconciliation against source queries; do not imply global-market coverage |
 | FR-002 | The system shall allow users to search job advertisements by supported text fields. | Must | Search tests |
 | FR-003 | The system shall provide filters only for fields present and usable in the audited dataset. | Must | Filter tests against the data dictionary |
 | FR-004 | The system shall show a detail view for each available job advertisement. | Must | Detail-page test |
@@ -202,6 +202,9 @@ Priority definitions are specified in Section 1.3. Requirements marked Condition
 | FR-026 | The system shall not expose model output that fails its task-specific quality gate. | Must | Model release review and UI/API test |
 | FR-027 | The system shall identify unsupported filters, comparisons, or model outputs as unavailable rather than infer missing facts. | Must | Data-coverage tests and UI review |
 | FR-028 | The backend shall provide documented, validated operations for website search, details, market metrics, skills, resources, and matching. | Must | API contract and integration tests |
+| FR-029 | Selecting a normalized job title shall open a role-analysis view showing country counts/shares and skill demand overall and by country; related advertisements shall be a secondary option. | Must | Role-search flow and metric reconciliation tests |
+| FR-030 | The system shall show arithmetic average salary by country only when disclosed salary values are comparable, accompanied by median, record count, currency, and pay period. | Conditional | Salary data-quality gate and country-level reconciliation |
+| FR-031 | Analytical charts shall expose values and definitions on hover/tap and support click-to-filter where applicable, with keyboard-accessible alternatives. | Must | Interaction, keyboard, and chart-accessibility tests |
 
 ## 10. External Interface Requirements
 
@@ -212,9 +215,9 @@ The user interface must support the pages and behavior in the [Feature Specifica
 ### 10.2 Software Interfaces
 
 - The frontend communicates with the backend API over HTTPS in deployed environments.
-- The backend communicates with the relational database using server-side credentials and parameterized queries.
-- Python scripts communicate with the selected database through a reviewed driver and secured environment configuration.
-- Analytics notebooks query approved database views or result sets and must not contain credentials.
+- The backend communicates with the local SQLite file using parameterized queries; the database path and contents stay on the trusted backend host.
+- Python scripts and analytics notebooks use the standard-library `sqlite3` module to open only a local file path; no network database configuration or credentials are used.
+- Analytics notebooks retrieve approved results or suitable samples and must not expose private data.
 - Exact request and response fields are defined in the [API Specification](API_SPECIFICATION.md) and finalized after the data audit.
 
 ### 10.3 External Services
@@ -232,7 +235,7 @@ No specialized hardware interface is required. Standard devices with a supported
 | NFR-001 | **Performance:** Common read operations should meet an agreed response-time target at the agreed demonstration data volume. An initial target of 2 seconds at the 95th percentile is proposed for review, not committed. | Load test after stack and data-volume decisions |
 | NFR-002 | **Reliability:** Database or model failures must produce a clear recoverable message; the interface must not present stale or invented results as current. | Failure-injection and UI-state tests |
 | NFR-003 | **Data integrity:** Displayed metrics must be traceable to documented queries or model outputs and must respect the data dictionary. | Reconciliation tests and review |
-| NFR-004 | **Security:** Credentials must remain server-side; inputs must be validated; database queries must be parameterized. | Security checklist and code review |
+| NFR-004 | **Security:** The local SQLite file and path must remain server-side; inputs must be validated; database queries must be parameterized. | Security checklist and code review |
 | NFR-005 | **Privacy:** Under the proposed D-015 baseline, user-entered skills are not retained and sensitive request contents are not logged. | Storage and logging review |
 | NFR-006 | **Accessibility:** Target WCAG 2.2 Level AA for key user flows, subject to project capacity and verification. | Automated and manual accessibility review |
 | NFR-007 | **Usability:** Search, filters, comparisons, and matching must have understandable labels and feedback. | User walkthroughs and acceptance tests |
@@ -241,14 +244,15 @@ No specialized hardware interface is required. Standard devices with a supported
 | NFR-010 | **Compatibility:** The application should work on current major desktop and mobile browsers selected for the demonstration. | Browser smoke tests |
 | NFR-011 | **Observability:** Service health and failures must be diagnosable without logging user skill inputs or credentials. | Operational review |
 | NFR-012 | **Data provenance:** Important results must identify sample size, source coverage, and relevant dates where available. | UI and report review |
-| NFR-013 | **Recoverability:** Database migrations and deployment changes must have a documented recovery or rollback approach appropriate to the selected hosting plan. | Release-readiness review |
+| NFR-013 | **Recoverability:** Local SQLite migrations, data reloads, and application changes must have a documented local backup or rebuild procedure. | Migration, restore, and release-readiness tests |
 | NFR-014 | **Portability:** Data transformations and analytical definitions should be reproducible outside a single developer's machine where feasible. | Re-run workflow in a clean environment |
 | NFR-015 | **Legal and ethical use:** Source terms, attribution, privacy, and redistribution limits must be reviewed before public deployment. | Data-use approval checklist |
+| NFR-016 | **Usability and visual density:** The Overview and role-analysis views should present a small number of clear visual sections, use progressive disclosure, and avoid requiring users to scan dense text or numbers. Every chart interaction must also work by touch and keyboard. | Responsive user walkthrough and accessibility review |
 
 ## 12. Data, API, and Database Design References
 
 - **Logical model:** See [Database Specification](DATABASE_SPECIFICATION.md) and [Logical ERD](../diagrams/04_LOGICAL_ERD.md).
-- **Physical model:** See the [initial Neon PostgreSQL DDL](../../scripts/database_loading/neon_schema.sql) and [Physical Schema Proposal](PHYSICAL_SCHEMA_PROPOSAL.md). The DDL and loader are prototypes; live execution and quota fit remain unverified.
+- **Physical model:** See [SQLite Physical Schema](PHYSICAL_SCHEMA_PROPOSAL.md) and the executable migration. The SQLite tables and integrity rules are implemented; newly added source fields must be re-audited and migrated explicitly.
 - **Data flow:** See [DFD Level 0](../diagrams/16_DFD_LEVEL_0.md), [DFD Level 1](../diagrams/17_DFD_LEVEL_1.md), and [Data Pipeline](../diagrams/05_DATA_PIPELINE.md).
 - **System behavior:** See [Use Cases](USE_CASES.md), [Job Search Sequence](../diagrams/19_JOB_SEARCH_SEQUENCE.md), [Skill Matching Sequence](../diagrams/09_SKILL_MATCHING_SEQUENCE.md), [Matching Request State](../diagrams/20_MATCH_REQUEST_STATE.md), and [Job Record State](../diagrams/21_DATA_RECORD_STATE.md).
 - **External API contract:** See [API Specification](API_SPECIFICATION.md).
@@ -266,6 +270,6 @@ Each requirement must have a verification method. The [Traceability Matrix](TRAC
 
 ## 14. Open Decisions and Change Control
 
-The following remain open and must be recorded in [Risks and Open Decisions](RISKS_AND_OPEN_DECISIONS.md) or an ADR: actual dataset fields and coverage, source-use permissions, final database provider, backend and frontend frameworks, hosting provider, chart library, numeric performance thresholds, salary-conversion policy, job-family labels, matching-score definition, data refresh cadence, and final skill-input retention policy.
+The following remain open and must be recorded in [Risks and Open Decisions](RISKS_AND_OPEN_DECISIONS.md) or an ADR: source refreshes and coverage, source-use permissions, frontend framework, chart library, numeric performance thresholds, salary-conversion policy, job-family labels, data refresh cadence, and full-data hosting feasibility. The Node.js backend runtime and local SQLite-only database are resolved. Jaccard matching is a deterministic, non-ML role-profile baseline; separately, a Node-served Naive Bayes model ranks exact observed titles for limited-scope review only. Individual-ad scoring, UI integration, and skill-input retention are out of scope or not implemented; submitted skills are transient in the current API.
 
 Changes to scope or requirement wording must update this SRS, the relevant user stories/use cases, the traceability matrix, diagrams, and project tasks. No proposed design is considered implemented until verified against the running system.
