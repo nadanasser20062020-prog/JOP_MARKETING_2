@@ -72,7 +72,20 @@ test('health and dashboard use the isolated v2 application', async (t) => {
   const docs = await fetch(`${base}/api/v2/docs`);
   assert.equal(docs.status, 200);
   assert.match(docs.headers.get('content-type'), /text\/markdown/);
-  assert.match(await docs.text(), /# JOP Marketing Intelligence API/);
+  const reference = await docs.text();
+  assert.match(reference, /# JOP Marketing Intelligence API/);
+  assert.doesNotMatch(reference, /[\u0600-\u06ff]/u);
+});
+
+test('health and analytics report a clear error when the SQLite database is missing', async (t) => {
+  const base = await testServer(t, { useMissingDatabase: true });
+  for (const route of ['/api/v2/health', '/api/v2/analytics/dashboard']) {
+    const response = await fetch(`${base}${route}`, { signal: AbortSignal.timeout(5_000) });
+    const payload = await response.json();
+    assert.equal(response.status, 503);
+    assert.equal(payload.error.code, 'DATABASE_NOT_FOUND');
+    assert.match(payload.error.message, /SQLite database not found/);
+  }
 });
 
 test('role report route returns dashboard-ready salary and country data', async (t) => {

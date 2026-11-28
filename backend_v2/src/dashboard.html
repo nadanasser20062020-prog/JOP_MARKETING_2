@@ -48,11 +48,26 @@
     const fmt = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
     const countFmt = new Intl.NumberFormat('en-US');
     const $ = (id) => document.getElementById(id);
-    async function request(path, options) {
-      const response = await fetch(api + path, options);
-      const payload = await response.json();
-      if (!response.ok || !payload.success) throw new Error(payload.error?.message || `Request failed (${response.status})`);
-      return payload.data;
+    const REQUEST_TIMEOUT_MS = 60_000;
+    async function request(path, options = {}) {
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+      try {
+        const response = await fetch(api + path, { ...options, signal: controller.signal });
+        let payload;
+        try { payload = await response.json(); } catch {
+          throw new Error(`تعذرت قراءة استجابة API (${response.status}).`);
+        }
+        if (!response.ok || !payload.success) throw new Error(payload.error?.message || `Request failed (${response.status})`);
+        return payload.data;
+      } catch (error) {
+        if (controller.signal.aborted) {
+          throw new Error('انتهت مهلة طلب التحليلات بعد 60 ثانية. تحقق من قاعدة البيانات أو استخدم قاعدة النشر المدمجة.');
+        }
+        throw error;
+      } finally {
+        window.clearTimeout(timeoutId);
+      }
     }
     function metric(label, value) {
       const article = document.createElement('article'); article.className = 'card metric';
