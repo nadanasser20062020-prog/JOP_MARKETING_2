@@ -1,0 +1,9 @@
+# Local data and derived deployment artifacts are rebuilt from the authorized NADA parts.
+/data/*.sqlite3
+/data/*.sqlite3-*
+/data/*.sqlite3.gz
+/data/*.tmp
+/reports/generated/
+.env
+.env.*
+!.env.example

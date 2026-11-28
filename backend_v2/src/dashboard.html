@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JOP Market Intelligence — Dashboard</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1020;--panel:#111a2f;--panel2:#17233d;--line:#263654;--text:#eef4ff;--muted:#9db0cf;--accent:#54d6be;--accent2:#66a6ff;--warning:#ffcc70;--danger:#ff8585}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#1d355f 0,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+    header{padding:34px clamp(18px,5vw,64px) 24px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--accent);font-size:.82rem;font-weight:700;letter-spacing:.04em}h1{margin:.35rem 0 .4rem;font-size:clamp(1.7rem,4vw,3rem)}h2{font-size:1.2rem;margin:0 0 14px}p{color:var(--muted);margin:.3rem 0}.wrap{max-width:1500px;margin:auto;padding:24px clamp(16px,4vw,52px) 64px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}.toolbar input{min-width:min(430px,100%);flex:1;background:#0d1528;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:12px 14px;font:inherit}.toolbar button{border:0;border-radius:12px;padding:12px 18px;background:var(--accent);color:#06211d;font:inherit;font-weight:800;cursor:pointer}.toolbar button:hover{filter:brightness(1.08)}.status{min-height:1.5em;color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.card{background:linear-gradient(145deg,var(--panel),#0f172a);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 30px #0002;min-width:0}.metric{grid-column:span 3}.metric strong{display:block;font-size:1.75rem;color:var(--accent);direction:ltr;text-align:right}.metric span{color:var(--muted);font-size:.9rem}.chart-card{grid-column:span 6}.wide{grid-column:span 12}.half{grid-column:span 6}.chart{display:grid;gap:9px}.bar-row{display:grid;grid-template-columns:minmax(100px,1.1fr) 3fr minmax(50px,.45fr);gap:10px;align-items:center;font-size:.84rem}.bar-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#d5e1f6}.bar-track{height:11px;border-radius:99px;background:#0a1120;overflow:hidden}.bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent2),var(--accent));min-width:2px}.bar-value{direction:ltr;text-align:left;color:var(--muted);font-variant-numeric:tabular-nums}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:right;vertical-align:top}th{color:var(--muted);font-weight:700;white-space:nowrap}td{font-variant-numeric:tabular-nums}.chip-list{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:5px 10px;border-radius:999px;background:#1c2b48;border:1px solid #31476d;font-size:.84rem}.note{border-inline-start:3px solid var(--warning);padding:10px 12px;background:#251f16;border-radius:8px;color:#f3d8a4;font-size:.88rem}.error{color:var(--danger)}.muted{color:var(--muted)}.pill{display:inline-block;padding:3px 9px;border-radius:999px;background:#293652;color:#d9e5f7;font-size:.8rem}.footer{margin-top:24px;font-size:.82rem;color:var(--muted)}.empty{color:var(--muted);padding:16px 0}
+    @media(max-width:900px){.metric{grid-column:span 6}.chart-card,.half{grid-column:span 12}}@media(max-width:560px){.metric{grid-column:span 6;padding:13px}.metric strong{font-size:1.35rem}.bar-row{grid-template-columns:minmax(75px,1fr) 2fr 42px;gap:6px;font-size:.76rem}.card{padding:14px}.wrap{padding-inline:12px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">JOP · MARKET INTELLIGENCE · BACKEND V2</div>
+    <h1>لوحة تحليل سوق الوظائف</h1>
+    <p>تحليلات مستخرجة من قاعدة NADA المنظفة. كل نسبة موضّح مقامها، والرواتب السنوية معروضة منفصلة حسب العملة.</p>
+    <div class="toolbar"><input id="roleInput" type="search" placeholder="اكتبي مسمى وظيفة للبحث، مثل Data Engineer" autocomplete="off"><button id="roleButton" type="button">تحليل الوظيفة</button><span id="roleStatus" class="status" role="status"></span></div>
+  </header>
+  <main class="wrap">
+    <div id="globalStatus" class="status" role="status">جارٍ تحميل التحليلات…</div>
+    <section class="grid" id="metrics" aria-label="ملخص السوق"></section>
+    <section class="grid" style="margin-top:16px">
+      <article class="card chart-card"><h2>أكثر المسميات إعلانًا</h2><div id="chartRoles" class="chart"></div></article>
+      <article class="card chart-card"><h2>أكثر الدول حسب عدد الإعلانات</h2><div id="chartCountries" class="chart"></div></article>
+      <article class="card chart-card"><h2>أكثر المهارات ظهورًا</h2><div id="chartSkills" class="chart"></div></article>
+      <article class="card chart-card"><h2>نمط العمل في الإعلانات</h2><div id="chartWorkModes" class="chart"></div></article>
+      <article class="card chart-card"><h2>حجم الإعلانات: أسواق عربية ودولية</h2><div id="chartMarkets" class="chart"></div></article>
+      <article class="card chart-card"><h2>مقارنة متوسط الراتب السنوي</h2><div id="chartMarketSalary" class="chart"></div><p class="muted">كل عملة في مخطط مستقل؛ المقارنة لا تخلط العملات.</p></article>
+    </section>
+    <section id="roleSection" class="grid" style="margin-top:24px;display:none">
+      <article class="card wide"><h2 id="roleHeading">تحليل الوظيفة</h2><div id="roleSummary" class="chip-list"></div><p id="roleNote" class="note" style="margin-top:12px"></p></article>
+      <article class="card chart-card"><h2>توزيع الوظيفة حسب الدول</h2><div id="roleCountries" class="chart"></div></article>
+      <article class="card chart-card"><h2>أكثر المهارات طلبًا للوظيفة</h2><div id="roleSkills" class="chart"></div></article>
+      <article class="card chart-card"><h2>نمط العمل للوظيفة</h2><div id="roleModes" class="chart"></div></article>
+      <article class="card chart-card"><h2>أكثر التقنيات ظهورًا معًا</h2><div id="roleCombos" class="chart"></div></article>
+      <article class="card wide"><h2>متوسط ومدى الراتب السنوي حسب الدولة والعملة</h2><div class="table-wrap"><table id="salaryTable"><thead><tr><th>الدولة</th><th>العملة/الفترة</th><th>عدد السجلات</th><th>المتوسط السنوي</th><th>مدى القيم السنوية</th><th>تقديري / فعلي / غير متحقق</th></tr></thead><tbody></tbody></table></div><p class="muted">المتوسط هو متوسط عمود الراتب السنوي المركزي؛ المدى يضم أصغر حد أدنى وأكبر حد أعلى ضمن إعلانات المجموعة.</p></article>
+    </section>
+    <section class="grid" style="margin-top:24px">
+      <article class="card wide"><h2>مقارنة الأسواق العربية والدولية</h2><div id="marketTable" class="table-wrap"></div><p class="muted">الأسواق غير المصنفة كدولة تُعرض في فئة مستقلة ولا تُحسب عربية أو دولية.</p></article>
+      <article class="card wide"><h2>جاهزية تصنيف عائلات الوظائف</h2><div id="familyGate" class="status">جارٍ التحقق…</div></article>
+    </section>
+    <div class="footer">الواجهة تعرض وصفًا لما هو موجود في البيانات. نسبة تغطية المهارات ليست احتمال توظيف، و«غير عن بُعد» لا تعني بالضرورة حضورًا مؤكدًا للمكتب.</div>
+  </main>
+  <script>
+    const api = '/api/v2';
+    const fmt = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+    const countFmt = new Intl.NumberFormat('en-US');
+    const $ = (id) => document.getElementById(id);
+    async function request(path, options) {
+      const response = await fetch(api + path, options);
+      const payload = await response.json();
+      if (!response.ok || !payload.success) throw new Error(payload.error?.message || `Request failed (${response.status})`);
+      return payload.data;
+    }
+    function metric(label, value) {
+      const article = document.createElement('article'); article.className = 'card metric';
+      const strong = document.createElement('strong'); strong.textContent = countFmt.format(Number(value || 0));
+      const span = document.createElement('span'); span.textContent = label;
+      article.append(strong, span); return article;
+    }
+    function renderBars(id, chart, maxItems = 12) {
+      const root = $(id); root.replaceChildren();
+      const labels = chart?.labels || []; const values = chart?.values || [];
+      const rows = labels.map((label, i) => ({ label, value: Number(values[i] || 0) })).filter((row) => Number.isFinite(row.value)).slice(0, maxItems);
+      if (!rows.length) { const empty = document.createElement('div'); empty.className = 'empty'; empty.textContent = 'لا توجد بيانات كافية لهذا المخطط.'; root.append(empty); return; }
+      const max = Math.max(1, ...rows.map((row) => row.value));
+      for (const row of rows) {
+        const line = document.createElement('div'); line.className = 'bar-row';
+        const label = document.createElement('div'); label.className = 'bar-label'; label.textContent = row.label;
+        const track = document.createElement('div'); track.className = 'bar-track';
+        const fill = document.createElement('div'); fill.className = 'bar-fill'; fill.style.width = `${Math.max(1, row.value / max * 100)}%`; track.append(fill);
+        const value = document.createElement('div'); value.className = 'bar-value'; value.textContent = countFmt.format(row.value);
+        line.append(label, track, value); root.append(line);
+      }
+    }
+    function renderSalaryRangeChart(rootId, salaryRows, currency) {
+      const rows = [];
+      for (const item of salaryRows || []) {
+        const salary = item.currencies?.find((entry) => entry.currency === currency);
+        if (salary?.mean) rows.push({ label: item.country, value: salary.mean });
+      }
+      renderBars(rootId, { labels: rows.map((row) => row.label), values: rows.map((row) => row.value) }, 12);
+      const heading = $(rootId).previousElementSibling;
+      if (heading) heading.textContent = `متوسط سنوي ${currency} حسب الدولة`;
+    }
+    function renderSalaryTable(rows) {
+      const body = $('salaryTable').querySelector('tbody'); body.replaceChildren();
+      for (const country of rows || []) {
+        for (const salary of country.currencies || []) {
+          if (!salary.records) continue;
+          const tr = document.createElement('tr');
+          const values = [country.country, `${salary.currency} · سنوي`, countFmt.format(salary.records), fmt.format(salary.mean), `${fmt.format(salary.range.minimum)} – ${fmt.format(salary.range.maximum)}`, `${countFmt.format(salary.estimateStatusCounts.estimated)} / ${countFmt.format(salary.estimateStatusCounts.actual)} / ${countFmt.format(salary.estimateStatusCounts.unverified)}`];
+          for (const text of values) { const td = document.createElement('td'); td.textContent = text; tr.append(td); }
+          body.append(tr);
+        }
+      }
+      if (!body.children.length) { const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan = 6; td.textContent = 'لا توجد قيم راتب سنوية لهذه المجموعة.'; tr.append(td); body.append(tr); }
+    }
+    function renderMarketTable(data) {
+      const root = $('marketTable'); root.replaceChildren();
+      const table = document.createElement('table');
+      const head = document.createElement('thead'); const hr = document.createElement('tr');
+      for (const label of ['السوق', 'الإعلانات', 'المسميات', 'أعلى المهارات']) { const th = document.createElement('th'); th.textContent = label; hr.append(th); }
+      head.append(hr); table.append(head);
+      const body = document.createElement('tbody');
+      for (const item of data.counts || []) {
+        const tr = document.createElement('tr');
+        const skills = (data.topSkillsByMarket || []).filter((skill) => skill.market === item.market).slice(0, 5).map((skill) => `${skill.skill} (${fmt.format(skill.appearancePctOfMarketAds)}%)`).join('، ');
+        for (const text of [item.market, countFmt.format(item.advertisementCount), countFmt.format(item.distinctRoles), skills || '—']) { const td = document.createElement('td'); td.textContent = text; tr.append(td); }
+        body.append(tr);
+      }
+      table.append(body); root.append(table);
+    }
+    async function loadDashboard() {
+      try {
+        const data = await request('/analytics/dashboard');
+        const overview = data.overview;
+        $('metrics').replaceChildren(
+          metric('إجمالي الإعلانات', overview.totalJobs),
+          metric('مسميات وظائف مختلفة', overview.distinctRoles),
+          metric('دول مسجلة', overview.distinctCountries),
+          metric('الدولة/المسمى الأعلى', overview.topRole?.advertisementCount || 0),
+        );
+        renderBars('chartRoles', data.charts.roles);
+        renderBars('chartCountries', data.charts.countries);
+        renderBars('chartSkills', data.charts.skills);
+        renderBars('chartWorkModes', data.charts.workModes);
+        renderBars('chartMarkets', data.charts.marketAds);
+        const arabSalary = data.marketComparison.salaries.find((item) => item.market === 'arab');
+        const intlSalary = data.marketComparison.salaries.find((item) => item.market === 'international');
+        const salaryRows = [];
+        for (const currency of ['USD', 'EGP', 'SAR']) {
+          for (const group of [arabSalary, intlSalary]) {
+            const salary = group?.currencies?.find((item) => item.currency === currency);
+            if (salary?.mean) salaryRows.push({ label: `${group.market} · ${currency}`, value: salary.mean });
+          }
+        }
+        renderBars('chartMarketSalary', { labels: salaryRows.map((row) => row.label), values: salaryRows.map((row) => row.value) });
+        renderMarketTable(data.marketComparison);
+        $('globalStatus').textContent = `تم تحميل بيانات ${countFmt.format(overview.totalJobs)} إعلانًا. تحديث العرض: ${new Date(data.generatedAt).toLocaleString()}`;
+        const gate = await request('/ml/job-family/status');
+        $('familyGate').textContent = `${gate.decision === 'GO' ? 'جاهز' : 'موقوف مؤقتًا (NO-GO)'} — ${gate.reasons?.join(' ') || 'لا توجد ملاحظات.'}`;
+        $('familyGate').className = gate.decision === 'GO' ? 'status' : 'note';
+      } catch (error) {
+        $('globalStatus').textContent = error.message;
+        $('globalStatus').classList.add('error');
+      }
+    }
+    async function loadRole() {
+      const title = $('roleInput').value.trim();
+      if (!title) { $('roleStatus').textContent = 'اكتبي مسمى وظيفة أولًا.'; return; }
+      $('roleStatus').textContent = 'جارٍ التحليل…'; $('roleStatus').classList.remove('error');
+      try {
+        const data = await request(`/analytics/role?title=${encodeURIComponent(title)}`);
+        $('roleSection').style.display = 'grid';
+        $('roleHeading').textContent = `${data.role.title} · ${countFmt.format(data.advertisementCount)} إعلان`;
+        $('roleSummary').replaceChildren();
+        for (const [label, value] of [['الدول', data.countryDemand.length], ['المهارات', data.skills.length], ['التقنيات المتشاركة', data.technologyCombinations.length]]) {
+          const chip = document.createElement('span'); chip.className = 'chip'; chip.textContent = `${label}: ${countFmt.format(value)}`; $('roleSummary').append(chip);
+        }
+        $('roleNote').textContent = data.workMode.interpretation;
+        renderBars('roleCountries', data.charts.countryDemand);
+        renderBars('roleSkills', data.charts.skillDemand, 15);
+        renderBars('roleModes', data.charts.workMode);
+        renderBars('roleCombos', data.charts.technologyCombinations);
+        renderSalaryTable(data.annualSalaryByCountry);
+        $('roleStatus').textContent = 'اكتمل تحليل الوظيفة.';
+      } catch (error) { $('roleStatus').textContent = error.message; $('roleStatus').classList.add('error'); }
+    }
+    $('roleButton').addEventListener('click', loadRole);
+    $('roleInput').addEventListener('keydown', (event) => { if (event.key === 'Enter') loadRole(); });
+    loadDashboard();
+  </script>
+</body>
+</html>

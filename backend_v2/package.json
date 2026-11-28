@@ -1,0 +1,25 @@
+{
+  "name": "jop-marketing-backend-v2",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fresh Node.js API, analytics, dashboard, and explainable ML for the NADA SQLite dataset",
+  "engines": {
+    "node": ">=22.13 <23"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/unit/*.test.js test/integration/*.test.js",
+    "test:unit": "node --test test/unit/*.test.js",
+    "test:integration": "node --test test/integration/*.test.js",
+    "check": "node scripts/check-syntax.js",
+    "db:check": "node scripts/check-database.js",
+    "vercel:check": "node scripts/check-vercel-package.js",
+    "analytics:build-deploy-db": "node scripts/build-deployment-database.js && node scripts/build-dashboard-snapshot.js",
+    "analytics:build-dashboard": "node scripts/build-dashboard-snapshot.js",
+    "ml:audit-labels": "node scripts/audit-job-family-labels.js",
+    "ml:evaluate-family": "node scripts/evaluate-job-family.js",
+    "ml:train-family": "node scripts/train-job-family-model.js"
+  }
+}

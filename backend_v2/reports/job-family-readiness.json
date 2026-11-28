@@ -1,0 +1,191 @@
+{
+  "decision": "NO_GO",
+  "auditScope": "label quality/provenance only; not a training or prediction gate",
+  "targetField": "role_family (active classifier target); category_raw is reported separately as a sparse source-label field",
+  "totalAdvertisements": 775155,
+  "roleFamilyLabelCoverage": 775155,
+  "roleFamilyClassCount": 16,
+  "sourceCategoryLabelCount": 30333,
+  "sourceCategoryClassCount": 25,
+  "sourceCategoryCoveragePct": 3.9132,
+  "labelReviewMetadata": [],
+  "minimumSourceCategoryClassSupport": 1,
+  "roleFamilyClasses": [
+    {
+      "label": "data_engineering",
+      "records": 218452
+    },
+    {
+      "label": "data_analytics_bi",
+      "records": 182545
+    },
+    {
+      "label": "data_science_ai_ml",
+      "records": 168319
+    },
+    {
+      "label": "other_technology",
+      "records": 109557
+    },
+    {
+      "label": "engineering_other",
+      "records": 41360
+    },
+    {
+      "label": "software_engineering",
+      "records": 28507
+    },
+    {
+      "label": "cloud_devops_platform",
+      "records": 11558
+    },
+    {
+      "label": "cybersecurity",
+      "records": 5132
+    },
+    {
+      "label": "qa_testing",
+      "records": 2727
+    },
+    {
+      "label": "network_it_support",
+      "records": 1750
+    },
+    {
+      "label": "hardware_embedded_iot",
+      "records": 1743
+    },
+    {
+      "label": "business_systems_analysis",
+      "records": 1131
+    },
+    {
+      "label": "product_management",
+      "records": 910
+    },
+    {
+      "label": "project_program_management",
+      "records": 779
+    },
+    {
+      "label": "sales_marketing",
+      "records": 579
+    },
+    {
+      "label": "ux_ui_design",
+      "records": 106
+    }
+  ],
+  "sourceCategoryClasses": [
+    {
+      "label": "software",
+      "records": 22245
+    },
+    {
+      "label": "hardware",
+      "records": 5157
+    },
+    {
+      "label": "cybersecurity",
+      "records": 2492
+    },
+    {
+      "label": "تكنولوجيا المعلومات",
+      "records": 59
+    },
+    {
+      "label": "Other",
+      "records": 55
+    },
+    {
+      "label": "Software / General Dev",
+      "records": 54
+    },
+    {
+      "label": "فنيين وحرفيين",
+      "records": 52
+    },
+    {
+      "label": "هندسة",
+      "records": 25
+    },
+    {
+      "label": "Backend",
+      "records": 21
+    },
+    {
+      "label": "Full Stack",
+      "records": 21
+    },
+    {
+      "label": "Data & AI",
+      "records": 20
+    },
+    {
+      "label": "Product / Project",
+      "records": 18
+    },
+    {
+      "label": "DevOps / Cloud / Infra",
+      "records": 17
+    },
+    {
+      "label": "Sales / Marketing",
+      "records": 17
+    },
+    {
+      "label": "Mobile",
+      "records": 16
+    },
+    {
+      "label": "Design / UX",
+      "records": 13
+    },
+    {
+      "label": "QA / Testing",
+      "records": 13
+    },
+    {
+      "label": "Frontend",
+      "records": 12
+    },
+    {
+      "label": "IT Support",
+      "records": 11
+    },
+    {
+      "label": "HR / Admin / Finance",
+      "records": 5
+    },
+    {
+      "label": "سيارات وميكانيك",
+      "records": 5
+    },
+    {
+      "label": "Engineering (non-software)",
+      "records": 2
+    },
+    {
+      "label": "Security",
+      "records": 1
+    },
+    {
+      "label": "تعليم",
+      "records": 1
+    },
+    {
+      "label": "خدمة عملاء",
+      "records": 1
+    }
+  ],
+  "reasons": [
+    "The database has no label-review/provenance field to identify a human-reviewed training set.",
+    "Some source-category classes have fewer than 50 examples; rare labels cannot support reliable held-out evaluation.",
+    "The populated role_family field is a derived label and is not marked as independently reviewed in this database."
+  ],
+  "nextSteps": [
+    "Treat the provenance warning as an interpretation caveat; it does not prevent fitting the stored role_family labels.",
+    "Inspect per-class test metrics and manually review low-support/error cases in job-family-model-evaluation.json.",
+    "If independent human-reviewed labels become available, evaluate them separately without disabling the existing classifier."
+  ]
+}

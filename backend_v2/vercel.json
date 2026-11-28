@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "api/[...path].js": {
+      "runtime": "nodejs22.x",
+      "maxDuration": 60,
+      "includeFiles": [
+        "data/jobs_analytics.sqlite3.gz",
+        "reports/job-family-readiness.json",
+        "reports/job-family-model-evaluation.json",
+        "models/job-family-model.json.gz",
+        "reports/dashboard-data.json",
+        "src/dashboard.html",
+        "API_REFERENCE.md"
+      ]
+    }
+  },
+  "rewrites": [
+    { "source": "/health", "destination": "/api/v2/health" },
+    { "source": "/dashboard", "destination": "/api/v2/dashboard" },
+    { "source": "/", "destination": "/api/v2/dashboard" }
+  ]
+}
